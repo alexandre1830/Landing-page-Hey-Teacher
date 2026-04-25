@@ -735,6 +735,7 @@ section { padding: clamp(80px, 10vw, 140px) 0; position: relative; }
   transition: transform .4s var(--ease), box-shadow .4s var(--ease), border-color .3s;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 .price-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-strong); border-color: var(--navy-light); }
 .price-card.featured {
