@@ -155,7 +155,7 @@ section { padding: clamp(80px, 10vw, 140px) 0; position: relative; }
   gap: 20px;
 }
 @media (max-width: 899px) {
-  .nav .wrap { justify-content: center; position: relative; }
+  .nav .wrap { justify-content: center; position: relative; min-height: 120px; }
   .nav .logo { position: absolute; left: 24px; margin-top: 48px; }
 }
 .logo { display: flex; align-items: center; flex-shrink: 0; }
