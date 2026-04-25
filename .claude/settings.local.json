@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p \"C:/Users/user/Documents/Hey, Teacher!/Sistema de controle/css\")",
+      "Bash(mkdir -p \"C:/Users/user/Documents/Hey, Teacher!/Sistema de controle/js\")",
+      "Bash(python -c \"from PIL import Image; img = Image.open\\('images/logo-azul.png'\\); print\\(img.size\\)\")",
+      "Bash(identify images/logo-azul.png)",
+      "Bash(powershell -command \"\\(Get-Item 'images/logo-azul.png'\\).Length\")",
+      "Bash(python3 -c ' *)",
+      "Bash(python3)"
+    ]
+  }
+}
