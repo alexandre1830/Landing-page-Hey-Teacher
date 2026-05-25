@@ -179,7 +179,7 @@ section { padding: clamp(80px, 10vw, 140px) 0; position: relative; }
 
 /* ===== HERO (editorial split brutal) ===== */
 .hero {
-  padding: clamp(80px, 10vw, 140px) 0;
+  padding: clamp(60px, 10vw, 120px) 0;
   position: relative;
   overflow: hidden;
 }
@@ -322,11 +322,13 @@ section { padding: clamp(80px, 10vw, 140px) 0; position: relative; }
 .hero-verb-active {
   font-family: 'Fraunces', serif;
   font-variation-settings: "opsz" 144;
-  font-style: italic;
-  font-weight: 600;
+  font-weight: 900;
+  font-style: normal;
+  text-transform: uppercase;
   color: var(--red);
   display: inline-block;
   position: relative;
+  margin: 0 4px;
   transition: opacity 220ms var(--ease), transform 220ms var(--ease);
   will-change: opacity, transform;
 }
@@ -1114,20 +1116,6 @@ footer { background: var(--navy-deep); color: rgba(255,255,255,.6); padding: 60p
 /* ===== ACTIVE NAV LINK ===== */
 .nav ul a.active { color: var(--red); }
 .nav ul a.active::after { transform: scaleX(1); }
-
-/* ===== BREADCRUMB ===== */
-.breadcrumb {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: .72rem;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  color: var(--mute);
-  margin-bottom: 18px;
-}
-.breadcrumb a { color: var(--ink-soft); transition: color .2s; }
-.breadcrumb a:hover { color: var(--red); }
-.breadcrumb .sep { margin: 0 8px; color: var(--navy-light); }
-.breadcrumb .current { color: var(--red); }
 
 /* ===== PAGE HERO (cabeçalho das páginas internas) ===== */
 .page-hero {

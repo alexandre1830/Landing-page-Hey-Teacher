@@ -97,9 +97,9 @@ const initHeroIntro = () => {
   }
   const steps = [
     { delay: 0,    cls: 'in-view-1' }, // headline linha 1
-    { delay: 500,  cls: 'in-view-2' }, // strike-through em "estudar"
+    { delay: 500,  cls: 'in-view-2' }, // strike-through em "na teoria"
     { delay: 900,  cls: 'in-view-3' }, // headline linha 2
-    { delay: 1100, cls: 'in-view-4' }, // highlight em "usá-lo"
+    { delay: 1100, cls: 'in-view-4' }, // highlight em "na prática"
     { delay: 1550, cls: 'in-view-5' }, // cursor piscante
     { delay: 1650, cls: 'in-view-6' }, // divisor + bloco inferior
   ];
