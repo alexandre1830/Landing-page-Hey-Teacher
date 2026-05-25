@@ -209,7 +209,7 @@ section { padding: clamp(80px, 10vw, 140px) 0; position: relative; }
 .hero.in-view-1 .hero-line-1 { opacity: 1; transform: translateY(0); }
 .hero.in-view-3 .hero-line-2 { opacity: 1; transform: translateY(0); }
 
-/* Strike-through em "estudar" */
+/* Strike-through em "na teoria" */
 .hero-strike-word {
   position: relative;
   display: inline-block;
@@ -220,7 +220,7 @@ section { padding: clamp(80px, 10vw, 140px) 0; position: relative; }
   position: absolute;
   left: -4px;
   right: -4px;
-  top: 52%;
+  top: 65%;
   height: 6px;
   background: var(--red);
   border-radius: 2px;
@@ -232,7 +232,7 @@ section { padding: clamp(80px, 10vw, 140px) 0; position: relative; }
 .hero.in-view-2 .hero-strike-line { transform: translateY(-50%) scaleX(1); }
 .hero-strike-word:hover .hero-strike-line { height: 8px; }
 
-/* Highlight marca-texto em "usá-lo" */
+/* Highlight marca-texto em "na prática" */
 .hero-highlight-word {
   position: relative;
   display: inline-block;
@@ -244,7 +244,7 @@ section { padding: clamp(80px, 10vw, 140px) 0; position: relative; }
   left: -6px;
   right: -6px;
   bottom: 0.12em;
-  height: 0.22em;
+  height: 0.42em;
   background: var(--red-light);
   opacity: 0.55;
   z-index: -1;
