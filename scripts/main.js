@@ -81,29 +81,27 @@ if (!document.querySelector('[data-include]')) {
   initPartialsDependent();
 }
 
-// ===== Hero entry sequence (home — Manifesto Edição 2026) =====
+// ===== Hero entry sequence (home) =====
 const prefersReducedMotion = () =>
   window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 const initHeroIntro = () => {
   const hero = document.querySelector('.hero');
   if (!hero) return;
-  // Com prefers-reduced-motion o CSS força tudo visível; ainda aplicamos as
-  // classes para que estados dependentes (cursor, highlight) entrem nos
-  // mesmos seletores .hero.in-view-X que a versão animada usa.
+  // Com prefers-reduced-motion o CSS força tudo visível; aplicamos as classes
+  // para que estados dependentes (cursor, highlight) acendam.
   if (prefersReducedMotion()) {
-    ['in-view-1','in-view-2','in-view-3','in-view-4','in-view-5','in-view-6','in-view-7']
+    ['in-view-1','in-view-2','in-view-3','in-view-4','in-view-5','in-view-6']
       .forEach(c => hero.classList.add(c));
     return;
   }
   const steps = [
-    { delay: 0,    cls: 'in-view-1' }, // eyebrow
-    { delay: 350,  cls: 'in-view-2' }, // headline linha 1
-    { delay: 850,  cls: 'in-view-3' }, // strike-through em "estudar"
-    { delay: 1250, cls: 'in-view-4' }, // headline linha 2
-    { delay: 1450, cls: 'in-view-5' }, // highlight em "usá-lo"
-    { delay: 1900, cls: 'in-view-6' }, // cursor piscante
-    { delay: 2000, cls: 'in-view-7' }, // divisor + bloco inferior + rotador
+    { delay: 0,    cls: 'in-view-1' }, // headline linha 1
+    { delay: 500,  cls: 'in-view-2' }, // strike-through em "estudar"
+    { delay: 900,  cls: 'in-view-3' }, // headline linha 2
+    { delay: 1100, cls: 'in-view-4' }, // highlight em "usá-lo"
+    { delay: 1550, cls: 'in-view-5' }, // cursor piscante
+    { delay: 1650, cls: 'in-view-6' }, // divisor + bloco inferior
   ];
   const heroObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -118,6 +116,35 @@ const initHeroIntro = () => {
 };
 initHeroIntro();
 
+// ===== Rotador de verbos (troca de textContent — largura natural) =====
+const initHeroVerbRotator = () => {
+  const verbEl = document.querySelector('.hero-verb-active');
+  if (!verbEl) return;
+  if (prefersReducedMotion()) return; // fica fixo em "falar"
+  const verbs = ['falar', 'ouvir', 'ler', 'escrever'];
+  let i = 0;
+  const stepMs = 2400;     // tempo de exibição de cada verbo
+  const outMs = 220;       // duração do fade-out
+  const cycle = () => {
+    verbEl.classList.add('is-out');
+    setTimeout(() => {
+      i = (i + 1) % verbs.length;
+      verbEl.textContent = verbs[i];
+      verbEl.classList.remove('is-out');
+      verbEl.classList.add('is-in-prep');
+      // Force reflow para que o estado in-prep seja aplicado antes de remover
+      void verbEl.offsetWidth;
+      verbEl.classList.remove('is-in-prep');
+    }, outMs);
+  };
+  // Começa o ciclo só depois que a sequência de entrada terminar
+  setTimeout(() => {
+    cycle();
+    setInterval(cycle, stepMs);
+  }, 2100);
+};
+initHeroVerbRotator();
+
 // ===== WhatsApp wave — chamada de atenção uma única vez por sessão =====
 const initHeroWave = () => {
   const wa = document.querySelector('.hero-cta-wa');
@@ -128,9 +155,8 @@ const initHeroWave = () => {
       // Espera a sequência de entrada estabilizar antes do wave
       setTimeout(() => {
         wa.classList.add('hero-wave');
-        // Remove a classe após a animação para liberar a propriedade
         setTimeout(() => wa.classList.remove('hero-wave'), 600);
-      }, 2400);
+      }, 2000);
       waObserver.unobserve(wa);
     });
   }, { threshold: 0.5 });
