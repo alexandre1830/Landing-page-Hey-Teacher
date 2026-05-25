@@ -1,0 +1,12 @@
+# Diretório interno do Claude Code (worktrees, settings locais, etc.)
+.claude/
+
+# OS / editores
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Editores
+.vscode/
+.idea/
