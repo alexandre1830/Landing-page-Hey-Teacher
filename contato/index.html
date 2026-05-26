@@ -45,146 +45,120 @@
 
 <div data-include="nav"></div>
 
-<!-- ===== PAGE HERO ===== -->
-<section class="page-hero">
-  <div class="wrap">
-    <div class="reveal">
-      <h1>Agende sua <em>aula diagnóstica</em>.</h1>
-      <p class="lede">Preencha o formulário e eu te chamo no WhatsApp em até 24h pra combinarmos o melhor horário. Leva menos de um minuto.</p>
-    </div>
-  </div>
-</section>
-
 <!-- ===== FORMULÁRIO (CTA primário) ===== -->
 <section class="agendar-form-section" id="agendar">
   <div class="wrap">
 
     <div class="form-card reveal">
 
-      <!-- Indicador de etapas -->
-      <div class="form-steps-indicator" aria-hidden="true">
-        <span class="step-pill is-active" data-step="1">Contato</span>
-        <span class="steps-divider"></span>
-        <span class="step-pill" data-step="2">Sobre você</span>
-      </div>
-
       <form id="agendar-form" class="agendar-form" novalidate>
 
-        <!-- ===== ETAPA 1: contato básico ===== -->
-        <fieldset class="form-step is-active" data-step="1">
-          <legend class="form-step-title">Vamos começar?</legend>
+        <!-- Nome -->
+        <div class="form-field">
+          <label for="f-nome">Primeiro nome <span class="req">*</span></label>
+          <input id="f-nome" name="nome" type="text" required autocomplete="given-name" placeholder="Como posso te chamar?">
+          <small class="field-error" data-error-for="nome" hidden></small>
+        </div>
 
-          <div class="form-field">
-            <label for="f-nome">Primeiro nome <span class="req">*</span></label>
-            <input id="f-nome" name="nome" type="text" required autocomplete="given-name" placeholder="Como posso te chamar?">
-            <small class="field-error" data-error-for="nome" hidden></small>
-          </div>
-
-          <div class="form-field">
-            <label for="f-whatsapp">WhatsApp <span class="req">*</span></label>
-            <input id="f-whatsapp" name="whatsapp" type="tel" required autocomplete="tel-national" placeholder="(00) 00000-0000" inputmode="numeric" maxlength="15">
-            <small class="field-error" data-error-for="whatsapp" hidden></small>
-          </div>
-
+        <!-- E-mail + WhatsApp (lado a lado) -->
+        <div class="field-row">
           <div class="form-field">
             <label for="f-email">E-mail <span class="req">*</span></label>
             <input id="f-email" name="email" type="email" required autocomplete="email" placeholder="seu@email.com">
             <small class="field-error" data-error-for="email" hidden></small>
           </div>
-
-          <div class="form-step-nav form-step-nav-end">
-            <button type="button" class="btn btn-primary" data-step-next>Próximo →</button>
-          </div>
-        </fieldset>
-
-        <!-- ===== ETAPA 2: qualificação ===== -->
-        <fieldset class="form-step" data-step="2">
-          <legend class="form-step-title">Conta um pouco mais.</legend>
-
-          <!-- Nível -->
-          <fieldset class="form-field">
-            <legend>Seu nível atual de inglês <span class="req">*</span></legend>
-            <div class="choice-group">
-              <label class="choice"><input type="radio" name="nivel" value="Nunca estudei / Iniciante" required><span>Nunca estudei / sou iniciante</span></label>
-              <label class="choice"><input type="radio" name="nivel" value="Básico"><span>Básico, sei o básico mas não converso</span></label>
-              <label class="choice"><input type="radio" name="nivel" value="Intermediário"><span>Intermediário, me viro mas trava</span></label>
-              <label class="choice"><input type="radio" name="nivel" value="Avançado"><span>Avançado, quero refinar</span></label>
-            </div>
-            <small class="field-error" data-error-for="nivel" hidden></small>
-          </fieldset>
-
-          <!-- Objetivo -->
-          <fieldset class="form-field">
-            <legend>Qual é o seu objetivo? <span class="opt">(pode marcar mais de um)</span> <span class="req">*</span></legend>
-            <div class="choice-group">
-              <label class="choice"><input type="checkbox" name="objetivo" value="Trabalho / carreira"><span>Trabalho / carreira</span></label>
-              <label class="choice"><input type="checkbox" name="objetivo" value="Viagem internacional"><span>Viagem internacional</span></label>
-              <label class="choice"><input type="checkbox" name="objetivo" value="Estudos / intercâmbio"><span>Estudos / intercâmbio</span></label>
-              <label class="choice"><input type="checkbox" name="objetivo" value="Provas de proficiência"><span>Provas de proficiência (Cambridge, TOEFL, IELTS…)</span></label>
-              <label class="choice"><input type="checkbox" name="objetivo" value="Crescimento pessoal"><span>Crescimento pessoal</span></label>
-            </div>
-            <small class="field-error" data-error-for="objetivo" hidden></small>
-          </fieldset>
-
-          <!-- Plano -->
-          <fieldset class="form-field">
-            <legend>Já tem um plano em mente?</legend>
-            <div class="choice-group">
-              <label class="choice"><input type="radio" name="plano" value="Essencial"><span>Essencial: 1 aula por semana</span></label>
-              <label class="choice"><input type="radio" name="plano" value="Acelerador"><span>Acelerador: 2 aulas por semana</span></label>
-              <label class="choice"><input type="radio" name="plano" value="Intensivo"><span>Intensivo: 3 aulas por semana</span></label>
-              <label class="choice"><input type="radio" name="plano" value="Ainda não sei" checked><span>Ainda não sei, me ajuda a escolher</span></label>
-            </div>
-          </fieldset>
-
-          <!-- Descrição -->
           <div class="form-field">
-            <label for="f-descricao">Algo mais que eu deva saber? <span class="opt">(opcional)</span></label>
-            <textarea id="f-descricao" name="descricao" rows="3" placeholder="Disponibilidade, restrições, pedidos especiais…"></textarea>
+            <label for="f-whatsapp">WhatsApp <span class="req">*</span></label>
+            <input id="f-whatsapp" name="whatsapp" type="tel" required autocomplete="tel-national" placeholder="(00) 00000-0000" inputmode="numeric" maxlength="15">
+            <small class="field-error" data-error-for="whatsapp" hidden></small>
           </div>
+        </div>
 
-          <!-- Consentimentos LGPD -->
-          <div class="form-field">
-            <div class="consent-group">
-              <label class="consent">
-                <input type="checkbox" name="consent_lgpd" value="sim" required>
-                <span class="consent-text">
-                  Autorizo o contato pela Hey, Teacher!™ e o tratamento dos meus dados conforme a <a href="/politica-de-privacidade/" target="_blank" rel="noopener">Política de Privacidade</a>. <span class="req">*</span>
-                </span>
-              </label>
-              <label class="consent">
-                <input type="checkbox" name="consent_marketing" value="sim">
-                <span class="consent-text">
-                  Autorizo receber promoções e dicas por e-mail.
-                </span>
-              </label>
-            </div>
-            <small class="field-error" data-error-for="consent_lgpd" hidden></small>
+        <!-- Nível -->
+        <div class="form-field">
+          <label for="f-nivel">Nível atual de inglês <span class="req">*</span></label>
+          <div class="select-wrap">
+            <select id="f-nivel" name="nivel" required>
+              <option value="" disabled selected>Selecione</option>
+              <option value="Nunca estudei / Iniciante">Nunca estudei / sou iniciante</option>
+              <option value="Básico">Básico, sei o básico mas não converso</option>
+              <option value="Intermediário">Intermediário, me viro mas trava</option>
+              <option value="Avançado">Avançado, quero refinar</option>
+            </select>
           </div>
+          <small class="field-error" data-error-for="nivel" hidden></small>
+        </div>
 
-          <!-- Campos ocultos: UTMs + honeypot -->
-          <input type="hidden" name="utm_source" value="">
-          <input type="hidden" name="utm_medium" value="">
-          <input type="hidden" name="utm_campaign" value="">
-          <input type="hidden" name="utm_content" value="">
-          <input type="hidden" name="utm_term" value="">
-          <input type="hidden" name="referrer" value="">
-          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
-
-          <!-- Navegação + Submit -->
-          <div class="form-step-nav">
-            <button type="button" class="btn btn-back" data-step-prev>← Voltar</button>
-            <button type="submit" class="btn btn-primary">
-              <span class="form-submit-label">Enviar</span>
-              <span class="form-submit-spinner" aria-hidden="true"></span>
-            </button>
+        <!-- Plano -->
+        <div class="form-field">
+          <label for="f-plano">Plano de interesse</label>
+          <div class="select-wrap">
+            <select id="f-plano" name="plano">
+              <option value="" disabled selected>Selecione</option>
+              <option value="Ainda não sei">Ainda não sei, me ajuda a escolher</option>
+              <option value="Essencial">Essencial: 1 aula por semana</option>
+              <option value="Acelerador">Acelerador: 2 aulas por semana</option>
+              <option value="Intensivo">Intensivo: 3 aulas por semana</option>
+            </select>
           </div>
-          <p class="form-foot">Resposta em até 24h via WhatsApp · Sem compromisso</p>
+        </div>
 
-          <div class="form-status form-status-error" role="alert" hidden>
-            Não consegui enviar agora. Pode tentar de novo, ou me chamar direto no <a href="https://wa.me/5534992365872" target="_blank" rel="noopener">WhatsApp</a>.
+        <!-- Qual o seu objetivo -->
+        <div class="form-field">
+          <label for="f-origem">Qual é o seu objetivo?</label>
+          <div class="select-wrap">
+            <select id="f-origem" name="origem">
+              <option value="" disabled selected>Selecione</option>
+              <option value="Trabalho e carreira">Trabalho e carreira</option>
+              <option value="Viagem internacional">Viagem internacional</option>
+              <option value="Estudo e intercâmbio">Estudo e intercâmbio</option>
+              <option value="Exame de proficiência">Exame de proficiência</option>
+              <option value="Crescimento pessoal">Crescimento pessoal</option>
+            </select>
           </div>
-        </fieldset>
+        </div>
+
+        <!-- Objetivo (textarea com contador) -->
+        <div class="form-field">
+          <label for="f-descricao">O que você quer conseguir com o inglês? <span class="opt">(opcional)</span></label>
+          <textarea id="f-descricao" name="descricao" rows="3" maxlength="500" placeholder="Ex.: passar numa entrevista, conversar em viagens, parar de travar na hora de falar..."></textarea>
+          <!-- <small class="char-counter" aria-hidden="true"><span data-char-count>0</span>/500</small> -->
+        </div>
+
+        <!-- Consentimentos LGPD -->
+        <div class="consent-group">
+          <label class="consent">
+            <input type="checkbox" name="consent_lgpd" value="sim" required>
+            <span class="consent-text">
+              Li e aceito a <a href="/politica-de-privacidade/" target="_blank" rel="noopener">política de privacidade</a> e autorizo o contato.
+            </span>
+          </label>
+          <label class="consent">
+            <input type="checkbox" name="consent_marketing" value="sim">
+            <span class="consent-text">
+              Autorizo receber promoções e dicas por e-mail.
+            </span>
+          </label>
+          <small class="field-error" data-error-for="consent_lgpd" hidden></small>
+        </div>
+
+        <!-- Hidden: UTMs + honeypot -->
+        <input type="hidden" name="utm_source" value="">
+        <input type="hidden" name="utm_medium" value="">
+        <input type="hidden" name="utm_campaign" value="">
+        <input type="hidden" name="utm_content" value="">
+        <input type="hidden" name="utm_term" value="">
+        <input type="hidden" name="referrer" value="">
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+
+        <button type="submit" class="btn btn-primary form-submit-btn">
+          <span class="form-submit-label">Quero destravar meu inglês</span>
+          <span class="form-submit-spinner" aria-hidden="true"></span>
+        </button>
+
+        <div class="form-status form-status-error" role="alert" hidden>
+          Não consegui enviar agora. Pode tentar de novo, ou me chamar direto no <a href="https://wa.me/5534992365872" target="_blank" rel="noopener">WhatsApp</a>.
+        </div>
 
       </form>
 
@@ -194,7 +168,6 @@
         <p>Te chamo no WhatsApp em até 24h pra combinar a aula diagnóstica. Enquanto isso, fica à vontade pra continuar explorando.</p>
         <div class="form-success-cta">
           <a href="/metodologia/" class="btn btn-ghost">Conhecer a metodologia →</a>
-          <a href="/planos/" class="btn btn-light">Conferir os planos →</a>
         </div>
       </div>
 

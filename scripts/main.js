@@ -144,22 +144,3 @@ const initHeroVerbRotator = () => {
   }, 2100);
 };
 initHeroVerbRotator();
-
-// ===== WhatsApp wave — chamada de atenção uma única vez por sessão =====
-const initHeroWave = () => {
-  const wa = document.querySelector('.hero-cta-wa');
-  if (!wa || prefersReducedMotion()) return;
-  const waObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      // Espera a sequência de entrada estabilizar antes do wave
-      setTimeout(() => {
-        wa.classList.add('hero-wave');
-        setTimeout(() => wa.classList.remove('hero-wave'), 600);
-      }, 2000);
-      waObserver.unobserve(wa);
-    });
-  }, { threshold: 0.5 });
-  waObserver.observe(wa);
-};
-initHeroWave();
