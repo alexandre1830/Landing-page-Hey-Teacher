@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contato | Hey, Teacher!™ — Fale comigo</title>
-<meta name="description" content="Fale diretamente com o professor Alexandre pelo WhatsApp, e-mail ou Instagram. Atendimento de segunda a sexta, 9h às 20h. Aulas 100% online para todo o Brasil.">
+<title>Contato | Hey, Teacher!™ · Agende sua aula diagnóstica gratuita</title>
+<meta name="description" content="Preencha o formulário e agende sua aula diagnóstica gratuita de inglês em até 24h. Aulas particulares online. Também atendo direto pelo WhatsApp, e-mail e Instagram.">
 <link rel="canonical" href="https://heyteacher.com.br/contato/">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Contato | Hey, Teacher!™">
-<meta property="og:description" content="Vamos conversar. WhatsApp, e-mail e Instagram — escolha o canal e me chame.">
+<meta property="og:description" content="Agende sua aula diagnóstica gratuita. Leva menos de um minuto.">
 <meta property="og:url" content="https://heyteacher.com.br/contato/">
 <meta property="og:image" content="https://heyteacher.com.br/images/logo-azul.png">
 <meta property="og:locale" content="pt_BR">
@@ -49,29 +49,175 @@
 <section class="page-hero">
   <div class="wrap">
     <div class="reveal">
-      <h1>Vamos <em>conversar</em>.</h1>
-      <p class="lede">O WhatsApp é o canal mais rápido — me chama por lá e a gente combina uma aula diagnóstica gratuita ou tira qualquer dúvida sobre planos, metodologia ou certificação.</p>
+      <h1>Agende sua <em>aula diagnóstica</em>.</h1>
+      <p class="lede">Preencha o formulário e eu te chamo no WhatsApp em até 24h pra combinarmos o melhor horário. Leva menos de um minuto.</p>
     </div>
   </div>
 </section>
 
-<!-- ===== WHATSAPP GIGANTE ===== -->
-<section class="cert" style="background:var(--white)">
+<!-- ===== FORMULÁRIO (CTA primário) ===== -->
+<section class="agendar-form-section" id="agendar">
   <div class="wrap">
-    <div class="contact-big reveal">
-      <h2>WhatsApp <em style="font-style:italic;color:var(--red);font-weight:500">é o caminho rápido</em>.</h2>
-      <p style="color:var(--ink-soft);font-size:1.05rem;margin:18px auto 0;max-width:560px">Respondo pessoalmente — sem bot, sem atendente, sem fila de espera. Mensagem chega direto pra mim.</p>
-      <br>
-      <a href="https://wa.me/5534992365872?text=Ol%C3%A1!%20Acessei%20o%20site%20da%20Hey%2C%20Teacher!%20e%20quero%20conversar%20sobre%20as%20aulas%20de%20ingl%C3%AAs." target="_blank" rel="noopener" class="btn btn-wa">
-        <svg class="wa-ico" viewBox="0 0 24 24"><path d="M17.5 14.38c-.28-.14-1.66-.82-1.92-.91-.26-.09-.44-.14-.63.14-.19.28-.73.91-.89 1.1-.16.19-.33.21-.61.07-.28-.14-1.19-.44-2.27-1.4-.84-.75-1.41-1.68-1.57-1.96-.16-.28-.02-.43.12-.57.13-.13.28-.33.42-.49.14-.16.19-.28.28-.47.09-.19.05-.35-.02-.49-.07-.14-.63-1.52-.87-2.08-.23-.54-.46-.47-.63-.48-.16-.01-.35-.01-.54-.01-.19 0-.49.07-.75.35-.26.28-.99.96-.99 2.35 0 1.39 1.01 2.73 1.15 2.92.14.19 1.99 3.04 4.83 4.26.67.29 1.2.46 1.61.59.68.22 1.29.19 1.78.11.54-.08 1.66-.68 1.9-1.33.23-.66.23-1.22.16-1.33-.07-.12-.26-.19-.54-.33zM12 2a10 10 0 0 0-8.59 15.16L2 22l4.97-1.3A10 10 0 1 0 12 2z"/></svg>
-        Abrir conversa no WhatsApp · (34) 99236-5872
-      </a>
-      <p style="font-family:'JetBrains Mono',monospace;font-size:.78rem;letter-spacing:.14em;color:var(--mute);text-transform:uppercase;margin-top:30px">
-        Atendimento · Segunda a sexta · 9h às 20h (horário de Brasília)
-      </p>
+
+    <div class="form-card reveal">
+
+      <!-- Indicador de etapas -->
+      <div class="form-steps-indicator" aria-hidden="true">
+        <span class="step-pill is-active" data-step="1">Contato</span>
+        <span class="steps-divider"></span>
+        <span class="step-pill" data-step="2">Sobre você</span>
+      </div>
+
+      <form id="agendar-form" class="agendar-form" novalidate>
+
+        <!-- ===== ETAPA 1: contato básico ===== -->
+        <fieldset class="form-step is-active" data-step="1">
+          <legend class="form-step-title">Vamos começar?</legend>
+
+          <div class="form-field">
+            <label for="f-nome">Primeiro nome <span class="req">*</span></label>
+            <input id="f-nome" name="nome" type="text" required autocomplete="given-name" placeholder="Como posso te chamar?">
+            <small class="field-error" data-error-for="nome" hidden></small>
+          </div>
+
+          <div class="form-field">
+            <label for="f-whatsapp">WhatsApp <span class="req">*</span></label>
+            <input id="f-whatsapp" name="whatsapp" type="tel" required autocomplete="tel-national" placeholder="(00) 00000-0000" inputmode="numeric" maxlength="15">
+            <small class="field-error" data-error-for="whatsapp" hidden></small>
+          </div>
+
+          <div class="form-field">
+            <label for="f-email">E-mail <span class="req">*</span></label>
+            <input id="f-email" name="email" type="email" required autocomplete="email" placeholder="seu@email.com">
+            <small class="field-error" data-error-for="email" hidden></small>
+          </div>
+
+          <div class="form-step-nav form-step-nav-end">
+            <button type="button" class="btn btn-primary" data-step-next>Próximo →</button>
+          </div>
+        </fieldset>
+
+        <!-- ===== ETAPA 2: qualificação ===== -->
+        <fieldset class="form-step" data-step="2">
+          <legend class="form-step-title">Conta um pouco mais.</legend>
+
+          <!-- Nível -->
+          <fieldset class="form-field">
+            <legend>Seu nível atual de inglês <span class="req">*</span></legend>
+            <div class="choice-group">
+              <label class="choice"><input type="radio" name="nivel" value="Nunca estudei / Iniciante" required><span>Nunca estudei / sou iniciante</span></label>
+              <label class="choice"><input type="radio" name="nivel" value="Básico"><span>Básico, sei o básico mas não converso</span></label>
+              <label class="choice"><input type="radio" name="nivel" value="Intermediário"><span>Intermediário, me viro mas trava</span></label>
+              <label class="choice"><input type="radio" name="nivel" value="Avançado"><span>Avançado, quero refinar</span></label>
+            </div>
+            <small class="field-error" data-error-for="nivel" hidden></small>
+          </fieldset>
+
+          <!-- Objetivo -->
+          <fieldset class="form-field">
+            <legend>Qual é o seu objetivo? <span class="opt">(pode marcar mais de um)</span> <span class="req">*</span></legend>
+            <div class="choice-group">
+              <label class="choice"><input type="checkbox" name="objetivo" value="Trabalho / carreira"><span>Trabalho / carreira</span></label>
+              <label class="choice"><input type="checkbox" name="objetivo" value="Viagem internacional"><span>Viagem internacional</span></label>
+              <label class="choice"><input type="checkbox" name="objetivo" value="Estudos / intercâmbio"><span>Estudos / intercâmbio</span></label>
+              <label class="choice"><input type="checkbox" name="objetivo" value="Provas de proficiência"><span>Provas de proficiência (Cambridge, TOEFL, IELTS…)</span></label>
+              <label class="choice"><input type="checkbox" name="objetivo" value="Crescimento pessoal"><span>Crescimento pessoal</span></label>
+            </div>
+            <small class="field-error" data-error-for="objetivo" hidden></small>
+          </fieldset>
+
+          <!-- Plano -->
+          <fieldset class="form-field">
+            <legend>Já tem um plano em mente?</legend>
+            <div class="choice-group">
+              <label class="choice"><input type="radio" name="plano" value="Essencial"><span>Essencial: 1 aula por semana</span></label>
+              <label class="choice"><input type="radio" name="plano" value="Acelerador"><span>Acelerador: 2 aulas por semana</span></label>
+              <label class="choice"><input type="radio" name="plano" value="Intensivo"><span>Intensivo: 3 aulas por semana</span></label>
+              <label class="choice"><input type="radio" name="plano" value="Ainda não sei" checked><span>Ainda não sei, me ajuda a escolher</span></label>
+            </div>
+          </fieldset>
+
+          <!-- Descrição -->
+          <div class="form-field">
+            <label for="f-descricao">Algo mais que eu deva saber? <span class="opt">(opcional)</span></label>
+            <textarea id="f-descricao" name="descricao" rows="3" placeholder="Disponibilidade, restrições, pedidos especiais…"></textarea>
+          </div>
+
+          <!-- Consentimentos LGPD -->
+          <div class="form-field">
+            <div class="consent-group">
+              <label class="consent">
+                <input type="checkbox" name="consent_lgpd" value="sim" required>
+                <span class="consent-text">
+                  Autorizo o contato pela Hey, Teacher!™ e o tratamento dos meus dados conforme a <a href="/politica-de-privacidade/" target="_blank" rel="noopener">Política de Privacidade</a>. <span class="req">*</span>
+                </span>
+              </label>
+              <label class="consent">
+                <input type="checkbox" name="consent_marketing" value="sim">
+                <span class="consent-text">
+                  Autorizo receber promoções e dicas por e-mail.
+                </span>
+              </label>
+            </div>
+            <small class="field-error" data-error-for="consent_lgpd" hidden></small>
+          </div>
+
+          <!-- Campos ocultos: UTMs + honeypot -->
+          <input type="hidden" name="utm_source" value="">
+          <input type="hidden" name="utm_medium" value="">
+          <input type="hidden" name="utm_campaign" value="">
+          <input type="hidden" name="utm_content" value="">
+          <input type="hidden" name="utm_term" value="">
+          <input type="hidden" name="referrer" value="">
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+
+          <!-- Navegação + Submit -->
+          <div class="form-step-nav">
+            <button type="button" class="btn btn-back" data-step-prev>← Voltar</button>
+            <button type="submit" class="btn btn-primary">
+              <span class="form-submit-label">Enviar</span>
+              <span class="form-submit-spinner" aria-hidden="true"></span>
+            </button>
+          </div>
+          <p class="form-foot">Resposta em até 24h via WhatsApp · Sem compromisso</p>
+
+          <div class="form-status form-status-error" role="alert" hidden>
+            Não consegui enviar agora. Pode tentar de novo, ou me chamar direto no <a href="https://wa.me/5534992365872" target="_blank" rel="noopener">WhatsApp</a>.
+          </div>
+        </fieldset>
+
+      </form>
+
+      <!-- Estado de sucesso (substitui o form após envio) -->
+      <div class="form-success" hidden>
+        <h2>Recebi seu pedido. <em>Já tô a caminho.</em></h2>
+        <p>Te chamo no WhatsApp em até 24h pra combinar a aula diagnóstica. Enquanto isso, fica à vontade pra continuar explorando.</p>
+        <div class="form-success-cta">
+          <a href="/metodologia/" class="btn btn-ghost">Conhecer a metodologia →</a>
+          <a href="/planos/" class="btn btn-light">Conferir os planos →</a>
+        </div>
+      </div>
+
     </div>
 
-    <!-- ===== OUTROS CANAIS ===== -->
+  </div>
+</section>
+
+<!-- ===== WHATSAPP SECUNDÁRIO ===== -->
+<section class="contact-alt">
+  <div class="wrap">
+    <div class="contact-alt-inner reveal">
+      <div class="contact-alt-text">
+        <h2>Prefere falar <em>agora</em>?</h2>
+        <p>Sem formulário, sem espera. Me chama direto no WhatsApp.</p>
+      </div>
+      <a href="https://wa.me/5534992365872?text=Ol%C3%A1!%20Acessei%20o%20site%20da%20Hey%2C%20Teacher!%20e%20quero%20conversar%20sobre%20as%20aulas%20de%20ingl%C3%AAs." target="_blank" rel="noopener" class="btn btn-wa">
+        <svg class="wa-ico" viewBox="0 0 24 24"><path d="M17.5 14.38c-.28-.14-1.66-.82-1.92-.91-.26-.09-.44-.14-.63.14-.19.28-.73.91-.89 1.1-.16.19-.33.21-.61.07-.28-.14-1.19-.44-2.27-1.4-.84-.75-1.41-1.68-1.57-1.96-.16-.28-.02-.43.12-.57.13-.13.28-.33.42-.49.14-.16.19-.28.28-.47.09-.19.05-.35-.02-.49-.07-.14-.63-1.52-.87-2.08-.23-.54-.46-.47-.63-.48-.16-.01-.35-.01-.54-.01-.19 0-.49.07-.75.35-.26.28-.99.96-.99 2.35 0 1.39 1.01 2.73 1.15 2.92.14.19 1.99 3.04 4.83 4.26.67.29 1.2.46 1.61.59.68.22 1.29.19 1.78.11.54-.08 1.66-.68 1.9-1.33.23-.66.23-1.22.16-1.33-.07-.12-.26-.19-.54-.33zM12 2a10 10 0 0 0-8.59 15.16L2 22l4.97-1.3A10 10 0 1 0 12 2z"/></svg>
+        Conversar no WhatsApp
+      </a>
+    </div>
+
+    <!-- Outros canais -->
     <div class="contact-channels reveal">
       <a href="mailto:contato@heyteacher.com.br" class="contact-channel">
         <div class="ch-label">E-mail</div>
@@ -83,14 +229,9 @@
       </a>
     </div>
 
-    <div class="contact-big reveal" style="margin-top:60px;text-align:center">
-      <h3 style="font-family:'Fraunces',serif;font-weight:600;font-size:clamp(1.3rem,2.2vw,1.8rem);color:var(--navy);margin-top:14px">
-        Aulas <em style="font-style:italic;color:var(--red)">100% online</em> · Brasil inteiro.
-      </h3>
-      <p style="color:var(--ink-soft);font-size:1rem;margin-top:14px;max-width:520px;margin-left:auto;margin-right:auto">
-        Atendo alunos de qualquer cidade — do Acre ao Rio Grande do Sul. Tudo o que você precisa é de uma conexão estável e disposição para falar inglês.
-      </p>
-    </div>
+    <p class="contact-meta reveal">
+      Atendimento de segunda a sexta, das 9h às 20h (Brasília) · Aulas 100% online para todo o Brasil.
+    </p>
   </div>
 </section>
 
@@ -98,5 +239,6 @@
 
 <script src="/scripts/includes.js" defer></script>
 <script src="/scripts/main.js" defer></script>
+<script src="/scripts/agendar.js" defer></script>
 </body>
 </html>
