@@ -433,8 +433,41 @@ section { padding: clamp(80px, 10vw, 140px) 0; position: relative; }
 /* ===== PROBLEM SECTION ===== */
 .problem { background: var(--off-white); }
 .problem-grid { display: grid; grid-template-columns: 1fr; gap: 40px; align-items: start; }
-@media (min-width: 900px) { .problem-grid { grid-template-columns: 1fr 1fr; gap: 90px; } }
+@media (min-width: 900px) { .problem-grid { grid-template-columns: 1fr 1fr; gap: 90px; align-items: stretch; } }
 .problem h2 em { color: var(--red); font-weight: 600; }
+
+/* Imagem da seção problema (coluna direita) com wash navy da marca */
+.problem-visual {
+  position: relative;
+  margin: 0;
+  border-radius: var(--radius-l);
+  overflow: hidden;
+  background: var(--navy);
+  isolation: isolate;
+  min-height: 340px;
+  box-shadow: var(--shadow-soft);
+}
+.problem-visual img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(0.25) contrast(1.03);
+}
+.problem-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(155deg, rgba(3,45,111,.60), rgba(3,45,111,.28) 55%, rgba(11,16,32,.55));
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+@media (min-width: 900px) {
+  /* A img absoluta não dita altura; a figure estica até a coluna esquerda */
+  .problem-visual { min-height: 0; }
+}
 .problem-list { list-style: none; display: grid; gap: 14px; margin-top: 30px; }
 .problem-list li {
   display: flex;
@@ -536,6 +569,7 @@ section { padding: clamp(80px, 10vw, 140px) 0; position: relative; }
   padding: 18px 20px;
   border-radius: var(--radius-m);
   color: var(--navy);
+  opacity: 0.7;
 }
 .teacher-info .n { font-family: 'Fraunces', serif; font-weight: 700; font-size: 1.3rem; letter-spacing: -.01em; }
 .teacher-info .r { font-size: .78rem; color: var(--ink-soft); letter-spacing: .02em; }
@@ -555,7 +589,7 @@ section { padding: clamp(80px, 10vw, 140px) 0; position: relative; }
 
 .teacher-copy blockquote {
   font-family: 'Fraunces', serif;
-  
+
   font-size: 1.2rem;
   line-height: 1.4;
   color: rgba(255,255,255,.92);
@@ -563,6 +597,18 @@ section { padding: clamp(80px, 10vw, 140px) 0; position: relative; }
   padding-left: 22px;
   margin-top: 20px;
 }
+
+/* Variante clara (fundo branco) — usada na página /sobre/ */
+.teacher-light { background: var(--white); color: var(--ink); }
+.teacher-light::before { display: none; }
+.teacher-light h2 { color: var(--navy); }
+.teacher-light .teacher-copy p { color: var(--ink-soft); }
+.teacher-light .teacher-copy p em { color: var(--red); }
+.teacher-light .teacher-copy blockquote { color: var(--navy); border-left-color: var(--red); }
+.teacher-light .teacher-photo { box-shadow: var(--shadow-strong); }
+.teacher-light .teacher-stats .s { background: var(--off-white); border-color: rgba(3,45,111,.1); }
+.teacher-light .teacher-stats .s .n { color: var(--red); }
+.teacher-light .teacher-stats .s .l { color: var(--mute); }
 
 /* ===== METHODOLOGY ===== */
 .method { background: var(--white); }
@@ -973,6 +1019,9 @@ footer { background: var(--navy-deep); color: rgba(255,255,255,.6); padding: 60p
 .foot-bottom ul{ list-style: none; display: flex; gap: 14px; }
 
 /* ===== FLOATING WHATSAPP ===== */
+/* Esconde o WhatsApp flutuante na página do formulário (não competir com o CTA) */
+.page-no-float .wa-float { display: none; }
+
 .wa-float {
   position: fixed;
   bottom: 24px; right: 24px;
@@ -1018,6 +1067,30 @@ footer { background: var(--navy-deep); color: rgba(255,255,255,.6); padding: 60p
 /* ===== ACTIVE NAV LINK ===== */
 .nav ul a.active { color: var(--red); }
 .nav ul a.active::after { transform: scaleX(1); }
+
+/* ===== INTRODUÇÃO (página /metodologia/) ===== */
+.method-intro {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 36px;
+  align-items: start;
+  margin-bottom: clamp(56px, 8vw, 90px);
+}
+.method-intro em { color: var(--red); font-style: normal; font-weight: bold; }
+@media (min-width: 900px) {
+  .method-intro { grid-template-columns: 1.05fr .95fr; gap: 56px; align-items: stretch; }
+}
+.method-intro-text h1 {
+  font-size: clamp(2rem, 4.6vw, 3.6rem);
+  margin-bottom: 22px;
+}
+.method-intro-text p { color: var(--ink-soft); font-size: 1.02rem; line-height: 1.7; }
+.method-intro-text p + p { margin-top: 16px; }
+.method-intro-text .method-intro-lede { font-size: 1.12rem; color: var(--ink); }
+.method-intro .problem-visual { min-height: 300px; }
+@media (min-width: 900px) {
+  .method-intro .problem-visual { min-height: 0; }
+}
 
 /* ===== PILAR EXPANDIDO (página /metodologia/) ===== */
 .pillar {
@@ -1311,30 +1384,50 @@ footer { background: var(--navy-deep); color: rgba(255,255,255,.6); padding: 60p
 
 /* ===== FORMULÁRIO DE AGENDAMENTO (/contato/) ===== */
 .agendar-form-section {
-  padding: clamp(20px, 4vw, 50px) 0 clamp(60px, 8vw, 100px);
-  background: var(--navy);
+  padding: clamp(40px, 6vw, 90px) 0 clamp(60px, 8vw, 100px);
+  background: var(--off-white);
   scroll-margin-top: 80px;
 }
 
-/* Card que envolve o formulário */
-.form-card {
-  max-width: 580px;
+/* Card único: imagem (esquerda) + formulário (direita), sem emenda entre eles */
+.agendar-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: stretch;
+  max-width: var(--max);
   margin: 0 auto;
+  position: relative;
   background: var(--white);
   border-radius: var(--radius-l);
-  padding: clamp(28px, 4vw, 44px) clamp(22px, 3.5vw, 42px) clamp(28px, 4vw, 40px);
   box-shadow:
-    0 24px 60px -28px rgba(3, 45, 111, 0.22),
-    0 6px 16px -8px rgba(3, 45, 111, 0.08);
-  position: relative;
+    0 30px 70px -30px rgba(3, 45, 111, 0.28),
+    0 8px 20px -10px rgba(3, 45, 111, 0.10);
   overflow: hidden;
 }
-.form-card::before {
+.agendar-layout::before {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 3px;
   background: linear-gradient(90deg, var(--red), var(--red-light) 60%, var(--navy-light));
+  z-index: 2;
+}
+@media (min-width: 900px) {
+  .agendar-layout { grid-template-columns: 0.92fr 1.08fr; }
+}
+
+/* Imagem: ocupa a metade esquerda rente às bordas (sem card próprio) */
+.agendar-visual { min-height: 300px; display: none; }
+.agendar-layout .agendar-visual { border-radius: 0; box-shadow: none; }
+@media (min-width: 900px) {
+  .agendar-visual { display: block; min-height: 0; }
+}
+
+/* Coluna do formulário: apenas o respiro interno (o card é o pai) */
+.form-card {
+  position: relative;
+  background: transparent;
+  padding: clamp(30px, 4vw, 52px) clamp(24px, 4vw, 48px) clamp(30px, 4vw, 46px);
 }
 
 /* Form base: lista vertical de campos */
