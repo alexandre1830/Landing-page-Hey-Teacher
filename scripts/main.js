@@ -52,6 +52,45 @@ const initSmoothScroll = (root = document) => {
 };
 initSmoothScroll();
 
+// ===== Toggle do menu hambúrguer (mobile) =====
+const initNavToggle = () => {
+  const nav = document.getElementById('nav');
+  const toggle = document.getElementById('nav-toggle');
+  if (!nav || !toggle || toggle.dataset.navBound) return;
+  toggle.dataset.navBound = '1';
+
+  const setOpen = (open) => {
+    nav.classList.toggle('is-open', open);
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggle.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+    document.body.classList.toggle('nav-open', open);
+  };
+
+  toggle.addEventListener('click', () => {
+    setOpen(!nav.classList.contains('is-open'));
+  });
+
+  // Fecha ao clicar em qualquer link do menu
+  nav.querySelectorAll('ul a').forEach((a) => {
+    a.addEventListener('click', () => setOpen(false));
+  });
+
+  // Fecha ao clicar na overlay escura
+  const overlay = document.getElementById('nav-overlay');
+  if (overlay) overlay.addEventListener('click', () => setOpen(false));
+
+  // Fecha ao apertar Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && nav.classList.contains('is-open')) setOpen(false);
+  });
+
+  // Fecha automaticamente se redimensionar para desktop
+  const mq = window.matchMedia('(min-width: 900px)');
+  const onMqChange = (e) => { if (e.matches) setOpen(false); };
+  if (mq.addEventListener) mq.addEventListener('change', onMqChange);
+  else if (mq.addListener) mq.addListener(onMqChange); // fallback Safari antigo
+};
+
 // ===== Coisas que dependem do nav/footer injetados via includes.js =====
 const initPartialsDependent = () => {
   // Ano dinâmico no footer
@@ -69,6 +108,9 @@ const initPartialsDependent = () => {
     applyShadow();
     window.addEventListener('scroll', applyShadow, { passive: true });
   }
+
+  // Menu hambúrguer mobile
+  initNavToggle();
 
   // Re-observar reveals e re-bindar smooth scroll caso o partial tenha trazido âncoras
   observeReveals();
