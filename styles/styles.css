@@ -30,6 +30,7 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  overflow-x: clip;
 }
 body {
   font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
@@ -757,8 +758,14 @@ section { padding: clamp(80px, 10vw, 140px) 0; position: relative; }
 
 /* ===== CERTIFICATE ===== */
 .cert { background: var(--off-white); }
-.cert-grid { display: grid; grid-template-columns: 1fr; gap: 60px; align-items: center; width: var(--max); }
+.cert-grid { display: grid; grid-template-columns: 1fr; gap: 60px; align-items: center; }
 @media (min-width: 900px) { .cert-grid { grid-template-columns: 1fr 1.05fr; gap: 80px; } }
+
+@media (max-width: 900px) {
+  .cert-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+  .cert-visual { order: -1; }
+  .cert-img-wrap { margin: 0 auto; max-width: 420px; }
+}
 
 .cert-visual { position: relative; padding: 30px 30px 40px; }
 .cert-img-wrap {
@@ -1236,8 +1243,8 @@ footer { background: var(--navy-deep); color: rgba(255,255,255,.6); padding: 60p
 /* ===== BLOCO DUPLAS/FAMÍLIAS ===== */
 .duo-card {
   max-width: var(--max);
-  padding: 40px 24px;
-  margin: 0 45px;
+  padding: clamp(28px, 4vw, 40px) clamp(20px, 3vw, 28px);
+  margin: 0 auto;
   background: linear-gradient(135deg, var(--navy), var(--navy-dark));
   color: var(--white);
   border-radius: var(--radius-l);
