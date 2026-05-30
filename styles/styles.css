@@ -564,6 +564,13 @@ body.nav-open .nav-overlay {
 }
 .marquee-track { display: flex; gap: 60px; animation: scroll 40s linear infinite; white-space: nowrap; }
 .marquee:hover .marquee-track { animation-play-state: paused; }
+/* Mobile: ritmo proporcionalmente mais rápido */
+@media (max-width: 900px) {
+  .marquee-track { animation-duration: 22s; }
+}
+@media (max-width: 480px) {
+  .marquee-track { animation-duration: 16s; }
+}
 .marquee span {
   font-family: 'Fraunces', serif;
   
