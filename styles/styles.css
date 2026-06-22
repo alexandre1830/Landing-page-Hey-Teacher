@@ -287,6 +287,47 @@ section { padding: clamp(80px, 10vw, 140px) 0; position: relative; }
   }
 }
 
+/* ---- CTA destacado no nav (item "Contato") ---- */
+.nav ul a.nav-cta {
+  background: var(--red);
+  color: var(--white);
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-weight: 600;
+  box-shadow:
+    0 6px 16px -8px rgba(166, 4, 4, 0.55),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.15);
+  transition: background .25s var(--ease), transform .25s var(--ease), box-shadow .25s var(--ease), color .25s;
+}
+.nav ul a.nav-cta:hover {
+  background: var(--red-dark);
+  color: var(--white);
+  transform: translateY(-1px);
+  box-shadow:
+    0 10px 22px -8px rgba(166, 4, 4, 0.65),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.15);
+}
+.nav ul a.nav-cta::after { display: none; } /* sem underline animado de hover */
+.nav ul a.nav-cta.active { background: var(--red); color: var(--white); }
+
+/* No mobile, o CTA fica como pill centralizado, separado do resto por um divisor */
+@media (max-width: 899px) {
+  .nav-cta-item {
+    display: flex !important;
+    justify-content: center;
+    padding: 14px 24px 6px !important;
+    margin-top: 6px;
+    border-top: 1px solid rgba(3, 45, 111, 0.08);
+  }
+  .nav ul a.nav-cta {
+    display: inline-block;
+    padding: 12px 28px;
+    border-left: none !important; /* override do estilo de item de menu mobile */
+    font-size: .95rem;
+  }
+  .nav ul a.nav-cta:hover { background: var(--red-dark); }
+}
+
 /* Trava scroll vertical quando o menu mobile está aberto */
 body.nav-open { overflow-y: hidden; }
 
@@ -1436,7 +1477,7 @@ footer { background: var(--navy-deep); color: rgba(255,255,255,.6); padding: 60p
   line-height: 1.7;
 }
 .prose h2 { font-size: clamp(1.4rem, 2.4vw, 2rem); margin: 36px 0 14px; color: var(--navy); }
-.prose h3 { font-size: 1.15rem; margin: 28px 0 10px; color: var(--navy); }
+.prose h3 { font-family:'Courier New', Courier, monospace; font-size: 1.15rem; margin: 28px 0 10px; color: var(--navy); font-weight: 700; }
 .prose p { margin-bottom: 16px; }
 .prose ul, .prose ol { margin: 0 0 16px 22px; }
 .prose li { margin-bottom: 8px; }
