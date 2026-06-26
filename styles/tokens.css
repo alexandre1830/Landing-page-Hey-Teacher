@@ -1,0 +1,48 @@
+/* ============================================================
+   DESIGN TOKENS — Hey, Teacher!™
+   ------------------------------------------------------------
+   Fonte única de cores, tipografia, raios, sombras e timing.
+   Carregar ANTES de styles.css em cada página.
+   ============================================================ */
+
+:root {
+  /* ===== PALETA — HEX ===== */
+  --navy:       #032d6f;
+  --navy-dark:  #021f4d;
+  --navy-deep:  #011638;
+  --navy-light: #8095b6;
+  --red:        #a60404;
+  --red-dark:   #7a0303;
+  --red-light:  #d18180;
+  --white:      #FFFFFF;
+  --off-white:  #F5F7FB;
+  --ink:        #0B1020;
+  --ink-soft:   #2B3154;
+  --mute:       #6B7290;
+
+  /* ===== PALETA — RGB (para uso com rgba) =====
+     Ex.: background: rgba(var(--navy-rgb), .08);
+     Mudar a paleta acima atualiza tudo automaticamente. */
+  --navy-rgb:      3, 45, 111;
+  --red-rgb:       166, 4, 4;
+  --red-light-rgb: 209, 129, 128;
+  --white-rgb:     255, 255, 255;
+
+  /* ===== TIPOGRAFIA ===== */
+  --font-serif: 'Fraunces', serif;
+  --font-sans:  'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-mono:  'JetBrains Mono', monospace;
+
+  /* ===== LAYOUT ===== */
+  --max:      1240px;
+  --radius-s: 8px;
+  --radius-m: 14px;
+  --radius-l: 22px;
+
+  /* ===== SOMBRAS ===== */
+  --shadow-soft:   0 10px 30px -12px rgba(var(--navy-rgb), .18);
+  --shadow-strong: 0 30px 60px -20px rgba(var(--navy-rgb), .35);
+
+  /* ===== TIMING / EASING ===== */
+  --ease: cubic-bezier(.2, .7, .15, 1);
+}
