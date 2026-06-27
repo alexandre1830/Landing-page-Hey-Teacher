@@ -30,25 +30,88 @@
 {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
+  "@id": "https://heyteacher.com.br/#organization",
   "name": "Hey, Teacher!™",
+  "alternateName": "Hey, Teacher",
   "url": "https://heyteacher.com.br/",
   "logo": "https://heyteacher.com.br/images/favicon-512.png",
-  "description": "Escola particular de inglês online com aulas 1:1, metodologia adaptada e certificação CEFR.",
-  "areaServed": "BR",
+  "image": "https://heyteacher.com.br/images/favicon-512.png",
+  "description": "Escola particular de inglês online com aulas 1:1, metodologia adaptada ao objetivo de cada aluno e certificação no padrão CEFR. Mentoria ilimitada, material incluso e aula diagnóstica gratuita.",
+  "slogan": "Pare de estudar inglês só na teoria. Comece a usá-lo na prática.",
+  "priceRange": "R$ 219,90 - R$ 439,90",
+  "inLanguage": ["pt-BR", "en"],
+  "knowsLanguage": ["Portuguese", "English"],
+  "areaServed": {
+    "@type": "Country",
+    "name": "Brasil"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "BR"
+  },
   "founder": {
     "@type": "Person",
-    "name": "Alexandre Oliveira"
+    "@id": "https://heyteacher.com.br/sobre/#alexandre",
+    "name": "Alexandre Oliveira",
+    "jobTitle": "Professor de inglês · Program Director",
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Brigham Young University (BYU)"
+    },
+    "url": "https://heyteacher.com.br/sobre/"
+  },
+  "employee": {
+    "@id": "https://heyteacher.com.br/sobre/#alexandre"
   },
   "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "customer service",
     "telephone": "+55-34-99236-5872",
     "email": "contato@heyteacher.com.br",
-    "availableLanguage": ["Portuguese", "English"]
+    "availableLanguage": ["Portuguese", "English"],
+    "hoursAvailable": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "20:00"
+    }
   },
   "sameAs": [
     "https://www.instagram.com/alexandre.heyteacher"
-  ]
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Planos de aulas particulares de inglês",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "name": "Plano Essencial",
+        "description": "Uma aula particular de inglês por semana, com mentoria ilimitada, material incluso e certificação CEFR.",
+        "price": "219.90",
+        "priceCurrency": "BRL",
+        "availability": "https://schema.org/InStock",
+        "url": "https://heyteacher.com.br/planos/"
+      },
+      {
+        "@type": "Offer",
+        "name": "Plano Acelerador",
+        "description": "Duas aulas particulares de inglês por semana, com guia de inglês de viagens, acesso a 100+ textos curados e tudo do plano Essencial.",
+        "price": "329.90",
+        "priceCurrency": "BRL",
+        "availability": "https://schema.org/InStock",
+        "url": "https://heyteacher.com.br/planos/"
+      },
+      {
+        "@type": "Offer",
+        "name": "Plano Intensivo",
+        "description": "Três aulas particulares de inglês por semana, com guia de inglês de negócios, correção de redação ilimitada e tudo do plano Acelerador.",
+        "price": "439.90",
+        "priceCurrency": "BRL",
+        "availability": "https://schema.org/InStock",
+        "url": "https://heyteacher.com.br/planos/"
+      }
+    ]
+  }
 }
 </script>
 <script type="application/ld+json">

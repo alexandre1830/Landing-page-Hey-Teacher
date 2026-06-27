@@ -1,0 +1,32 @@
+# Hey, Teacher!™
+
+> Escola particular de inglês online para falantes de português, fundada e ensinada pelo professor Alexandre Oliveira. Aulas individuais ao vivo (1:1), 50 minutos, com metodologia própria adaptada ao nível e ao objetivo de cada aluno. Conversação real desde a primeira aula, sem decoreba, com material exclusivo e certificação no padrão internacional CEFR.
+
+## Sobre
+
+- O professor: Alexandre Oliveira ensina inglês desde 2021, passou por quatro instituições de ensino de idioma e estuda Software Development na Brigham Young University (BYU). A metodologia une experiência docente prática com clareza estrutural.
+- Público-alvo: profissionais, estudantes e adultos brasileiros que querem destravar a conversação em inglês para trabalho, viagem, estudos no exterior, provas de proficiência ou crescimento pessoal.
+- Diferenciais: aulas particulares 1:1, mentoria ilimitada por WhatsApp, material 100% incluso, planner semanal de estudo, certificação CEFR, sem taxa de matrícula, sem multa de fidelidade.
+
+## Páginas principais
+
+- [Home](https://heyteacher.com.br/): visão geral da proposta, metodologia resumida em 7 pilares, planos, depoimentos, FAQ.
+- [Metodologia](https://heyteacher.com.br/metodologia/): os 7 pilares do método explicados (gramática simplificada, vocabulário por tópicos, exercícios focados, leitura, vídeos e músicas, escrita prática, conversação ao vivo) + timeline de uma aula típica de 50 minutos.
+- [Sobre o professor](https://heyteacher.com.br/sobre/): trajetória do Alexandre, filosofia de ensino, formação acadêmica.
+- [Planos e investimento](https://heyteacher.com.br/planos/): três planos com mensalidades em reais — Essencial (R$ 219,90, 1 aula/semana), Acelerador (R$ 329,90, 2 aulas/semana), Intensivo (R$ 439,90, 3 aulas/semana). Inclui FAQ específico de preço.
+- [Certificação CEFR](https://heyteacher.com.br/certificacao/): explicação dos níveis A1–C2, como funciona a avaliação interna das quatro habilidades (reading, listening, writing, speaking), amostra do certificado.
+- [Contato / agendar aula diagnóstica](https://heyteacher.com.br/contato/): formulário para agendar aula diagnóstica gratuita (sem compromisso), com resposta em até 24h via WhatsApp.
+
+## Recursos técnicos
+
+- [Política de Privacidade](https://heyteacher.com.br/politica-de-privacidade/): tratamento de dados conforme LGPD.
+- [Termos de Uso](https://heyteacher.com.br/termos-de-uso/): condições gerais das aulas, cancelamento, propriedade intelectual do material.
+- [Sitemap XML](https://heyteacher.com.br/sitemap.xml)
+
+## Contato
+
+- WhatsApp: +55 34 99236-5872
+- E-mail: contato@heyteacher.com.br
+- Instagram: [@alexandre.heyteacher](https://www.instagram.com/alexandre.heyteacher)
+- Atendimento: segunda a sexta, 8h às 20h (horário de Brasília)
+- Alcance: aulas 100% online para todo o Brasil

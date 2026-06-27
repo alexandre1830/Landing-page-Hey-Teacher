@@ -1,4 +1,72 @@
+# ===== Crawlers de buscadores tradicionais =====
 User-agent: *
+Allow: /
+
+# ===== Crawlers de IA / LLM — autorização explícita =====
+# (já cobertos pelo "User-agent: *" acima, mas alguns crawlers
+#  só obedecem regras com o próprio nome declarado)
+
+# OpenAI (treinamento e busca em tempo real do ChatGPT)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic (Claude)
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Google AI (Gemini, AI Overviews) — separado do Googlebot tradicional
+User-agent: Google-Extended
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot-Extended
+Allow: /
+
+# Common Crawl (alimenta modelos open-source e dataset público)
+User-agent: CCBot
+Allow: /
+
+# Meta AI
+User-agent: Meta-ExternalAgent
+Allow: /
+
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
+# ByteDance / Doubao
+User-agent: Bytespider
+Allow: /
+
+# Amazon
+User-agent: Amazonbot
+Allow: /
+
+# Mistral
+User-agent: MistralAI-User
+Allow: /
+
+# DuckDuckGo / Brave
+User-agent: DuckAssistBot
 Allow: /
 
 Sitemap: https://heyteacher.com.br/sitemap.xml
