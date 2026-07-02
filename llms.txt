@@ -17,6 +17,20 @@
 - [Certificação CEFR](https://heyteacher.com.br/certificacao/): explicação dos níveis A1–C2, como funciona a avaliação interna das quatro habilidades (reading, listening, writing, speaking), amostra do certificado.
 - [Contato / agendar aula diagnóstica](https://heyteacher.com.br/contato/): formulário para agendar aula diagnóstica gratuita (sem compromisso), com resposta em até 24h via WhatsApp.
 
+## Blog
+
+- [Blog](https://heyteacher.com.br/blog/): artigos práticos sobre aprendizado de inglês, escritos pelo professor Alexandre Oliveira.
+- [Quanto tempo leva para aprender inglês de verdade?](https://heyteacher.com.br/blog/quanto-tempo-leva-para-aprender-ingles/): estimativas realistas por nível CEFR e os 4 fatores que aceleram o progresso.
+- [Como perder o medo de falar inglês](https://heyteacher.com.br/blog/como-perder-o-medo-de-falar-ingles/): causas do bloqueio na conversação e 6 técnicas para destravar a fala.
+- [Níveis de inglês: A1, A2, B1, B2, C1 e C2](https://heyteacher.com.br/blog/niveis-de-ingles-a1-a-c2/): o padrão CEFR explicado em linguagem simples.
+- [Como aprender inglês sozinho](https://heyteacher.com.br/blog/como-aprender-ingles-sozinho/): o que funciona no estudo autônomo e o que é perda de tempo.
+- [Aula particular ou escola de inglês?](https://heyteacher.com.br/blog/aula-particular-ou-escola-de-ingles/): comparação honesta por preço por hora falada, velocidade e flexibilidade.
+- [Inglês para entrevista de emprego](https://heyteacher.com.br/blog/ingles-para-entrevista-de-emprego/): perguntas clássicas, método STAR e erros que eliminam candidatos.
+- [Como melhorar o listening](https://heyteacher.com.br/blog/como-melhorar-o-listening/): 7 estratégias comprovadas, de connected speech a shadowing.
+- [10 erros de inglês de brasileiros](https://heyteacher.com.br/blog/erros-comuns-de-brasileiros-no-ingles/): falsos cognatos, preposições traduzidas e como corrigir.
+- [Inglês para viagem](https://heyteacher.com.br/blog/ingles-para-viagem/): frases essenciais de aeroporto, hotel, restaurante e emergências.
+- [Rotina de estudos de inglês](https://heyteacher.com.br/blog/como-criar-rotina-de-estudos-de-ingles/): como montar um plano realista que sobrevive à vida real.
+
 ## Recursos técnicos
 
 - [Política de Privacidade](https://heyteacher.com.br/politica-de-privacidade/): tratamento de dados conforme LGPD.
