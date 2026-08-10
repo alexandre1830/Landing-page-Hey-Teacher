@@ -916,6 +916,26 @@ body.nav-open .nav-overlay {
   border-radius: 4px;
 }
 
+/* Variante clara: fundo branco, cards azuis */
+.diff--light { background: var(--white); color: var(--navy); }
+.diff--light h2 { color: var(--navy); }
+.diff--light .section-head p { color: var(--ink); }
+.diff--light .diff-card {
+  background: var(--navy);
+  border: 1px solid rgba(var(--navy-rgb), .08);
+  box-shadow:
+    0 1px 2px rgba(var(--navy-rgb), .1),
+    0 8px 20px -8px rgba(var(--navy-rgb), .25);
+}
+.diff--light .diff-card:hover {
+  background: var(--navy);
+  box-shadow:
+    0 2px 4px rgba(var(--navy-rgb), .12),
+    0 16px 32px -10px rgba(var(--navy-rgb), .35);
+}
+.diff--light .diff-card h3 { color: var(--white); }
+.diff--light .diff-card p { color: rgba(var(--white-rgb), .75); }
+
 .diff-strip {
   display: flex;
   flex-wrap: wrap;
