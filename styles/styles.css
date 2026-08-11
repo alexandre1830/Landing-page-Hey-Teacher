@@ -32,7 +32,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
    intencional do site. */
 em { font-style: normal; font-weight: 600; }
 
-h1, h2, h3 {
+h1, h2 {
   font-family: var(--font-serif);
   font-variation-settings: "opsz" 144;
   letter-spacing: -0.03em;
@@ -41,7 +41,15 @@ h1, h2, h3 {
 }
 h1 { font-weight: 700; font-size: clamp(2.4rem, 6vw, 5.2rem); }
 h2 { font-weight: 700; font-size: clamp(2rem, 4.2vw, 3.6rem); }
-h3 { font-weight: 600; font-size: clamp(1.25rem, 2vw, 1.6rem); letter-spacing: -.02em; }
+/* h3 = nível de subtítulo: Jakarta Sans (Fraunces perde legibilidade em tamanho menor) */
+h3 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: clamp(1.25rem, 2vw, 1.6rem);
+  letter-spacing: -.01em;
+  line-height: 1.25;
+  color: var(--navy);
+}
 
 /* ===== LAYOUT ===== */
 .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
@@ -755,7 +763,7 @@ body.nav-open .nav-overlay {
   color: var(--navy);
   opacity: 0.7;
 }
-.teacher-info .n { font-family: var(--font-serif); font-weight: 700; font-size: 1.3rem; letter-spacing: -.01em; }
+.teacher-info .n { font-family: var(--font-sans); font-weight: 700; font-size: 1.3rem; letter-spacing: -.01em; }
 .teacher-info .r { font-size: .78rem; color: var(--ink-soft); letter-spacing: .02em; }
 
 .teacher-copy p { color: rgba(var(--white-rgb), .85); font-size: 1.02rem; margin-bottom: 18px; line-height: 1.7; }
@@ -900,7 +908,7 @@ body.nav-open .nav-overlay {
 }
 .diff-card:hover .ic { transform: rotate(-8deg) scale(1.08); }
 .diff-card .ic svg { width: 24px; height: 24px; stroke-width: 2.2; }
-.diff-card h3 { color: var(--white); font-family: var(--font-serif); margin-bottom: 12px; }
+.diff-card h3 { color: var(--white); font-family: var(--font-sans); margin-bottom: 12px; }
 .diff-card p { color: rgba(var(--white-rgb), .75); font-size: .95rem; line-height: 1.6; }
 .diff-card p em { color: var(--red-light); }
 .diff-card .tag {
@@ -1006,7 +1014,7 @@ body.nav-open .nav-overlay {
   transition: transform .3s, border-color .3s;
 }
 .cert-level:hover { transform: translateY(-3px); border-color: var(--red); }
-.cert-level .l { font-family: var(--font-serif); font-weight: 700; color: var(--navy); font-size: 1.1rem; }
+.cert-level .l { font-family: var(--font-sans); font-weight: 700; color: var(--navy); font-size: 1.1rem; }
 .cert-level .n { font-size: .72rem; color: var(--mute); letter-spacing: .06em; text-transform: uppercase; margin-top: 2px; }
 
 /* ===== PRICING ===== */
@@ -1062,7 +1070,7 @@ body.nav-open .nav-overlay {
 .price-stars { display: flex; gap: 3px; margin-bottom: 12px; }
 .price-stars span { color: var(--red); font-size: 1.1rem; }
 .price-card.featured .price-stars span { color: var(--red-light); }
-.price-card h3 { font-family: var(--font-serif); margin-bottom: 6px; color: inherit; }
+.price-card h3 { font-family: var(--font-sans); margin-bottom: 6px; color: inherit; }
 .price-card.featured h3 { color: var(--white); }
 .price-card .freq { font-size: .88rem; color: var(--mute); margin-bottom: 26px; }
 .price-card.featured .freq { color: rgba(var(--white-rgb), .65); }
@@ -1157,8 +1165,8 @@ body.nav-open .nav-overlay {
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-  font-family: var(--font-serif);
-  font-weight: 600;
+  font-family: var(--font-sans);
+  font-weight: 700;
   font-size: 1.05rem;
   color: var(--navy);
   list-style: none;
@@ -1200,7 +1208,7 @@ body.nav-open .nav-overlay {
 footer { background: var(--navy-deep); color: rgba(var(--white-rgb), .6); padding: 60px 0 30px; }
 .foot-grid { display: grid; grid-template-columns: 1fr; gap: 40px; margin-bottom: 40px; }
 @media (min-width: 800px) { .foot-grid { grid-template-columns: 1.4fr 1fr 1fr; } }
-.foot-grid h4 { font-family: var(--font-serif); color: var(--white); margin-bottom: 16px; font-size: 1rem; font-weight: 600; letter-spacing: -.01em; }
+.foot-grid h4 { font-family: var(--font-sans); color: var(--white); margin-bottom: 16px; font-size: 1rem; font-weight: 700; letter-spacing: -.01em; }
 .foot-grid ul { list-style: none; display: grid; gap: 10px; }
 .foot-grid a { font-size: .9rem; transition: color .2s; }
 .foot-grid a:hover { color: var(--red-light); }
@@ -1371,7 +1379,7 @@ footer { background: var(--navy-deep); color: rgba(var(--white-rgb), .6); paddin
   font-weight: 600;
   letter-spacing: .04em;
 }
-.timeline-item .what strong { color: var(--navy); display: block; margin-bottom: 2px; font-family: var(--font-serif); font-size: 1rem; }
+.timeline-item .what strong { color: var(--navy); display: block; margin-bottom: 2px; font-family: var(--font-sans); font-weight: 700; font-size: 1rem; }
 .timeline-item .what span { color: var(--ink-soft); font-size: .9rem; }
 
 /* ===== EQUIVALÊNCIA DE INVESTIMENTO (página /planos/) ===== */
@@ -1413,7 +1421,7 @@ footer { background: var(--navy-deep); color: rgba(var(--white-rgb), .6); paddin
   border-color: var(--navy);
 }
 .compare-card h4 {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-weight: 700;
   font-size: 1.15rem;
   margin-bottom: 16px;
@@ -1475,7 +1483,7 @@ footer { background: var(--navy-deep); color: rgba(var(--white-rgb), .6); paddin
   font-size: 1rem;
   line-height: 1.7;
 }
-.prose h2 { font-size: clamp(1.4rem, 2.4vw, 2rem); margin: 36px 0 14px; color: var(--navy); }
+.prose h2 { font-family: var(--font-sans); font-weight: 700; font-size: clamp(1.4rem, 2.4vw, 2rem); line-height: 1.3; letter-spacing: -.01em; margin: 36px 0 14px; color: var(--navy); }
 .prose h3 { font-family: var(--font-sans); font-size: 1.15rem; margin: 28px 0 10px; color: var(--navy); font-weight: 700; }
 .prose p { margin-bottom: 16px; }
 .prose ul, .prose ol { margin: 0 0 16px 22px; }
@@ -1553,8 +1561,8 @@ footer { background: var(--navy-deep); color: rgba(var(--white-rgb), .6); paddin
   margin-bottom: 5px;
 }
 .contact-channel .ch-value {
-  font-family: var(--font-serif);
-  font-weight: 600;
+  font-family: var(--font-sans);
+  font-weight: 700;
   color: var(--navy);
   font-size: 1rem;
 }
@@ -2040,8 +2048,12 @@ footer { background: var(--navy-deep); color: rgba(var(--white-rgb), .6); paddin
   text-align: center;
 }
 .post-cta h2 {
+  font-family: var(--font-sans);
+  font-weight: 700;
   color: var(--white);
   font-size: clamp(1.3rem, 2.4vw, 1.7rem);
+  line-height: 1.3;
+  letter-spacing: -.01em;
   margin-bottom: 10px;
 }
 .post-cta p {
