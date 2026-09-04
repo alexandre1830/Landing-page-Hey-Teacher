@@ -59,18 +59,18 @@
     if (refInput) refInput.value = (document.referrer || '').slice(0, 300);
   } catch (_) { /* noop */ }
 
-  // ===== Máscara de telefone BR =====
+  // ===== Sanitização leve do telefone (aceita formato internacional) =====
+  // Não força máscara BR: mantém dígitos, espaço, hífen e parênteses, além de
+  // um "+" apenas como primeiro caractere (código do país). Assim números do
+  // Brasil e do exterior passam sem serem truncados ou reformatados.
   if (phoneInput) {
-    const applyMask = (v) => {
-      v = v.replace(/\D/g, '').slice(0, 11);
-      if (v.length > 10) return v.replace(/^(\d{2})(\d{5})(\d{0,4}).*/, '($1) $2-$3');
-      if (v.length > 6)  return v.replace(/^(\d{2})(\d{4})(\d{0,4}).*/, '($1) $2-$3');
-      if (v.length > 2)  return v.replace(/^(\d{2})(\d{0,5}).*/, '($1) $2');
-      if (v.length > 0)  return v.replace(/^(\d{0,2}).*/, '($1');
-      return '';
+    const sanitize = (v) => {
+      let cleaned = v.replace(/[^\d+\s()\-]/g, '');
+      cleaned = cleaned.replace(/(?!^)\+/g, ''); // "+" só no início
+      return cleaned.slice(0, 24);
     };
     phoneInput.addEventListener('input', () => {
-      phoneInput.value = applyMask(phoneInput.value);
+      phoneInput.value = sanitize(phoneInput.value);
     });
   }
 
@@ -129,17 +129,15 @@
       clearError('email', emailEl);
     }
 
-    // WhatsApp (11 dígitos)
+    // WhatsApp — nacional ou internacional (8 a 15 dígitos, padrão E.164)
     const phoneDigits = (phoneInput.value || '').replace(/\D/g, '');
     if (!phoneDigits) {
       showError('whatsapp', 'Coloca seu WhatsApp aqui.', phoneInput);
       firstInvalid = firstInvalid || phoneInput;
-    } else if (phoneDigits.length < 11) {
+    } else if (phoneDigits.length < 8 || phoneDigits.length > 15) {
       showError(
         'whatsapp',
-        phoneDigits.length < 10
-          ? 'Falta o DDD no número.'
-          : 'Falta um dígito (DDD + 9 dígitos).',
+        'Número incompleto. Se for de fora do Brasil, inclua o código do país (ex.: +44).',
         phoneInput
       );
       firstInvalid = firstInvalid || phoneInput;
