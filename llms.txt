@@ -13,7 +13,7 @@
 - [Home](https://heyteacher.com.br/): visão geral da proposta, metodologia resumida em 7 pilares, planos, depoimentos, FAQ.
 - [Metodologia](https://heyteacher.com.br/metodologia/): os 7 pilares do método explicados (gramática simplificada, vocabulário por tópicos, exercícios focados, leitura, vídeos e músicas, escrita prática, conversação ao vivo) + timeline de uma aula típica de 50 minutos.
 - [Sobre o professor](https://heyteacher.com.br/sobre/): trajetória do Alexandre, filosofia de ensino, formação acadêmica.
-- [Planos e investimento](https://heyteacher.com.br/planos/): três planos com mensalidades em reais — Essencial (R$ 219,90, 1 aula/semana), Acelerador (R$ 329,90, 2 aulas/semana), Intensivo (R$ 439,90, 3 aulas/semana). Inclui FAQ específico de preço.
+- [Planos e investimento](https://heyteacher.com.br/planos/): três planos com mensalidades em reais — Essencial (R$ 249, 1 aula/semana), Acelerador (R$ 399, 2 aulas/semana), Intensivo (R$ 499, 3 aulas/semana). Inclui FAQ específico de preço.
 - [Certificação CEFR](https://heyteacher.com.br/certificacao/): explicação dos níveis A1–C2, como funciona a avaliação interna das quatro habilidades (reading, listening, writing, speaking), amostra do certificado.
 - [Contato / agendar aula diagnóstica](https://heyteacher.com.br/contato/): formulário para agendar aula diagnóstica gratuita (sem compromisso), com resposta em até 24h via WhatsApp.
 
