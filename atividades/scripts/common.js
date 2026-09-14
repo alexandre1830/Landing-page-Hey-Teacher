@@ -103,6 +103,30 @@ const ACTIVITIES = {
       </div>`
   },
 
+  sentences: {
+    id: 'sentences',
+    slug: 'monte-a-frase',
+    title: 'Monte a Frase',
+    kicker: 'Gramática',
+    dataUrl: `${ACTIVITIES_ROOT}/data/sentences.json`,
+    levelMeta: ld => `${ld.puzzles.length} rodadas · ${ld.puzzles.reduce((sum, p) => sum + p.sentences.length, 0)} frases`,
+    totalMeta: data => {
+      const total = LEVEL_ORDER.reduce((sum, l) => sum + data.levels[l].puzzles.reduce((s, p) => s + p.sentences.length, 0), 0);
+      return `${LEVEL_ORDER.length} níveis · ${total} frases`;
+    },
+    visual: `
+      <div class="ac-sb" aria-hidden="true">
+        <div class="ac-sb-line">
+          ${['She', 'has', 'already'].map(w => `<span class="ok">${w}</span>`).join('')}<span class="slot"></span><span class="end">.</span>
+        </div>
+        <div class="ac-sb-bank">
+          ${[['finished', ''], ['', 'used'], ['yet', 'extra'], ['', 'used'], ['work', ''], ['her', ''], ['', 'used']].map(([w, st]) =>
+            `<span class="${st}">${w}</span>`
+          ).join('')}
+        </div>
+      </div>`
+  },
+
   hangman: {
     id: 'hangman',
     slug: 'jogo-da-forca',

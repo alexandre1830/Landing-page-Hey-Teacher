@@ -521,6 +521,78 @@
 
 .activity-card:hover .ac-mm { transform: scale(1.06) rotate(-2deg); }
 
+/* Sentence builder illustration: answer line + word bank */
+.ac-sb {
+  width: min(260px, 86%);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: transform .45s var(--spring);
+}
+
+.ac-sb-line,
+.ac-sb-bank {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.ac-sb-line {
+  min-height: 52px;
+  padding: 9px 10px;
+  border-radius: 10px;
+  background: var(--white);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.3);
+}
+
+.ac-sb span {
+  min-width: 30px;
+  height: 26px;
+  padding: 0 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .78rem;
+  font-weight: 700;
+  color: var(--navy);
+  background: var(--pz-paper);
+  border-radius: 6px;
+  box-shadow: inset 0 -2px 0 rgba(3, 45, 111, 0.18);
+}
+
+.ac-sb-line span.ok { color: var(--white); background: var(--pz-green); box-shadow: none; }
+
+.ac-sb-line span.slot {
+  min-width: 52px;
+  background: transparent;
+  box-shadow: inset 0 0 0 1.5px var(--red);
+}
+
+.ac-sb-line span.end {
+  min-width: 0;
+  padding: 0;
+  font-size: 1rem;
+  background: none;
+  box-shadow: none;
+}
+
+.ac-sb-bank span.used {
+  min-width: 44px;
+  background: transparent;
+  box-shadow: inset 0 0 0 1.5px rgba(238, 242, 249, 0.25);
+}
+
+.ac-sb-bank span.extra {
+  color: rgba(238, 242, 249, 0.6);
+  background: transparent;
+  box-shadow: inset 0 0 0 1.5px rgba(238, 242, 249, 0.25);
+  text-decoration: line-through;
+}
+
+.activity-card:hover .ac-sb { transform: scale(1.06) rotate(2deg); }
+
 /* Quiz show illustration: question with timer + answer tiles */
 .ac-qz {
   width: min(250px, 84%);

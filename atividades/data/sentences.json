@@ -1,0 +1,624 @@
+{
+  "metadata": {
+    "title": "English Sentence Builder Rounds by CEFR Level",
+    "description": "36 themed rounds of 8 sentences each. The player puts shuffled words in the right order. Grammar topics, sentence length, extra words that don't belong, tries and translation hints are calibrated to each CEFR level.",
+    "framework": "CEFR (Common European Framework of Reference for Languages)",
+    "puzzles_per_level": 6,
+    "sentences_per_puzzle": 8,
+    "levels": ["A1", "A2", "B1", "B2", "C1", "C2"],
+    "level_settings": {
+      "tries": "Wrong checks allowed per sentence before the answer is shown.",
+      "extras": "How many words from each sentence's \"extra\" list are mixed in as distractors.",
+      "hint": "\"always\" shows the Portuguese translation from the start; \"on-request\" hides it until the player asks for it."
+    },
+    "sentence_fields": {
+      "text": "The answer, with its punctuation. Tiles are the words without commas or final punctuation.",
+      "alt": "Other correct orders that use exactly the same words.",
+      "pt": "Portuguese translation used as a hint.",
+      "extra": "Distractor words that can't form a correct sentence.",
+      "keepCase": "Keep the capital letter of the first word (proper nouns)."
+    },
+    "version": "1.0"
+  },
+  "levels": {
+    "A1": {
+      "name": "Beginner",
+      "description": "Short sentences with everyday verbs. The translation is always visible and you have three tries per sentence.",
+      "tries": 3,
+      "extras": 0,
+      "hint": "always",
+      "puzzles": [
+        {
+          "id": "A1-intro",
+          "theme": "Meeting People",
+          "description": "Introducing yourself and others.",
+          "sentences": [
+            { "text": "Nice to meet you.", "pt": "Prazer em conhecer você." },
+            { "text": "Where are you from?", "pt": "De onde você é?" },
+            { "text": "I am from Brazil.", "pt": "Eu sou do Brasil." },
+            { "text": "How old is your sister?", "pt": "Quantos anos tem a sua irmã?" },
+            { "text": "This is my best friend.", "pt": "Este é o meu melhor amigo." },
+            { "text": "What do you do?", "pt": "O que você faz da vida?" },
+            { "text": "She is a nurse at the hospital.", "pt": "Ela é enfermeira no hospital." },
+            { "text": "His parents are very kind.", "pt": "Os pais dele são muito gentis." }
+          ]
+        },
+        {
+          "id": "A1-routine",
+          "theme": "Daily Routine",
+          "description": "Present simple for things you do every day.",
+          "sentences": [
+            { "text": "I get up at seven.", "alt": ["At seven, I get up."], "pt": "Eu me levanto às sete." },
+            { "text": "She always has breakfast at home.", "pt": "Ela sempre toma café da manhã em casa." },
+            { "text": "We go to work by bus.", "alt": ["We go by bus to work."], "pt": "Nós vamos ao trabalho de ônibus." },
+            { "text": "He never drinks coffee.", "pt": "Ele nunca bebe café." },
+            { "text": "My father works in a bank.", "pt": "Meu pai trabalha em um banco." },
+            { "text": "They watch TV after dinner.", "alt": ["After dinner, they watch TV."], "pt": "Eles assistem TV depois do jantar." },
+            { "text": "I don't work on Sundays.", "alt": ["On Sundays, I don't work."], "pt": "Eu não trabalho aos domingos." },
+            { "text": "The shop opens at nine.", "alt": ["At nine, the shop opens."], "pt": "A loja abre às nove." }
+          ]
+        },
+        {
+          "id": "A1-questions",
+          "theme": "Asking Questions",
+          "description": "Questions with do, does and question words.",
+          "sentences": [
+            { "text": "Do you like pizza?", "pt": "Você gosta de pizza?" },
+            { "text": "Where does she live?", "pt": "Onde ela mora?" },
+            { "text": "What time is it?", "pt": "Que horas são?" },
+            { "text": "Is your house big?", "pt": "A sua casa é grande?" },
+            { "text": "Does he have a car?", "pt": "Ele tem carro?" },
+            { "text": "When is your birthday?", "pt": "Quando é o seu aniversário?" },
+            { "text": "Are they your brothers?", "pt": "Eles são seus irmãos?" },
+            { "text": "How do you spell your name?", "pt": "Como se soletra o seu nome?" }
+          ]
+        },
+        {
+          "id": "A1-town",
+          "theme": "Around Town",
+          "description": "There is, there are and where things are.",
+          "sentences": [
+            { "text": "There is a park near my house.", "alt": ["Near my house, there is a park."], "pt": "Tem um parque perto da minha casa." },
+            { "text": "There are two banks on this street.", "alt": ["On this street, there are two banks."], "pt": "Há dois bancos nesta rua." },
+            { "text": "The cinema is next to the school.", "pt": "O cinema fica ao lado da escola." },
+            { "text": "Is there a pharmacy here?", "pt": "Tem uma farmácia aqui?" },
+            { "text": "The bus stop is behind the church.", "pt": "O ponto de ônibus fica atrás da igreja." },
+            { "text": "There aren't any shops in my village.", "alt": ["In my village, there aren't any shops."], "pt": "Não há lojas no meu vilarejo." },
+            { "text": "My school is on the left.", "pt": "Minha escola fica à esquerda." },
+            { "text": "Where is the train station?", "pt": "Onde fica a estação de trem?" }
+          ]
+        },
+        {
+          "id": "A1-can",
+          "theme": "What Can You Do?",
+          "description": "Can and can't for ability and permission.",
+          "sentences": [
+            { "text": "I can swim very well.", "pt": "Eu sei nadar muito bem." },
+            { "text": "She can't drive a car.", "pt": "Ela não sabe dirigir." },
+            { "text": "Can you speak English?", "pt": "Você fala inglês?" },
+            { "text": "My brother can play the guitar.", "pt": "Meu irmão sabe tocar violão." },
+            { "text": "We can meet after class.", "alt": ["After class, we can meet."], "pt": "Podemos nos encontrar depois da aula." },
+            { "text": "Can I open the window?", "pt": "Posso abrir a janela?" },
+            { "text": "Birds can fly, but penguins can't.", "pt": "Os pássaros sabem voar, mas os pinguins não." },
+            { "text": "You can't park here.", "pt": "Você não pode estacionar aqui." }
+          ]
+        },
+        {
+          "id": "A1-likes",
+          "theme": "Likes & Dislikes",
+          "description": "Talking about what you love and hate.",
+          "sentences": [
+            { "text": "I love my new job.", "pt": "Eu amo meu novo emprego." },
+            { "text": "She doesn't like cold weather.", "pt": "Ela não gosta de tempo frio." },
+            { "text": "Do you like horror films?", "pt": "Você gosta de filmes de terror?" },
+            { "text": "My kids love chocolate cake.", "pt": "Meus filhos adoram bolo de chocolate." },
+            { "text": "He hates getting up early.", "pt": "Ele odeia acordar cedo." },
+            { "text": "We really like this song.", "pt": "Nós gostamos muito desta música." },
+            { "text": "What kind of music do you like?", "pt": "Que tipo de música você curte?" },
+            { "text": "I don't like tea very much.", "pt": "Eu não gosto muito de chá." }
+          ]
+        }
+      ]
+    },
+
+    "A2": {
+      "name": "Elementary",
+      "description": "Longer sentences about the past, the future and comparisons. The translation is always visible and you have three tries.",
+      "tries": 3,
+      "extras": 0,
+      "hint": "always",
+      "puzzles": [
+        {
+          "id": "A2-weekend",
+          "theme": "Last Weekend",
+          "description": "Past simple for finished actions.",
+          "sentences": [
+            { "text": "I visited my grandparents last Saturday.", "alt": ["Last Saturday, I visited my grandparents."], "pt": "Visitei meus avós no sábado passado." },
+            { "text": "We didn't go to the beach.", "pt": "Nós não fomos à praia." },
+            { "text": "Did you watch the game yesterday?", "pt": "Você assistiu ao jogo ontem?" },
+            { "text": "She bought a new dress for the party.", "alt": ["For the party, she bought a new dress."], "pt": "Ela comprou um vestido novo para a festa." },
+            { "text": "What did you do on Sunday?", "pt": "O que você fez no domingo?" },
+            { "text": "They stayed at home because it rained.", "alt": ["Because it rained, they stayed at home."], "pt": "Eles ficaram em casa porque choveu." },
+            { "text": "My brother cooked dinner for everyone.", "pt": "Meu irmão fez o jantar para todo mundo." },
+            { "text": "We had a great time at the concert.", "pt": "Nós nos divertimos muito no show." }
+          ]
+        },
+        {
+          "id": "A2-future",
+          "theme": "Future Plans",
+          "description": "Going to, will and the present continuous for plans.",
+          "sentences": [
+            { "text": "I'm going to study abroad next year.", "alt": ["Next year, I'm going to study abroad."], "pt": "Vou estudar no exterior no ano que vem." },
+            { "text": "Are you going to call her tonight?", "pt": "Você vai ligar para ela hoje à noite?" },
+            { "text": "It will probably rain tomorrow.", "alt": ["Tomorrow, it will probably rain."], "pt": "Provavelmente vai chover amanhã." },
+            { "text": "We're meeting our friends at eight.", "alt": ["At eight, we're meeting our friends."], "pt": "Vamos encontrar nossos amigos às oito." },
+            { "text": "She isn't going to buy that car.", "pt": "Ela não vai comprar aquele carro." },
+            { "text": "I think I'll have the fish.", "pt": "Acho que vou pedir o peixe." },
+            { "text": "What are you doing this weekend?", "pt": "O que você vai fazer neste fim de semana?" },
+            { "text": "They won't finish the project on time.", "pt": "Eles não vão terminar o projeto a tempo." }
+          ]
+        },
+        {
+          "id": "A2-compare",
+          "theme": "Comparing Things",
+          "description": "Comparatives, superlatives and as ... as.",
+          "sentences": [
+            { "text": "My new phone is lighter than my old one.", "pt": "Meu celular novo é mais leve que o antigo." },
+            { "text": "This is the best restaurant in town.", "pt": "Este é o melhor restaurante da cidade." },
+            { "text": "Is Brazil bigger than Argentina?", "pt": "O Brasil é maior que a Argentina?" },
+            { "text": "Today is hotter than yesterday.", "pt": "Hoje está mais quente que ontem." },
+            { "text": "She is the tallest girl in her class.", "pt": "Ela é a menina mais alta da turma." },
+            { "text": "Trains are more comfortable than buses.", "pt": "Trens são mais confortáveis que ônibus." },
+            { "text": "This exercise is not as easy as it looks.", "pt": "Este exercício não é tão fácil quanto parece." },
+            { "text": "What is the most beautiful city you know?", "pt": "Qual é a cidade mais bonita que você conhece?" }
+          ]
+        },
+        {
+          "id": "A2-now",
+          "theme": "Right Now",
+          "description": "Present continuous for what is happening now.",
+          "sentences": [
+            { "text": "I'm reading a very good book.", "pt": "Estou lendo um livro muito bom." },
+            { "text": "What are you doing right now?", "pt": "O que você está fazendo agora?" },
+            { "text": "The children are playing in the garden.", "pt": "As crianças estão brincando no jardim." },
+            { "text": "She isn't working today.", "alt": ["Today, she isn't working."], "pt": "Ela não está trabalhando hoje." },
+            { "text": "Is it raining outside?", "pt": "Está chovendo lá fora?" },
+            { "text": "We're waiting for the bus.", "pt": "Estamos esperando o ônibus." },
+            { "text": "Why are you laughing at me?", "pt": "Por que você está rindo de mim?" },
+            { "text": "My parents are travelling around Europe.", "pt": "Meus pais estão viajando pela Europa." }
+          ]
+        },
+        {
+          "id": "A2-rules",
+          "theme": "Rules & Advice",
+          "description": "Must, have to and should.",
+          "sentences": [
+            { "text": "You must wear a seat belt.", "pt": "Você deve usar cinto de segurança." },
+            { "text": "You should see a doctor.", "pt": "Você deveria ir ao médico." },
+            { "text": "We don't have to wear a uniform.", "pt": "Nós não precisamos usar uniforme." },
+            { "text": "Do I have to pay now?", "pt": "Tenho que pagar agora?" },
+            { "text": "You mustn't use your phone here.", "pt": "Você não pode usar o celular aqui." },
+            { "text": "She should drink more water.", "pt": "Ela deveria beber mais água." },
+            { "text": "Students have to arrive before eight.", "pt": "Os alunos têm que chegar antes das oito." },
+            { "text": "What should I bring to the party?", "pt": "O que eu devo levar para a festa?" }
+          ]
+        },
+        {
+          "id": "A2-cafe",
+          "theme": "At the Café",
+          "description": "Polite requests and offers.",
+          "sentences": [
+            { "text": "I would like a glass of water.", "pt": "Eu gostaria de um copo de água." },
+            { "text": "Could you bring the menu, please?", "alt": ["Could you please bring the menu?"], "pt": "Você poderia trazer o cardápio, por favor?" },
+            { "text": "Can I pay by card?", "pt": "Posso pagar com cartão?" },
+            { "text": "Would you like some dessert?", "pt": "Você gostaria de uma sobremesa?" },
+            { "text": "How much is the chocolate cake?", "pt": "Quanto custa o bolo de chocolate?" },
+            { "text": "We'd like a table for four.", "pt": "Gostaríamos de uma mesa para quatro." },
+            { "text": "Could I have the bill, please?", "alt": ["Could I please have the bill?"], "pt": "Pode me trazer a conta, por favor?" },
+            { "text": "Is there any sugar in this juice?", "pt": "Tem açúcar neste suco?" }
+          ]
+        }
+      ]
+    },
+
+    "B1": {
+      "name": "Intermediate",
+      "description": "Present perfect, conditionals, the passive and linking words. One extra word doesn't belong, and the translation is shown on request.",
+      "tries": 3,
+      "extras": 1,
+      "hint": "on-request",
+      "puzzles": [
+        {
+          "id": "B1-experiences",
+          "theme": "Life Experiences",
+          "description": "Present perfect with ever, never, already and yet.",
+          "sentences": [
+            { "text": "Have you ever been to London?", "extra": ["went"], "pt": "Você já foi a Londres?" },
+            { "text": "I have never tried Japanese food.", "extra": ["try"], "pt": "Eu nunca experimentei comida japonesa." },
+            { "text": "She has already finished her homework.", "alt": ["She has finished her homework already."], "extra": ["yet"], "pt": "Ela já terminou a lição de casa." },
+            { "text": "We haven't decided where to go yet.", "extra": ["already"], "pt": "Ainda não decidimos aonde ir." },
+            { "text": "How long have you lived in this city?", "extra": ["since"], "pt": "Há quanto tempo você mora nesta cidade?" },
+            { "text": "They have known each other since 2015.", "alt": ["Since 2015, they have known each other."], "extra": ["for"], "pt": "Eles se conhecem desde 2015." },
+            { "text": "He has just left the office.", "extra": ["yet"], "pt": "Ele acabou de sair do escritório." },
+            { "text": "I've lost my keys again.", "extra": ["losed"], "pt": "Perdi minhas chaves de novo." }
+          ]
+        },
+        {
+          "id": "B1-linking",
+          "theme": "Linking Ideas",
+          "description": "Because, so, although, in case and more.",
+          "sentences": [
+            { "text": "I stayed at home because I was tired.", "alt": ["Because I was tired, I stayed at home."], "extra": ["so"], "pt": "Fiquei em casa porque estava cansado." },
+            { "text": "It was raining, so we took a taxi.", "extra": ["because"], "pt": "Estava chovendo, então pegamos um táxi." },
+            { "text": "Although it was late, she kept working.", "alt": ["She kept working although it was late."], "extra": ["but"], "pt": "Embora fosse tarde, ela continuou trabalhando." },
+            { "text": "He's rich, but he isn't happy.", "extra": ["although"], "pt": "Ele é rico, mas não é feliz." },
+            { "text": "I'll call you when I get home.", "alt": ["When I get home, I'll call you."], "extra": ["will"], "pt": "Eu te ligo quando chegar em casa." },
+            { "text": "She studied hard in order to pass the exam.", "extra": ["for"], "pt": "Ela estudou muito para passar na prova." },
+            { "text": "We went out even though it was cold.", "alt": ["Even though it was cold, we went out."], "extra": ["despite"], "pt": "Saímos, mesmo estando frio." },
+            { "text": "Take an umbrella in case it rains.", "alt": ["In case it rains, take an umbrella."], "extra": ["if"], "pt": "Leve um guarda-chuva caso chova." }
+          ]
+        },
+        {
+          "id": "B1-conditionals",
+          "theme": "If Clauses",
+          "description": "First and second conditionals.",
+          "sentences": [
+            { "text": "If it rains, we will stay at home.", "alt": ["We will stay at home if it rains."], "extra": ["would"], "pt": "Se chover, vamos ficar em casa." },
+            { "text": "If I had more time, I would travel more.", "alt": ["I would travel more if I had more time."], "extra": ["will"], "pt": "Se eu tivesse mais tempo, viajaria mais." },
+            { "text": "What would you do if you won the lottery?", "alt": ["If you won the lottery, what would you do?"], "extra": ["will"], "pt": "O que você faria se ganhasse na loteria?" },
+            { "text": "You'll feel better if you get some sleep.", "alt": ["If you get some sleep, you'll feel better."], "extra": ["would"], "pt": "Você vai se sentir melhor se dormir um pouco." },
+            { "text": "If I were you, I would accept the offer.", "alt": ["I would accept the offer if I were you."], "extra": ["will"], "pt": "Se eu fosse você, aceitaria a oferta." },
+            { "text": "She won't come unless you invite her.", "alt": ["Unless you invite her, she won't come."], "extra": ["if"], "pt": "Ela não vem a menos que você a convide." },
+            { "text": "If you heat ice, it melts.", "alt": ["Ice melts if you heat it."], "extra": ["will"], "pt": "Se você aquece o gelo, ele derrete." },
+            { "text": "Would you be angry if I told him the truth?", "alt": ["If I told him the truth, would you be angry?"], "extra": ["tell"], "pt": "Você ficaria bravo se eu contasse a verdade para ele?" }
+          ]
+        },
+        {
+          "id": "B1-passive",
+          "theme": "The Passive Voice",
+          "description": "When the action matters more than who does it.",
+          "sentences": [
+            { "text": "This bridge was built in 1920.", "alt": ["In 1920, this bridge was built."], "extra": ["build"], "pt": "Esta ponte foi construída em 1920." },
+            { "text": "English is spoken all over the world.", "alt": ["All over the world, English is spoken."], "extra": ["speaks"], "keepCase": true, "pt": "O inglês é falado no mundo todo." },
+            { "text": "The winners will be announced tomorrow.", "alt": ["Tomorrow, the winners will be announced."], "extra": ["announce"], "pt": "Os vencedores serão anunciados amanhã." },
+            { "text": "My bike was stolen last night.", "alt": ["Last night, my bike was stolen."], "extra": ["stole"], "pt": "Minha bicicleta foi roubada ontem à noite." },
+            { "text": "Are these shoes made in Italy?", "extra": ["make"], "pt": "Estes sapatos são feitos na Itália?" },
+            { "text": "The letter hasn't been sent yet.", "extra": ["sended"], "pt": "A carta ainda não foi enviada." },
+            { "text": "The house is cleaned every Friday.", "alt": ["Every Friday, the house is cleaned."], "extra": ["cleans"], "pt": "A casa é limpa toda sexta-feira." },
+            { "text": "The meeting has been cancelled.", "extra": ["cancel"], "pt": "A reunião foi cancelada." }
+          ]
+        },
+        {
+          "id": "B1-habits",
+          "theme": "Past Habits",
+          "description": "Used to, would and be used to.",
+          "sentences": [
+            { "text": "I used to live in a small town.", "extra": ["use"], "pt": "Eu morava numa cidade pequena." },
+            { "text": "Did you use to play any sports?", "extra": ["used"], "pt": "Você praticava algum esporte?" },
+            { "text": "She didn't use to like vegetables.", "extra": ["used"], "pt": "Ela não gostava de legumes." },
+            { "text": "There used to be a cinema here.", "extra": ["had"], "pt": "Antigamente havia um cinema aqui." },
+            { "text": "We used to go camping every summer.", "alt": ["Every summer, we used to go camping."], "extra": ["going"], "pt": "Nós costumávamos acampar todo verão." },
+            { "text": "My grandfather would tell us stories.", "extra": ["used"], "pt": "Meu avô contava histórias para nós." },
+            { "text": "He is used to working at night.", "extra": ["work"], "pt": "Ele está acostumado a trabalhar à noite." },
+            { "text": "I'm getting used to the cold weather.", "extra": ["get"], "pt": "Estou me acostumando com o frio." }
+          ]
+        },
+        {
+          "id": "B1-relative",
+          "theme": "Relative Clauses",
+          "description": "Who, which, that, where and whose.",
+          "sentences": [
+            { "text": "That's the man who helped me.", "extra": ["which"], "pt": "Aquele é o homem que me ajudou." },
+            { "text": "This is the book that changed my life.", "extra": ["who"], "pt": "Este é o livro que mudou a minha vida." },
+            { "text": "The hotel where we stayed was amazing.", "extra": ["which"], "pt": "O hotel onde ficamos era incrível." },
+            { "text": "I have a friend whose father is a pilot.", "extra": ["who"], "pt": "Tenho um amigo cujo pai é piloto." },
+            { "text": "Is this the phone you bought yesterday?", "extra": ["who"], "pt": "Este é o celular que você comprou ontem?" },
+            { "text": "The girl who won the prize is my cousin.", "extra": ["which"], "pt": "A menina que ganhou o prêmio é minha prima." },
+            { "text": "Do you remember the day when we met?", "extra": ["which"], "pt": "Você lembra do dia em que nos conhecemos?" },
+            { "text": "The cake that she made was delicious.", "extra": ["who"], "pt": "O bolo que ela fez estava delicioso." }
+          ]
+        }
+      ]
+    },
+
+    "B2": {
+      "name": "Upper-Intermediate",
+      "description": "Wishes, reported speech, indirect questions and deduction. One extra word, translation on request and two tries per sentence.",
+      "tries": 2,
+      "extras": 1,
+      "hint": "on-request",
+      "puzzles": [
+        {
+          "id": "B2-regrets",
+          "theme": "Regrets & Wishes",
+          "description": "Third conditional, wish and if only.",
+          "sentences": [
+            { "text": "If I had studied harder, I would have passed.", "alt": ["I would have passed if I had studied harder."], "extra": ["will"], "pt": "Se eu tivesse estudado mais, teria passado." },
+            { "text": "I wish I had more free time.", "extra": ["have"], "pt": "Queria ter mais tempo livre." },
+            { "text": "She wishes she hadn't said that.", "extra": ["didn't"], "pt": "Ela queria não ter dito aquilo." },
+            { "text": "If only I had listened to your advice.", "extra": ["listen"], "pt": "Se ao menos eu tivesse ouvido o seu conselho." },
+            { "text": "We would have missed the flight if we hadn't taken a taxi.", "alt": ["If we hadn't taken a taxi, we would have missed the flight."], "extra": ["didn't"], "pt": "Teríamos perdido o voo se não tivéssemos pegado um táxi." },
+            { "text": "I wish you wouldn't interrupt me all the time.", "extra": ["don't"], "pt": "Queria que você não me interrompesse o tempo todo." },
+            { "text": "He regrets not taking the job.", "extra": ["to"], "pt": "Ele se arrepende de não ter aceitado o emprego." },
+            { "text": "What would you have done in my position?", "alt": ["In my position, what would you have done?"], "extra": ["did"], "pt": "O que você teria feito no meu lugar?" }
+          ]
+        },
+        {
+          "id": "B2-reported",
+          "theme": "Reported Speech",
+          "description": "Telling others what people said and asked.",
+          "sentences": [
+            { "text": "She said that she was feeling tired.", "extra": ["told"], "pt": "Ela disse que estava se sentindo cansada." },
+            { "text": "He told me he would call later.", "extra": ["said"], "pt": "Ele me disse que ligaria mais tarde." },
+            { "text": "They asked us where we lived.", "extra": ["did"], "pt": "Eles nos perguntaram onde morávamos." },
+            { "text": "My boss asked me to finish the report.", "extra": ["said"], "pt": "Meu chefe me pediu para terminar o relatório." },
+            { "text": "She wanted to know if I was coming.", "extra": ["am"], "pt": "Ela queria saber se eu vinha." },
+            { "text": "The doctor advised him to stop smoking.", "extra": ["said"], "pt": "O médico o aconselhou a parar de fumar." },
+            { "text": "He denied breaking the window.", "extra": ["to"], "pt": "Ele negou ter quebrado a janela." },
+            { "text": "I asked her why she had left so early.", "extra": ["did"], "pt": "Perguntei a ela por que tinha saído tão cedo." }
+          ]
+        },
+        {
+          "id": "B2-indirect",
+          "theme": "Polite Questions",
+          "description": "Indirect questions: no inversion after the question word.",
+          "sentences": [
+            { "text": "Could you tell me where the station is?", "extra": ["does"], "pt": "Você poderia me dizer onde fica a estação?" },
+            { "text": "Do you know what time the museum opens?", "extra": ["does"], "pt": "Você sabe a que horas o museu abre?" },
+            { "text": "I wonder why she didn't come to the party.", "extra": ["does"], "pt": "Fico me perguntando por que ela não veio à festa." },
+            { "text": "Can you tell me how much this costs?", "extra": ["does"], "pt": "Você pode me dizer quanto isto custa?" },
+            { "text": "Do you have any idea who took my pen?", "extra": ["did"], "pt": "Você tem ideia de quem pegou a minha caneta?" },
+            { "text": "I'd like to know whether the price includes breakfast.", "extra": ["does"], "pt": "Eu gostaria de saber se o preço inclui café da manhã." },
+            { "text": "Would you mind telling me your name?", "extra": ["to"], "pt": "Você se importaria de me dizer o seu nome?" },
+            { "text": "Could you explain what this word means?", "extra": ["does"], "pt": "Você poderia explicar o que esta palavra significa?" }
+          ]
+        },
+        {
+          "id": "B2-deduction",
+          "theme": "Must Have, Can't Have",
+          "description": "Modal verbs for deduction and possibility.",
+          "sentences": [
+            { "text": "She must be at work by now.", "alt": ["By now, she must be at work."], "extra": ["can"], "pt": "A esta hora ela já deve estar no trabalho." },
+            { "text": "You must have been exhausted after the trip.", "alt": ["After the trip, you must have been exhausted."], "extra": ["being"], "pt": "Você deve ter ficado exausto depois da viagem." },
+            { "text": "He can't have forgotten our meeting.", "extra": ["forget"], "pt": "Ele não pode ter esquecido a nossa reunião." },
+            { "text": "They might have missed the train.", "extra": ["missing"], "pt": "Eles podem ter perdido o trem." },
+            { "text": "It could be a mistake in the system.", "extra": ["been"], "pt": "Pode ser um erro no sistema." },
+            { "text": "The keys must be somewhere in the house.", "extra": ["have"], "pt": "As chaves devem estar em algum lugar da casa." },
+            { "text": "She may not have received my message.", "extra": ["receive"], "pt": "Ela pode não ter recebido a minha mensagem." },
+            { "text": "You can't be serious about quitting your job.", "extra": ["being"], "pt": "Você não pode estar falando sério sobre largar o emprego." }
+          ]
+        },
+        {
+          "id": "B2-verb-patterns",
+          "theme": "Gerunds & Infinitives",
+          "description": "Verbs followed by -ing or to.",
+          "sentences": [
+            { "text": "I'm looking forward to hearing from you.", "extra": ["hear"], "pt": "Aguardo o seu retorno." },
+            { "text": "She decided to change her career.", "extra": ["changing"], "pt": "Ela decidiu mudar de carreira." },
+            { "text": "Would you mind closing the door?", "extra": ["to"], "pt": "Você se importa de fechar a porta?" },
+            { "text": "He stopped smoking two years ago.", "alt": ["Two years ago, he stopped smoking."], "extra": ["smoke"], "pt": "Ele parou de fumar há dois anos." },
+            { "text": "I can't afford to buy a new car.", "extra": ["buying"], "pt": "Não tenho dinheiro para comprar um carro novo." },
+            { "text": "They avoided talking about the problem.", "extra": ["to"], "pt": "Eles evitaram falar sobre o problema." },
+            { "text": "Don't forget to lock the door.", "extra": ["locking"], "pt": "Não esqueça de trancar a porta." },
+            { "text": "It's no use complaining about the weather.", "extra": ["to"], "pt": "Não adianta reclamar do tempo." }
+          ]
+        },
+        {
+          "id": "B2-causative",
+          "theme": "Getting Things Done",
+          "description": "The causative and more passive forms.",
+          "sentences": [
+            { "text": "I had my hair cut yesterday.", "alt": ["Yesterday, I had my hair cut."], "extra": ["cutting"], "pt": "Cortei o cabelo ontem." },
+            { "text": "We're having our kitchen painted next week.", "alt": ["Next week, we're having our kitchen painted."], "extra": ["paint"], "pt": "Vamos mandar pintar a nossa cozinha na semana que vem." },
+            { "text": "You should get your eyes tested.", "extra": ["test"], "pt": "Você deveria fazer um exame de vista." },
+            { "text": "She got her phone repaired at the mall.", "extra": ["repair"], "pt": "Ela mandou consertar o celular no shopping." },
+            { "text": "The report is being reviewed by the manager.", "extra": ["reviewing"], "pt": "O relatório está sendo revisado pelo gerente." },
+            { "text": "Our flight has been delayed because of the storm.", "alt": ["Because of the storm, our flight has been delayed."], "extra": ["delaying"], "pt": "Nosso voo foi atrasado por causa da tempestade." },
+            { "text": "The new hospital is going to be opened in May.", "alt": ["In May, the new hospital is going to be opened."], "extra": ["open"], "pt": "O novo hospital será inaugurado em maio." },
+            { "text": "Where did you have your suit made?", "extra": ["make"], "pt": "Onde você mandou fazer o seu terno?" }
+          ]
+        }
+      ]
+    },
+
+    "C1": {
+      "name": "Advanced",
+      "description": "Inversion, cleft sentences, participle clauses and formal language. Two extra words, translation on request and two tries.",
+      "tries": 2,
+      "extras": 2,
+      "hint": "on-request",
+      "puzzles": [
+        {
+          "id": "C1-inversion",
+          "theme": "Inversion for Emphasis",
+          "description": "Negative adverbials at the start of the sentence.",
+          "sentences": [
+            { "text": "Not only did she win the race, but she also broke the record.", "extra": ["does", "was"], "pt": "Ela não só venceu a corrida como também quebrou o recorde." },
+            { "text": "Never have I seen such a beautiful sunset.", "extra": ["saw", "ever"], "pt": "Nunca vi um pôr do sol tão bonito." },
+            { "text": "Hardly had we arrived when it started to rain.", "extra": ["than", "did"], "pt": "Mal tínhamos chegado quando começou a chover." },
+            { "text": "Only then did I realise my mistake.", "extra": ["realised", "do"], "pt": "Só então percebi o meu erro." },
+            { "text": "Under no circumstances should you open this door.", "extra": ["not", "opened"], "pt": "Em hipótese alguma você deve abrir esta porta." },
+            { "text": "Rarely do we get the chance to relax.", "extra": ["does", "getting"], "pt": "Raramente temos a chance de relaxar." },
+            { "text": "No sooner had he left than the phone rang.", "extra": ["when", "did"], "pt": "Mal ele saiu, o telefone tocou." },
+            { "text": "Little did they know what was about to happen.", "extra": ["knew", "does"], "pt": "Mal sabiam eles o que estava prestes a acontecer." }
+          ]
+        },
+        {
+          "id": "C1-cleft",
+          "theme": "Cleft Sentences",
+          "description": "What I need is ... and It was ... who.",
+          "sentences": [
+            { "text": "What I need is a long holiday.", "alt": ["A long holiday is what I need."], "extra": ["that", "are"], "pt": "O que eu preciso é de umas longas férias." },
+            { "text": "It was my sister who told me the news.", "extra": ["which", "were"], "pt": "Foi a minha irmã que me contou a novidade." },
+            { "text": "All I want is a bit of peace and quiet.", "extra": ["wants", "are"], "pt": "Tudo o que eu quero é um pouco de paz e sossego." },
+            { "text": "The reason why I called is to apologise.", "extra": ["because", "for"], "pt": "O motivo pelo qual liguei é para pedir desculpas." },
+            { "text": "What surprised me most was his reaction.", "alt": ["His reaction was what surprised me most."], "extra": ["who", "were"], "pt": "O que mais me surpreendeu foi a reação dele." },
+            { "text": "It is not the money that matters to me.", "extra": ["who", "matter"], "pt": "Não é o dinheiro que importa para mim." },
+            { "text": "What happened was that we got completely lost.", "extra": ["happens", "who"], "pt": "O que aconteceu foi que nos perdemos completamente." },
+            { "text": "It was in Paris that they first met.", "extra": ["where", "meet"], "pt": "Foi em Paris que eles se conheceram." }
+          ]
+        },
+        {
+          "id": "C1-conditionals",
+          "theme": "Mixed Conditionals",
+          "description": "Past and present in the same conditional.",
+          "sentences": [
+            { "text": "If I had taken that job, I would be living in Tokyo now.", "alt": ["I would be living in Tokyo now if I had taken that job."], "extra": ["will", "lived"], "pt": "Se eu tivesse aceitado aquele emprego, estaria morando em Tóquio agora." },
+            { "text": "If she weren't so stubborn, she would have apologised.", "alt": ["She would have apologised if she weren't so stubborn."], "extra": ["will", "apologise"], "pt": "Se ela não fosse tão teimosa, teria pedido desculpas." },
+            { "text": "We wouldn't be lost if you had checked the map.", "alt": ["If you had checked the map, we wouldn't be lost."], "extra": ["didn't", "will"], "pt": "Não estaríamos perdidos se você tivesse olhado o mapa." },
+            { "text": "Had I known about the traffic, I would have left earlier.", "alt": ["I would have left earlier had I known about the traffic."], "extra": ["did", "knew"], "pt": "Se eu soubesse do trânsito, teria saído mais cedo." },
+            { "text": "Should you need any help, do not hesitate to call.", "alt": ["Do not hesitate to call should you need any help."], "extra": ["will", "needed"], "pt": "Caso precise de ajuda, não hesite em ligar." },
+            { "text": "Provided that you finish on time, you can leave early.", "alt": ["You can leave early provided that you finish on time."], "extra": ["unless", "will"], "pt": "Desde que você termine a tempo, pode sair mais cedo." },
+            { "text": "If he were more organised, he wouldn't have missed the deadline.", "alt": ["He wouldn't have missed the deadline if he were more organised."], "extra": ["will", "missing"], "pt": "Se ele fosse mais organizado, não teria perdido o prazo." },
+            { "text": "Suppose you lost your job, what would you do?", "extra": ["will", "did"], "pt": "Suponha que você perdesse o emprego: o que faria?" }
+          ]
+        },
+        {
+          "id": "C1-participles",
+          "theme": "Participle Clauses",
+          "description": "Having done, built in, not knowing ...",
+          "sentences": [
+            { "text": "Having finished the report, she went home.", "alt": ["She went home having finished the report."], "extra": ["finishing", "was"], "pt": "Depois de terminar o relatório, ela foi para casa." },
+            { "text": "Built in 1890, the theatre is the oldest in the city.", "alt": ["The theatre built in 1890 is the oldest in the city."], "extra": ["building", "was"], "pt": "Construído em 1890, o teatro é o mais antigo da cidade." },
+            { "text": "Not knowing what to say, he remained silent.", "alt": ["He remained silent, not knowing what to say."], "extra": ["didn't", "known"], "pt": "Sem saber o que dizer, ele ficou em silêncio." },
+            { "text": "Feeling exhausted, we decided to stop for the night.", "alt": ["We decided to stop for the night, feeling exhausted."], "extra": ["felt", "deciding"], "pt": "Exaustos, decidimos parar para passar a noite." },
+            { "text": "The woman sitting next to me was a famous writer.", "extra": ["sat", "who"], "pt": "A mulher sentada ao meu lado era uma escritora famosa." },
+            { "text": "Most of the people invited to the party didn't come.", "extra": ["inviting", "who"], "pt": "A maioria das pessoas convidadas para a festa não veio." },
+            { "text": "Having been warned about the risks, they still went ahead.", "alt": ["They still went ahead, having been warned about the risks."], "extra": ["warning", "being"], "pt": "Mesmo tendo sido avisados dos riscos, eles seguiram em frente." },
+            { "text": "Walking along the beach, I found a message in a bottle.", "alt": ["I found a message in a bottle walking along the beach."], "extra": ["walked", "finding"], "pt": "Caminhando pela praia, encontrei uma mensagem numa garrafa." }
+          ]
+        },
+        {
+          "id": "C1-formal",
+          "theme": "Formal & Tentative Language",
+          "description": "Hedging and impersonal structures.",
+          "sentences": [
+            { "text": "It could be argued that the policy has failed.", "extra": ["arguing", "been"], "pt": "Pode-se argumentar que a política fracassou." },
+            { "text": "The results appear to suggest a clear connection.", "extra": ["suggesting", "appears"], "pt": "Os resultados parecem sugerir uma conexão clara." },
+            { "text": "There is little evidence to support this claim.", "extra": ["few", "supporting"], "pt": "Há poucas evidências que sustentem essa afirmação." },
+            { "text": "It is widely believed that exercise improves mood.", "extra": ["believing", "widen"], "pt": "Acredita-se amplamente que o exercício melhora o humor." },
+            { "text": "This may be due to a lack of funding.", "extra": ["cause", "been"], "pt": "Isso pode ser devido à falta de financiamento." },
+            { "text": "The findings should be interpreted with caution.", "extra": ["interpreting", "carefully"], "pt": "Os resultados devem ser interpretados com cautela." },
+            { "text": "It seems unlikely that prices will fall this year.", "alt": ["This year, it seems unlikely that prices will fall."], "extra": ["unlike", "falling"], "pt": "Parece improvável que os preços caiam este ano." },
+            { "text": "To some extent, the plan was a success.", "alt": ["The plan was a success to some extent."], "extra": ["extend", "been"], "pt": "Até certo ponto, o plano foi um sucesso." }
+          ]
+        },
+        {
+          "id": "C1-linking",
+          "theme": "Advanced Linking",
+          "description": "Despite, whereas, provided that and more.",
+          "sentences": [
+            { "text": "Despite the heavy rain, the match went ahead.", "alt": ["The match went ahead despite the heavy rain."], "extra": ["although", "of"], "pt": "Apesar da chuva forte, a partida foi realizada." },
+            { "text": "She accepted the offer even though the salary was low.", "alt": ["Even though the salary was low, she accepted the offer."], "extra": ["despite", "however"], "pt": "Ela aceitou a oferta, embora o salário fosse baixo." },
+            { "text": "Whereas my brother loves sport, I prefer reading.", "alt": ["I prefer reading, whereas my brother loves sport."], "extra": ["however", "despite"], "pt": "Enquanto meu irmão adora esporte, eu prefiro ler." },
+            { "text": "In spite of being injured, he finished the race.", "alt": ["He finished the race in spite of being injured."], "extra": ["despite", "although"], "pt": "Apesar de estar machucado, ele terminou a corrida." },
+            { "text": "As long as you keep calm, everything will be fine.", "alt": ["Everything will be fine as long as you keep calm."], "extra": ["unless", "provided"], "pt": "Contanto que você mantenha a calma, tudo vai dar certo." },
+            { "text": "Owing to the strike, all flights were cancelled.", "alt": ["All flights were cancelled owing to the strike."], "extra": ["because", "due"], "pt": "Devido à greve, todos os voos foram cancelados." },
+            { "text": "Much as I like him, I can't trust him.", "alt": ["I can't trust him, much as I like him."], "extra": ["although", "so"], "pt": "Por mais que eu goste dele, não consigo confiar nele." },
+            { "text": "The plan is impractical, not to mention expensive.", "extra": ["mentioning", "despite"], "pt": "O plano é impraticável, sem falar que é caro." }
+          ]
+        }
+      ]
+    },
+
+    "C2": {
+      "name": "Proficiency",
+      "description": "Advanced inversion, the subjunctive, fronting and academic style. Two extra words, translation on request and two tries.",
+      "tries": 2,
+      "extras": 2,
+      "hint": "on-request",
+      "puzzles": [
+        {
+          "id": "C2-inversion",
+          "theme": "Advanced Inversion",
+          "description": "Were it not for, so ... that, not until ...",
+          "sentences": [
+            { "text": "Were it not for your support, we would never have succeeded.", "alt": ["We would never have succeeded were it not for your support."], "extra": ["was", "if"], "pt": "Se não fosse pelo seu apoio, nunca teríamos conseguido." },
+            { "text": "So complex was the problem that nobody could solve it.", "alt": ["The problem was so complex that nobody could solve it."], "extra": ["such", "is"], "pt": "O problema era tão complexo que ninguém conseguia resolvê-lo." },
+            { "text": "At no point did the company admit any wrongdoing.", "extra": ["does", "admitted"], "pt": "Em momento algum a empresa admitiu qualquer irregularidade." },
+            { "text": "Only after the results were published did the truth emerge.", "extra": ["was", "emerged"], "pt": "Só depois que os resultados foram publicados a verdade veio à tona." },
+            { "text": "Such was his anger that he left without a word.", "alt": ["His anger was such that he left without a word."], "extra": ["so", "is"], "pt": "Tamanha era a raiva dele que ele saiu sem dizer uma palavra." },
+            { "text": "Had we been informed earlier, we could have prevented the crisis.", "alt": ["We could have prevented the crisis had we been informed earlier."], "extra": ["if", "prevent"], "pt": "Se tivéssemos sido informados antes, poderíamos ter evitado a crise." },
+            { "text": "Not until the next morning did she notice the damage.", "alt": ["She did not notice the damage until the next morning."], "extra": ["noticed", "does"], "pt": "Só na manhã seguinte ela percebeu o estrago." },
+            { "text": "Nowhere else in the world will you find such hospitality.", "alt": ["You will find such hospitality nowhere else in the world."], "extra": ["would", "found"], "pt": "Em nenhum outro lugar do mundo você vai encontrar tanta hospitalidade." }
+          ]
+        },
+        {
+          "id": "C2-subjunctive",
+          "theme": "Formal Structures",
+          "description": "The subjunctive and other formal patterns.",
+          "sentences": [
+            { "text": "It is essential that every employee be informed.", "extra": ["being", "informing"], "pt": "É essencial que todos os funcionários sejam informados." },
+            { "text": "The committee recommended that the plan be postponed.", "extra": ["postpone", "being"], "pt": "O comitê recomendou que o plano fosse adiado." },
+            { "text": "I would rather you didn't mention this to anyone.", "extra": ["don't", "mentioned"], "pt": "Eu preferiria que você não mencionasse isso a ninguém." },
+            { "text": "It's high time we made a decision.", "extra": ["make", "to"], "pt": "Já passou da hora de tomarmos uma decisão." },
+            { "text": "She insisted that he apologise in person.", "extra": ["apologises", "to"], "pt": "Ela insistiu que ele pedisse desculpas pessoalmente." },
+            { "text": "If need be, we can postpone the launch.", "alt": ["We can postpone the launch if need be."], "extra": ["needs", "will"], "pt": "Se for preciso, podemos adiar o lançamento." },
+            { "text": "Be that as it may, the decision is final.", "alt": ["The decision is final, be that as it may."], "extra": ["are", "being"], "pt": "Seja como for, a decisão é final." },
+            { "text": "Heaven forbid that anything should happen to them.", "extra": ["forbids", "would"], "pt": "Deus me livre de acontecer alguma coisa com eles." }
+          ]
+        },
+        {
+          "id": "C2-fronting",
+          "theme": "Emphasis & Fronting",
+          "description": "Strange as it may seem, try as he might ...",
+          "sentences": [
+            { "text": "Strange as it may seem, I actually enjoyed the exam.", "alt": ["I actually enjoyed the exam, strange as it may seem."], "extra": ["although", "seems"], "pt": "Por mais estranho que pareça, eu realmente gostei da prova." },
+            { "text": "Try as he might, he couldn't open the door.", "alt": ["He couldn't open the door, try as he might."], "extra": ["tried", "however"], "pt": "Por mais que tentasse, ele não conseguia abrir a porta." },
+            { "text": "Much to our surprise, the proposal was approved.", "alt": ["The proposal was approved, much to our surprise."], "extra": ["surprising", "many"], "pt": "Para nossa grande surpresa, a proposta foi aprovada." },
+            { "text": "That he was lying was obvious to everyone.", "extra": ["what", "being"], "pt": "Que ele estava mentindo era óbvio para todos." },
+            { "text": "Talented though she is, she still lacks experience.", "alt": ["She still lacks experience, talented though she is."], "extra": ["although", "despite"], "pt": "Por mais talentosa que seja, ela ainda tem pouca experiência." },
+            { "text": "What really annoys me is people who never apologise.", "extra": ["which", "are"], "pt": "O que realmente me irrita são pessoas que nunca pedem desculpas." },
+            { "text": "The more you practise, the more confident you become.", "extra": ["most", "becoming"], "pt": "Quanto mais você pratica, mais confiante fica." },
+            { "text": "Gone are the days when phones were used only for calls.", "alt": ["The days when phones were used only for calls are gone.", "Gone are the days when phones were only used for calls.", "The days when phones were only used for calls are gone."], "extra": ["is", "using"], "pt": "Foi-se o tempo em que celulares eram usados só para ligações." }
+          ]
+        },
+        {
+          "id": "C2-modals",
+          "theme": "Nuanced Modals",
+          "description": "Needn't have, might have, ought to have ...",
+          "sentences": [
+            { "text": "You needn't have bought so much food.", "extra": ["didn't", "buy"], "pt": "Você não precisava ter comprado tanta comida." },
+            { "text": "She should have been told about the changes.", "extra": ["tell", "being"], "pt": "Ela deveria ter sido informada sobre as mudanças." },
+            { "text": "He would often sit by the window for hours.", "alt": ["He would often sit for hours by the window."], "extra": ["used", "sitting"], "pt": "Ele costumava ficar sentado à janela por horas." },
+            { "text": "You might have warned me that the road was closed.", "extra": ["warn", "being"], "pt": "Você podia ter me avisado que a estrada estava fechada." },
+            { "text": "There's no way he could have known the answer.", "extra": ["can", "knowing"], "pt": "Não tem como ele ter sabido a resposta." },
+            { "text": "We may as well take a taxi since it's raining.", "alt": ["Since it's raining, we may as well take a taxi."], "extra": ["taking", "should"], "pt": "Já que está chovendo, é melhor pegarmos um táxi." },
+            { "text": "You'd better not be late again.", "extra": ["to", "being"], "pt": "É bom você não se atrasar de novo." },
+            { "text": "The package ought to have arrived yesterday.", "extra": ["should", "arrive"], "pt": "O pacote deveria ter chegado ontem." }
+          ]
+        },
+        {
+          "id": "C2-academic",
+          "theme": "Academic Style",
+          "description": "Nominalisation and impersonal writing.",
+          "sentences": [
+            { "text": "The implementation of the policy proved more difficult than anticipated.", "extra": ["implementing", "anticipating"], "pt": "A implementação da política se mostrou mais difícil do que o previsto." },
+            { "text": "There has been a marked increase in remote work.", "extra": ["have", "marking"], "pt": "Houve um aumento acentuado no trabalho remoto." },
+            { "text": "These findings cast doubt on earlier assumptions.", "extra": ["casted", "of"], "pt": "Essas descobertas lançam dúvidas sobre suposições anteriores." },
+            { "text": "Little attention has been paid to this issue.", "extra": ["few", "payed"], "pt": "Pouca atenção tem sido dada a essa questão." },
+            { "text": "The data lend support to the original hypothesis.", "extra": ["lending", "of"], "pt": "Os dados corroboram a hipótese original." },
+            { "text": "Further research is needed to confirm these results.", "alt": ["To confirm these results, further research is needed."], "extra": ["farther", "confirming"], "pt": "São necessárias mais pesquisas para confirmar esses resultados." },
+            { "text": "The extent to which this applies remains unclear.", "extra": ["extend", "what"], "pt": "Ainda não está claro em que medida isso se aplica." },
+            { "text": "Of particular concern is the lack of transparency.", "alt": ["The lack of transparency is of particular concern."], "extra": ["concerning", "are"], "pt": "Particularmente preocupante é a falta de transparência." }
+          ]
+        },
+        {
+          "id": "C2-idiomatic",
+          "theme": "Idiomatic Structures",
+          "description": "Fixed patterns that sound natural and fluent.",
+          "sentences": [
+            { "text": "It goes without saying that safety comes first.", "extra": ["say", "going"], "pt": "Nem é preciso dizer que a segurança vem em primeiro lugar." },
+            { "text": "For all his wealth, he was deeply unhappy.", "alt": ["He was deeply unhappy for all his wealth."], "extra": ["despite", "of"], "pt": "Apesar de toda a sua riqueza, ele era profundamente infeliz." },
+            { "text": "There is no point in arguing about it now.", "alt": ["Now there is no point in arguing about it."], "extra": ["to", "argue"], "pt": "Não adianta discutir sobre isso agora." },
+            { "text": "I can't help feeling that something is wrong.", "extra": ["to", "feel"], "pt": "Não consigo deixar de sentir que algo está errado." },
+            { "text": "She is by no means the only person to blame.", "extra": ["any", "blaming"], "pt": "Ela não é de forma alguma a única culpada." },
+            { "text": "No matter how hard I try, I can't remember his name.", "alt": ["I can't remember his name no matter how hard I try."], "extra": ["however", "trying"], "pt": "Por mais que eu tente, não consigo lembrar o nome dele." },
+            { "text": "As far as I'm concerned, the matter is closed.", "alt": ["The matter is closed as far as I'm concerned."], "extra": ["concerning", "long"], "pt": "No que me diz respeito, o assunto está encerrado." },
+            { "text": "It remains to be seen whether the plan will work.", "extra": ["seeing", "remain"], "pt": "Resta saber se o plano vai funcionar." }
+          ]
+        }
+      ]
+    }
+  }
+}
