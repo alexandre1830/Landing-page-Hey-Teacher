@@ -1,0 +1,702 @@
+{
+  "metadata": {
+    "title": "English Word Search Puzzles by CEFR Level",
+    "description": "36 themed word search puzzles. Themes and vocabulary are calibrated to each CEFR level, and so is the grid: size, allowed word directions and the share of 'decoy' filler letters taken from the hidden words.",
+    "framework": "CEFR (Common European Framework of Reference for Languages)",
+    "puzzles_per_level": 6,
+    "levels": ["A1", "A2", "B1", "B2", "C1", "C2"],
+    "level_settings": {
+      "grid": "Rows and columns of the letter grid.",
+      "directions": "Allowed reading directions: right, down, down-right, up-right, left, up, down-left, up-left.",
+      "decoyLetters": "0 to 1. Share of filler letters copied from the hidden words (higher = harder).",
+      "listMode": "What the word list shows by default: \"words\" or \"clues\" (definitions). Teachers can switch during class."
+    },
+    "version": "1.0"
+  },
+  "levels": {
+    "A1": {
+      "name": "Beginner",
+      "description": "Short, everyday words hidden left to right and top to bottom only. A small grid with random filler letters.",
+      "grid": { "rows": 10, "cols": 12 },
+      "directions": ["right", "down"],
+      "decoyLetters": 0,
+      "listMode": "words",
+      "puzzles": [
+        {
+          "id": "A1-fruits",
+          "theme": "Fruits & Vegetables",
+          "description": "Healthy food from farms and gardens.",
+          "words": [
+            { "answer": "ORANGE", "clue": "A round fruit. It is also a color." },
+            { "answer": "GRAPE", "clue": "A small green or purple fruit. People make wine from it." },
+            { "answer": "LEMON", "clue": "A yellow fruit. It is very sour." },
+            { "answer": "CARROT", "clue": "A long orange vegetable. Rabbits love it." },
+            { "answer": "TOMATO", "clue": "A red fruit we often eat in salads." },
+            { "answer": "POTATO", "clue": "A vegetable we use to make French fries." },
+            { "answer": "ONION", "clue": "A vegetable that can make you cry when you cut it." },
+            { "answer": "PEAR", "clue": "A green or yellow fruit. It is round at the bottom." }
+          ]
+        },
+        {
+          "id": "A1-school",
+          "theme": "School Things",
+          "description": "Things you find in a classroom.",
+          "words": [
+            { "answer": "GLUE", "clue": "You use it to stick pieces of paper together." },
+            { "answer": "BOOK", "clue": "You read it. It has many pages." },
+            { "answer": "DESK", "clue": "A table where students sit and work." },
+            { "answer": "PENCIL", "clue": "You write or draw with it. It is made of wood." },
+            { "answer": "RULER", "clue": "You use it to draw straight lines." },
+            { "answer": "ERASER", "clue": "You use it to remove mistakes on paper." },
+            { "answer": "TEACHER", "clue": "The person who helps students learn." },
+            { "answer": "BACKPACK", "clue": "A bag for your books. You carry it on your shoulders." }
+          ]
+        },
+        {
+          "id": "A1-body",
+          "theme": "The Body",
+          "description": "Parts of your body.",
+          "words": [
+            { "answer": "HEAD", "clue": "The top part of your body." },
+            { "answer": "HAND", "clue": "It has five fingers." },
+            { "answer": "NOSE", "clue": "You smell with it." },
+            { "answer": "MOUTH", "clue": "You eat and talk with it." },
+            { "answer": "EYE", "clue": "You see with it." },
+            { "answer": "EAR", "clue": "You hear with it." },
+            { "answer": "LEG", "clue": "One of the two long parts of your body you use to walk." },
+            { "answer": "HAIR", "clue": "It grows on your head. It can be long or short." }
+          ]
+        },
+        {
+          "id": "A1-days",
+          "theme": "Days & Numbers",
+          "description": "Days of the week and numbers.",
+          "words": [
+            { "answer": "MONDAY", "clue": "The first day of the working week." },
+            { "answer": "FRIDAY", "clue": "The day before Saturday." },
+            { "answer": "SUNDAY", "clue": "The day after Saturday." },
+            { "answer": "THREE", "clue": "Two plus one." },
+            { "answer": "SEVEN", "clue": "The number of days in a week." },
+            { "answer": "TEN", "clue": "The number of fingers on your hands." },
+            { "answer": "TWENTY", "clue": "Ten plus ten." },
+            { "answer": "TWELVE", "clue": "The number of months in a year." }
+          ]
+        },
+        {
+          "id": "A1-sports",
+          "theme": "Sports & Games",
+          "description": "Playing and doing sports.",
+          "words": [
+            { "answer": "BALL", "clue": "A round thing you kick or throw in many games." },
+            { "answer": "SOCCER", "clue": "Players kick a ball and try to score goals." },
+            { "answer": "TENNIS", "clue": "You play it with a racket and a small yellow ball." },
+            { "answer": "SWIM", "clue": "To move through water using your arms and legs." },
+            { "answer": "RUN", "clue": "To move very fast on your feet." },
+            { "answer": "TEAM", "clue": "A group of players who play together." },
+            { "answer": "WIN", "clue": "The opposite of lose." },
+            { "answer": "BIKE", "clue": "It has two wheels. You ride it." }
+          ]
+        },
+        {
+          "id": "A1-actions",
+          "theme": "Everyday Actions",
+          "description": "Things we do every day.",
+          "words": [
+            { "answer": "WAKE", "clue": "To stop sleeping: I ___ up at 7 o'clock." },
+            { "answer": "EAT", "clue": "To put food in your mouth." },
+            { "answer": "DRINK", "clue": "To take water, milk or juice into your mouth." },
+            { "answer": "SLEEP", "clue": "You do this in bed at night." },
+            { "answer": "READ", "clue": "You do this with a book or a magazine." },
+            { "answer": "COOK", "clue": "To make food, for example pasta or rice." },
+            { "answer": "WALK", "clue": "To move on your feet, not fast." },
+            { "answer": "WASH", "clue": "To clean something with water." }
+          ]
+        }
+      ]
+    },
+    "A2": {
+      "name": "Elementary",
+      "description": "Common words for daily life, hidden across, down and diagonally. A slightly bigger grid with a few decoy letters.",
+      "grid": { "rows": 11, "cols": 13 },
+      "directions": ["right", "down", "down-right"],
+      "decoyLetters": 0.1,
+      "listMode": "words",
+      "puzzles": [
+        {
+          "id": "A2-kitchen",
+          "theme": "In the Kitchen",
+          "description": "Cooking, food and kitchen objects.",
+          "words": [
+            { "answer": "OVEN", "clue": "You bake cakes and bread in it." },
+            { "answer": "FRIDGE", "clue": "A cold machine that keeps food fresh." },
+            { "answer": "KNIFE", "clue": "You cut food with it." },
+            { "answer": "SPOON", "clue": "You eat soup with it." },
+            { "answer": "PLATE", "clue": "You put your food on it." },
+            { "answer": "BOWL", "clue": "A deep round dish for cereal." },
+            { "answer": "RECIPE", "clue": "Instructions that tell you how to cook something." },
+            { "answer": "BOIL", "clue": "To heat water until it bubbles." },
+            { "answer": "MICROWAVE", "clue": "A machine that heats food very quickly." }
+          ]
+        },
+        {
+          "id": "A2-nature",
+          "theme": "Nature & Landscapes",
+          "description": "Places you can see in nature.",
+          "words": [
+            { "answer": "RIVER", "clue": "Water that flows across land to the sea." },
+            { "answer": "MOUNTAIN", "clue": "A very high hill." },
+            { "answer": "FOREST", "clue": "A large area with lots of trees." },
+            { "answer": "LAKE", "clue": "An area of water with land all around it." },
+            { "answer": "BEACH", "clue": "An area of sand next to the sea." },
+            { "answer": "ISLAND", "clue": "Land with water all around it." },
+            { "answer": "DESERT", "clue": "A very dry, hot place with very little rain." },
+            { "answer": "VALLEY", "clue": "Low land between two hills." },
+            { "answer": "OCEAN", "clue": "A very large sea, like the Atlantic or the Pacific." }
+          ]
+        },
+        {
+          "id": "A2-people",
+          "theme": "Describing People",
+          "description": "Appearance and personality.",
+          "words": [
+            { "answer": "TALL", "clue": "The opposite of short." },
+            { "answer": "FRIENDLY", "clue": "Nice to other people and easy to talk to." },
+            { "answer": "CURLY", "clue": "Hair that is not straight." },
+            { "answer": "BEARD", "clue": "Hair that grows on a man's chin and face." },
+            { "answer": "SLIM", "clue": "Thin in an attractive way." },
+            { "answer": "KIND", "clue": "Someone who is nice and likes helping others." },
+            { "answer": "FUNNY", "clue": "Someone who makes you laugh." },
+            { "answer": "QUIET", "clue": "Someone who doesn't talk very much." },
+            { "answer": "ELDERLY", "clue": "A polite word for old people." }
+          ]
+        },
+        {
+          "id": "A2-celebrations",
+          "theme": "Parties & Celebrations",
+          "description": "Special days and how we celebrate them.",
+          "words": [
+            { "answer": "BIRTHDAY", "clue": "The day of the year you were born." },
+            { "answer": "PARTY", "clue": "An event where people eat, drink and dance together." },
+            { "answer": "GIFT", "clue": "Something you give to someone on a special day." },
+            { "answer": "CAKE", "clue": "A sweet baked food, often chocolate or vanilla." },
+            { "answer": "CANDLE", "clue": "A stick of wax that gives light when it burns." },
+            { "answer": "WEDDING", "clue": "The ceremony when two people get married." },
+            { "answer": "INVITE", "clue": "To ask someone to come to an event." },
+            { "answer": "BALLOON", "clue": "A colorful rubber bag filled with air." },
+            { "answer": "FIREWORKS", "clue": "Colorful explosions in the sky at New Year." }
+          ]
+        },
+        {
+          "id": "A2-chores",
+          "theme": "Daily Routine & Chores",
+          "description": "Your day and jobs around the house.",
+          "words": [
+            { "answer": "LAUNDRY", "clue": "Clothes that need to be washed." },
+            { "answer": "DISHES", "clue": "Plates, cups and bowls you wash after a meal." },
+            { "answer": "VACUUM", "clue": "To clean the floor with a machine." },
+            { "answer": "IRON", "clue": "To make clothes smooth with a hot tool." },
+            { "answer": "SHOWER", "clue": "You stand under it to wash your body." },
+            { "answer": "BREAKFAST", "clue": "The first meal of the day." },
+            { "answer": "ALARM", "clue": "It rings in the morning to wake you up." },
+            { "answer": "COMMUTE", "clue": "To travel to work or school every day." },
+            { "answer": "TIDY", "clue": "To put things in the right place so a room looks nice." }
+          ]
+        },
+        {
+          "id": "A2-countries",
+          "theme": "Countries of the World",
+          "description": "Countries and what they are famous for.",
+          "words": [
+            { "answer": "JAPAN", "clue": "Its capital is Tokyo." },
+            { "answer": "CANADA", "clue": "A big country north of the United States." },
+            { "answer": "MEXICO", "clue": "Tacos and mariachi music come from this country." },
+            { "answer": "ITALY", "clue": "Pizza and pasta are famous foods from this country." },
+            { "answer": "SPAIN", "clue": "Madrid is its capital." },
+            { "answer": "EGYPT", "clue": "The pyramids are in this country." },
+            { "answer": "CHINA", "clue": "The country with the Great Wall." },
+            { "answer": "FRANCE", "clue": "The Eiffel Tower is in its capital, Paris." },
+            { "answer": "BRAZIL", "clue": "The largest country in South America." }
+          ]
+        }
+      ]
+    },
+    "B1": {
+      "name": "Intermediate",
+      "description": "Topic vocabulary for work, travel and social life, hidden in four directions, including diagonals going up.",
+      "grid": { "rows": 12, "cols": 15 },
+      "directions": ["right", "down", "down-right", "up-right"],
+      "decoyLetters": 0.2,
+      "listMode": "words",
+      "puzzles": [
+        {
+          "id": "B1-travel",
+          "theme": "Travel Experiences",
+          "description": "Trips, tourists and adventures.",
+          "words": [
+            { "answer": "ADVENTURE", "clue": "An exciting and unusual experience." },
+            { "answer": "SOUVENIR", "clue": "Something you buy to remember a place you visited." },
+            { "answer": "HOSTEL", "clue": "A cheap place to stay, popular with young travelers." },
+            { "answer": "ITINERARY", "clue": "A detailed plan of the places you will visit on a trip." },
+            { "answer": "JOURNEY", "clue": "The act of traveling from one place to another." },
+            { "answer": "TOURIST", "clue": "A person who visits a place on vacation." },
+            { "answer": "JET LAG", "clue": "Tiredness you feel after a long flight across time zones." },
+            { "answer": "LUGGAGE", "clue": "Bags and suitcases you take on a trip." },
+            { "answer": "SIGHTSEEING", "clue": "Visiting the famous places of a city." },
+            { "answer": "BOOKING", "clue": "A reservation, for example for a hotel room." }
+          ]
+        },
+        {
+          "id": "B1-cooking",
+          "theme": "Food & Cooking",
+          "description": "Tastes, dishes and meals.",
+          "words": [
+            { "answer": "INGREDIENT", "clue": "One of the foods you need to make a dish." },
+            { "answer": "FLAVOR", "clue": "The taste of food or drink." },
+            { "answer": "SPICY", "clue": "Food with a hot, strong taste, like chili." },
+            { "answer": "DESSERT", "clue": "Sweet food eaten at the end of a meal." },
+            { "answer": "ROAST", "clue": "To cook meat or vegetables in the oven." },
+            { "answer": "SLICE", "clue": "A thin, flat piece cut from bread, cake or meat." },
+            { "answer": "TAKEOUT", "clue": "Food you buy at a restaurant to eat at home." },
+            { "answer": "APPETIZER", "clue": "A small dish served before the main course." },
+            { "answer": "SEAFOOD", "clue": "Fish and shellfish eaten as a meal." },
+            { "answer": "LEFTOVERS", "clue": "Food that is not eaten and is kept for later." }
+          ]
+        },
+        {
+          "id": "B1-work",
+          "theme": "Jobs & Careers",
+          "description": "Finding and doing a job.",
+          "words": [
+            { "answer": "INTERVIEW", "clue": "A formal meeting where you answer questions to get a job." },
+            { "answer": "SALARY", "clue": "The money you receive every month for your work." },
+            { "answer": "EMPLOYER", "clue": "A person or company that pays people to work for them." },
+            { "answer": "OVERTIME", "clue": "Extra hours you work after your normal working day." },
+            { "answer": "APPLICANT", "clue": "A person who is trying to get a job or a place at a university." },
+            { "answer": "CAREER", "clue": "The series of jobs you do during your working life." },
+            { "answer": "SKILLS", "clue": "Abilities you have, like speaking languages or using computers." },
+            { "answer": "EXPERIENCE", "clue": "Knowledge you get from doing a job for a long time." },
+            { "answer": "SHIFT", "clue": "A period of work, for example the night ___." },
+            { "answer": "CONTRACT", "clue": "A legal document that describes the conditions of a job." }
+          ]
+        },
+        {
+          "id": "B1-housing",
+          "theme": "Home & Housing",
+          "description": "Places to live and the people around you.",
+          "words": [
+            { "answer": "NEIGHBOR", "clue": "A person who lives next to you." },
+            { "answer": "APARTMENT", "clue": "A set of rooms to live in, inside a larger building." },
+            { "answer": "LANDLORD", "clue": "The person who owns the home you rent." },
+            { "answer": "FURNITURE", "clue": "Tables, chairs, beds and sofas." },
+            { "answer": "BALCONY", "clue": "A small outdoor area on the outside of an upper floor." },
+            { "answer": "GARAGE", "clue": "A building where you keep your car." },
+            { "answer": "SUBURB", "clue": "An area where people live on the edge of a city." },
+            { "answer": "BASEMENT", "clue": "A room or floor below ground level." },
+            { "answer": "ROOMMATE", "clue": "A person who shares a home with you." },
+            { "answer": "DOORBELL", "clue": "You ring it when you arrive at someone's house." }
+          ]
+        },
+        {
+          "id": "B1-sports",
+          "theme": "Sports & Competition",
+          "description": "Teams, games and winning.",
+          "words": [
+            { "answer": "TOURNAMENT", "clue": "A competition with many teams or players and several rounds." },
+            { "answer": "OPPONENT", "clue": "The person or team you play against." },
+            { "answer": "REFEREE", "clue": "The person who makes sure players follow the rules." },
+            { "answer": "CHAMPION", "clue": "The winner of a competition." },
+            { "answer": "TRAINING", "clue": "Practice to prepare for a sport or competition." },
+            { "answer": "MEDAL", "clue": "A metal disc given to winners, like gold, silver or bronze." },
+            { "answer": "CAPTAIN", "clue": "The leader of a sports team." },
+            { "answer": "SCORE", "clue": "The number of points each team has." },
+            { "answer": "DEFEAT", "clue": "To beat someone in a game." },
+            { "answer": "SUPPORTER", "clue": "A person who likes and follows a team." }
+          ]
+        },
+        {
+          "id": "B1-social",
+          "theme": "Social Media",
+          "description": "Posting, sharing and staying connected.",
+          "words": [
+            { "answer": "FOLLOWERS", "clue": "People who subscribe to see your posts." },
+            { "answer": "HASHTAG", "clue": "A word with the # symbol used to group posts." },
+            { "answer": "PROFILE", "clue": "The page with your photo and personal information." },
+            { "answer": "MESSAGE", "clue": "A short piece of text you send to someone." },
+            { "answer": "SELFIE", "clue": "A photo you take of yourself with your phone." },
+            { "answer": "COMMENT", "clue": "Something you write under someone's post." },
+            { "answer": "VIRAL", "clue": "A video that spreads very quickly online goes ___." },
+            { "answer": "NOTIFICATION", "clue": "An alert on your phone telling you something new happened." },
+            { "answer": "STREAMING", "clue": "Watching or listening to videos or music online without downloading." },
+            { "answer": "UPLOAD", "clue": "To send a photo or file from your device to the internet." }
+          ]
+        }
+      ]
+    },
+    "B2": {
+      "name": "Upper-Intermediate",
+      "description": "Longer, topic-specific vocabulary. Words now also run backwards (right to left and bottom to top), with more decoy letters.",
+      "grid": { "rows": 13, "cols": 16 },
+      "directions": ["right", "down", "down-right", "up-right", "left", "up"],
+      "decoyLetters": 0.35,
+      "listMode": "words",
+      "puzzles": [
+        {
+          "id": "B2-health",
+          "theme": "Health & Medicine",
+          "description": "Illness, treatment and wellbeing.",
+          "words": [
+            { "answer": "TREATMENT", "clue": "Medical care given to cure an illness or injury." },
+            { "answer": "RECOVERY", "clue": "The process of getting better after being ill." },
+            { "answer": "SURGERY", "clue": "Medical operations performed by a doctor." },
+            { "answer": "INFECTION", "clue": "An illness caused by bacteria or a virus." },
+            { "answer": "NUTRIENTS", "clue": "Substances in food that your body needs to stay healthy." },
+            { "answer": "PAINKILLER", "clue": "A medicine you take for a headache or backache." },
+            { "answer": "WELLBEING", "clue": "The state of being healthy and happy." },
+            { "answer": "OUTBREAK", "clue": "The sudden start of a disease in a community." },
+            { "answer": "IMMUNITY", "clue": "The body's ability to resist a disease." },
+            { "answer": "THERAPY", "clue": "Regular sessions with a professional to help with a mental or physical problem." },
+            { "answer": "SPECIALIST", "clue": "A doctor with expert knowledge in one area of medicine." }
+          ]
+        },
+        {
+          "id": "B2-city",
+          "theme": "Urban Life",
+          "description": "Living, working and moving around in cities.",
+          "words": [
+            { "answer": "COMMUTER", "clue": "Someone who travels a long way to work every day." },
+            { "answer": "CONGESTION", "clue": "Heavy traffic that makes roads very slow." },
+            { "answer": "SKYSCRAPER", "clue": "A very tall modern building." },
+            { "answer": "PEDESTRIAN", "clue": "A person walking on the street, not driving." },
+            { "answer": "NEIGHBORHOOD", "clue": "An area of a city where people live." },
+            { "answer": "RENOVATION", "clue": "The process of repairing and improving an old building." },
+            { "answer": "OVERCROWDED", "clue": "With too many people in a small space." },
+            { "answer": "NIGHTLIFE", "clue": "Bars, clubs and entertainment available in the evening." },
+            { "answer": "LANDMARK", "clue": "A famous building or place that is easy to recognize." },
+            { "answer": "HOMELESS", "clue": "Without a place to live." },
+            { "answer": "VIBRANT", "clue": "Full of energy, activity and life." }
+          ]
+        },
+        {
+          "id": "B2-climate",
+          "theme": "Environment & Climate",
+          "description": "Climate change and protecting nature.",
+          "words": [
+            { "answer": "EMISSIONS", "clue": "Gases released into the air, for example by cars and factories." },
+            { "answer": "RENEWABLE", "clue": "Energy from sources that never run out, like the sun or wind." },
+            { "answer": "SUSTAINABLE", "clue": "Able to continue without damaging the environment." },
+            { "answer": "DEFORESTATION", "clue": "Cutting down large areas of trees." },
+            { "answer": "BIODIVERSITY", "clue": "The variety of plant and animal life in an area." },
+            { "answer": "GREENHOUSE", "clue": "___ gases trap heat in the atmosphere." },
+            { "answer": "FOOTPRINT", "clue": "Your carbon ___ is the amount of CO2 your activities produce." },
+            { "answer": "CONSERVATION", "clue": "Protecting nature, wildlife and natural resources." },
+            { "answer": "HABITAT", "clue": "The natural home of an animal or plant." },
+            { "answer": "ENDANGERED", "clue": "At risk of disappearing forever." },
+            { "answer": "LANDFILL", "clue": "A place where waste is buried under the ground." }
+          ]
+        },
+        {
+          "id": "B2-learning",
+          "theme": "Learning & Skills",
+          "description": "Education, training and personal development.",
+          "words": [
+            { "answer": "APPRENTICE", "clue": "Someone who learns a trade by working with an expert." },
+            { "answer": "ASSESSMENT", "clue": "A test or evaluation of someone's knowledge or ability." },
+            { "answer": "CURRICULUM", "clue": "All the subjects taught in a school or course." },
+            { "answer": "KNOWLEDGE", "clue": "Information and understanding you gain through study." },
+            { "answer": "MENTOR", "clue": "An experienced person who advises someone less experienced." },
+            { "answer": "PROFICIENT", "clue": "Very good at doing something because of practice." },
+            { "answer": "QUALIFICATION", "clue": "An official certificate showing you have completed a course." },
+            { "answer": "SEMINAR", "clue": "A class where a small group discusses a topic with a teacher." },
+            { "answer": "TUITION", "clue": "Money paid for teaching, especially at university." },
+            { "answer": "WORKSHOP", "clue": "A practical session where people learn by doing activities." },
+            { "answer": "LIFELONG", "clue": "___ learning: continuing to study throughout your life." }
+          ]
+        },
+        {
+          "id": "B2-tech",
+          "theme": "Technology & Innovation",
+          "description": "Software, data and the digital world.",
+          "words": [
+            { "answer": "ALGORITHM", "clue": "A set of steps a computer follows to solve a problem." },
+            { "answer": "CYBERSECURITY", "clue": "Protecting computers and networks from attacks." },
+            { "answer": "SOFTWARE", "clue": "Programs that run on a computer." },
+            { "answer": "AUTOMATION", "clue": "Using machines to do work that people used to do." },
+            { "answer": "DATABASE", "clue": "An organized collection of information stored on a computer." },
+            { "answer": "ENCRYPTION", "clue": "Converting data into a code so others can't read it." },
+            { "answer": "HARDWARE", "clue": "The physical parts of a computer." },
+            { "answer": "PROTOTYPE", "clue": "The first model of a new product, made for testing." },
+            { "answer": "STARTUP", "clue": "A new, small company, often in technology." },
+            { "answer": "VIRTUAL", "clue": "___ reality: a computer-generated 3D world." },
+            { "answer": "ROBOTICS", "clue": "The science of designing machines that can move and act by themselves." }
+          ]
+        },
+        {
+          "id": "B2-emotions",
+          "theme": "Emotions & Attitudes",
+          "description": "Precise words for how people feel.",
+          "words": [
+            { "answer": "FRUSTRATED", "clue": "Annoyed because you can't do or achieve what you want." },
+            { "answer": "OVERWHELMED", "clue": "Feeling that you have too much to deal with." },
+            { "answer": "RELIEVED", "clue": "Happy because something bad did not happen or is over." },
+            { "answer": "ENTHUSIASTIC", "clue": "Very excited and interested in something." },
+            { "answer": "SKEPTICAL", "clue": "Doubting that something is true or will work." },
+            { "answer": "RESENTFUL", "clue": "Angry because you feel you were treated unfairly." },
+            { "answer": "INSECURE", "clue": "Not confident about yourself or your abilities." },
+            { "answer": "DETERMINED", "clue": "Having made a firm decision to achieve something." },
+            { "answer": "DEVASTATED", "clue": "Extremely shocked and sad." },
+            { "answer": "NOSTALGIC", "clue": "Thinking with pleasure and a little sadness about the past." },
+            { "answer": "CONTENT", "clue": "Satisfied and happy with what you have." }
+          ]
+        }
+      ]
+    },
+    "C1": {
+      "name": "Advanced",
+      "description": "Specialized and academic vocabulary hidden in all eight directions. The list shows definitions by default, so students must work out each word first.",
+      "grid": { "rows": 14, "cols": 17 },
+      "directions": ["right", "down", "down-right", "up-right", "left", "up", "down-left", "up-left"],
+      "decoyLetters": 0.5,
+      "listMode": "clues",
+      "puzzles": [
+        {
+          "id": "C1-law",
+          "theme": "Law & Justice",
+          "description": "Courts, cases and legal language.",
+          "words": [
+            { "answer": "LITIGATION", "clue": "The process of taking a dispute to court." },
+            { "answer": "PROSECUTION", "clue": "The side in a criminal trial that tries to prove the accused is guilty." },
+            { "answer": "DEFENDANT", "clue": "A person accused of a crime in a court of law." },
+            { "answer": "JURISDICTION", "clue": "The official power of a court to make legal decisions in an area." },
+            { "answer": "TESTIMONY", "clue": "A formal statement given by a witness in court." },
+            { "answer": "ACQUITTAL", "clue": "A verdict that the accused is not guilty." },
+            { "answer": "STATUTE", "clue": "A written law passed by a legislative body." },
+            { "answer": "PLAINTIFF", "clue": "A person who brings a case against another in a civil court." },
+            { "answer": "INJUNCTION", "clue": "A court order requiring someone to stop doing something." },
+            { "answer": "PRECEDENT", "clue": "An earlier ruling used as a guide for later cases." },
+            { "answer": "LIABILITY", "clue": "Legal responsibility for something, especially damages." },
+            { "answer": "SETTLEMENT", "clue": "An agreement that ends a legal dispute without a trial." }
+          ]
+        },
+        {
+          "id": "C1-global",
+          "theme": "Globalization",
+          "description": "Trade, migration and a connected world.",
+          "words": [
+            { "answer": "MULTINATIONAL", "clue": "A company operating in several countries." },
+            { "answer": "OUTSOURCING", "clue": "Contracting work out to an external supplier, often abroad." },
+            { "answer": "MIGRATION", "clue": "The movement of people from one country or region to another." },
+            { "answer": "SUPPLY CHAIN", "clue": "The network of companies involved in producing and delivering a product." },
+            { "answer": "EMERGING", "clue": "___ markets: fast-growing economies such as India or Brazil." },
+            { "answer": "REMITTANCE", "clue": "Money sent home by someone working abroad." },
+            { "answer": "INEQUALITY", "clue": "An unfair difference in wealth or opportunity between groups." },
+            { "answer": "SANCTIONS", "clue": "Penalties imposed on a country to force it to obey international law." },
+            { "answer": "PROTECTIONISM", "clue": "Shielding domestic industries from foreign competition through tariffs." },
+            { "answer": "INFRASTRUCTURE", "clue": "Basic systems such as roads, power and water supply." },
+            { "answer": "HOMOGENIZATION", "clue": "The process by which cultures become increasingly alike." },
+            { "answer": "TRADE BLOC", "clue": "A group of countries that reduce trade barriers among themselves." }
+          ]
+        },
+        {
+          "id": "C1-science",
+          "theme": "Science & Research",
+          "description": "The language of experiments and discovery.",
+          "words": [
+            { "answer": "PHENOMENON", "clue": "A fact or event that can be observed, especially one hard to explain." },
+            { "answer": "REPLICATE", "clue": "To repeat an experiment and obtain the same results." },
+            { "answer": "CATALYST", "clue": "A substance that speeds up a chemical reaction without being changed." },
+            { "answer": "SPECIMEN", "clue": "A sample of something used for scientific study." },
+            { "answer": "THEORETICAL", "clue": "Based on ideas rather than practical experience." },
+            { "answer": "PARAMETER", "clue": "A limit or factor that defines how something can be done." },
+            { "answer": "ANOMALY", "clue": "Something that deviates from what is standard or expected." },
+            { "answer": "CALIBRATE", "clue": "To adjust an instrument so that it measures accurately." },
+            { "answer": "MOLECULE", "clue": "The smallest unit of a chemical compound." },
+            { "answer": "FORMULATE", "clue": "To create and express an idea or theory carefully." },
+            { "answer": "DATASET", "clue": "A structured collection of data used for analysis." },
+            { "answer": "OBSOLETE", "clue": "No longer used because something newer exists." }
+          ]
+        },
+        {
+          "id": "C1-media",
+          "theme": "Media & Accountability",
+          "description": "Journalism, trust and public information.",
+          "words": [
+            { "answer": "ECHO CHAMBER", "clue": "An environment where people only hear opinions that reinforce their own." },
+            { "answer": "MISINFORMATION", "clue": "False or inaccurate information, spread with or without intent." },
+            { "answer": "PARTISAN", "clue": "Strongly supporting one political party or cause." },
+            { "answer": "OVERSIGHT", "clue": "Official supervision to make sure rules are followed." },
+            { "answer": "WHISTLEBLOWER", "clue": "An insider who exposes wrongdoing within an organization." },
+            { "answer": "TRANSPARENCY", "clue": "Openness that allows the public to see how decisions are made." },
+            { "answer": "SCRUTINY", "clue": "Close and critical examination." },
+            { "answer": "EDITORIAL", "clue": "An article expressing a newspaper's own opinion." },
+            { "answer": "CORRESPONDENT", "clue": "A journalist who reports from a particular place or on a particular subject." },
+            { "answer": "IMPARTIAL", "clue": "Treating all sides equally; not biased." },
+            { "answer": "DEFAMATION", "clue": "Damaging someone's reputation with false statements." },
+            { "answer": "CREDIBILITY", "clue": "The quality of being trusted and believed." }
+          ]
+        },
+        {
+          "id": "C1-leadership",
+          "theme": "Work & Leadership",
+          "description": "Managing people, teams and organizations.",
+          "words": [
+            { "answer": "DELEGATE", "clue": "To give part of your work or authority to someone else." },
+            { "answer": "INITIATIVE", "clue": "The ability to act independently without being told what to do." },
+            { "answer": "STAKEHOLDER", "clue": "Anyone with an interest in the success of a project or company." },
+            { "answer": "PRODUCTIVITY", "clue": "The rate at which work is completed efficiently." },
+            { "answer": "MICROMANAGE", "clue": "To control every small detail of an employee's work." },
+            { "answer": "NETWORKING", "clue": "Building professional contacts that may help your career." },
+            { "answer": "RESTRUCTURE", "clue": "To reorganize a company in a new way, often to cut costs." },
+            { "answer": "INCENTIVE", "clue": "Something that motivates people to work harder, such as a bonus." },
+            { "answer": "COLLABORATE", "clue": "To work jointly with others on a shared goal." },
+            { "answer": "BENCHMARK", "clue": "A standard against which performance is measured." },
+            { "answer": "TURNOVER", "clue": "The rate at which employees leave a company and are replaced." },
+            { "answer": "HIERARCHY", "clue": "A system in which people are ranked by authority." }
+          ]
+        },
+        {
+          "id": "C1-culture",
+          "theme": "Culture & Identity",
+          "description": "Heritage, belonging and cultural exchange.",
+          "words": [
+            { "answer": "ETIQUETTE", "clue": "The accepted rules of polite behavior in a society." },
+            { "answer": "HOSPITALITY", "clue": "Friendly and generous treatment of guests." },
+            { "answer": "HERITAGE", "clue": "Traditions and history passed down through generations." },
+            { "answer": "INDIGENOUS", "clue": "Originating naturally in a particular place; native." },
+            { "answer": "CUISINE", "clue": "A style of cooking characteristic of a country or region." },
+            { "answer": "PILGRIMAGE", "clue": "A journey to a sacred place for religious reasons." },
+            { "answer": "EXPATRIATE", "clue": "A person living outside their native country." },
+            { "answer": "DIASPORA", "clue": "A community of people living far from their ancestral homeland." },
+            { "answer": "ASSIMILATION", "clue": "The process of absorbing a minority group into the dominant society." },
+            { "answer": "MULTICULTURAL", "clue": "Including people of many different backgrounds and traditions." },
+            { "answer": "CUSTOMS", "clue": "Traditional ways of behaving in a particular society." },
+            { "answer": "FOLKLORE", "clue": "Traditional stories and beliefs of a community." }
+          ]
+        }
+      ]
+    },
+    "C2": {
+      "name": "Proficiency",
+      "description": "Low-frequency, nuanced vocabulary in a large grid, in all eight directions and packed with decoy letters. Definitions are shown instead of words.",
+      "grid": { "rows": 15, "cols": 18 },
+      "directions": ["right", "down", "down-right", "up-right", "left", "up", "down-left", "up-left"],
+      "decoyLetters": 0.6,
+      "listMode": "clues",
+      "puzzles": [
+        {
+          "id": "C2-verbs",
+          "theme": "Precise Verbs",
+          "description": "Formal verbs with exact shades of meaning.",
+          "words": [
+            { "answer": "CIRCUMVENT", "clue": "To find a clever way around a rule or obstacle." },
+            { "answer": "UNDERMINE", "clue": "To gradually weaken someone's authority or efforts." },
+            { "answer": "PROLIFERATE", "clue": "To increase rapidly in number." },
+            { "answer": "CAPITULATE", "clue": "To cease resisting and surrender." },
+            { "answer": "EXTRAPOLATE", "clue": "To estimate unknown values by extending known trends." },
+            { "answer": "VINDICATE", "clue": "To clear of blame or prove to be right." },
+            { "answer": "OBLITERATE", "clue": "To destroy utterly, leaving no trace." },
+            { "answer": "REPUDIATE", "clue": "To refuse to accept or be associated with." },
+            { "answer": "SUBSTANTIATE", "clue": "To provide evidence to support a claim." },
+            { "answer": "AMELIORATE", "clue": "To make something bad or unsatisfactory better." },
+            { "answer": "EPITOMIZE", "clue": "To be a perfect example of." },
+            { "answer": "ABDICATE", "clue": "To renounce a throne or a responsibility." }
+          ]
+        },
+        {
+          "id": "C2-mind",
+          "theme": "States of Mind",
+          "description": "Subtle emotions and moods.",
+          "words": [
+            { "answer": "MELANCHOLY", "clue": "A deep, lingering sadness, often without obvious cause." },
+            { "answer": "EXASPERATION", "clue": "Intense irritation and annoyance." },
+            { "answer": "TREPIDATION", "clue": "A feeling of fear or anxiety about what may happen." },
+            { "answer": "EUPHORIA", "clue": "A state of intense excitement and happiness." },
+            { "answer": "AMBIVALENCE", "clue": "The state of having mixed or contradictory feelings." },
+            { "answer": "INDIGNATION", "clue": "Anger provoked by what is perceived as unfair treatment." },
+            { "answer": "CONTRITION", "clue": "Sincere remorse for wrongdoing." },
+            { "answer": "SCHADENFREUDE", "clue": "Pleasure derived from another person's misfortune." },
+            { "answer": "EQUANIMITY", "clue": "Mental calmness, especially in a difficult situation." },
+            { "answer": "DESPONDENCY", "clue": "A state of low spirits caused by loss of hope." },
+            { "answer": "COMPLACENCY", "clue": "Smug satisfaction that leads to a lack of vigilance." },
+            { "answer": "WISTFULNESS", "clue": "A vague, regretful longing." }
+          ]
+        },
+        {
+          "id": "C2-reasoning",
+          "theme": "Science & Reasoning",
+          "description": "Logic, evidence and how knowledge is built.",
+          "words": [
+            { "answer": "PARADIGM", "clue": "A framework of theories and assumptions accepted in a field." },
+            { "answer": "HEURISTIC", "clue": "A mental shortcut or rule of thumb for solving problems." },
+            { "answer": "COROLLARY", "clue": "A proposition that follows directly from one already proved." },
+            { "answer": "AXIOMATIC", "clue": "Self-evident or unquestionably true." },
+            { "answer": "CAUSALITY", "clue": "The relationship whereby one event brings about another." },
+            { "answer": "CONJECTURE", "clue": "An opinion or conclusion formed on incomplete information." },
+            { "answer": "FALSIFIABLE", "clue": "Capable of being proven wrong by evidence, a hallmark of scientific claims." },
+            { "answer": "PARSIMONY", "clue": "The principle of preferring the simplest adequate explanation." },
+            { "answer": "DEDUCTIVE", "clue": "Reasoning from general premises to a necessarily true conclusion." },
+            { "answer": "INDUCTIVE", "clue": "Reasoning from specific observations to a probable generalization." },
+            { "answer": "TAXONOMY", "clue": "The science of classifying organisms or concepts into groups." },
+            { "answer": "CONFOUNDING", "clue": "A ___ variable distorts the apparent relationship between two others." }
+          ]
+        },
+        {
+          "id": "C2-politics",
+          "theme": "Political Discourse",
+          "description": "The vocabulary of power, parties and policy.",
+          "words": [
+            { "answer": "FILIBUSTER", "clue": "Prolonged speaking used to obstruct a vote in a legislature." },
+            { "answer": "GERRYMANDER", "clue": "To manipulate electoral boundaries for partisan advantage." },
+            { "answer": "PLUTOCRACY", "clue": "Government by the wealthy." },
+            { "answer": "CRONYISM", "clue": "Appointing friends to positions of authority regardless of merit." },
+            { "answer": "PATRONAGE", "clue": "The power to grant favors or appointments in return for support." },
+            { "answer": "POPULISM", "clue": "Politics claiming to champion ordinary people against a corrupt elite." },
+            { "answer": "TECHNOCRAT", "clue": "An expert who exercises power by virtue of technical knowledge." },
+            { "answer": "LAISSEZ-FAIRE", "clue": "An economic doctrine opposing government intervention in markets." },
+            { "answer": "SECESSION", "clue": "The formal withdrawal of a region from a nation." },
+            { "answer": "BIPARTISAN", "clue": "Supported by two opposing political parties." },
+            { "answer": "EXPROPRIATION", "clue": "The seizure of private property by the state." },
+            { "answer": "REALPOLITIK", "clue": "Politics based on practical rather than moral considerations." }
+          ]
+        },
+        {
+          "id": "C2-arts",
+          "theme": "Arts & Aesthetics",
+          "description": "Movements, techniques and critical terms.",
+          "words": [
+            { "answer": "CHIAROSCURO", "clue": "The dramatic contrast of light and shade in a painting." },
+            { "answer": "AVANT-GARDE", "clue": "New and experimental ideas in art, ahead of their time." },
+            { "answer": "PASTICHE", "clue": "A work imitating the style of another artist or period." },
+            { "answer": "ALLEGORY", "clue": "A story whose characters and events symbolize deeper meanings." },
+            { "answer": "MINIMALISM", "clue": "A style using the fewest and simplest elements." },
+            { "answer": "DENOUEMENT", "clue": "The final resolution of a plot." },
+            { "answer": "SURREALISM", "clue": "A movement that explored the unconscious through dreamlike imagery." },
+            { "answer": "IMPRESSIONISM", "clue": "A movement that captured fleeting effects of light with visible brushstrokes." },
+            { "answer": "VIRTUOSO", "clue": "A person highly skilled in music or another art." },
+            { "answer": "ICONOCLAST", "clue": "A person who attacks cherished beliefs or institutions." },
+            { "answer": "PALIMPSEST", "clue": "Something reused or altered but still bearing traces of its earlier form." },
+            { "answer": "CATHARSIS", "clue": "The release of strong emotions through art, especially tragedy." }
+          ]
+        },
+        {
+          "id": "C2-speech",
+          "theme": "Ways of Speaking",
+          "description": "Adjectives for how people talk and write.",
+          "words": [
+            { "answer": "LACONIC", "clue": "Using very few words." },
+            { "answer": "LOQUACIOUS", "clue": "Tending to talk a great deal." },
+            { "answer": "GRANDILOQUENT", "clue": "Pompous or extravagant in language." },
+            { "answer": "TACITURN", "clue": "Reserved and saying little in conversation." },
+            { "answer": "PEDANTIC", "clue": "Excessively concerned with minor details and rules." },
+            { "answer": "SARDONIC", "clue": "Grimly mocking or cynical." },
+            { "answer": "VITRIOLIC", "clue": "Filled with bitter criticism or malice." },
+            { "answer": "CIRCUMLOCUTION", "clue": "Using many words where fewer would do, especially to be evasive." },
+            { "answer": "DIDACTIC", "clue": "Intended to teach, often in a patronizing way." },
+            { "answer": "PLATITUDINOUS", "clue": "Full of dull, overused remarks." },
+            { "answer": "ARTICULATE", "clue": "Able to express ideas fluently and clearly." },
+            { "answer": "INCOHERENT", "clue": "Expressed in a confusing, disjointed way." }
+          ]
+        }
+      ]
+    }
+  }
+}

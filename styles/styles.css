@@ -155,6 +155,10 @@ section { padding: clamp(80px, 10vw, 140px) 0; position: relative; }
   }
   .nav ul a:hover::after { transform: scaleX(1); }
 }
+/* Faixa estreita do desktop: aproxima os itens para caber o menu inteiro */
+@media (min-width: 900px) and (max-width: 1080px) {
+  .nav ul { gap: 22px; }
+}
 
 /* ----- Botão hambúrguer (só mobile) ----- */
 .nav-toggle {
@@ -268,6 +272,8 @@ section { padding: clamp(80px, 10vw, 140px) 0; position: relative; }
   .nav.is-open ul li:nth-child(4) { animation-delay: .17s; }
   .nav.is-open ul li:nth-child(5) { animation-delay: .21s; }
   .nav.is-open ul li:nth-child(6) { animation-delay: .25s; }
+  .nav.is-open ul li:nth-child(7) { animation-delay: .29s; }
+  .nav.is-open ul li:nth-child(8) { animation-delay: .33s; }
   @keyframes nav-item-in {
     from { opacity: 0; transform: translateX(-6px); }
     to   { opacity: 1; transform: translateX(0); }
@@ -865,6 +871,49 @@ body.nav-open .nav-overlay {
 .method-card.bonus .ic { background: var(--red); color: var(--white); }
 .method-card.bonus h3 { color: var(--white); }
 .method-card.bonus p { color: rgba(var(--white-rgb), .78); }
+
+/* Chamada para os jogos e atividades extras (home e metodologia) */
+.games-callout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px 28px;
+  max-width: 920px;
+  margin: 40px auto 0;
+  padding: 26px 28px;
+  background: var(--off-white);
+  border: 1px solid rgba(var(--navy-rgb), .08);
+  border-radius: var(--radius-m);
+}
+.games-callout .ic {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: var(--navy);
+  color: var(--white);
+}
+.games-callout .ic svg { width: 26px; height: 26px; stroke-width: 1.8; }
+.games-callout-text { flex: 1 1 320px; }
+.games-callout-text .tag {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: .7rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 6px;
+}
+.games-callout-text h3 { margin-bottom: 6px; }
+.games-callout-text p { color: var(--ink-soft); font-size: .95rem; line-height: 1.6; }
+.games-callout .btn { flex-shrink: 0; }
+@media (max-width: 640px) {
+  .games-callout { padding: 22px 20px; }
+  .games-callout .btn { width: 100%; justify-content: center; }
+}
 
 /* ===== DIFFERENTIALS / RESULTS ===== */
 .diff { background: var(--navy); color: var(--white); position: relative; overflow: hidden; }

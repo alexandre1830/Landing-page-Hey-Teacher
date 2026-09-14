@@ -1,0 +1,972 @@
+{
+  "metadata": {
+    "title": "English Grammar Quiz Show by CEFR Level",
+    "description": "60 gameshow rounds of 8 grammar questions each. Every level covers the grammar topics usually taught at that stage, and the question types, number of options, suggested time and lifelines get harder as the level goes up.",
+    "framework": "CEFR (Common European Framework of Reference for Languages)",
+    "puzzles_per_level": 10,
+    "questions_per_puzzle": 8,
+    "levels": ["A1", "A2", "B1", "B2", "C1", "C2"],
+    "level_settings": {
+      "timer": "Suggested seconds per question (0 = no timer). Before starting, the teacher can pick another time or turn the timer off.",
+      "lifelines": "Lifelines each player or team can use once per round: \"fifty\" (50:50), \"friend\" (ask a friend: 20 seconds to talk it over) and \"double\" (double points)."
+    },
+    "question_types": {
+      "choice": "\"prompt\" with ___ for the gap and \"options\". The FIRST option is the correct one; options are shuffled on screen. Use \"—\" for 'no word'.",
+      "truefalse": "\"sentence\" and \"answer\" (true/false). Incorrect sentences need \"fix\" with the corrected version.",
+      "order": "\"answer\" split into chunks with \" / \". Chunks are shown shuffled, exactly as written (so start with lowercase unless it's I or a name). Optional \"alt\": other valid orders using the same chunks.",
+      "spot": "\"sentence\" with the wrong word(s) in [brackets], and \"fix\" with the corrected sentence.",
+      "type": "\"prompt\" with ___ for the gap and \"answers\": every accepted answer (not case-sensitive)."
+    },
+    "version": "1.1"
+  },
+  "levels": {
+    "A1": {
+      "name": "Beginner",
+      "description": "The first building blocks: to be, articles, pronouns, simple present, question words and can. Short sentences, three options per question and plenty of time.",
+      "timer": 60,
+      "lifelines": ["fifty", "friend", "double"],
+      "puzzles": [
+        {
+          "id": "A1-to-be",
+          "theme": "Verb To Be",
+          "description": "Am, is and are in positive, negative and question forms.",
+          "questions": [
+            { "type": "choice", "prompt": "My brother ___ ten years old.", "options": ["is", "am", "are"], "explain": "Use is with he, she, it and singular nouns like my brother." },
+            { "type": "choice", "prompt": "We ___ from Brazil.", "options": ["are", "is", "am"], "explain": "Use are with we, you and they." },
+            { "type": "truefalse", "sentence": "I is a teacher.", "answer": false, "fix": "I am a teacher.", "explain": "With I, always use am." },
+            { "type": "choice", "prompt": "___ you happy?", "options": ["Are", "Is", "Am"], "explain": "In questions, the verb to be comes before the subject: Are you…?" },
+            { "type": "order", "answer": "is / she / your sister?", "explain": "Questions with to be: Is + subject + … ?" },
+            { "type": "truefalse", "sentence": "They aren't at home.", "answer": true, "explain": "Aren't = are not. It is the negative of are." },
+            { "type": "type", "prompt": "The shop ___ open on Sundays. (be, negative)", "answers": ["isn't", "is not"], "explain": "The negative of is is is not or isn't." },
+            { "type": "choice", "prompt": "Is he a doctor? — Yes, he ___.", "options": ["is", "does", "are"], "explain": "Short answers repeat the verb: Yes, he is. / No, he isn't." }
+          ]
+        },
+        {
+          "id": "A1-articles-plurals",
+          "theme": "A, An & Plurals",
+          "description": "The articles a, an and the, and regular and irregular plurals.",
+          "questions": [
+            { "type": "choice", "prompt": "I have ___ apple in my bag.", "options": ["an", "a", "some"], "explain": "Use an before a vowel sound: an apple, an egg." },
+            { "type": "choice", "prompt": "My mum is ___ nurse.", "options": ["a", "an", "—"], "explain": "Use a or an with jobs: She is a nurse. He is an engineer." },
+            { "type": "type", "prompt": "One child, two ___.", "answers": ["children"], "explain": "Child has an irregular plural: children." },
+            { "type": "truefalse", "sentence": "I have two sisters and one brothers.", "answer": false, "fix": "I have two sisters and one brother.", "explain": "After one, use the singular noun: one brother." },
+            { "type": "choice", "prompt": "There are three ___ on the table.", "options": ["boxes", "boxs", "box"], "explain": "Nouns ending in -x, -s, -ch and -sh add -es: boxes, buses, watches." },
+            { "type": "choice", "prompt": "Can you close ___ door, please?", "options": ["the", "a", "an"], "explain": "Use the when we both know which one: the door of this room." },
+            { "type": "truefalse", "sentence": "He is an honest man.", "answer": true, "explain": "The h in honest is silent, so the word starts with a vowel sound: an honest man." },
+            { "type": "type", "prompt": "One woman, two ___.", "answers": ["women"], "explain": "Woman → women and man → men are irregular plurals." }
+          ]
+        },
+        {
+          "id": "A1-this-that",
+          "theme": "This, That, These & Those",
+          "description": "Pointing at things near and far, one or many.",
+          "questions": [
+            { "type": "choice", "prompt": "___ is my phone, here in my hand.", "options": ["This", "That", "These"], "explain": "Use this for one thing that is near you." },
+            { "type": "choice", "prompt": "Look at ___ birds up in the sky!", "options": ["those", "this", "that"], "explain": "Use those for more than one thing that is far from you." },
+            { "type": "truefalse", "sentence": "These shoes are new.", "answer": true, "explain": "These + plural noun + are." },
+            { "type": "choice", "prompt": "What's ___ noise outside?", "options": ["that", "these", "those"], "explain": "Use that for one thing you see or hear that is not near you." },
+            { "type": "truefalse", "sentence": "This apples are delicious.", "answer": false, "fix": "These apples are delicious.", "explain": "Apples is plural, so use these, not this." },
+            { "type": "type", "prompt": "Is ___ your bag over there? (that / those)", "answers": ["that"], "explain": "Bag is singular and over there is far, so we use that." },
+            { "type": "order", "answer": "are / these / your keys?", "explain": "Questions: Are + these/those + noun?" },
+            { "type": "choice", "prompt": "Who are ___ people over there?", "options": ["those", "that", "this"], "explain": "People is plural and over there is far: those." }
+          ]
+        },
+        {
+          "id": "A1-pronouns-possessives",
+          "theme": "Pronouns & Possessives",
+          "description": "I, me, my, mine and the possessive 's.",
+          "questions": [
+            { "type": "choice", "prompt": "This is my friend. ___ name is Anna.", "options": ["Her", "She", "His"], "explain": "Her is the possessive adjective for she: her name." },
+            { "type": "choice", "prompt": "Can you help ___, please?", "options": ["me", "I", "my"], "explain": "After a verb, use the object pronoun: help me, call him." },
+            { "type": "truefalse", "sentence": "That is Johns car.", "answer": false, "fix": "That is John's car.", "explain": "Use 's to show that something belongs to a person: John's car." },
+            { "type": "choice", "prompt": "Paul and I are brothers. ___ live in Rome.", "options": ["We", "They", "Us"], "explain": "Paul and I = we." },
+            { "type": "type", "prompt": "Look at those shoes. I love ___!", "answers": ["them"], "explain": "Them is the object pronoun for they." },
+            { "type": "order", "answer": "their / house / is / very big.", "explain": "Possessive adjectives come before the noun: their house." },
+            { "type": "choice", "prompt": "Is this your bag? — No, it isn't ___.", "options": ["mine", "my", "me"], "explain": "Use mine, yours, his and hers when there is no noun after them." },
+            { "type": "truefalse", "sentence": "Him is my teacher.", "answer": false, "fix": "He is my teacher.", "explain": "Before the verb, use the subject pronoun: he, she, they." }
+          ]
+        },
+        {
+          "id": "A1-simple-present",
+          "theme": "Simple Present",
+          "description": "Daily routines, he/she/it + -s, and do/does.",
+          "questions": [
+            { "type": "choice", "prompt": "She ___ coffee every morning.", "options": ["drinks", "drink", "drinking"], "explain": "With he, she and it, add -s to the verb: she drinks." },
+            { "type": "choice", "prompt": "I ___ like fish.", "options": ["don't", "doesn't", "not"], "explain": "Negative with I, you, we and they: don't + verb." },
+            { "type": "truefalse", "sentence": "He play football on Saturdays.", "answer": false, "fix": "He plays football on Saturdays.", "explain": "He, she and it need -s: he plays." },
+            { "type": "choice", "prompt": "___ your parents live in London?", "options": ["Do", "Does", "Are"], "explain": "Questions with I, you, we and they: Do + subject + verb?" },
+            { "type": "type", "prompt": "My dad ___ TV after dinner. (watch)", "answers": ["watches"], "explain": "Verbs ending in -ch, -sh, -s, -x and -o add -es: watches, goes." },
+            { "type": "order", "answer": "does / your sister / work / in a bank?", "explain": "Questions with he, she and it: Does + subject + verb (no -s)?" },
+            { "type": "truefalse", "sentence": "Does she speaks English?", "answer": false, "fix": "Does she speak English?", "explain": "After does, the verb has no -s." },
+            { "type": "choice", "prompt": "Tom ___ to school by bus.", "options": ["goes", "go", "gos"], "explain": "Go becomes goes with he, she and it." }
+          ]
+        },
+        {
+          "id": "A1-adverbs-frequency",
+          "theme": "Adverbs of Frequency",
+          "description": "Always, usually, sometimes, never and where they go.",
+          "questions": [
+            { "type": "choice", "prompt": "I ___ drink coffee. I hate it!", "options": ["never", "always", "usually"], "explain": "Never = 0% of the time." },
+            { "type": "choice", "prompt": "She is ___ late for school. She's a very good student.", "options": ["never", "always", "often"], "explain": "A very good student is never late." },
+            { "type": "truefalse", "sentence": "He always is happy.", "answer": false, "fix": "He is always happy.", "explain": "Adverbs of frequency go after the verb be." },
+            { "type": "truefalse", "sentence": "We usually have lunch at one o'clock.", "answer": true, "explain": "Adverbs of frequency go before most other verbs: usually have." },
+            { "type": "choice", "prompt": "My parents ___ watch TV in the evening.", "options": ["sometimes", "are sometimes", "sometimes are"], "explain": "Before a main verb, the adverb comes alone: sometimes watch." },
+            { "type": "type", "prompt": "How ___ do you play tennis? — Twice a week.", "answers": ["often"], "explain": "How often asks how many times something happens." },
+            { "type": "order", "answer": "I / often / go / to the cinema.", "explain": "Subject + adverb of frequency + verb." },
+            { "type": "choice", "prompt": "It ___ snows in Brazil. It's very rare.", "options": ["hardly ever", "always", "usually"], "explain": "Hardly ever = almost never." }
+          ]
+        },
+        {
+          "id": "A1-question-words",
+          "theme": "Question Words",
+          "description": "What, where, when, who, how old and how much.",
+          "questions": [
+            { "type": "choice", "prompt": "___ do you live? — In Madrid.", "options": ["Where", "When", "Who"], "explain": "Where asks about places." },
+            { "type": "choice", "prompt": "___ is your birthday? — In May.", "options": ["When", "Where", "Who"], "explain": "When asks about time: days, months and years." },
+            { "type": "truefalse", "sentence": "What time does the film start?", "answer": true, "explain": "What time asks about the hour." },
+            { "type": "choice", "prompt": "___ is that man? — He's my uncle.", "options": ["Who", "What", "Where"], "explain": "Who asks about people." },
+            { "type": "type", "prompt": "How ___ are you? — I'm twelve.", "answers": ["old"], "explain": "How old asks about age." },
+            { "type": "truefalse", "sentence": "Where you are from?", "answer": false, "fix": "Where are you from?", "explain": "In questions with be, the verb comes before the subject." },
+            { "type": "order", "answer": "what / is / your favourite / colour?", "explain": "Question word + be + subject?" },
+            { "type": "choice", "prompt": "___ is this T-shirt? — It's fifteen dollars.", "options": ["How much", "How many", "How old"], "explain": "How much asks about price." }
+          ]
+        },
+        {
+          "id": "A1-prepositions-time",
+          "theme": "In, On & At (Time)",
+          "description": "Prepositions for times, days, months and seasons.",
+          "questions": [
+            { "type": "choice", "prompt": "My birthday is ___ June.", "options": ["in", "on", "at"], "explain": "Use in with months, years and seasons." },
+            { "type": "choice", "prompt": "The class starts ___ nine o'clock.", "options": ["at", "in", "on"], "explain": "Use at with clock times." },
+            { "type": "truefalse", "sentence": "I go to bed late at night.", "answer": true, "explain": "At night is a fixed expression. But we say in the morning, in the afternoon and in the evening." },
+            { "type": "choice", "prompt": "We don't have school ___ Saturday.", "options": ["on", "in", "at"], "explain": "Use on with days of the week." },
+            { "type": "truefalse", "sentence": "She was born on 2010.", "answer": false, "fix": "She was born in 2010.", "explain": "Use in with years." },
+            { "type": "type", "prompt": "It's very cold here ___ winter.", "answers": ["in"], "explain": "Use in with seasons: in winter, in summer." },
+            { "type": "order", "answer": "we / have lunch / at / half past twelve.", "alt": ["at / half past twelve / we / have lunch."], "explain": "At + clock time. The time can also start the sentence." },
+            { "type": "choice", "prompt": "I have English classes ___ Monday mornings.", "options": ["on", "in", "at"], "explain": "Day + part of the day takes on: on Monday mornings." }
+          ]
+        },
+        {
+          "id": "A1-there-is",
+          "theme": "There Is & There Are",
+          "description": "Describing places with there is/are and in, on, under, next to.",
+          "questions": [
+            { "type": "choice", "prompt": "There ___ a cat in the garden.", "options": ["is", "are", "am"], "explain": "There is + a singular noun." },
+            { "type": "choice", "prompt": "There ___ two beds in my room.", "options": ["are", "is", "be"], "explain": "There are + a plural noun." },
+            { "type": "choice", "prompt": "The keys are ___ the table.", "options": ["on", "in", "at"], "explain": "On = touching the top of a surface." },
+            { "type": "truefalse", "sentence": "There are a sofa in the living room.", "answer": false, "fix": "There is a sofa in the living room.", "explain": "A sofa is singular, so we say there is." },
+            { "type": "order", "answer": "is there / a bank / near here?", "explain": "Questions: Is there…? / Are there…?" },
+            { "type": "choice", "prompt": "My shoes are ___ the bed, on the floor.", "options": ["under", "on", "between"], "explain": "Under = below something." },
+            { "type": "type", "prompt": "___ there any eggs in the fridge?", "answers": ["are"], "explain": "Any eggs is plural: Are there any…?" },
+            { "type": "truefalse", "sentence": "The bank is next to the supermarket.", "answer": true, "explain": "Next to = beside, very close." }
+          ]
+        },
+        {
+          "id": "A1-can",
+          "theme": "Can & Can't",
+          "description": "Talking about ability and asking for permission.",
+          "questions": [
+            { "type": "choice", "prompt": "She ___ swim very well.", "options": ["can", "cans", "can to"], "explain": "Can is the same for every person: I can, she can." },
+            { "type": "truefalse", "sentence": "I can to speak French.", "answer": false, "fix": "I can speak French.", "explain": "After can, use the verb without to." },
+            { "type": "choice", "prompt": "___ I open the window, please?", "options": ["Can", "Do", "Am"], "explain": "Use Can I…? to ask for permission." },
+            { "type": "type", "prompt": "Penguins are birds, but they ___ fly. (can, negative)", "answers": ["can't", "cannot", "can not"], "explain": "Can't (cannot) is the negative of can." },
+            { "type": "order", "answer": "can / you / help me?", "explain": "Questions: Can + subject + verb?" },
+            { "type": "choice", "prompt": "Can he drive? — No, he ___.", "options": ["can't", "doesn't", "isn't"], "explain": "Short answers: Yes, he can. / No, he can't." },
+            { "type": "truefalse", "sentence": "My grandma can't use a smartphone.", "answer": true, "explain": "Can't + verb shows something a person is not able to do." },
+            { "type": "choice", "prompt": "Babies ___ walk, but they can smile.", "options": ["can't", "can", "don't can"], "explain": "Can't shows no ability. Don't can is never correct." }
+          ]
+        }
+      ]
+    },
+    "A2": {
+      "name": "Elementary",
+      "description": "Everyday grammar for past, present and future, plus comparisons, adverbs, quantities and polite requests. Three options per question with generous time.",
+      "timer": 45,
+      "lifelines": ["fifty", "friend", "double"],
+      "puzzles": [
+        {
+          "id": "A2-present-continuous",
+          "theme": "Simple Present vs Present Continuous",
+          "description": "Routines and facts versus actions happening now.",
+          "questions": [
+            { "type": "choice", "prompt": "Look! It ___.", "options": ["is raining", "rains", "rain"], "explain": "Look! shows the action is happening now: present continuous." },
+            { "type": "choice", "prompt": "I usually ___ to work, but today I'm taking the bus.", "options": ["walk", "am walking", "walks"], "explain": "Usually shows a routine: simple present." },
+            { "type": "truefalse", "sentence": "She is liking chocolate.", "answer": false, "fix": "She likes chocolate.", "explain": "Like is a state verb. We don't normally use it in the continuous form." },
+            { "type": "type", "prompt": "Be quiet, please. The baby ___. (sleep)", "answers": ["is sleeping", "'s sleeping"], "explain": "Be quiet shows something is happening right now: is sleeping." },
+            { "type": "order", "answer": "what / are you / doing / this weekend?", "explain": "The present continuous can also describe fixed plans for the near future." },
+            { "type": "choice", "prompt": "Water ___ at 100 degrees Celsius.", "options": ["boils", "is boiling", "boiling"], "explain": "Facts that are always true use the simple present." },
+            { "type": "truefalse", "sentence": "We're studying for an important exam this month.", "answer": true, "explain": "Temporary situations around now can use the present continuous." },
+            { "type": "choice", "prompt": "How often ___ to the gym?", "options": ["do you go", "are you going", "you go"], "explain": "How often asks about routines: simple present." }
+          ]
+        },
+        {
+          "id": "A2-simple-past",
+          "theme": "Simple Past",
+          "description": "Regular and irregular verbs, did and didn't.",
+          "questions": [
+            { "type": "choice", "prompt": "We ___ a great film last night.", "options": ["saw", "seen", "see"], "explain": "See is irregular: see – saw – seen. The simple past is saw." },
+            { "type": "type", "prompt": "Yesterday I ___ a new jacket. (buy)", "answers": ["bought"], "explain": "Buy is irregular: buy – bought." },
+            { "type": "truefalse", "sentence": "Did you went to the party?", "answer": false, "fix": "Did you go to the party?", "explain": "After did, use the base form of the verb: Did you go…?" },
+            { "type": "choice", "prompt": "She ___ at home last weekend.", "options": ["wasn't", "didn't", "weren't"], "explain": "Use was/wasn't with I, he, she and it." },
+            { "type": "order", "answer": "where / did you / go / on holiday?", "explain": "Past questions: question word + did + subject + base verb." },
+            { "type": "choice", "prompt": "They ___ the museum two years ago.", "options": ["visited", "visit", "have visited"], "explain": "Ago refers to a finished time in the past: simple past." },
+            { "type": "truefalse", "sentence": "I didn't see him yesterday.", "answer": true, "explain": "Negative: didn't + base verb." },
+            { "type": "type", "prompt": "The train ___ suddenly. (stop)", "answers": ["stopped"], "explain": "Short verbs ending in consonant–vowel–consonant double the last letter: stop – stopped." }
+          ]
+        },
+        {
+          "id": "A2-present-perfect-ever",
+          "theme": "Present Perfect: Ever & Never",
+          "description": "Talking about life experiences with Have you ever…?",
+          "questions": [
+            { "type": "choice", "prompt": "Have you ever ___ sushi?", "options": ["eaten", "ate", "eat"], "explain": "Present perfect: have + past participle (eat – ate – eaten)." },
+            { "type": "choice", "prompt": "I've ___ been to Australia, but I'd love to go.", "options": ["never", "ever", "already"], "explain": "Never = not at any time in my life." },
+            { "type": "truefalse", "sentence": "She has visited Paris three times.", "answer": true, "explain": "Use the present perfect with a number of times for life experiences." },
+            { "type": "truefalse", "sentence": "Have you ever see a ghost?", "answer": false, "fix": "Have you ever seen a ghost?", "explain": "The present perfect needs the past participle: see – saw – seen." },
+            { "type": "type", "prompt": "My brother has ___ a horse. (never / ride)", "answers": ["never ridden"], "explain": "Ride is irregular: ride – rode – ridden." },
+            { "type": "choice", "prompt": "Where's Anna? — She's ___ to the shops. She'll be back soon.", "options": ["gone", "been", "went"], "explain": "Gone to = she went there and is still there. Been to = she went and came back." },
+            { "type": "order", "answer": "have / you / ever / met / a famous person?", "explain": "Have + subject + ever + past participle?" },
+            { "type": "choice", "prompt": "Has he ever ___ a marathon?", "options": ["run", "ran", "running"], "explain": "Run is irregular: run – ran – run. The past participle is run." }
+          ]
+        },
+        {
+          "id": "A2-comparatives",
+          "theme": "Comparatives & Superlatives",
+          "description": "Comparing people and things: bigger, more expensive, the best.",
+          "questions": [
+            { "type": "choice", "prompt": "My bag is ___ than yours.", "options": ["heavier", "heavyer", "more heavy"], "explain": "Adjectives ending in -y change to -ier: heavy – heavier." },
+            { "type": "choice", "prompt": "This is ___ film I've ever seen.", "options": ["the best", "the goodest", "better"], "explain": "Good is irregular: good – better – the best." },
+            { "type": "truefalse", "sentence": "Russia is more big than France.", "answer": false, "fix": "Russia is bigger than France.", "explain": "Short adjectives add -er: big – bigger." },
+            { "type": "type", "prompt": "Paris is ___ than Lisbon. (expensive)", "answers": ["more expensive"], "explain": "Long adjectives use more: more expensive." },
+            { "type": "choice", "prompt": "Today is ___ day of the year!", "options": ["the hottest", "the hotter", "hottest"], "explain": "Superlatives use the + -est: the hottest." },
+            { "type": "order", "answer": "my sister / is / taller / than me.", "explain": "Use a comparative + than to compare two people or things." },
+            { "type": "truefalse", "sentence": "Your house is not as big as mine.", "answer": true, "explain": "Not as + adjective + as shows that two things are different." },
+            { "type": "choice", "prompt": "Of all my friends, Mia is ___.", "options": ["the funniest", "the funnyest", "funnier"], "explain": "Funny → the funniest: -y changes to -iest." }
+          ]
+        },
+        {
+          "id": "A2-adverbs-manner",
+          "theme": "Adjectives & Adverbs",
+          "description": "Quick or quickly? Good or well? Describing how we do things.",
+          "questions": [
+            { "type": "choice", "prompt": "She speaks English very ___.", "options": ["well", "good", "goodly"], "explain": "Good is an adjective. The adverb is well." },
+            { "type": "choice", "prompt": "Please drive ___. The road is icy.", "options": ["carefully", "careful", "carefuly"], "explain": "Many adverbs are adjective + -ly: careful → carefully." },
+            { "type": "truefalse", "sentence": "He is a fast runner. He runs fast.", "answer": true, "explain": "Fast is both an adjective and an adverb." },
+            { "type": "truefalse", "sentence": "You look tiredly.", "answer": false, "fix": "You look tired.", "explain": "After look, feel, seem and be, use an adjective, not an adverb." },
+            { "type": "type", "prompt": "The children played ___ in the garden. (happy)", "answers": ["happily"], "explain": "Adjectives ending in -y change to -ily: happy → happily." },
+            { "type": "choice", "prompt": "They work very ___ – ten hours a day.", "options": ["hard", "hardly", "hardily"], "explain": "Hard is also an adverb. Hardly means almost not." },
+            { "type": "order", "answer": "my dad / cooks / pasta / very well.", "explain": "The adverb of manner usually goes after the object: cooks pasta very well." },
+            { "type": "choice", "prompt": "This soup tastes ___.", "options": ["delicious", "deliciously", "more deliciously"], "explain": "Taste works like be here, so it is followed by an adjective." }
+          ]
+        },
+        {
+          "id": "A2-quantifiers",
+          "theme": "Some, Any, Much & Many",
+          "description": "Countable and uncountable nouns with quantifiers.",
+          "questions": [
+            { "type": "choice", "prompt": "Is there ___ milk in the fridge?", "options": ["any", "many", "a"], "explain": "Use any in questions and negative sentences." },
+            { "type": "choice", "prompt": "How ___ people came to the party?", "options": ["many", "much", "any"], "explain": "Use many with countable nouns: people, books, cars." },
+            { "type": "truefalse", "sentence": "I don't have much money.", "answer": true, "explain": "Use much with uncountable nouns like money, time and water." },
+            { "type": "choice", "prompt": "We need ___ eggs for the cake.", "options": ["some", "any", "much"], "explain": "Use some in positive sentences." },
+            { "type": "type", "prompt": "How ___ sugar do you take in your coffee?", "answers": ["much"], "explain": "Sugar is uncountable: how much." },
+            { "type": "truefalse", "sentence": "Can I give you an advice?", "answer": false, "fix": "Can I give you some advice?", "explain": "Advice is uncountable: some advice, a piece of advice." },
+            { "type": "order", "answer": "there are / a lot of / tourists / in summer.", "alt": ["in summer / there are / a lot of / tourists."], "explain": "A lot of works with both countable and uncountable nouns." },
+            { "type": "choice", "prompt": "There aren't ___ chairs for everyone.", "options": ["enough", "much", "a little"], "explain": "Enough means as many as we need. Much and a little are for uncountable nouns." }
+          ]
+        },
+        {
+          "id": "A2-future",
+          "theme": "Will & Going To",
+          "description": "Plans, predictions, promises and quick decisions.",
+          "questions": [
+            { "type": "choice", "prompt": "Look at those black clouds. It ___ rain.", "options": ["is going to", "will", "goes to"], "explain": "Use going to for predictions based on what we can see now." },
+            { "type": "choice", "prompt": "The phone is ringing. — OK, ___ answer it!", "options": ["I'll", "I'm going to", "I"], "explain": "Use will for decisions made at the moment of speaking." },
+            { "type": "truefalse", "sentence": "We are going to visit our grandparents next Sunday.", "answer": true, "explain": "Use going to for plans we have already decided." },
+            { "type": "type", "prompt": "I promise I ___ anyone. (not / tell)", "answers": ["won't tell", "will not tell"], "explain": "Promises use will: I won't tell." },
+            { "type": "order", "answer": "what / are you going to / do / after school?", "explain": "Questions: question word + be + subject + going to + verb." },
+            { "type": "truefalse", "sentence": "I think it wills be sunny tomorrow.", "answer": false, "fix": "I think it will be sunny tomorrow.", "explain": "Will never takes -s." },
+            { "type": "choice", "prompt": "She has bought some paint. She ___ her room.", "options": ["is going to paint", "will painting", "paints"], "explain": "She has already decided (she bought paint), so we use going to." },
+            { "type": "choice", "prompt": "Maybe people ___ on Mars one day.", "options": ["will live", "are living", "live"], "explain": "Predictions based on opinion often use will, especially with maybe or I think." }
+          ]
+        },
+        {
+          "id": "A2-modals-obligation",
+          "theme": "Must, Have To & Should",
+          "description": "Modal verbs for rules, obligation and advice.",
+          "questions": [
+            { "type": "choice", "prompt": "You ___ smoke in the hospital. It's forbidden.", "options": ["mustn't", "don't have to", "shouldn't to"], "explain": "Mustn't = it is not allowed." },
+            { "type": "choice", "prompt": "It's Saturday! We ___ get up early.", "options": ["don't have to", "mustn't", "haven't to"], "explain": "Don't have to = it is not necessary." },
+            { "type": "truefalse", "sentence": "You should to see a doctor.", "answer": false, "fix": "You should see a doctor.", "explain": "After should, use the base verb without to." },
+            { "type": "choice", "prompt": "She ___ wear a uniform at her new school.", "options": ["has to", "have to", "must to"], "explain": "With he, she and it: has to." },
+            { "type": "type", "prompt": "You look tired. You ___ go to bed early. (advice)", "answers": ["should", "ought to"], "explain": "Should is used to give advice." },
+            { "type": "order", "answer": "do / we / have to / pay now?", "explain": "Questions with have to use do/does." },
+            { "type": "truefalse", "sentence": "Drivers must stop at a red light.", "answer": true, "explain": "Must is used for strong rules and obligations." },
+            { "type": "choice", "prompt": "I ___ finish this report yesterday.", "options": ["had to", "must", "should"], "explain": "Must has no past form. Use had to for obligation in the past." }
+          ]
+        },
+        {
+          "id": "A2-requests-offers",
+          "theme": "Requests & Offers",
+          "description": "Can, could, would and shall for asking and offering politely.",
+          "questions": [
+            { "type": "choice", "prompt": "___ you open the window, please?", "options": ["Could", "Shall", "Should"], "explain": "Could you…? is a polite request." },
+            { "type": "choice", "prompt": "It's cold in here. ___ I close the door?", "options": ["Shall", "Would", "Do"], "explain": "Shall I…? offers to do something for someone." },
+            { "type": "truefalse", "sentence": "Could you to help me with my bags?", "answer": false, "fix": "Could you help me with my bags?", "explain": "After could, use the base verb without to." },
+            { "type": "choice", "prompt": "___ you like a cup of tea?", "options": ["Would", "Do", "Will"], "explain": "Would you like…? is a polite offer." },
+            { "type": "truefalse", "sentence": "I'd like a table for two, please.", "answer": true, "explain": "I'd like = I would like, a polite way to ask for something." },
+            { "type": "type", "prompt": "___ I help you? — Yes, please. I'm looking for a jumper.", "answers": ["can", "may", "shall", "could"], "explain": "Can I help you? (or May I…?) is a common offer in shops." },
+            { "type": "order", "answer": "would / you mind / waiting / a moment?", "explain": "Would you mind + -ing? is a very polite request." },
+            { "type": "choice", "prompt": "Would you like ___ to the party with us?", "options": ["to come", "come", "coming"], "explain": "Would like + to + infinitive." }
+          ]
+        },
+        {
+          "id": "A2-linking-words",
+          "theme": "And, But, Because & So",
+          "description": "Joining ideas with and, but, or, because and so.",
+          "questions": [
+            { "type": "choice", "prompt": "I was hungry, ___ I made a sandwich.", "options": ["so", "because", "but"], "explain": "So introduces a result." },
+            { "type": "choice", "prompt": "She stayed at home ___ she was ill.", "options": ["because", "so", "but"], "explain": "Because introduces a reason." },
+            { "type": "truefalse", "sentence": "I like tea, but I don't like coffee.", "answer": true, "explain": "But joins two contrasting ideas." },
+            { "type": "choice", "prompt": "The hotel was nice, ___ it was very expensive.", "options": ["but", "so", "because"], "explain": "But shows a contrast: nice vs expensive." },
+            { "type": "truefalse", "sentence": "Because it was raining, so we stayed inside.", "answer": false, "fix": "Because it was raining, we stayed inside.", "explain": "Don't use because and so in the same sentence." },
+            { "type": "type", "prompt": "Do you want pizza ___ pasta for dinner?", "answers": ["or"], "explain": "Use or to give a choice." },
+            { "type": "order", "answer": "I / couldn't sleep / because / it was too hot.", "alt": ["because / it was too hot / I / couldn't sleep."], "explain": "Result + because + reason. Because can also start the sentence." },
+            { "type": "choice", "prompt": "I got up, had a shower ___ went to work.", "options": ["and", "but", "so"], "explain": "Use and to add actions or ideas." }
+          ]
+        }
+      ]
+    },
+    "B1": {
+      "name": "Intermediate",
+      "description": "Present perfect, narrative tenses, conditionals, the passive, question forms and phrasal verbs. Four options per question and a first taste of spotting mistakes.",
+      "timer": 45,
+      "lifelines": ["fifty", "friend", "double"],
+      "puzzles": [
+        {
+          "id": "B1-present-perfect",
+          "theme": "Present Perfect vs Simple Past",
+          "description": "Experiences, recent news, for/since and finished time.",
+          "questions": [
+            { "type": "choice", "prompt": "I ___ to Japan three times so far.", "options": ["have been", "went", "was", "am going"], "explain": "Experiences up to now (so far) use the present perfect." },
+            { "type": "choice", "prompt": "She ___ here since 2018.", "options": ["has worked", "works", "worked", "is working"], "explain": "Since + a starting point, for a situation that continues now: present perfect." },
+            { "type": "spot", "sentence": "I [have seen] that film last week.", "fix": "I saw that film last week.", "explain": "Last week is a finished time, so use the simple past." },
+            { "type": "type", "prompt": "We ___ each other for ten years. (know)", "answers": ["have known", "'ve known"], "explain": "For + a period of time up to now: present perfect." },
+            { "type": "choice", "prompt": "Have you finished your homework ___?", "options": ["yet", "already", "just", "ever"], "explain": "Yet is used in questions and negatives, usually at the end of the sentence." },
+            { "type": "truefalse", "sentence": "When have you arrived?", "answer": false, "fix": "When did you arrive?", "explain": "Questions with when ask about a finished time: simple past." },
+            { "type": "order", "answer": "I've / just / heard / the news.", "explain": "Just goes between have and the past participle." },
+            { "type": "choice", "prompt": "My parents ___ married in 1995.", "options": ["got", "have got", "have been getting", "get"], "explain": "In 1995 is a finished time: simple past." }
+          ]
+        },
+        {
+          "id": "B1-past-continuous",
+          "theme": "Past Continuous & Used To",
+          "description": "Background actions, interruptions and past habits.",
+          "questions": [
+            { "type": "choice", "prompt": "I ___ a shower when the phone rang.", "options": ["was having", "had", "have had", "am having"], "explain": "Use the past continuous for the longer action that was interrupted." },
+            { "type": "choice", "prompt": "When I was a child, I ___ climb trees.", "options": ["used to", "use to", "was used to", "am used to"], "explain": "Used to + base verb describes past habits that don't happen any more." },
+            { "type": "spot", "sentence": "At 8 p.m. last night I was [watch] TV.", "fix": "At 8 p.m. last night I was watching TV.", "explain": "Past continuous = was/were + -ing." },
+            { "type": "type", "prompt": "She ___ to like vegetables, but now she loves them. (not / use)", "answers": ["didn't use", "did not use"], "explain": "Negative: didn't use to (without -d)." },
+            { "type": "truefalse", "sentence": "Did you use to have long hair?", "answer": true, "explain": "Questions: Did + subject + use to + verb?" },
+            { "type": "choice", "prompt": "While Tom ___, someone stole his bike.", "options": ["was shopping", "shopped", "has shopped", "is shopping"], "explain": "While introduces the longer background action: past continuous." },
+            { "type": "order", "answer": "they / were playing / tennis / when it started to rain.", "explain": "Past continuous for the background action + simple past for the short action." },
+            { "type": "truefalse", "sentence": "I was knowing the answer, but I forgot it.", "answer": false, "fix": "I knew the answer, but I forgot it.", "explain": "Know is a state verb, so it isn't used in the continuous form." }
+          ]
+        },
+        {
+          "id": "B1-question-tags",
+          "theme": "Question Tags",
+          "description": "Checking information: isn't it?, don't you?, did she?",
+          "questions": [
+            { "type": "choice", "prompt": "You're from Italy, ___?", "options": ["aren't you", "are you", "don't you", "isn't it"], "explain": "A positive sentence with be takes a negative tag with be: aren't you?" },
+            { "type": "choice", "prompt": "She doesn't eat meat, ___?", "options": ["does she", "doesn't she", "is she", "did she"], "explain": "A negative sentence takes a positive tag with the same auxiliary." },
+            { "type": "spot", "sentence": "He can swim, [doesn't] he?", "fix": "He can swim, can't he?", "explain": "The tag repeats the auxiliary or modal of the sentence: can → can't." },
+            { "type": "truefalse", "sentence": "I'm late, aren't I?", "answer": true, "explain": "The tag for I am is aren't I?" },
+            { "type": "type", "prompt": "Let's go for a walk, ___ we?", "answers": ["shall"], "explain": "After Let's…, the tag is shall we?" },
+            { "type": "choice", "prompt": "You haven't seen my keys, ___?", "options": ["have you", "haven't you", "did you", "do you"], "explain": "Haven't seen → positive tag with have: have you?" },
+            { "type": "truefalse", "sentence": "Nobody called while I was out, didn't they?", "answer": false, "fix": "Nobody called while I was out, did they?", "explain": "Nobody makes the sentence negative, so the tag is positive. We use they after nobody and everyone." },
+            { "type": "order", "answer": "it / was / a great party, / wasn't it?", "explain": "Statement + comma + tag with the same verb." }
+          ]
+        },
+        {
+          "id": "B1-indirect-questions",
+          "theme": "Indirect Questions",
+          "description": "Polite questions: Could you tell me where…?",
+          "questions": [
+            { "type": "choice", "prompt": "Could you tell me where ___?", "options": ["the station is", "is the station", "the station", "does the station"], "explain": "Indirect questions use statement word order: where the station is." },
+            { "type": "choice", "prompt": "Do you know what time ___?", "options": ["the shop opens", "does the shop open", "opens the shop", "the shop does open"], "explain": "No do/does in indirect questions: what time the shop opens." },
+            { "type": "spot", "sentence": "I wonder [does she] like her new job.", "fix": "I wonder if she likes her new job.", "explain": "Yes/no indirect questions use if or whether, with statement word order." },
+            { "type": "truefalse", "sentence": "Do you know where is the nearest bank?", "answer": false, "fix": "Do you know where the nearest bank is?", "explain": "After Do you know…, the subject comes before the verb." },
+            { "type": "type", "prompt": "Can you tell me ___ this bus goes to the airport? (yes/no question)", "answers": ["if", "whether"], "explain": "Use if or whether when the direct question has no question word." },
+            { "type": "choice", "prompt": "Do you have any idea why ___ so upset?", "options": ["he was", "was he", "did he be", "he did be"], "explain": "Question word + subject + verb: why he was." },
+            { "type": "truefalse", "sentence": "Could you tell me when the next train leaves?", "answer": true, "explain": "Correct: when + subject + verb, with no does." },
+            { "type": "order", "answer": "I'd like to know / how much / this jacket / costs.", "explain": "Introductory phrase + question word + subject + verb." }
+          ]
+        },
+        {
+          "id": "B1-conditionals",
+          "theme": "Zero, First & Second Conditionals",
+          "description": "General truths, real possibilities and imaginary situations.",
+          "questions": [
+            { "type": "choice", "prompt": "If you heat ice, it ___.", "options": ["melts", "would melt", "melted", "has melted"], "explain": "Zero conditional for general truths: If + present, present." },
+            { "type": "choice", "prompt": "If it rains tomorrow, we ___ at home.", "options": ["will stay", "would stay", "stayed", "would have stayed"], "explain": "First conditional: If + present, will + verb, for real future possibilities." },
+            { "type": "spot", "sentence": "If I [will see] her, I'll give her your message.", "fix": "If I see her, I'll give her your message.", "explain": "Don't use will in the if-clause: If I see her…" },
+            { "type": "type", "prompt": "If I ___ more money, I would travel around the world. (have)", "answers": ["had"], "explain": "Second conditional: If + simple past, would + verb, for imaginary situations." },
+            { "type": "choice", "prompt": "If I ___ you, I would apologise.", "options": ["were", "am", "would be", "will be"], "explain": "In the second conditional we often use were with I: If I were you…" },
+            { "type": "truefalse", "sentence": "What would you do if you won the lottery?", "answer": true, "explain": "Second conditional questions: What would you do if + simple past?" },
+            { "type": "order", "answer": "you'll / miss the bus / if you / don't hurry.", "alt": ["if you / don't hurry / you'll / miss the bus."], "explain": "The if-clause can also come second. Then no comma is needed." },
+            { "type": "choice", "prompt": "Unless you study, you ___ the exam.", "options": ["won't pass", "will pass", "wouldn't pass", "don't pass"], "explain": "Unless = if not: If you don't study, you won't pass." }
+          ]
+        },
+        {
+          "id": "B1-passive",
+          "theme": "Passive Voice",
+          "description": "Simple present and simple past passive: is made, was built.",
+          "questions": [
+            { "type": "choice", "prompt": "English ___ in many countries.", "options": ["is spoken", "speaks", "is speaking", "spoken"], "explain": "Simple present passive: am/is/are + past participle." },
+            { "type": "choice", "prompt": "The Eiffel Tower ___ in 1889.", "options": ["was built", "built", "is built", "was building"], "explain": "Simple past passive: was/were + past participle." },
+            { "type": "type", "prompt": "These cars ___ in Germany. (make)", "answers": ["are made"], "explain": "Plural subject in the simple present passive: are made." },
+            { "type": "spot", "sentence": "The letters [was] sent yesterday.", "fix": "The letters were sent yesterday.", "explain": "Letters is plural: were sent." },
+            { "type": "truefalse", "sentence": "My wallet was stolen on the train.", "answer": true, "explain": "We use the passive when the person who did the action is unknown or unimportant." },
+            { "type": "order", "answer": "the thief / was caught / by / the police.", "explain": "By introduces the agent – the person who did the action." },
+            { "type": "choice", "prompt": "Where ___ this photo taken?", "options": ["was", "did", "were", "has"], "explain": "Passive questions: question word + was/were + subject + past participle." },
+            { "type": "truefalse", "sentence": "The bridge was build in the 19th century.", "answer": false, "fix": "The bridge was built in the 19th century.", "explain": "The passive needs the past participle: build – built – built." }
+          ]
+        },
+        {
+          "id": "B1-gerunds-infinitives",
+          "theme": "Gerunds & Infinitives",
+          "description": "Verb patterns: enjoy doing, decide to do.",
+          "questions": [
+            { "type": "choice", "prompt": "I enjoy ___ in the sea.", "options": ["swimming", "to swim", "swim", "swam"], "explain": "Enjoy is followed by the -ing form." },
+            { "type": "choice", "prompt": "They decided ___ a new car.", "options": ["to buy", "buying", "buy", "bought"], "explain": "Decide is followed by to + infinitive." },
+            { "type": "spot", "sentence": "She suggested [to go] to the cinema.", "fix": "She suggested going to the cinema.", "explain": "Suggest is followed by the -ing form." },
+            { "type": "type", "prompt": "I'm looking forward to ___ you. (see)", "answers": ["seeing"], "explain": "In look forward to, to is a preposition, so it is followed by -ing." },
+            { "type": "truefalse", "sentence": "He promised to call me later.", "answer": true, "explain": "Promise + to + infinitive." },
+            { "type": "choice", "prompt": "Would you mind ___ the window?", "options": ["opening", "to open", "open", "opened"], "explain": "Mind is followed by the -ing form." },
+            { "type": "order", "answer": "she / is good at / learning / languages.", "explain": "After prepositions (at, of, about…) use the -ing form." },
+            { "type": "choice", "prompt": "I went to the shop ___ some milk.", "options": ["to buy", "for buy", "buying", "for buying"], "explain": "Use to + infinitive to say why you do something." }
+          ]
+        },
+        {
+          "id": "B1-phrasal-verbs",
+          "theme": "Phrasal Verbs",
+          "description": "Meaning and word order: turn it down, look after them.",
+          "questions": [
+            { "type": "choice", "prompt": "The music is too loud. Can you turn ___?", "options": ["it down", "down it", "it up", "up it"], "explain": "Turn down = make quieter. A pronoun goes between the verb and the particle: turn it down." },
+            { "type": "choice", "prompt": "Who looks ___ your dog when you're on holiday?", "options": ["after", "for", "into", "up to"], "explain": "Look after = take care of." },
+            { "type": "spot", "sentence": "I've lost my glasses. Can you help me look [them for]?", "fix": "I've lost my glasses. Can you help me look for them?", "explain": "Look for can't be separated: the object always goes after for." },
+            { "type": "truefalse", "sentence": "She took off her shoes at the door.", "answer": true, "explain": "With a noun object, both orders are possible: took off her shoes / took her shoes off." },
+            { "type": "type", "prompt": "Your coat is on the floor. Please pick ___ up.", "answers": ["it"], "explain": "A pronoun object goes between the verb and the particle: pick it up." },
+            { "type": "truefalse", "sentence": "Smoking is bad for you. You should give up it.", "answer": false, "fix": "Smoking is bad for you. You should give it up.", "explain": "With separable phrasal verbs, a pronoun can't go after the particle." },
+            { "type": "choice", "prompt": "The meeting was ___ because the boss was ill.", "options": ["called off", "called up", "put on", "turned off"], "explain": "Call off = cancel." },
+            { "type": "order", "answer": "we / ran out of / milk / this morning.", "alt": ["this morning / we / ran out of / milk."], "explain": "Run out of = have no more of something. It takes an object after of." }
+          ]
+        },
+        {
+          "id": "B1-relative-clauses",
+          "theme": "Relative Clauses",
+          "description": "Who, which, that, where and whose.",
+          "questions": [
+            { "type": "choice", "prompt": "The woman ___ lives next door is a pilot.", "options": ["who", "which", "where", "whose"], "explain": "Use who (or that) for people." },
+            { "type": "choice", "prompt": "This is the café ___ we first met.", "options": ["where", "which", "who", "whose"], "explain": "Use where for places (= in which)." },
+            { "type": "spot", "sentence": "The book [who] I'm reading is fantastic.", "fix": "The book that I'm reading is fantastic.", "explain": "Use which or that for things, not who." },
+            { "type": "type", "prompt": "I have a friend ___ father is a famous chef.", "answers": ["whose"], "explain": "Whose shows possession: her father → whose father." },
+            { "type": "truefalse", "sentence": "The film that we watched last night was boring.", "answer": true, "explain": "That can replace which for things in defining relative clauses." },
+            { "type": "choice", "prompt": "Is that the dog ___ bit you?", "options": ["that", "what", "where", "whose"], "explain": "Use that or which for animals and things." },
+            { "type": "order", "answer": "the man / who / fixed my car / was very friendly.", "explain": "A relative clause comes directly after the noun it describes." },
+            { "type": "spot", "sentence": "That's the hotel where we stayed [there] last year.", "fix": "That's the hotel where we stayed last year.", "explain": "Where already refers to the hotel, so there is not needed." }
+          ]
+        },
+        {
+          "id": "B1-so-such",
+          "theme": "So, Such, Too & Enough",
+          "description": "Making ideas stronger and talking about the right amount.",
+          "questions": [
+            { "type": "choice", "prompt": "It was ___ a boring film that I fell asleep.", "options": ["such", "so", "too", "very"], "explain": "Such + a/an + adjective + noun + that." },
+            { "type": "choice", "prompt": "The coffee is ___ hot to drink. I'll wait a minute.", "options": ["too", "so", "such", "enough"], "explain": "Too + adjective + to-infinitive: more than is possible or good." },
+            { "type": "spot", "sentence": "He isn't [enough old] to drive.", "fix": "He isn't old enough to drive.", "explain": "Enough goes after adjectives: old enough." },
+            { "type": "truefalse", "sentence": "We don't have enough chairs for everyone.", "answer": true, "explain": "Enough goes before nouns: enough chairs." },
+            { "type": "type", "prompt": "The weather was ___ nice that we ate outside.", "answers": ["so"], "explain": "So + adjective + that." },
+            { "type": "truefalse", "sentence": "She is such kind person.", "answer": false, "fix": "She is such a kind person.", "explain": "Such + a/an + adjective + singular noun." },
+            { "type": "choice", "prompt": "There were ___ many people that we couldn't get in.", "options": ["so", "such", "too", "enough"], "explain": "So many / so much + noun + that." },
+            { "type": "order", "answer": "the box / was / too heavy / for me / to carry.", "alt": ["the box / was / too heavy / to carry / for me."], "explain": "Too + adjective + for someone + to-infinitive." }
+          ]
+        }
+      ]
+    },
+    "B2": {
+      "name": "Upper-Intermediate",
+      "description": "Hypothetical pasts, reported speech, deduction, verb patterns, advanced passives and linkers of contrast. More mistakes to spot, more words to type and a shorter suggested time.",
+      "timer": 30,
+      "lifelines": ["fifty", "friend", "double"],
+      "puzzles": [
+        {
+          "id": "B2-narrative-tenses",
+          "theme": "Past Perfect & Perfect Continuous",
+          "description": "Narrative tenses and activities continuing up to a moment.",
+          "questions": [
+            { "type": "choice", "prompt": "When we got to the cinema, the film ___.", "options": ["had already started", "already started", "has already started", "was already starting"], "explain": "Past perfect for an action completed before another past action." },
+            { "type": "choice", "prompt": "I'm exhausted. I ___ all morning.", "options": ["have been cleaning", "had been cleaning", "cleaned", "am cleaning"], "explain": "Present perfect continuous: an activity up to now with a visible result." },
+            { "type": "spot", "sentence": "She was nervous because she had never [flew] before.", "fix": "She was nervous because she had never flown before.", "explain": "The past perfect needs the past participle: fly – flew – flown." },
+            { "type": "type", "prompt": "They ___ for two hours when the bus finally came. (wait)", "answers": ["had been waiting", "'d been waiting"], "explain": "Past perfect continuous: duration up to a moment in the past." },
+            { "type": "truefalse", "sentence": "I have been knowing her for years.", "answer": false, "fix": "I have known her for years.", "explain": "State verbs like know don't use continuous forms." },
+            { "type": "order", "answer": "by the time / we arrived, / everyone / had left.", "explain": "By the time + simple past, past perfect." },
+            { "type": "choice", "prompt": "How long ___ English?", "options": ["have you been learning", "are you learning", "do you learn", "had you learned"], "explain": "How long + present perfect continuous for an activity that continues now." },
+            { "type": "type", "prompt": "His eyes were red because he ___. (cry)", "answers": ["had been crying", "'d been crying"], "explain": "Past perfect continuous explains a past situation with an earlier activity." }
+          ]
+        },
+        {
+          "id": "B2-used-to",
+          "theme": "Used To, Be Used To & Get Used To",
+          "description": "Past habits versus things that are familiar or becoming familiar.",
+          "questions": [
+            { "type": "choice", "prompt": "I ___ getting up early now – I've done it for years.", "options": ["am used to", "used to", "use to", "am use to"], "explain": "Be used to + -ing = be familiar with something." },
+            { "type": "choice", "prompt": "When she moved to London, it took her months to ___ driving on the left.", "options": ["get used to", "use to", "be use", "used to"], "explain": "Get used to + -ing = become familiar with something over time." },
+            { "type": "spot", "sentence": "I'm not used to [work] at night.", "fix": "I'm not used to working at night.", "explain": "In be used to, to is a preposition, so it is followed by the -ing form." },
+            { "type": "type", "prompt": "We ___ live in a small village, but now we live in the city.", "answers": ["used to"], "explain": "Used to + base verb describes past habits and states that are no longer true." },
+            { "type": "truefalse", "sentence": "Don't worry, you'll soon get used to the new software.", "answer": true, "explain": "Get used to + noun or -ing: you'll soon get used to it." },
+            { "type": "type", "prompt": "He ___ to wearing glasses yet, so he keeps touching them. (not / be / used)", "answers": ["isn't used", "is not used", "'s not used"], "explain": "Negative of be used to: isn't used to + -ing." },
+            { "type": "choice", "prompt": "Did you ___ play an instrument when you were at school?", "options": ["use to", "used to", "get used to", "be used to"], "explain": "After did and didn't, write use to without -d." },
+            { "type": "order", "answer": "it / took me / ages / to get used to / the noise.", "explain": "It took me + time + to get used to + noun." }
+          ]
+        },
+        {
+          "id": "B2-future-forms",
+          "theme": "Future Continuous & Future Perfect",
+          "description": "Actions in progress or completed at a point in the future.",
+          "questions": [
+            { "type": "choice", "prompt": "This time tomorrow, I ___ on a beach in Spain.", "options": ["will be lying", "will lie", "will have lain", "am lying"], "explain": "Future continuous: an action in progress at a specific time in the future." },
+            { "type": "choice", "prompt": "By 2030, they ___ the new airport.", "options": ["will have built", "will be building", "build", "have built"], "explain": "Future perfect: an action completed before a future time (by…)." },
+            { "type": "spot", "sentence": "By the end of the month, I will have [save] enough money.", "fix": "By the end of the month, I will have saved enough money.", "explain": "Future perfect: will have + past participle." },
+            { "type": "type", "prompt": "Don't call at 8. We ___ dinner then. (have)", "answers": ["will be having", "'ll be having"], "explain": "Future continuous for an activity in progress at that time." },
+            { "type": "truefalse", "sentence": "Will you be using the car tonight?", "answer": true, "explain": "The future continuous is a polite way to ask about someone's plans." },
+            { "type": "order", "answer": "by next June, / she / will have been / working here / for ten years.", "explain": "Future perfect continuous: duration up to a point in the future." },
+            { "type": "choice", "prompt": "Hurry up! The shops ___ by the time we get there.", "options": ["will have closed", "closed", "close", "have closed"], "explain": "By the time + future: use the future perfect for something finished before then." },
+            { "type": "type", "prompt": "In an hour, I ___ this essay. (finish – future perfect)", "answers": ["will have finished", "'ll have finished"], "explain": "Future perfect: will have + past participle." }
+          ]
+        },
+        {
+          "id": "B2-third-mixed-conditionals",
+          "theme": "Third & Mixed Conditionals",
+          "description": "Imagining a different past and its results, then and now.",
+          "questions": [
+            { "type": "choice", "prompt": "If I had known about the party, I ___.", "options": ["would have come", "would come", "will come", "had come"], "explain": "Third conditional: If + past perfect, would have + past participle." },
+            { "type": "choice", "prompt": "If she hadn't missed the bus, she ___ here now.", "options": ["would be", "would have been", "will be", "had been"], "explain": "Mixed conditional: a past condition (hadn't missed) with a present result (now)." },
+            { "type": "spot", "sentence": "If we [would have] left earlier, we wouldn't have missed the flight.", "fix": "If we had left earlier, we wouldn't have missed the flight.", "explain": "Don't use would in the if-clause: If we had left…" },
+            { "type": "type", "prompt": "If you ___ me, I would have failed. (not / help)", "answers": ["hadn't helped", "had not helped"], "explain": "The if-clause of a third conditional uses had/hadn't + past participle." },
+            { "type": "truefalse", "sentence": "If I were taller, I would have joined the basketball team.", "answer": true, "explain": "Mixed conditional: a present or permanent situation (were taller) with a past result (would have joined)." },
+            { "type": "order", "answer": "she / would have passed / if she / had studied harder.", "alt": ["if she / had studied harder / she / would have passed."], "explain": "The if-clause can come second: result + if + past perfect." },
+            { "type": "type", "prompt": "I got wet. If I ___ an umbrella, I wouldn't have got wet. (bring)", "answers": ["had brought", "'d brought"], "explain": "Past perfect in the if-clause of a third conditional." },
+            { "type": "choice", "prompt": "If he had taken the job in London, he ___ there now.", "options": ["would be living", "would have lived", "will live", "lived"], "explain": "Mixed conditional with a present result; the continuous form stresses an ongoing situation now." }
+          ]
+        },
+        {
+          "id": "B2-modals-deduction",
+          "theme": "Modals of Deduction",
+          "description": "Must, might and can't (have): making guesses about the present and the past.",
+          "questions": [
+            { "type": "choice", "prompt": "She's been working all day. She ___ be exhausted.", "options": ["must", "can't", "should have", "mustn't"], "explain": "Must when we are almost sure something is true." },
+            { "type": "choice", "prompt": "That ___ be John. He's in Australia this week.", "options": ["can't", "must", "mustn't", "might have"], "explain": "Can't when we are almost sure something is impossible." },
+            { "type": "spot", "sentence": "The streets are wet. It must have [rain] last night.", "fix": "The streets are wet. It must have rained last night.", "explain": "Must have + past participle for deductions about the past." },
+            { "type": "type", "prompt": "I can't find my keys. I ___ them at the office. (maybe / leave)", "answers": ["might have left", "may have left", "could have left"], "explain": "Might/may/could have + past participle for past possibilities." },
+            { "type": "truefalse", "sentence": "She can't have see us – she was looking the other way.", "answer": false, "fix": "She can't have seen us – she was looking the other way.", "explain": "Can't have + past participle: we're sure something didn't happen." },
+            { "type": "order", "answer": "they / might / have got / lost.", "explain": "Modal + have + past participle." },
+            { "type": "choice", "prompt": "Tom didn't come to class yesterday. He ___ ill.", "options": ["may have been", "must be", "can't have", "should be"], "explain": "May have been: a possible explanation about the past." },
+            { "type": "spot", "sentence": "You [mustn't] have heard the news – you look so calm!", "fix": "You can't have heard the news – you look so calm!", "explain": "The negative of must for deduction is can't (have), not mustn't." }
+          ]
+        },
+        {
+          "id": "B2-passive-causative",
+          "theme": "Passive Forms & Causative",
+          "description": "The passive in all tenses and have/get something done.",
+          "questions": [
+            { "type": "choice", "prompt": "The road ___ at the moment, so take another route.", "options": ["is being repaired", "is repaired", "has repaired", "is repairing"], "explain": "Present continuous passive: is/are being + past participle." },
+            { "type": "choice", "prompt": "I ___ my hair cut yesterday.", "options": ["had", "made", "did", "was"], "explain": "Causative: have something done – someone else did it for you." },
+            { "type": "type", "prompt": "The results ___ next week. (will / announce)", "answers": ["will be announced"], "explain": "Future passive: will be + past participle." },
+            { "type": "spot", "sentence": "The new hospital has been [open] by the mayor.", "fix": "The new hospital has been opened by the mayor.", "explain": "Present perfect passive: has been + past participle (opened)." },
+            { "type": "truefalse", "sentence": "We're getting our kitchen painted next week.", "answer": true, "explain": "Get something done is a more informal causative." },
+            { "type": "order", "answer": "the project / must / be finished / by Friday.", "alt": ["by Friday / the project / must / be finished."], "explain": "Modal passive: modal + be + past participle." },
+            { "type": "choice", "prompt": "When we arrived, the room ___.", "options": ["had already been cleaned", "already cleaned", "has already been cleaned", "was already cleaning"], "explain": "Past perfect passive: had been + past participle, for an action before another past moment." },
+            { "type": "type", "prompt": "My car is making a strange noise. I need to ___ it checked.", "answers": ["have", "get"], "explain": "Have/get + object + past participle: someone else will check it." }
+          ]
+        },
+        {
+          "id": "B2-reported-speech",
+          "theme": "Reported Speech",
+          "description": "Reporting statements, questions, orders and advice.",
+          "questions": [
+            { "type": "choice", "prompt": "“I'm tired.” → She said she ___ tired.", "options": ["was", "is being", "has been", "will be"], "explain": "The present tense usually moves one step back: am → was." },
+            { "type": "choice", "prompt": "“Where do you live?” → He asked me where ___.", "options": ["I lived", "did I live", "do I live", "I do live"], "explain": "Reported questions use statement word order: where I lived." },
+            { "type": "spot", "sentence": "She [told] that she would be late.", "fix": "She said that she would be late.", "explain": "Tell needs an object (told me); say doesn't." },
+            { "type": "type", "prompt": "“Don't touch it!” → He told me ___ touch it.", "answers": ["not to"], "explain": "Reported orders: tell someone (not) to + verb." },
+            { "type": "truefalse", "sentence": "They asked me if could I help them.", "answer": false, "fix": "They asked me if I could help them.", "explain": "Yes/no questions are reported with if or whether, followed by statement word order: if I could." },
+            { "type": "order", "answer": "she / asked me / what time / the train left.", "explain": "Reported questions have no question word order and no question mark." },
+            { "type": "type", "prompt": "“I saw him yesterday.” → She said she ___ him the day before. (see)", "answers": ["had seen", "'d seen"], "explain": "The simple past often becomes past perfect, and yesterday becomes the day before." },
+            { "type": "choice", "prompt": "“You should rest.” → The doctor ___ me to rest.", "options": ["advised", "suggested", "said", "explained"], "explain": "Advise + object + to + infinitive. Suggest, say and explain don't follow this pattern." }
+          ]
+        },
+        {
+          "id": "B2-verb-patterns",
+          "theme": "Verb Patterns: -ing or To?",
+          "description": "Remember, forget, stop, try and regret change their meaning.",
+          "questions": [
+            { "type": "choice", "prompt": "Please remember ___ the lights when you leave.", "options": ["to turn off", "turning off", "turn off", "to turning off"], "explain": "Remember to do = don't forget to do something in the future." },
+            { "type": "choice", "prompt": "We stopped at a service station ___ some petrol.", "options": ["to get", "getting", "get", "for getting"], "explain": "Stop + to-infinitive = stop in order to do something else." },
+            { "type": "spot", "sentence": "I'll never forget [to see] the Northern Lights for the first time.", "fix": "I'll never forget seeing the Northern Lights for the first time.", "explain": "Forget/remember + -ing refers to a memory of something in the past." },
+            { "type": "truefalse", "sentence": "If the printer doesn't work, try turning it off and on again.", "answer": true, "explain": "Try + -ing = do something as an experiment to see if it helps." },
+            { "type": "type", "prompt": "We regret ___ you that your application was unsuccessful. (inform)", "answers": ["to inform"], "explain": "Regret to inform/tell/say is a formal way to give bad news." },
+            { "type": "choice", "prompt": "He's given up cigarettes – he stopped ___ last year.", "options": ["smoking", "to smoke", "smoke", "to smoking"], "explain": "Stop + -ing = no longer do something." },
+            { "type": "type", "prompt": "I don't remember ___ this film before. Is it new? (see)", "answers": ["seeing", "having seen"], "explain": "Remember + -ing = have a memory of a past action." },
+            { "type": "order", "answer": "I / tried / to lift / the box, / but it was too heavy.", "explain": "Try + to-infinitive = make an effort to do something difficult." }
+          ]
+        },
+        {
+          "id": "B2-non-defining-relatives",
+          "theme": "Non-defining Relative Clauses",
+          "description": "Adding extra information with commas: who, which, whose, where.",
+          "questions": [
+            { "type": "choice", "prompt": "My sister, ___ lives in Canada, is coming to visit.", "options": ["who", "that", "which", "whom"], "explain": "Use who for people in non-defining clauses. That is not possible here." },
+            { "type": "choice", "prompt": "He passed all his exams, ___ surprised everyone.", "options": ["which", "that", "what", "who"], "explain": "Which can refer back to the whole previous clause." },
+            { "type": "spot", "sentence": "Paris, [that] is the capital of France, attracts millions of tourists.", "fix": "Paris, which is the capital of France, attracts millions of tourists.", "explain": "That can't introduce a non-defining relative clause." },
+            { "type": "type", "prompt": "The Taj Mahal, ___ was built in the 17th century, is made of white marble.", "answers": ["which"], "explain": "Use which for things in non-defining clauses." },
+            { "type": "truefalse", "sentence": "My neighbour, whose dog barks all night, has finally moved away.", "answer": true, "explain": "Whose shows possession: my neighbour's dog → whose dog." },
+            { "type": "type", "prompt": "We stayed at the Grand Hotel, ___ the food was excellent.", "answers": ["where", "at which", "in which"], "explain": "Where = at/in which, for places." },
+            { "type": "truefalse", "sentence": "My best friend, I've known since I was five, is getting married.", "answer": false, "fix": "My best friend, who I've known since I was five, is getting married.", "explain": "The relative pronoun can't be left out in a non-defining clause." },
+            { "type": "order", "answer": "Mr Jones, / who / teaches us maths, / is retiring.", "explain": "Non-defining clauses go between commas, right after the noun they describe." }
+          ]
+        },
+        {
+          "id": "B2-contrast-linkers",
+          "theme": "Linkers of Contrast",
+          "description": "Although, despite, in spite of, however and whereas.",
+          "questions": [
+            { "type": "choice", "prompt": "___ the rain, we enjoyed the match.", "options": ["Despite", "Although", "However", "Even though"], "explain": "Despite + noun. Although and even though need a clause." },
+            { "type": "choice", "prompt": "___ it was late, nobody wanted to leave.", "options": ["Although", "Despite", "In spite of", "However"], "explain": "Although + subject + verb." },
+            { "type": "spot", "sentence": "Despite [of] the traffic, we arrived on time.", "fix": "Despite the traffic, we arrived on time.", "explain": "Despite never takes of. In spite of does." },
+            { "type": "type", "prompt": "In spite ___ feeling ill, she went to work.", "answers": ["of"], "explain": "In spite of + noun or -ing." },
+            { "type": "truefalse", "sentence": "Although the flat is quite small, but it is in a great location.", "answer": false, "fix": "Although the flat is quite small, it is in a great location.", "explain": "Don't use although and but in the same sentence." },
+            { "type": "choice", "prompt": "My brother loves football, ___ I prefer tennis.", "options": ["whereas", "despite", "however", "in spite of"], "explain": "Whereas contrasts two facts in the same sentence." },
+            { "type": "type", "prompt": "She got the job ___ she had no experience. (2 words)", "answers": ["even though"], "explain": "Even though + clause is a stronger form of although." },
+            { "type": "order", "answer": "despite / having / a headache, / she finished the report.", "explain": "Despite + -ing, then the main clause." }
+          ]
+        }
+      ]
+    },
+    "C1": {
+      "name": "Advanced",
+      "description": "Structures for emphasis, style and caution: inversion, cleft sentences, hedging, participle clauses and the unreal past. Sentence transformations, and no 50:50.",
+      "timer": 30,
+      "lifelines": ["friend", "double"],
+      "puzzles": [
+        {
+          "id": "C1-formal-future",
+          "theme": "Formal Future Forms",
+          "description": "Be to, be due to, be set to and be on the verge of.",
+          "questions": [
+            { "type": "choice", "prompt": "The Prime Minister ___ visit Japan next month.", "options": ["is to", "is being to", "will to", "is due"], "explain": "Be to + base form describes official plans and arrangements." },
+            { "type": "choice", "prompt": "The new stadium is ___ to open in 2027.", "options": ["due", "about", "verge", "point"], "explain": "Be due to = be expected or scheduled to happen." },
+            { "type": "spot", "sentence": "All candidates are to [arriving] at 8:30 for the exam.", "fix": "All candidates are to arrive at 8:30 for the exam.", "explain": "Be to is followed by the base form: are to arrive." },
+            { "type": "type", "prompt": "Scientists believe they are on the ___ of a major breakthrough.", "answers": ["verge", "brink"], "explain": "Be on the verge/brink of + noun or -ing = be very close to something happening." },
+            { "type": "truefalse", "sentence": "Prices are set to rise again next year.", "answer": true, "explain": "Be set to = be likely to happen soon. It is common in the news." },
+            { "type": "type", "prompt": "The train ___ to arrive at 10:15, but it's running late. (be due – past)", "answers": ["was due"], "explain": "Was due to describes a schedule in the past, often one that didn't happen as planned." },
+            { "type": "choice", "prompt": "You ___ tell anyone about this meeting. It's confidential.", "options": ["are not to", "are not due to", "are not set to", "are not on the verge of"], "explain": "Be not to = must not. It is used for formal instructions." },
+            { "type": "order", "answer": "the company / is about to / launch / its new app.", "explain": "Be about to + base form = going to happen very soon." }
+          ]
+        },
+        {
+          "id": "C1-unreal-past",
+          "theme": "Wishes & Unreal Past",
+          "description": "Wish, if only, it's time and would rather.",
+          "questions": [
+            { "type": "choice", "prompt": "I wish I ___ more time to travel.", "options": ["had", "have", "would have", "will have"], "explain": "Wish + simple past for present situations we'd like to be different." },
+            { "type": "choice", "prompt": "It's high time we ___ home.", "options": ["went", "go", "will go", "have gone"], "explain": "It's (high) time + simple past, even though the meaning is present." },
+            { "type": "type", "prompt": "I regret not studying harder at school. → I wish I ___ harder at school.", "answers": ["had studied", "'d studied"], "explain": "Wish + past perfect for regrets about the past." },
+            { "type": "spot", "sentence": "I'd rather you [don't] tell anyone about this.", "fix": "I'd rather you didn't tell anyone about this.", "explain": "Would rather + another subject + simple past." },
+            { "type": "truefalse", "sentence": "If only he stops interrupting me!", "answer": false, "fix": "If only he would stop interrupting me!", "explain": "Wish/if only + would expresses annoyance about someone's behaviour." },
+            { "type": "order", "answer": "I wish / you / wouldn't / leave your shoes there.", "explain": "Wish + would for irritating habits." },
+            { "type": "spot", "sentence": "She wishes she [has] accepted the job offer last year.", "fix": "She wishes she had accepted the job offer last year.", "explain": "For past regrets, use wish + past perfect." },
+            { "type": "choice", "prompt": "Suppose you ___ the lottery, what would you do?", "options": ["won", "win", "will win", "would win"], "explain": "Suppose/imagine + simple past for imaginary present or future situations." }
+          ]
+        },
+        {
+          "id": "C1-advanced-conditionals",
+          "theme": "Advanced Conditionals",
+          "description": "Inverted conditionals and alternatives to if.",
+          "questions": [
+            { "type": "choice", "prompt": "___ you need any help, just call me.", "options": ["Should", "Would", "Were", "Had"], "explain": "Should + subject + verb = if you need (formal, and a little less likely)." },
+            { "type": "choice", "prompt": "___ I known, I would have helped.", "options": ["Had", "If", "Should", "Were"], "explain": "Inverted third conditional: Had + subject + past participle." },
+            { "type": "type", "prompt": "___ your help, I would have given up. (= without; 2 words)", "answers": ["but for"], "explain": "But for = if it hadn't been for (formal)." },
+            { "type": "spot", "sentence": "Were he to resign, the company [will] collapse.", "fix": "Were he to resign, the company would collapse.", "explain": "Were + subject + to-infinitive is hypothetical, so the result needs would." },
+            { "type": "truefalse", "sentence": "You can borrow my car provided that you will drive carefully.", "answer": false, "fix": "You can borrow my car provided that you drive carefully.", "explain": "Provided (that) = only if. Like if, it is followed by a present tense, not will." },
+            { "type": "order", "answer": "had it not been / for the rain, / we / would have won.", "explain": "Had it not been for… = If it hadn't been for…" },
+            { "type": "choice", "prompt": "I'll lend you the money ___ you pay me back by Friday.", "options": ["as long as", "unless", "otherwise", "in case"], "explain": "As long as = on condition that." },
+            { "type": "type", "prompt": "If we were to cancel now, we would lose our deposit. → ___ we to cancel now, we would lose our deposit.", "answers": ["were"], "explain": "Inverted form: Were + subject + to-infinitive." }
+          ]
+        },
+        {
+          "id": "C1-inversion",
+          "theme": "Inversion",
+          "description": "Negative and limiting adverbials: Never have I…, Not only…, Hardly…",
+          "questions": [
+            { "type": "choice", "prompt": "Never ___ such a beautiful sunset.", "options": ["have I seen", "I have seen", "I saw", "did I saw"], "explain": "After negative adverbials like never, invert the auxiliary and the subject: have I seen." },
+            { "type": "choice", "prompt": "Not only ___ late, but he also forgot the tickets.", "options": ["was he", "he was", "he did", "did he was"], "explain": "Not only + auxiliary + subject." },
+            { "type": "type", "prompt": "I had just sat down when the phone rang. → No sooner ___ down than the phone rang.", "answers": ["had I sat"], "explain": "No sooner + had + subject + past participle… than." },
+            { "type": "spot", "sentence": "Hardly [I had] arrived when it started to pour.", "fix": "Hardly had I arrived when it started to pour.", "explain": "Hardly… when requires inversion: had I arrived." },
+            { "type": "order", "answer": "only then / did she / realise / her mistake.", "explain": "Only then / only later + auxiliary + subject." },
+            { "type": "type", "prompt": "You shouldn't open this door under any circumstances. → Under no circumstances ___ this door.", "answers": ["should you open"], "explain": "Under no circumstances + modal + subject + verb." },
+            { "type": "truefalse", "sentence": "Little they knew what was about to happen.", "answer": false, "fix": "Little did they know what was about to happen.", "explain": "Little at the start of a sentence needs inversion: Little did they know…" },
+            { "type": "spot", "sentence": "Seldom [we have] seen such commitment from a new employee.", "fix": "Seldom have we seen such commitment from a new employee.", "explain": "Seldom and rarely at the start of a sentence trigger inversion." }
+          ]
+        },
+        {
+          "id": "C1-cleft-sentences",
+          "theme": "Cleft Sentences",
+          "description": "Adding emphasis with It is… that and What… is.",
+          "questions": [
+            { "type": "choice", "prompt": "___ I need right now is a long holiday.", "options": ["What", "That", "It", "Which"], "explain": "What-cleft: What + clause + be + the emphasised part." },
+            { "type": "choice", "prompt": "It was my sister ___ told me the news.", "options": ["who", "what", "which", "whom"], "explain": "It-cleft: It + be + emphasised person + who/that + clause." },
+            { "type": "type", "prompt": "Mark broke the window. → It ___ broke the window.", "answers": ["was Mark who", "was Mark that"], "explain": "It was + emphasised person + who/that." },
+            { "type": "spot", "sentence": "What really annoys me [it] is people who talk in cinemas.", "fix": "What really annoys me is people who talk in cinemas.", "explain": "In a what-cleft, don't add it before be." },
+            { "type": "order", "answer": "all / I did / was / ask a question.", "explain": "All + clause + be + bare infinitive emphasises that it was only one small thing." },
+            { "type": "truefalse", "sentence": "The reason why I called is that I need your advice.", "answer": true, "explain": "The reason why… is that… is another way to add emphasis." },
+            { "type": "type", "prompt": "I didn't understand until I read the instructions. → It ___ I read the instructions that I understood.", "answers": ["wasn't until", "was not until"], "explain": "It was not until… that… emphasises the moment something changed." },
+            { "type": "choice", "prompt": "___ was in 2010 that they finally moved to Canada.", "options": ["It", "What", "This", "There"], "explain": "It-clefts can emphasise a time: It was in 2010 that…" }
+          ]
+        },
+        {
+          "id": "C1-emphatic-do",
+          "theme": "Emphatic Do & Auxiliaries",
+          "description": "Adding emphasis and contrast with do, does, did and stressed auxiliaries.",
+          "questions": [
+            { "type": "choice", "prompt": "I know you don't believe me, but I ___ lock the door!", "options": ["did", "was", "have", "had"], "explain": "Emphatic did + base form insists that something really happened." },
+            { "type": "choice", "prompt": "She doesn't like big parties, but she ___ enjoy small dinners with friends.", "options": ["does", "is", "do", "has"], "explain": "Emphatic does + base form creates a contrast with the previous idea." },
+            { "type": "spot", "sentence": "He did [told] me about the problem, but I forgot.", "fix": "He did tell me about the problem, but I forgot.", "explain": "After emphatic do, does or did, use the base form." },
+            { "type": "truefalse", "sentence": "I do apologise for the delay.", "answer": true, "explain": "Emphatic do is common in formal apologies and thanks." },
+            { "type": "type", "prompt": "___ be quiet! I'm trying to concentrate. (emphatic imperative)", "answers": ["do"], "explain": "Do + imperative makes a request stronger." },
+            { "type": "choice", "prompt": "Although he rarely calls, he ___ send me a card every birthday.", "options": ["does", "is", "has", "do"], "explain": "Emphatic does contrasts with rarely calls." },
+            { "type": "truefalse", "sentence": "You said it would rain, and so did it.", "answer": false, "fix": "You said it would rain, and so it did.", "explain": "To confirm something, use so + subject + auxiliary: and so it did. (So did it means 'it did too'.)" },
+            { "type": "order", "answer": "we / did / warn you / about the weather.", "explain": "Subject + did + base form, with stress on did." }
+          ]
+        },
+        {
+          "id": "C1-participle-clauses",
+          "theme": "Participle Clauses",
+          "description": "Shortening clauses with -ing, -ed and having done.",
+          "questions": [
+            { "type": "choice", "prompt": "___ the report, she sent it to her manager.", "options": ["Having finished", "Finished", "Having been finished", "To finish"], "explain": "Having + past participle shows an action completed before the main one." },
+            { "type": "choice", "prompt": "___ in 1889, the tower is now a global icon.", "options": ["Built", "Building", "Having built", "To build"], "explain": "A past participle clause has a passive meaning: (It was) built in 1889." },
+            { "type": "spot", "sentence": "Walking down the street, [a car] nearly hit me.", "fix": "Walking down the street, I was nearly hit by a car.", "explain": "The subject of the main clause must be the one doing the participle action: I was walking, not the car." },
+            { "type": "type", "prompt": "Because he didn't know the way, he got lost. → Not ___ the way, he got lost.", "answers": ["knowing"], "explain": "Negative participle clauses: Not + -ing." },
+            { "type": "truefalse", "sentence": "Anyone wishing to leave early should speak to the organiser.", "answer": true, "explain": "A participle clause can replace a relative clause: anyone who wishes → anyone wishing." },
+            { "type": "order", "answer": "having been told / the news, / he / sat down in silence.", "explain": "Having been + past participle: a completed passive action before the main one." },
+            { "type": "choice", "prompt": "The man ___ to the manager is my uncle.", "options": ["talking", "talked", "having talked", "to talk"], "explain": "An -ing clause can replace a relative clause: the man who is talking." },
+            { "type": "type", "prompt": "The documents which were stolen last week have been found. → The documents ___ last week have been found.", "answers": ["stolen"], "explain": "A past participle clause replaces a passive relative clause." }
+          ]
+        },
+        {
+          "id": "C1-advanced-passive",
+          "theme": "Advanced Passive Structures",
+          "description": "It is said that…, He is believed to have…, being done.",
+          "questions": [
+            { "type": "choice", "prompt": "The painting ___ worth millions.", "options": ["is thought to be", "is thought being", "thinks to be", "is thinking to be"], "explain": "Subject + passive reporting verb + to-infinitive." },
+            { "type": "choice", "prompt": "The suspect is believed ___ the country last week.", "options": ["to have left", "to leave", "having left", "to be leaving"], "explain": "The perfect infinitive (to have + past participle) refers to an earlier action." },
+            { "type": "type", "prompt": "People say that he is very rich. → He ___ very rich.", "answers": ["is said to be"], "explain": "Personal passive: He is said to be…" },
+            { "type": "type", "prompt": "People believe that the fire started in the kitchen. → It ___ that the fire started in the kitchen.", "answers": ["is believed"], "explain": "Impersonal passive: It is believed that…" },
+            { "type": "spot", "sentence": "The company is reported [to lose] millions last year.", "fix": "The company is reported to have lost millions last year.", "explain": "Last year is earlier than the reporting, so use to have + past participle." },
+            { "type": "truefalse", "sentence": "She hates been told what to do.", "answer": false, "fix": "She hates being told what to do.", "explain": "After hate, use the passive -ing form: being + past participle." },
+            { "type": "order", "answer": "the meeting / is expected / to be / postponed.", "explain": "Passive infinitive: to be + past participle." },
+            { "type": "choice", "prompt": "There ___ to be around 7,000 languages in the world.", "options": ["are said", "is said", "say", "are saying"], "explain": "There + passive reporting verb + to be: There are said to be…" }
+          ]
+        },
+        {
+          "id": "C1-hedging",
+          "theme": "Hedging & Distancing",
+          "description": "Sounding cautious: seem to, appear to, tend to, it would appear that.",
+          "questions": [
+            { "type": "choice", "prompt": "The new policy ___ to have reduced unemployment.", "options": ["seems", "is seeming", "seems that", "is likely that"], "explain": "Seem to + perfect infinitive makes a cautious claim about the past." },
+            { "type": "choice", "prompt": "It would ___ that the meeting has been cancelled.", "options": ["appear", "seem to", "tend", "look"], "explain": "It would appear (or seem) that… distances the speaker from the claim." },
+            { "type": "spot", "sentence": "There appears [being] a problem with your account.", "fix": "There appears to be a problem with your account.", "explain": "Appear and seem are followed by a to-infinitive: there appears to be." },
+            { "type": "type", "prompt": "People ___ to spend more when they shop online. (= generally do)", "answers": ["tend"], "explain": "Tend to = usually or generally do something." },
+            { "type": "truefalse", "sentence": "The results would seem to suggest that the treatment is effective.", "answer": true, "explain": "Would seem to and suggest together make the claim very cautious." },
+            { "type": "choice", "prompt": "Prices are ___ to rise further this year.", "options": ["likely", "probably", "possible", "maybe"], "explain": "Be likely to + base form. Probably is an adverb: prices will probably rise." },
+            { "type": "type", "prompt": "The data ___ that young people are reading less. (suggest, cautious – 2 words)", "answers": ["may suggest", "might suggest", "could suggest", "would suggest"], "explain": "Modals such as may, might and would soften a claim." },
+            { "type": "order", "answer": "there / seems to be / some confusion / about the dates.", "explain": "There + seem/appear + to be + noun." }
+          ]
+        },
+        {
+          "id": "C1-gradable-adjectives",
+          "theme": "Gradable & Extreme Adjectives",
+          "description": "Very tired or absolutely exhausted? Choosing the right intensifier.",
+          "questions": [
+            { "type": "choice", "prompt": "The film was ___ brilliant – you have to see it!", "options": ["absolutely", "very", "fairly", "a bit"], "explain": "Brilliant is an extreme adjective, so use absolutely, not very." },
+            { "type": "choice", "prompt": "I'm ___ tired after the long walk.", "options": ["very", "absolutely", "utterly", "completely"], "explain": "Tired is gradable: very tired, extremely tired. Absolutely goes with exhausted." },
+            { "type": "spot", "sentence": "The hotel room was [very] enormous.", "fix": "The hotel room was absolutely enormous.", "explain": "Enormous is an extreme adjective: use absolutely, totally or really, not very." },
+            { "type": "truefalse", "sentence": "The exam was really impossible.", "answer": true, "explain": "Really works with both gradable and extreme adjectives." },
+            { "type": "type", "prompt": "I'm not just cold – I'm absolutely ___! (extreme adjective)", "answers": ["freezing", "frozen"], "explain": "Freezing is the extreme form of cold." },
+            { "type": "choice", "prompt": "Her performance was ___ perfect.", "options": ["absolutely", "very", "extremely", "slightly"], "explain": "Perfect can't be graded, so we use absolutely." },
+            { "type": "truefalse", "sentence": "I was extremely furious when I saw the bill.", "answer": false, "fix": "I was absolutely furious when I saw the bill.", "explain": "Furious is already extreme, so use absolutely, not extremely." },
+            { "type": "order", "answer": "the view / from the top / was / absolutely stunning.", "alt": ["from the top / the view / was / absolutely stunning."], "explain": "Absolutely + extreme adjective: absolutely stunning." }
+          ]
+        }
+      ]
+    },
+    "C2": {
+      "name": "Proficiency",
+      "description": "Fine distinctions of form and register: the subjunctive, agreement, articles, ellipsis, fronting and nominalisation. Subtle distractors, and no 50:50.",
+      "timer": 30,
+      "lifelines": ["friend", "double"],
+      "puzzles": [
+        {
+          "id": "C2-tense-nuance",
+          "theme": "Future in the Past & Tense Nuance",
+          "description": "Was to have done, was about to, would, and polite distancing.",
+          "questions": [
+            { "type": "choice", "prompt": "The wedding ___ in June, but it was cancelled.", "options": ["was to have taken place", "has taken place", "would have take place", "had been taking place"], "explain": "Was to have + past participle: a planned event that didn't happen." },
+            { "type": "choice", "prompt": "I ___ leave when she finally arrived.", "options": ["was about to", "was going", "would", "am about to"], "explain": "Was about to = on the point of doing something." },
+            { "type": "type", "prompt": "Years later, she ___ become the company's first female CEO. (future seen from the past)", "answers": ["was to", "would", "would later", "was later to"], "explain": "Was to / would describe what happened later, seen from a point in the past." },
+            { "type": "spot", "sentence": "I was wondering if you [can] help me with this form.", "fix": "I was wondering if you could help me with this form.", "explain": "Past forms create polite distance: I was wondering if you could…" },
+            { "type": "truefalse", "sentence": "When I was young, we would spend every summer at the lake.", "answer": true, "explain": "Would describes repeated actions in the past." },
+            { "type": "spot", "sentence": "When I was a child, I [would have] a dog called Max.", "fix": "When I was a child, I used to have a dog called Max.", "explain": "Would can't describe past states; use used to." },
+            { "type": "order", "answer": "she / was on the point of / giving up / when the call came.", "explain": "Be on the point of + -ing = be about to." },
+            { "type": "choice", "prompt": "The train ___ at 6, so I don't know why it's late.", "options": ["was supposed to arrive", "was supposing to arrive", "supposes to arrive", "has supposed to arrive"], "explain": "Was supposed to = it was expected or planned, but it didn't happen." }
+          ]
+        },
+        {
+          "id": "C2-modal-nuance",
+          "theme": "Modal Nuance",
+          "description": "Needn't have vs didn't need to, may well, might as well, be bound to.",
+          "questions": [
+            { "type": "choice", "prompt": "I ___ cooked so much food – only three people came.", "options": ["needn't have", "didn't need to", "mustn't have", "couldn't have"], "explain": "Needn't have + past participle: you did it, but it was unnecessary." },
+            { "type": "choice", "prompt": "There's nothing good on TV. We ___ go to bed.", "options": ["might as well", "may well", "are bound to", "should have"], "explain": "Might as well = there's no better option." },
+            { "type": "type", "prompt": "It's almost certain that prices will rise again. → Prices ___ rise again. (bound)", "answers": ["are bound to"], "explain": "Be bound to = certain or very likely to happen." },
+            { "type": "spot", "sentence": "You shouldn't have [to] worried – everything went perfectly.", "fix": "You shouldn't have worried – everything went perfectly.", "explain": "Shouldn't have + past participle criticises or regrets a past action." },
+            { "type": "truefalse", "sentence": "She may well to be right about the budget.", "answer": false, "fix": "She may well be right about the budget.", "explain": "May well (= it's quite likely) is followed by the base form, without to." },
+            { "type": "order", "answer": "he / would / keep interrupting / at the worst moments.", "alt": ["at the worst moments / he / would / keep interrupting."], "explain": "Stressed would expresses annoyance at typical behaviour." },
+            { "type": "choice", "prompt": "We had plenty of time, so we ___ hurry.", "options": ["didn't need to", "needn't have", "mustn't", "couldn't"], "explain": "Didn't need to + base verb: it wasn't necessary (and we probably didn't hurry)." },
+            { "type": "type", "prompt": "You ___ have told me it was your birthday! I had no idea. (criticism)", "answers": ["might", "could", "should"], "explain": "Might/could have + past participle can express reproach." }
+          ]
+        },
+        {
+          "id": "C2-subjunctive",
+          "theme": "The Subjunctive & Formal Register",
+          "description": "Insist that he be, lest, if need be and other formal structures.",
+          "questions": [
+            { "type": "choice", "prompt": "The committee insisted that the report ___ published immediately.", "options": ["be", "is", "was", "will be"], "explain": "Mandative subjunctive: the base form after insist, demand or recommend that…" },
+            { "type": "choice", "prompt": "It is essential that every candidate ___ the form in full.", "options": ["complete", "completes", "completed", "will complete"], "explain": "After it is essential/vital that, the subjunctive uses the base form, even with a singular subject." },
+            { "type": "type", "prompt": "She took careful notes ___ she forget anything important. (formal: to avoid the risk that)", "answers": ["lest"], "explain": "Lest (formal) = in order to avoid; it is followed by the subjunctive or should." },
+            { "type": "spot", "sentence": "The doctor recommended that he [stops] smoking at once.", "fix": "The doctor recommended that he stop smoking at once.", "explain": "Recommend that + subjunctive: he stop (or he should stop)." },
+            { "type": "truefalse", "sentence": "Be that as it may, we still need to meet the deadline.", "answer": true, "explain": "Be that as it may is a fixed subjunctive expression meaning 'even so'." },
+            { "type": "order", "answer": "far be it / from me / to tell you / how to do your job.", "explain": "Far be it from me to… is a formal subjunctive idiom." },
+            { "type": "choice", "prompt": "If need ___, we can postpone the launch.", "options": ["be", "is", "were", "being"], "explain": "If need be = if necessary; a fixed subjunctive form." },
+            { "type": "spot", "sentence": "Come what [will], I shall not change my decision.", "fix": "Come what may, I shall not change my decision.", "explain": "The fixed expression is come what may." }
+          ]
+        },
+        {
+          "id": "C2-subject-verb-agreement",
+          "theme": "Subject–Verb Agreement",
+          "description": "Tricky subjects: a number of, neither… nor, the police, mathematics.",
+          "questions": [
+            { "type": "choice", "prompt": "A number of students ___ complained about the new timetable.", "options": ["have", "has", "is", "was"], "explain": "A number of + plural noun takes a plural verb." },
+            { "type": "choice", "prompt": "The number of cars on our roads ___ increasing every year.", "options": ["is", "are", "have", "were"], "explain": "The number of… takes a singular verb, because the subject is number." },
+            { "type": "spot", "sentence": "Neither the manager nor his assistants [was] available.", "fix": "Neither the manager nor his assistants were available.", "explain": "With neither… nor, the verb agrees with the nearer subject: assistants were." },
+            { "type": "truefalse", "sentence": "Ten kilometres is a long way to walk.", "answer": true, "explain": "Amounts of distance, money and time are treated as a single unit." },
+            { "type": "type", "prompt": "The police ___ investigating the incident. (be – present)", "answers": ["are"], "explain": "Police is always a plural noun." },
+            { "type": "choice", "prompt": "Everyone in the office ___ to attend the training.", "options": ["has", "have", "are", "were"], "explain": "Everyone, everybody and each take a singular verb." },
+            { "type": "truefalse", "sentence": "Mathematics are my favourite subject.", "answer": false, "fix": "Mathematics is my favourite subject.", "explain": "Subjects ending in -ics, like mathematics and physics, take a singular verb." },
+            { "type": "order", "answer": "the news / about the merger / was / a complete surprise.", "explain": "News is uncountable and takes a singular verb." }
+          ]
+        },
+        {
+          "id": "C2-articles",
+          "theme": "Articles in Depth",
+          "description": "The rich, a Mr Patel, and no article with abstract ideas.",
+          "questions": [
+            { "type": "choice", "prompt": "___ unemployed often find it hard to get a loan.", "options": ["The", "—", "An", "Some"], "explain": "The + adjective refers to a whole group of people: the unemployed, the rich." },
+            { "type": "choice", "prompt": "___ life is full of surprises.", "options": ["—", "The", "A", "An"], "explain": "Abstract nouns used in a general sense take no article." },
+            { "type": "spot", "sentence": "[The] nature has a remarkable way of restoring balance.", "fix": "Nature has a remarkable way of restoring balance.", "explain": "Nature in its general sense takes no article." },
+            { "type": "truefalse", "sentence": "She plays the violin in an orchestra.", "answer": true, "explain": "Musical instruments usually take the: play the violin." },
+            { "type": "type", "prompt": "There's ___ Mr Patel on the phone for you. Do you know him? (article)", "answers": ["a"], "explain": "A + name = a person called Mr Patel whom we don't know." },
+            { "type": "choice", "prompt": "He was sent to ___ prison for five years.", "options": ["—", "the", "an", "some"], "explain": "Prison, school, hospital and church take no article when we mean their main purpose." },
+            { "type": "truefalse", "sentence": "The Mount Everest is the highest mountain in the world.", "answer": false, "fix": "Mount Everest is the highest mountain in the world.", "explain": "Single mountains take no article, but mountain ranges do: the Alps." },
+            { "type": "order", "answer": "the Smiths / are having / a party / on Saturday.", "alt": ["on Saturday / the Smiths / are having / a party."], "explain": "The + plural surname = the whole family." }
+          ]
+        },
+        {
+          "id": "C2-ellipsis-substitution",
+          "theme": "Ellipsis & Substitution",
+          "description": "Avoiding repetition with so, not, do so, one and omission.",
+          "questions": [
+            { "type": "choice", "prompt": "Will it rain tomorrow? — I hope ___.", "options": ["not", "no", "don't", "so not"], "explain": "I hope not is the negative of I hope so." },
+            { "type": "choice", "prompt": "She said she'd finish the report by noon, and she has ___.", "options": ["done so", "made so", "done it so", "so done"], "explain": "Do so replaces a verb phrase, especially in formal English." },
+            { "type": "type", "prompt": "I'd love to come, but I'm not sure I'll be able ___.", "answers": ["to"], "explain": "Keep to when the verb after it is left out: able to (come)." },
+            { "type": "spot", "sentence": "I've read both novels, and I prefer the first [ones].", "fix": "I've read both novels, and I prefer the first one.", "explain": "One replaces a singular countable noun; ones is plural." },
+            { "type": "truefalse", "sentence": "He doesn't like jazz, and neither I do.", "answer": false, "fix": "He doesn't like jazz, and neither do I.", "explain": "Neither/nor + auxiliary + subject for negative agreement." },
+            { "type": "order", "answer": "you can / take a break / if you / want to.", "alt": ["if you / want to / you can / take a break."], "explain": "The verb after to is left out when it is clear from the context." },
+            { "type": "choice", "prompt": "Are you coming to the meeting? — I'm afraid ___.", "options": ["not", "no", "I don't", "not so"], "explain": "In I'm afraid not, not replaces the whole negative clause." },
+            { "type": "type", "prompt": "Few people expected the plan to work, but it ___.", "answers": ["did"], "explain": "An auxiliary on its own can replace the whole verb phrase: it did (work)." }
+          ]
+        },
+        {
+          "id": "C2-fronting-emphasis",
+          "theme": "Fronting & Emphatic Structures",
+          "description": "Try as I might, Much as I admire, So great was…",
+          "questions": [
+            { "type": "choice", "prompt": "___ as I might, I couldn't open the jar.", "options": ["Try", "Trying", "Tried", "To try"], "explain": "Try as I might = although I tried very hard." },
+            { "type": "choice", "prompt": "___ was the demand that tickets sold out in minutes.", "options": ["Such", "So", "Such a", "As"], "explain": "Such + be + noun + that: a fronted structure for emphasis." },
+            { "type": "type", "prompt": "The noise was so loud that nobody could sleep. → So ___ that nobody could sleep.", "answers": ["loud was the noise"], "explain": "So + adjective + be + subject + that…" },
+            { "type": "spot", "sentence": "Much as I respect him, [but] I can't agree with his decision.", "fix": "Much as I respect him, I can't agree with his decision.", "explain": "Much as already means although, so don't add but." },
+            { "type": "truefalse", "sentence": "Strange though it may seem, I actually enjoy exams.", "answer": true, "explain": "Adjective + though/as + subject + verb = although it may seem strange." },
+            { "type": "order", "answer": "so tired / was she / that she / fell asleep at her desk.", "explain": "So + adjective + verb + subject + that… puts extra emphasis on the adjective." },
+            { "type": "type", "prompt": "Although he was exhausted, he kept running. → Exhausted ___ he was, he kept running.", "answers": ["as", "though"], "explain": "Adjective + as/though + subject + verb for concession." },
+            { "type": "choice", "prompt": "Gone ___ the days when phones were only used for calls.", "options": ["are", "is", "were being", "have"], "explain": "Fronted participle + be + subject for emphasis: Gone are the days…" }
+          ]
+        },
+        {
+          "id": "C2-relative-structures",
+          "theme": "Complex Relative Structures",
+          "description": "All of whom, in which case, whereby and whoever.",
+          "questions": [
+            { "type": "choice", "prompt": "She has three brothers, ___ are doctors.", "options": ["all of whom", "all of them", "all whom", "who all of"], "explain": "Quantifier + of + whom/which in non-defining relative clauses." },
+            { "type": "choice", "prompt": "The train may be late, ___ we'll take a taxi.", "options": ["in which case", "in that case", "which case", "in case which"], "explain": "In which case = and if that happens." },
+            { "type": "type", "prompt": "They introduced a system ___ employees can work from home two days a week. (formal, 1 word)", "answers": ["whereby"], "explain": "Whereby (formal) = by which, through which." },
+            { "type": "spot", "sentence": "He failed the exam, [what] surprised everyone.", "fix": "He failed the exam, which surprised everyone.", "explain": "Which (not what) can refer back to a whole clause." },
+            { "type": "truefalse", "sentence": "Who took my umbrella had better return it.", "answer": false, "fix": "Whoever took my umbrella had better return it.", "explain": "Whoever = the person who, any person who. Who can't be used alone as the subject like this." },
+            { "type": "order", "answer": "the reason / for which / he resigned / remains unclear.", "explain": "Preposition + which is the formal pattern." },
+            { "type": "choice", "prompt": "I'll give the spare tickets to ___ wants them.", "options": ["whoever", "whomever", "who", "whom"], "explain": "Whoever is the subject of wants, so whomever is wrong here." },
+            { "type": "spot", "sentence": "The village [in where] I grew up has changed completely.", "fix": "The village in which I grew up has changed completely.", "explain": "After a preposition, use which, not where." }
+          ]
+        },
+        {
+          "id": "C2-absolute-constructions",
+          "theme": "Absolute Constructions",
+          "description": "Weather permitting, all things considered, the work done…",
+          "questions": [
+            { "type": "choice", "prompt": "___ considered, the event was a great success.", "options": ["All things", "All thing", "All is", "Everything is"], "explain": "All things considered = after thinking about everything." },
+            { "type": "choice", "prompt": "___ no other option, they accepted the offer.", "options": ["There being", "There was", "Being there", "It being"], "explain": "There being = because there was. It is formal." },
+            { "type": "spot", "sentence": "The meeting [ended], everyone went back to work.", "fix": "The meeting having ended, everyone went back to work.", "explain": "An absolute clause needs a participle, not a finite verb: The meeting having ended…" },
+            { "type": "truefalse", "sentence": "Her arms folded, she waited for an explanation.", "answer": true, "explain": "Noun + past participle can describe how someone looked while doing something." },
+            { "type": "type", "prompt": "The work ___, we went home. (do – participle)", "answers": ["done"], "explain": "Noun + past participle = when the work had been done." },
+            { "type": "choice", "prompt": "Other things ___ equal, the more experienced candidate should get the job.", "options": ["being", "are", "been", "to be"], "explain": "Other things being equal = if nothing else is different." },
+            { "type": "truefalse", "sentence": "Weather permitted, the ceremony will take place outdoors.", "answer": false, "fix": "Weather permitting, the ceremony will take place outdoors.", "explain": "The fixed phrase uses the -ing form: weather permitting = if the weather is good enough." },
+            { "type": "order", "answer": "his hands / in his pockets, / he / walked slowly home.", "explain": "Noun + prepositional phrase can form a verbless absolute clause." }
+          ]
+        },
+        {
+          "id": "C2-nominalisation",
+          "theme": "Nominalisation",
+          "description": "Turning verbs and adjectives into nouns for a formal style.",
+          "questions": [
+            { "type": "choice", "prompt": "The government decided to raise taxes. → The government's ___ to raise taxes was unpopular.", "options": ["decision", "deciding", "decide", "decisive"], "explain": "Decide (verb) → decision (noun)." },
+            { "type": "choice", "prompt": "Prices rose sharply, which worried consumers. → The sharp ___ in prices worried consumers.", "options": ["rise", "raise", "rising up", "arise"], "explain": "A rise in = an increase in. Raise is mainly a verb that needs an object." },
+            { "type": "spot", "sentence": "The [fail] of the project led to several resignations.", "fix": "The failure of the project led to several resignations.", "explain": "Fail is a verb; the noun is failure." },
+            { "type": "type", "prompt": "The company expanded rapidly. → The rapid ___ of the company surprised analysts.", "answers": ["expansion"], "explain": "Expand (verb) → expansion (noun). The adverb rapidly becomes the adjective rapid." },
+            { "type": "truefalse", "sentence": "The introduction of the new law caused widespread protests.", "answer": true, "explain": "Introduce → the introduction of: a noun phrase replaces a whole clause." },
+            { "type": "type", "prompt": "People are increasingly aware of climate change. → There is growing ___ of climate change.", "answers": ["awareness"], "explain": "Aware (adjective) → awareness (noun)." },
+            { "type": "choice", "prompt": "The team didn't communicate, so the project was delayed. → A ___ of communication delayed the project.", "options": ["lack", "lacking", "less", "missing"], "explain": "A lack of + noun = not having enough of something." },
+            { "type": "order", "answer": "the closure / of the factory / resulted in / hundreds of job losses.", "explain": "Noun phrase + resulted in + noun phrase: a typical formal pattern." }
+          ]
+        }
+      ]
+    }
+  }
+}

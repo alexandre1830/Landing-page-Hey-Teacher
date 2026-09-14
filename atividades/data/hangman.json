@@ -1,0 +1,605 @@
+{
+  "metadata": {
+    "title": "English Hangman Rounds by CEFR Level",
+    "description": "36 themed hangman rounds of 8 words each. Themes, vocabulary and phrase length are calibrated to each CEFR level, and so are the number of lives and whether the clue is visible from the start.",
+    "framework": "CEFR (Common European Framework of Reference for Languages)",
+    "puzzles_per_level": 6,
+    "words_per_puzzle": 8,
+    "levels": ["A1", "A2", "B1", "B2", "C1", "C2"],
+    "level_settings": {
+      "lives": "Wrong guesses allowed per word (1 to 10). Fewer lives start with more of the drawing already in place.",
+      "clue": "\"always\" shows the clue from the start; \"on-request\" hides it until someone presses Show clue."
+    },
+    "version": "1.0"
+  },
+  "levels": {
+    "A1": {
+      "name": "Beginner",
+      "description": "Short, everyday words with plenty of lives. The clue is always visible.",
+      "lives": 10,
+      "clue": "always",
+      "puzzles": [
+        {
+          "id": "A1-breakfast",
+          "theme": "Breakfast Time",
+          "description": "Food and drinks for the morning.",
+          "words": [
+            { "answer": "TOAST", "clue": "Bread that is hot and brown on both sides." },
+            { "answer": "BUTTER", "clue": "Soft yellow food. You put it on bread." },
+            { "answer": "CEREAL", "clue": "You eat it in a bowl with milk." },
+            { "answer": "HONEY", "clue": "A sweet, sticky food made by bees." },
+            { "answer": "JAM", "clue": "Sweet food made from fruit and sugar." },
+            { "answer": "YOGURT", "clue": "A thick white food made from milk. It is often cold." },
+            { "answer": "TEA", "clue": "A hot drink. People in England love it." },
+            { "answer": "PANCAKE", "clue": "A thin, flat, round food. People often eat it with syrup." }
+          ]
+        },
+        {
+          "id": "A1-music",
+          "theme": "Music",
+          "description": "Instruments, songs and dancing.",
+          "words": [
+            { "answer": "PIANO", "clue": "A big instrument with black and white keys." },
+            { "answer": "DRUMS", "clue": "You hit them with sticks to make music." },
+            { "answer": "FLUTE", "clue": "A long, thin instrument. You blow into it." },
+            { "answer": "SING", "clue": "To make music with your voice." },
+            { "answer": "SONG", "clue": "Music with words." },
+            { "answer": "DANCE", "clue": "To move your body to music." },
+            { "answer": "BAND", "clue": "A group of people who play music together." },
+            { "answer": "RADIO", "clue": "You listen to music and news on it." }
+          ]
+        },
+        {
+          "id": "A1-transport",
+          "theme": "Transport",
+          "description": "Ways to travel from place to place.",
+          "words": [
+            { "answer": "CAR", "clue": "It has four wheels. A family can drive it." },
+            { "answer": "BUS", "clue": "A big vehicle. Many people travel in it in the city." },
+            { "answer": "TRAIN", "clue": "It goes on rails from station to station." },
+            { "answer": "PLANE", "clue": "It flies in the sky." },
+            { "answer": "BOAT", "clue": "It moves on water, on a lake or a river." },
+            { "answer": "TRUCK", "clue": "A big vehicle that carries heavy things." },
+            { "answer": "TAXI", "clue": "A car you pay to take you somewhere." },
+            { "answer": "SHIP", "clue": "A very big vehicle that crosses the ocean." }
+          ]
+        },
+        {
+          "id": "A1-nature",
+          "theme": "Nature",
+          "description": "The world outside: plants, sky and sea.",
+          "words": [
+            { "answer": "TREE", "clue": "It is tall and green, with leaves and branches." },
+            { "answer": "FLOWER", "clue": "A colorful part of a plant. It smells nice." },
+            { "answer": "GRASS", "clue": "Short green plants in a park or garden." },
+            { "answer": "SKY", "clue": "It is blue on a sunny day." },
+            { "answer": "SEA", "clue": "Big salty water. Fish live in it." },
+            { "answer": "STAR", "clue": "A small light in the sky at night." },
+            { "answer": "MOON", "clue": "You see it at night. Sometimes it is round." },
+            { "answer": "RAINBOW", "clue": "An arc of seven colors in the sky." }
+          ]
+        },
+        {
+          "id": "A1-feelings",
+          "theme": "Feelings",
+          "description": "How you feel today.",
+          "words": [
+            { "answer": "HAPPY", "clue": "How you feel when something good happens." },
+            { "answer": "SAD", "clue": "How you feel when you want to cry." },
+            { "answer": "ANGRY", "clue": "How you feel when someone is not nice to you." },
+            { "answer": "TIRED", "clue": "How you feel when you need to sleep." },
+            { "answer": "HUNGRY", "clue": "How you feel when you want to eat." },
+            { "answer": "SCARED", "clue": "How you feel in a horror movie." },
+            { "answer": "THIRSTY", "clue": "How you feel when you want to drink water." },
+            { "answer": "SICK", "clue": "Not well. You need a doctor." }
+          ]
+        },
+        {
+          "id": "A1-objects",
+          "theme": "Everyday Objects",
+          "description": "Things you use every day.",
+          "words": [
+            { "answer": "PHONE", "clue": "You use it to call and text your friends." },
+            { "answer": "KEY", "clue": "You use it to open a door." },
+            { "answer": "CLOCK", "clue": "It tells you the time." },
+            { "answer": "CUP", "clue": "You drink coffee or tea from it." },
+            { "answer": "BOTTLE", "clue": "Water or juice comes in it." },
+            { "answer": "TOWEL", "clue": "You use it to get dry after a shower." },
+            { "answer": "MIRROR", "clue": "You look in it to see your face." },
+            { "answer": "UMBRELLA", "clue": "You use it when it rains." }
+          ]
+        }
+      ]
+    },
+    "A2": {
+      "name": "Elementary",
+      "description": "Common words for daily life, with a clue to guide every guess.",
+      "lives": 9,
+      "clue": "always",
+      "puzzles": [
+        {
+          "id": "A2-restaurant",
+          "theme": "At the Restaurant",
+          "description": "Ordering food and paying the bill.",
+          "words": [
+            { "answer": "MENU", "clue": "A list of the food and drinks in a restaurant." },
+            { "answer": "BILL", "clue": "The paper that shows how much you must pay." },
+            { "answer": "TIP", "clue": "Extra money you give to a waiter for good service." },
+            { "answer": "NAPKIN", "clue": "A piece of cloth or paper to clean your mouth." },
+            { "answer": "SALAD", "clue": "A cold dish of lettuce, tomatoes and other vegetables." },
+            { "answer": "STEAK", "clue": "A thick piece of meat, often beef." },
+            { "answer": "SOUP", "clue": "A hot liquid food, often made with vegetables." },
+            { "answer": "RESERVATION", "clue": "You make one to be sure there is a table for you." }
+          ]
+        },
+        {
+          "id": "A2-weather",
+          "theme": "Weather Forecast",
+          "description": "Talking about the weather.",
+          "words": [
+            { "answer": "SUNNY", "clue": "Weather when the sky is clear and bright." },
+            { "answer": "CLOUDY", "clue": "The sky is gray and you can't see the sun." },
+            { "answer": "STORM", "clue": "Very bad weather with strong wind and rain." },
+            { "answer": "THUNDER", "clue": "A loud, deep noise from the sky in bad weather." },
+            { "answer": "LIGHTNING", "clue": "A bright flash in the sky during a storm." },
+            { "answer": "FOGGY", "clue": "When the air is gray and you can't see far." },
+            { "answer": "WINDY", "clue": "When the air moves a lot and the trees move." },
+            { "answer": "TEMPERATURE", "clue": "How hot or cold it is, for example 25 degrees." }
+          ]
+        },
+        {
+          "id": "A2-accessories",
+          "theme": "Clothes & Accessories",
+          "description": "What people wear and carry.",
+          "words": [
+            { "answer": "SCARF", "clue": "You wear it around your neck when it's cold." },
+            { "answer": "GLOVES", "clue": "You wear them on your hands in winter." },
+            { "answer": "SWEATER", "clue": "A warm piece of clothing for the top of your body." },
+            { "answer": "BELT", "clue": "You wear it around your waist to hold up your pants." },
+            { "answer": "JEANS", "clue": "Blue pants made of denim." },
+            { "answer": "BOOTS", "clue": "Shoes that cover your feet and ankles." },
+            { "answer": "SUNGLASSES", "clue": "You wear them over your eyes on bright days." },
+            { "answer": "NECKLACE", "clue": "A piece of jewelry, like a gold chain, worn above your chest." }
+          ]
+        },
+        {
+          "id": "A2-gadgets",
+          "theme": "Gadgets & Technology",
+          "description": "Devices we use at home and at work.",
+          "words": [
+            { "answer": "LAPTOP", "clue": "A small computer you can carry." },
+            { "answer": "TABLET", "clue": "A flat computer with a touch screen, bigger than a phone." },
+            { "answer": "EMAIL", "clue": "A message you send over the internet." },
+            { "answer": "PRINTER", "clue": "A machine that puts your documents on paper." },
+            { "answer": "MOUSE", "clue": "You move it with your hand to control a computer." },
+            { "answer": "CAMERA", "clue": "You take photos with it." },
+            { "answer": "HEADPHONES", "clue": "You wear them on your ears to listen to music." },
+            { "answer": "SPEAKER", "clue": "A device that makes music louder." }
+          ]
+        },
+        {
+          "id": "A2-goingout",
+          "theme": "Going Out",
+          "description": "Places to go in your free time.",
+          "words": [
+            { "answer": "CINEMA", "clue": "You go there to watch a new movie on a big screen." },
+            { "answer": "THEATER", "clue": "Actors perform plays on a stage there." },
+            { "answer": "GYM", "clue": "You go there to exercise." },
+            { "answer": "ZOO", "clue": "A place where you can see wild animals." },
+            { "answer": "AQUARIUM", "clue": "A place where you can see fish and other sea creatures." },
+            { "answer": "BOWLING", "clue": "A game where you roll a heavy ball at ten pins." },
+            { "answer": "FESTIVAL", "clue": "A big celebration with music, food and fun, often outside." },
+            { "answer": "CAFE", "clue": "A small place where you can drink coffee and eat cake." }
+          ]
+        },
+        {
+          "id": "A2-wildlife",
+          "theme": "Animals of the World",
+          "description": "Wild animals from every continent.",
+          "words": [
+            { "answer": "GIRAFFE", "clue": "The tallest animal. It has a very long neck." },
+            { "answer": "ZEBRA", "clue": "A black and white animal like a horse." },
+            { "answer": "PENGUIN", "clue": "A black and white bird that can't fly but swims very well." },
+            { "answer": "DOLPHIN", "clue": "A smart sea animal that jumps out of the water." },
+            { "answer": "KANGAROO", "clue": "An Australian animal that jumps and carries its baby in a pocket." },
+            { "answer": "CAMEL", "clue": "A desert animal with one or two humps." },
+            { "answer": "OWL", "clue": "A bird that is awake at night." },
+            { "answer": "SHARK", "clue": "A big fish with sharp teeth." }
+          ]
+        }
+      ]
+    },
+    "B1": {
+      "name": "Intermediate",
+      "description": "Topic vocabulary and everyday phrasal verbs, with fewer lives.",
+      "lives": 8,
+      "clue": "always",
+      "puzzles": [
+        {
+          "id": "B1-money",
+          "theme": "Money & Banking",
+          "description": "Paying, saving and borrowing.",
+          "words": [
+            { "answer": "ACCOUNT", "clue": "You open one at a bank to keep your money." },
+            { "answer": "CASH", "clue": "Money in coins and notes, not on a card." },
+            { "answer": "CREDIT CARD", "clue": "A piece of plastic you use to buy now and pay later." },
+            { "answer": "LOAN", "clue": "Money you borrow and must pay back." },
+            { "answer": "WITHDRAW", "clue": "To take money out of a bank or an ATM." },
+            { "answer": "CURRENCY", "clue": "The money used in a country, like the euro or the dollar." },
+            { "answer": "PAYMENT", "clue": "Money given in exchange for a product or service." },
+            { "answer": "EXCHANGE RATE", "clue": "The value of one country's money compared to another's." }
+          ]
+        },
+        {
+          "id": "B1-phrasal",
+          "theme": "Everyday Phrasal Verbs",
+          "description": "Common verbs with up, off, out and on.",
+          "words": [
+            { "answer": "GIVE UP", "clue": "To stop trying to do something." },
+            { "answer": "LOOK AFTER", "clue": "To take care of someone or something." },
+            { "answer": "FIND OUT", "clue": "To discover information." },
+            { "answer": "PUT OFF", "clue": "To delay something until later." },
+            { "answer": "CARRY ON", "clue": "To continue doing something." },
+            { "answer": "RUN OUT", "clue": "To have none left: \"We've ___ ___ of milk.\"" },
+            { "answer": "TAKE OFF", "clue": "What a plane does when it leaves the ground." },
+            { "answer": "BRING UP", "clue": "To raise a child, or to mention a topic in a conversation." }
+          ]
+        },
+        {
+          "id": "B1-disasters",
+          "theme": "Natural Disasters",
+          "description": "When nature becomes dangerous.",
+          "words": [
+            { "answer": "EARTHQUAKE", "clue": "When the ground shakes violently." },
+            { "answer": "HURRICANE", "clue": "A huge storm with very strong winds, formed over the ocean." },
+            { "answer": "TSUNAMI", "clue": "A giant, destructive wave that hits the coast." },
+            { "answer": "VOLCANO", "clue": "A mountain that can erupt with hot lava." },
+            { "answer": "WILDFIRE", "clue": "Flames that spread quickly and out of control through forests." },
+            { "answer": "AVALANCHE", "clue": "A huge amount of snow falling down a mountain." },
+            { "answer": "TORNADO", "clue": "A spinning column of wind that destroys everything in its path." },
+            { "answer": "LANDSLIDE", "clue": "When earth and rocks suddenly fall down a hill." }
+          ]
+        },
+        {
+          "id": "B1-road",
+          "theme": "On the Road",
+          "description": "Driving, traffic and road safety.",
+          "words": [
+            { "answer": "TRAFFIC JAM", "clue": "A long line of cars that can't move." },
+            { "answer": "SPEED LIMIT", "clue": "The fastest you are allowed to drive on a road." },
+            { "answer": "SEAT BELT", "clue": "You fasten it in a car for safety." },
+            { "answer": "ROUNDABOUT", "clue": "A circular junction where cars drive around a center." },
+            { "answer": "HIGHWAY", "clue": "A big, fast road between cities." },
+            { "answer": "PASSENGER", "clue": "A person traveling in a vehicle who isn't driving." },
+            { "answer": "CROSSWALK", "clue": "A striped area on the road where pedestrians have priority." },
+            { "answer": "GAS STATION", "clue": "A place where you fill your car with fuel." }
+          ]
+        },
+        {
+          "id": "B1-space",
+          "theme": "Science & Space",
+          "description": "Planets, stars and space travel.",
+          "words": [
+            { "answer": "PLANET", "clue": "Earth, Mars and Jupiter are examples." },
+            { "answer": "ASTRONAUT", "clue": "A person who travels into space." },
+            { "answer": "GRAVITY", "clue": "The force that makes things fall to the ground." },
+            { "answer": "GALAXY", "clue": "A huge group of stars, like the Milky Way." },
+            { "answer": "ROCKET", "clue": "A vehicle that launches into space." },
+            { "answer": "SATELLITE", "clue": "An object that orbits the Earth, used for TV or GPS." },
+            { "answer": "OXYGEN", "clue": "The gas we need to breathe." },
+            { "answer": "ECLIPSE", "clue": "When the moon blocks the light of the sun." }
+          ]
+        },
+        {
+          "id": "B1-arts",
+          "theme": "Arts & Entertainment",
+          "description": "Music, theater, books and art.",
+          "words": [
+            { "answer": "ORCHESTRA", "clue": "A large group of musicians playing classical music together." },
+            { "answer": "SCULPTURE", "clue": "A work of art made from stone, metal or wood." },
+            { "answer": "MUSICAL", "clue": "A play or film with lots of songs and dancing." },
+            { "answer": "AUDITION", "clue": "A short performance to get a role in a show." },
+            { "answer": "CARTOON", "clue": "A funny drawing or an animated film." },
+            { "answer": "NOVEL", "clue": "A long written story about imaginary people and events." },
+            { "answer": "POETRY", "clue": "Writing with rhythm, often in short lines." },
+            { "answer": "GALLERY", "clue": "A building where you can see paintings." }
+          ]
+        }
+      ]
+    },
+    "B2": {
+      "name": "Upper-Intermediate",
+      "description": "Longer words, collocations and common idioms. Fewer lives for every mistake.",
+      "lives": 7,
+      "clue": "always",
+      "puzzles": [
+        {
+          "id": "B2-idioms",
+          "theme": "Everyday Idioms",
+          "description": "Expressions native speakers use all the time.",
+          "words": [
+            { "answer": "PIECE OF CAKE", "clue": "Something very easy." },
+            { "answer": "BREAK THE ICE", "clue": "To make people feel relaxed when they first meet." },
+            { "answer": "UNDER THE WEATHER", "clue": "Feeling a little sick." },
+            { "answer": "HIT THE BOOKS", "clue": "To study hard." },
+            { "answer": "ONCE IN A BLUE MOON", "clue": "Very rarely." },
+            { "answer": "CALL IT A DAY", "clue": "To decide to stop working on something." },
+            { "answer": "SPILL THE BEANS", "clue": "To tell a secret." },
+            { "answer": "COST AN ARM AND A LEG", "clue": "To be very expensive." }
+          ]
+        },
+        {
+          "id": "B2-travel",
+          "theme": "Travel Problems",
+          "description": "When a trip doesn't go to plan.",
+          "words": [
+            { "answer": "LOST LUGGAGE", "clue": "Bags that the airline couldn't find." },
+            { "answer": "CANCELLATION", "clue": "When a flight or event is officially stopped before it happens." },
+            { "answer": "OVERBOOKED", "clue": "When a flight or hotel has sold more places than it has." },
+            { "answer": "STOPOVER", "clue": "A short stay in a place in the middle of a long journey." },
+            { "answer": "CONNECTING FLIGHT", "clue": "A second plane you take to reach your final destination." },
+            { "answer": "TRAVEL INSURANCE", "clue": "A policy that pays if something goes wrong on your trip." },
+            { "answer": "BOARDING PASS", "clue": "The document you show to get on a plane." },
+            { "answer": "COMPENSATION", "clue": "Money paid to you because something went wrong." }
+          ]
+        },
+        {
+          "id": "B2-society",
+          "theme": "Social Issues",
+          "description": "Problems and solutions in society.",
+          "words": [
+            { "answer": "POVERTY", "clue": "The state of being extremely poor." },
+            { "answer": "UNEMPLOYMENT", "clue": "The situation of not having a job." },
+            { "answer": "DISCRIMINATION", "clue": "Treating people unfairly because of their race, gender or age." },
+            { "answer": "EQUALITY", "clue": "The same rights and opportunities for everyone." },
+            { "answer": "VOLUNTEER", "clue": "A person who works without being paid to help others." },
+            { "answer": "CHARITY", "clue": "An organization that collects money to help people in need." },
+            { "answer": "IMMIGRATION", "clue": "Coming to live permanently in a foreign country." },
+            { "answer": "WELFARE", "clue": "Government help for people in financial need." }
+          ]
+        },
+        {
+          "id": "B2-fitness",
+          "theme": "Sport & Fitness",
+          "description": "Training, performance and fair play.",
+          "words": [
+            { "answer": "ENDURANCE", "clue": "The ability to keep going during a long, hard activity." },
+            { "answer": "WARM-UP", "clue": "Light exercise done before a workout to prepare your muscles." },
+            { "answer": "FLEXIBILITY", "clue": "The ability to bend and stretch your body easily." },
+            { "answer": "PERSONAL BEST", "clue": "Your fastest time or highest score ever." },
+            { "answer": "UNDERDOG", "clue": "The team or player that is expected to lose." },
+            { "answer": "DOPING", "clue": "Illegally using drugs to improve sports performance." },
+            { "answer": "HAMSTRING", "clue": "The muscle at the back of your upper leg, often injured." },
+            { "answer": "SPORTSMANSHIP", "clue": "Fair and respectful behavior in competition." }
+          ]
+        },
+        {
+          "id": "B2-marketing",
+          "theme": "Marketing & Brands",
+          "description": "How companies sell their products.",
+          "words": [
+            { "answer": "TARGET AUDIENCE", "clue": "The group of people a product or advert is aimed at." },
+            { "answer": "MARKET RESEARCH", "clue": "Studying what customers want before launching a product." },
+            { "answer": "BRAND LOYALTY", "clue": "When customers keep buying from the same company." },
+            { "answer": "ENDORSEMENT", "clue": "When a celebrity publicly supports a product." },
+            { "answer": "WORD OF MOUTH", "clue": "Promotion that happens when people recommend something to friends." },
+            { "answer": "PACKAGING", "clue": "The box, bag or wrapping a product is sold in." },
+            { "answer": "BESTSELLER", "clue": "A book or product that is extremely popular with buyers." },
+            { "answer": "TRADEMARK", "clue": "A legally protected name or symbol of a company." }
+          ]
+        },
+        {
+          "id": "B2-speaking",
+          "theme": "Ways to Speak",
+          "description": "Verbs that describe how people talk.",
+          "words": [
+            { "answer": "PERSUADE", "clue": "To make someone agree to do something by giving reasons." },
+            { "answer": "EXAGGERATE", "clue": "To make something sound bigger or better than it really is." },
+            { "answer": "WHISPER", "clue": "To speak very quietly." },
+            { "answer": "COMPLAIN", "clue": "To say that you are not happy about something." },
+            { "answer": "MUMBLE", "clue": "To speak unclearly, without opening your mouth enough." },
+            { "answer": "BOAST", "clue": "To talk too proudly about yourself." },
+            { "answer": "INSIST", "clue": "To say firmly that something must happen." },
+            { "answer": "CONFESS", "clue": "To admit that you did something wrong." }
+          ]
+        }
+      ]
+    },
+    "C1": {
+      "name": "Advanced",
+      "description": "Specialized vocabulary and workplace idioms. Only six lives, and clues stay hidden until someone asks for one.",
+      "lives": 6,
+      "clue": "on-request",
+      "puzzles": [
+        {
+          "id": "C1-workidioms",
+          "theme": "Idioms at Work",
+          "description": "Expressions for meetings, projects and teamwork.",
+          "words": [
+            { "answer": "THINK OUTSIDE THE BOX", "clue": "To be creative and consider new ideas." },
+            { "answer": "BACK TO THE DRAWING BOARD", "clue": "Starting again because a plan has failed." },
+            { "answer": "CUT CORNERS", "clue": "To do something badly or cheaply to save time or money." },
+            { "answer": "LEARN THE ROPES", "clue": "To find out how a job or activity is done." },
+            { "answer": "PULL YOUR WEIGHT", "clue": "To do a fair share of the work." },
+            { "answer": "GET THE BALL ROLLING", "clue": "To start an activity or process." },
+            { "answer": "ON THE SAME PAGE", "clue": "In agreement; sharing an understanding." },
+            { "answer": "RAISE THE BAR", "clue": "To set a higher standard." }
+          ]
+        },
+        {
+          "id": "C1-green",
+          "theme": "Sustainability",
+          "description": "The vocabulary of a greener economy.",
+          "words": [
+            { "answer": "CARBON NEUTRAL", "clue": "Producing no net greenhouse gas emissions." },
+            { "answer": "CIRCULAR ECONOMY", "clue": "A system in which products are reused and recycled instead of discarded." },
+            { "answer": "GREENWASHING", "clue": "Misleading claims that a company is environmentally friendly." },
+            { "answer": "BIODEGRADABLE", "clue": "Able to decompose naturally without causing harm." },
+            { "answer": "SINGLE-USE", "clue": "Meant to be discarded after serving its purpose only once." },
+            { "answer": "DEPLETION", "clue": "The reduction of a natural resource until little remains." },
+            { "answer": "UPCYCLING", "clue": "Turning waste materials into products of higher value." },
+            { "answer": "REWILDING", "clue": "Restoring land to its natural, uncultivated state." }
+          ]
+        },
+        {
+          "id": "C1-language",
+          "theme": "Language & Linguistics",
+          "description": "Talking about how languages work and are learned.",
+          "words": [
+            { "answer": "FLUENCY", "clue": "The ability to speak a language smoothly and easily." },
+            { "answer": "DIALECT", "clue": "A regional variety of a language." },
+            { "answer": "PRONUNCIATION", "clue": "The way in which a word is spoken." },
+            { "answer": "BILINGUAL", "clue": "Able to speak two languages equally well." },
+            { "answer": "COLLOCATION", "clue": "Words that naturally go together, like \"make a decision\"." },
+            { "answer": "IMMERSION", "clue": "Learning a language by being surrounded by it." },
+            { "answer": "SLANG", "clue": "Very informal words used by a particular group." },
+            { "answer": "MOTHER TONGUE", "clue": "The first language you learned as a child." }
+          ]
+        },
+        {
+          "id": "C1-techsociety",
+          "theme": "Technology & Society",
+          "description": "The social impact of digital life.",
+          "words": [
+            { "answer": "DEEPFAKE", "clue": "A video manipulated with AI to show someone doing or saying something they didn't." },
+            { "answer": "SURVEILLANCE", "clue": "Close monitoring of people, often by governments or companies." },
+            { "answer": "DATA BREACH", "clue": "An incident in which private information is stolen or exposed." },
+            { "answer": "DIGITAL DIVIDE", "clue": "The gap between people with and without access to technology." },
+            { "answer": "FACIAL RECOGNITION", "clue": "Technology that identifies people from images of them." },
+            { "answer": "SCREEN TIME", "clue": "How long someone spends using phones, tablets or computers." },
+            { "answer": "CYBERBULLYING", "clue": "Harassing or threatening someone online." },
+            { "answer": "OPEN SOURCE", "clue": "Describing software whose code is freely available for anyone to modify." }
+          ]
+        },
+        {
+          "id": "C1-economy",
+          "theme": "Business & Economics",
+          "description": "Markets, investment and company strategy.",
+          "words": [
+            { "answer": "MERGER", "clue": "The joining of two companies into one." },
+            { "answer": "VENTURE CAPITAL", "clue": "Money invested in new, high-risk businesses." },
+            { "answer": "STOCK MARKET", "clue": "Where shares in companies are bought and sold." },
+            { "answer": "SUPPLY AND DEMAND", "clue": "The economic relationship that determines prices." },
+            { "answer": "CASH FLOW", "clue": "The movement of money into and out of a business." },
+            { "answer": "DOWNSIZING", "clue": "Reducing the number of employees to cut costs." },
+            { "answer": "BOTTOM LINE", "clue": "A company's final profit or loss; also, the most important factor." },
+            { "answer": "GIG ECONOMY", "clue": "A labor market based on short-term, freelance jobs." }
+          ]
+        },
+        {
+          "id": "C1-personality",
+          "theme": "Personality & Behavior",
+          "description": "Precise adjectives to describe people.",
+          "words": [
+            { "answer": "CONSCIENTIOUS", "clue": "Careful and determined to do a job well." },
+            { "answer": "ASSERTIVE", "clue": "Confident in expressing opinions without being aggressive." },
+            { "answer": "OPINIONATED", "clue": "Holding strong views and expressing them too readily." },
+            { "answer": "RESOURCEFUL", "clue": "Good at finding clever ways to solve problems." },
+            { "answer": "TACTFUL", "clue": "Careful not to upset or offend people." },
+            { "answer": "IMPULSIVE", "clue": "Acting suddenly without thinking about the consequences." },
+            { "answer": "GULLIBLE", "clue": "Easily tricked into believing things." },
+            { "answer": "ARROGANT", "clue": "Behaving as if you are better than others." }
+          ]
+        }
+      ]
+    },
+    "C2": {
+      "name": "Proficiency",
+      "description": "Sophisticated vocabulary, borrowed words and long idiomatic phrases. Six lives, with clues on request.",
+      "lives": 6,
+      "clue": "on-request",
+      "puzzles": [
+        {
+          "id": "C2-idioms",
+          "theme": "Advanced Idioms",
+          "description": "Rich figurative expressions.",
+          "words": [
+            { "answer": "A BLESSING IN DISGUISE", "clue": "Something that seems bad at first but turns out to be good." },
+            { "answer": "THE ELEPHANT IN THE ROOM", "clue": "An obvious problem that nobody wants to discuss." },
+            { "answer": "BURN THE MIDNIGHT OIL", "clue": "To work late, long after everyone else has gone to bed." },
+            { "answer": "BITE THE BULLET", "clue": "To face a difficult or unpleasant situation with courage." },
+            { "answer": "THE LAST STRAW", "clue": "The final problem that makes a situation unbearable." },
+            { "answer": "ADD INSULT TO INJURY", "clue": "To make a bad situation even worse." },
+            { "answer": "BARKING UP THE WRONG TREE", "clue": "Pursuing a mistaken line of thought or action." },
+            { "answer": "A DOUBLE-EDGED SWORD", "clue": "Something with both favorable and unfavorable consequences." }
+          ]
+        },
+        {
+          "id": "C2-borrowed",
+          "theme": "Borrowed Words",
+          "description": "Expressions English took from other languages.",
+          "words": [
+            { "answer": "ZEITGEIST", "clue": "The defining spirit or mood of a particular period (German)." },
+            { "answer": "WANDERLUST", "clue": "A strong desire to travel (German)." },
+            { "answer": "DOPPELGANGER", "clue": "A person who looks exactly like someone else (German)." },
+            { "answer": "DEJA VU", "clue": "The feeling of having already experienced the present moment (French)." },
+            { "answer": "FAUX PAS", "clue": "An embarrassing social blunder (French)." },
+            { "answer": "CARPE DIEM", "clue": "Seize the day; make the most of the present (Latin)." },
+            { "answer": "STATUS QUO", "clue": "The existing state of affairs (Latin)." },
+            { "answer": "QUID PRO QUO", "clue": "A favor given in exchange for something else (Latin)." }
+          ]
+        },
+        {
+          "id": "C2-literary",
+          "theme": "Literary Devices",
+          "description": "Techniques writers use to create effects.",
+          "words": [
+            { "answer": "ONOMATOPOEIA", "clue": "A word that imitates the sound it describes, like \"buzz\"." },
+            { "answer": "ALLITERATION", "clue": "Repetition of the same initial sound, as in \"Peter Piper picked\"." },
+            { "answer": "OXYMORON", "clue": "A combination of contradictory terms, like \"deafening silence\"." },
+            { "answer": "PERSONIFICATION", "clue": "Giving human qualities to something non-human." },
+            { "answer": "FORESHADOWING", "clue": "Hints in a story about what will happen later." },
+            { "answer": "SOLILOQUY", "clue": "A speech in which a character alone on stage speaks their thoughts aloud." },
+            { "answer": "ANACHRONISM", "clue": "Something placed in the wrong historical period." },
+            { "answer": "STREAM OF CONSCIOUSNESS", "clue": "A narrative style that follows a character's continuous flow of thoughts." }
+          ]
+        },
+        {
+          "id": "C2-diplomacy",
+          "theme": "Conflict & Diplomacy",
+          "description": "The language of international relations.",
+          "words": [
+            { "answer": "RAPPROCHEMENT", "clue": "The re-establishment of friendly relations between former rivals." },
+            { "answer": "ULTIMATUM", "clue": "A final demand backed by the threat of consequences." },
+            { "answer": "CEASEFIRE", "clue": "A temporary suspension of fighting." },
+            { "answer": "BRINKMANSHIP", "clue": "Pushing a dangerous situation to the edge of disaster to gain an advantage." },
+            { "answer": "APPEASEMENT", "clue": "Making concessions to an aggressor in order to avoid conflict." },
+            { "answer": "MEDIATION", "clue": "Intervention by a neutral party to resolve a dispute." },
+            { "answer": "STALEMATE", "clue": "A situation in which neither side can make progress." },
+            { "answer": "ARMISTICE", "clue": "A formal agreement to end hostilities, especially at the end of a war." }
+          ]
+        },
+        {
+          "id": "C2-adjectives",
+          "theme": "Nuanced Adjectives",
+          "description": "Refined words with a positive or negative edge.",
+          "words": [
+            { "answer": "EFFERVESCENT", "clue": "Vivacious and enthusiastic; bubbly." },
+            { "answer": "SANGUINE", "clue": "Optimistic, especially in a difficult situation." },
+            { "answer": "INSIDIOUS", "clue": "Proceeding gradually and subtly, but with harmful effects." },
+            { "answer": "INNOCUOUS", "clue": "Harmless and unlikely to offend." },
+            { "answer": "PERNICIOUS", "clue": "Highly destructive or damaging." },
+            { "answer": "AUSPICIOUS", "clue": "Suggesting a promising future; favorable." },
+            { "answer": "SUPERFLUOUS", "clue": "Unnecessary; more than is needed." },
+            { "answer": "METICULOUS", "clue": "Showing great attention to detail; very careful and precise." }
+          ]
+        },
+        {
+          "id": "C2-belief",
+          "theme": "Knowledge & Belief",
+          "description": "Faith, doubt and understanding.",
+          "words": [
+            { "answer": "AGNOSTIC", "clue": "A person who believes the existence of God cannot be known." },
+            { "answer": "HERESY", "clue": "A belief contrary to accepted religious doctrine." },
+            { "answer": "ENLIGHTENMENT", "clue": "A state of deep understanding; also an 18th-century intellectual movement." },
+            { "answer": "SUPERSTITION", "clue": "An irrational belief in luck or magic." },
+            { "answer": "EPIPHANY", "clue": "A sudden moment of insight or revelation." },
+            { "answer": "ORTHODOXY", "clue": "Adherence to accepted or traditional beliefs." },
+            { "answer": "CREDENCE", "clue": "Belief in or acceptance of something as true." },
+            { "answer": "DISILLUSIONMENT", "clue": "Disappointment on discovering that something is not as good as you believed." }
+          ]
+        }
+      ]
+    }
+  }
+}

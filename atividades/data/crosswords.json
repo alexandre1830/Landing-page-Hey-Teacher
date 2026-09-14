@@ -1,0 +1,687 @@
+{
+  "metadata": {
+    "title": "English Crossword Puzzles by CEFR Level",
+    "description": "36 themed crossword puzzles. Themes, word length, word frequency and clue complexity are calibrated to each CEFR level. Answers may contain spaces or hyphens; the grid uses letters only and the clue shows the word lengths.",
+    "framework": "CEFR (Common European Framework of Reference for Languages)",
+    "puzzles_per_level": 6,
+    "levels": ["A1", "A2", "B1", "B2", "C1", "C2"],
+    "version": "1.0"
+  },
+  "levels": {
+    "A1": {
+      "name": "Beginner",
+      "description": "Short, high-frequency words about everyday life. Clues are simple present-tense sentences with familiar, concrete contexts.",
+      "puzzles": [
+        {
+          "id": "A1-food",
+          "theme": "Food & Drinks",
+          "description": "Fruit, food and everyday drinks.",
+          "words": [
+            { "answer": "APPLE", "clue": "A round fruit. It can be red or green." },
+            { "answer": "BREAD", "clue": "You use it to make a sandwich." },
+            { "answer": "MILK", "clue": "A white drink. It comes from cows." },
+            { "answer": "EGG", "clue": "It comes from a chicken. You can eat it for breakfast." },
+            { "answer": "CHEESE", "clue": "A yellow or white food. We put it on pizza." },
+            { "answer": "BANANA", "clue": "A long yellow fruit. Monkeys love it." },
+            { "answer": "COFFEE", "clue": "A hot brown drink. Many people drink it in the morning." },
+            { "answer": "JUICE", "clue": "A drink made from fruit, like orange ___." }
+          ]
+        },
+        {
+          "id": "A1-family",
+          "theme": "Family & Friends",
+          "description": "The people in your family and your life.",
+          "words": [
+            { "answer": "MOTHER", "clue": "Mom. She is a parent." },
+            { "answer": "BROTHER", "clue": "A boy with the same mom and dad as you." },
+            { "answer": "SISTER", "clue": "A girl with the same mom and dad as you." },
+            { "answer": "BABY", "clue": "A very young child. It can't walk or talk." },
+            { "answer": "FRIEND", "clue": "A person you like and have fun with." },
+            { "answer": "GRANDPA", "clue": "The dad of your mom or dad." },
+            { "answer": "COUSIN", "clue": "The child of your aunt or uncle." },
+            { "answer": "HUSBAND", "clue": "A married man. He has a wife." }
+          ]
+        },
+        {
+          "id": "A1-animals",
+          "theme": "Animals",
+          "description": "Pets, farm animals and wild animals.",
+          "words": [
+            { "answer": "DOG", "clue": "A popular pet. It says \"woof!\"" },
+            { "answer": "RABBIT", "clue": "A small animal with long ears. It loves carrots." },
+            { "answer": "HORSE", "clue": "A big animal. People ride it." },
+            { "answer": "FISH", "clue": "It lives in water and it can swim." },
+            { "answer": "BIRD", "clue": "It has wings and it can fly." },
+            { "answer": "COW", "clue": "A big farm animal. It gives us milk." },
+            { "answer": "LION", "clue": "A big cat from Africa. It is the king of the animals." },
+            { "answer": "MONKEY", "clue": "It lives in trees and it eats bananas." }
+          ]
+        },
+        {
+          "id": "A1-home",
+          "theme": "At Home",
+          "description": "Rooms and furniture in a house.",
+          "words": [
+            { "answer": "KITCHEN", "clue": "The room where you cook." },
+            { "answer": "BED", "clue": "You sleep in it at night." },
+            { "answer": "TABLE", "clue": "You put your plate on it when you eat." },
+            { "answer": "CHAIR", "clue": "You sit on it." },
+            { "answer": "DOOR", "clue": "You open it to go into a room." },
+            { "answer": "WINDOW", "clue": "You look outside through it." },
+            { "answer": "SOFA", "clue": "A long, soft seat in the living room." },
+            { "answer": "BATHROOM", "clue": "The room with the shower and the toilet." }
+          ]
+        },
+        {
+          "id": "A1-clothes",
+          "theme": "Clothes & Colors",
+          "description": "What you wear and basic colors.",
+          "words": [
+            { "answer": "SHIRT", "clue": "You wear it on your body. It often has buttons." },
+            { "answer": "SHOES", "clue": "You wear them on your feet." },
+            { "answer": "DRESS", "clue": "A girl or a woman wears it. It is like a top and a skirt together." },
+            { "answer": "HAT", "clue": "You wear it on your head." },
+            { "answer": "JACKET", "clue": "You wear it over your clothes when it is cold." },
+            { "answer": "BLUE", "clue": "The color of the sky on a sunny day." },
+            { "answer": "GREEN", "clue": "The color of grass and leaves." },
+            { "answer": "YELLOW", "clue": "The color of bananas and the sun." }
+          ]
+        },
+        {
+          "id": "A1-weather",
+          "theme": "Weather & Seasons",
+          "description": "The seasons and the weather outside.",
+          "words": [
+            { "answer": "SUMMER", "clue": "The hottest season of the year." },
+            { "answer": "WINTER", "clue": "The coldest season of the year." },
+            { "answer": "SPRING", "clue": "The season when flowers start to grow." },
+            { "answer": "RAIN", "clue": "Water that falls from the sky." },
+            { "answer": "SNOW", "clue": "It is white and very cold. Children play in it." },
+            { "answer": "SUN", "clue": "It is big, yellow and hot. You see it in the sky during the day." },
+            { "answer": "CLOUD", "clue": "It is white or gray, and it is in the sky." },
+            { "answer": "COLD", "clue": "The temperature opposite of hot." }
+          ]
+        },
+        {
+          "id": "A1-routine",
+            "theme": "Daily Routine",
+            "description": "Things you do every day.",
+          "words": [
+            { "answer": "SLEEP", "clue": "You need to do this every night." },
+            { "answer": "EAT", "clue": "You have to do this every day to survive." },
+            { "answer": "SHOWER", "clue": "You do this to clean yourself." },
+            { "answer": "COMB", "clue": "You do this to style your hair." },
+            { "answer": "WORK", "clue": "You do this to make money and pay bills." },
+            { "answer": "STUDY", "clue": "You do this to learn new things and develop." },
+            { "answer": "READ", "clue": "You do this to learn or to have fun." },
+            { "answer": "WALK", "clue": "You do this to get somewhere or to exercise." }
+          ]
+        }
+      ]
+    },
+    "A2": {
+      "name": "Elementary",
+      "description": "Common words for travel, shopping, work and free time. Clues use simple definitions and everyday situations.",
+      "puzzles": [
+        {
+          "id": "A2-travel",
+          "theme": "Travel & Transport",
+          "description": "Getting around and going on a trip.",
+          "words": [
+            { "answer": "AIRPORT", "clue": "The place where planes take off and land." },
+            { "answer": "TICKET", "clue": "You buy this before you get on a bus or a plane." },
+            { "answer": "PASSPORT", "clue": "An official document you need to travel to another country." },
+            { "answer": "SUITCASE", "clue": "A large bag with a handle. You put your clothes in it for a trip." },
+            { "answer": "TRAIN", "clue": "It travels on rails and stops at stations." },
+            { "answer": "HOTEL", "clue": "A building where you pay to stay the night when you are on vacation." },
+            { "answer": "BICYCLE", "clue": "It has two wheels, and you use your legs to move it." },
+            { "answer": "SUBWAY", "clue": "A railway that runs under the streets of a big city." },
+            { "answer": "DELAYED", "clue": "If your flight is late, it is ___." }
+          ]
+        },
+        {
+          "id": "A2-shopping",
+          "theme": "Shopping",
+          "description": "Prices, stores and paying for things.",
+          "words": [
+            { "answer": "CASHIER", "clue": "The person who takes your money at the checkout." },
+            { "answer": "RECEIPT", "clue": "A piece of paper that shows what you bought and how much you paid." },
+            { "answer": "CHEAP", "clue": "Low in price." },
+            { "answer": "EXPENSIVE", "clue": "It costs a lot of money." },
+            { "answer": "DISCOUNT", "clue": "A lower price than usual, for example 20% off." },
+            { "answer": "SIZE", "clue": "Small, medium or large? What ___ do you wear?" },
+            { "answer": "WALLET", "clue": "A small, flat case for your money and cards." },
+            { "answer": "BAKERY", "clue": "A shop that sells bread and cakes." },
+            { "answer": "CUSTOMER", "clue": "A person who buys things in a shop." }
+          ]
+        },
+        {
+          "id": "A2-jobs",
+          "theme": "Jobs",
+          "description": "What people do at work.",
+          "words": [
+            { "answer": "DOCTOR", "clue": "This person examines sick people and tells them what medicine to take." },
+            { "answer": "NURSE", "clue": "This person takes care of patients in a hospital." },
+            { "answer": "CHEF", "clue": "A person who cooks in a restaurant." },
+            { "answer": "PILOT", "clue": "A person who flies a plane." },
+            { "answer": "FARMER", "clue": "A person who grows vegetables and keeps animals." },
+            { "answer": "DENTIST", "clue": "You visit this person to check your teeth." },
+            { "answer": "WAITER", "clue": "A person who brings food to your table." },
+            { "answer": "MECHANIC", "clue": "A person who repairs cars." },
+            { "answer": "ENGINEER", "clue": "A person who designs machines, bridges or roads." }
+          ]
+        },
+        {
+          "id": "A2-town",
+          "theme": "Around Town",
+          "description": "Places and buildings in a city.",
+          "words": [
+            { "answer": "LIBRARY", "clue": "A place where you can borrow books." },
+            { "answer": "BANK", "clue": "You go there to take out or save money." },
+            { "answer": "MUSEUM", "clue": "A building where you can see old and interesting things, like dinosaur bones." },
+            { "answer": "PHARMACY", "clue": "A shop where you buy medicine." },
+            { "answer": "STADIUM", "clue": "A very big place where people watch football games or concerts." },
+            { "answer": "BRIDGE", "clue": "It goes over a river so people and cars can cross." },
+            { "answer": "POST OFFICE", "clue": "You go there to send letters and packages." },
+            { "answer": "PARK", "clue": "A green area in a city with trees, grass and paths." },
+            { "answer": "HOSPITAL", "clue": "An ambulance takes sick or injured people here." }
+          ]
+        },
+        {
+          "id": "A2-health",
+          "theme": "Health & the Body",
+          "description": "Parts of the body and feeling sick.",
+          "words": [
+            { "answer": "HEADACHE", "clue": "A pain in your head." },
+            { "answer": "STOMACH", "clue": "The part of your body where food goes after you eat it." },
+            { "answer": "FEVER", "clue": "When your body temperature is higher than normal because you are sick." },
+            { "answer": "COUGH", "clue": "You make this noise when you have a cold and a sore throat." },
+            { "answer": "SHOULDER", "clue": "The part of your body between your neck and your arm." },
+            { "answer": "KNEE", "clue": "The middle part of your leg. It bends when you sit down." },
+            { "answer": "MEDICINE", "clue": "You take this to feel better when you are sick." },
+            { "answer": "TOOTH", "clue": "One of the hard white things in your mouth." },
+            { "answer": "HEALTHY", "clue": "Fruit and vegetables are ___ food." }
+          ]
+        },
+        {
+          "id": "A2-hobbies",
+          "theme": "Free Time & Hobbies",
+          "description": "Things to do in your free time.",
+          "words": [
+            { "answer": "GUITAR", "clue": "A musical instrument with six strings." },
+            { "answer": "PAINTING", "clue": "Making pictures with a brush and colors." },
+            { "answer": "CAMPING", "clue": "Sleeping in a tent in nature." },
+            { "answer": "DANCING", "clue": "Moving your body to music." },
+            { "answer": "CHESS", "clue": "A board game with kings, queens and other pieces." },
+            { "answer": "FISHING", "clue": "Sitting by a river or lake with a rod, hoping to catch something for dinner." },
+            { "answer": "GARDENING", "clue": "Taking care of the plants and flowers outside your house." },
+            { "answer": "CONCERT", "clue": "A show where musicians play music live." },
+            { "answer": "HIKING", "clue": "Walking long distances in the mountains or in the countryside." }
+          ]
+        }
+      ]
+    },
+    "B1": {
+      "name": "Intermediate",
+      "description": "Vocabulary for opinions, feelings and familiar abstract topics. Clues combine definitions with gap-fill sentences and common collocations.",
+      "puzzles": [
+        {
+          "id": "B1-environment",
+          "theme": "The Environment",
+          "description": "Nature, pollution and climate issues.",
+          "words": [
+            { "answer": "POLLUTION", "clue": "Damage to the air, water or land caused by harmful substances." },
+            { "answer": "RECYCLE", "clue": "To process used paper, glass or cans so they can be used again." },
+            { "answer": "CLIMATE", "clue": "The typical weather conditions of a region over a long period." },
+            { "answer": "ENERGY", "clue": "Solar and wind ___ are cleaner than coal and oil." },
+            { "answer": "PLASTIC", "clue": "A light material used for bottles and bags. It takes hundreds of years to break down." },
+            { "answer": "WASTE", "clue": "Things we throw away because we don't need them anymore." },
+            { "answer": "EXTINCT", "clue": "When a species has no members left alive, like the dinosaurs, it is ___." },
+            { "answer": "FLOOD", "clue": "When a lot of water covers land that is usually dry." },
+            { "answer": "DROUGHT", "clue": "A long period with little or no rain." },
+            { "answer": "ORGANIC", "clue": "Food that is grown without artificial chemicals is called ___." }
+          ]
+        },
+        {
+          "id": "B1-technology",
+          "theme": "Technology & the Internet",
+          "description": "Devices, apps and life online.",
+          "words": [
+            { "answer": "PASSWORD", "clue": "A secret combination of letters and numbers you use to log in to an account." },
+            { "answer": "DOWNLOAD", "clue": "To copy a file or an app from the internet to your device." },
+            { "answer": "BATTERY", "clue": "My phone's ___ is almost dead. I need to charge it." },
+            { "answer": "WEBSITE", "clue": "A collection of pages on the internet about a company, person or topic." },
+            { "answer": "KEYBOARD", "clue": "The set of buttons with letters and numbers that you press to type on a computer." },
+            { "answer": "SCREEN", "clue": "The flat surface on a phone, computer or TV where you see images." },
+            { "answer": "WIRELESS", "clue": "Working without cables, like Wi-Fi or Bluetooth headphones." },
+            { "answer": "UPDATE", "clue": "A newer version of an app or program that fixes problems." },
+            { "answer": "BROWSER", "clue": "A program like Chrome or Safari that you use to go on the internet." },
+            { "answer": "SEARCH", "clue": "To look for information online, for example using Google." }
+          ]
+        },
+        {
+          "id": "B1-feelings",
+          "theme": "Feelings & Personality",
+          "description": "Emotions and personality adjectives.",
+          "words": [
+            { "answer": "NERVOUS", "clue": "Feeling worried or a little afraid, for example before an exam." },
+            { "answer": "JEALOUS", "clue": "Unhappy because someone has something that you want." },
+            { "answer": "PROUD", "clue": "Pleased about something that you or someone close to you did well." },
+            { "answer": "GENEROUS", "clue": "Happy to give money, time or gifts to other people." },
+            { "answer": "RELIABLE", "clue": "You can trust this person to do what they promise." },
+            { "answer": "BORED", "clue": "How you feel when there is nothing interesting to do." },
+            { "answer": "CONFIDENT", "clue": "Sure of yourself and your abilities." },
+            { "answer": "HONEST", "clue": "An ___ person always tells the truth." },
+            { "answer": "STRESSED", "clue": "Worried and under pressure because of too much work or too many problems." },
+            { "answer": "EMBARRASSED", "clue": "How you feel when people see you do something silly or wrong." }
+          ]
+        },
+        {
+          "id": "B1-education",
+          "theme": "Education & Learning",
+          "description": "School, university and studying.",
+          "words": [
+            { "answer": "UNIVERSITY", "clue": "A place where you can study for a degree after high school." },
+            { "answer": "HOMEWORK", "clue": "Exercises that a teacher asks you to do at home." },
+            { "answer": "SUBJECT", "clue": "Math, history or biology, for example." },
+            { "answer": "SCHEDULE", "clue": "A plan that shows the times of your classes." },
+            { "answer": "GRADE", "clue": "The letter or number you get on a test, such as A or 9/10." },
+            { "answer": "CHEAT", "clue": "To act dishonestly, for example by copying someone's answers in an exam." },
+            { "answer": "REVIEW", "clue": "To study something again before a test." },
+            { "answer": "SCHOLARSHIP", "clue": "Money given to a student to help pay for their studies." },
+            { "answer": "LECTURE", "clue": "A long talk given by a professor to a large group of students." },
+            { "answer": "GRADUATE", "clue": "To successfully complete a course and receive your diploma." }
+          ]
+        },
+        {
+          "id": "B1-media",
+          "theme": "Movies & Media",
+          "description": "Film, TV and entertainment.",
+          "words": [
+            { "answer": "DOCUMENTARY", "clue": "A film or TV program that presents facts about real people or events." },
+            { "answer": "COMEDY", "clue": "A funny movie that makes you laugh." },
+            { "answer": "HORROR", "clue": "A type of movie made to frighten you." },
+            { "answer": "AUDIENCE", "clue": "The people who watch a show, film or concert." },
+            { "answer": "SUBTITLES", "clue": "Words at the bottom of the screen that translate what the actors say." },
+            { "answer": "EPISODE", "clue": "One part of a TV series." },
+            { "answer": "DIRECTOR", "clue": "The person in charge of making a film who tells the actors what to do." },
+            { "answer": "HEADLINE", "clue": "The title of a news story, printed in large letters." },
+            { "answer": "PODCAST", "clue": "A recorded audio show that you can listen to online." },
+            { "answer": "CELEBRITY", "clue": "A famous person, especially in the world of entertainment." }
+          ]
+        },
+        {
+          "id": "B1-lifestyle",
+          "theme": "Health & Lifestyle",
+          "description": "Diet, exercise and everyday habits.",
+          "words": [
+            { "answer": "BALANCED", "clue": "A ___ diet includes many different kinds of food in the right amounts." },
+            { "answer": "VEGETARIAN", "clue": "A person who doesn't eat meat or fish." },
+            { "answer": "INJURY", "clue": "Damage to your body, for example from an accident or while playing sports." },
+            { "answer": "ALLERGY", "clue": "A bad reaction to things like nuts, pollen or cats." },
+            { "answer": "WORKOUT", "clue": "A session of physical exercise, for example at the gym." },
+            { "answer": "APPOINTMENT", "clue": "You make an ___ to see the doctor at a specific time." },
+            { "answer": "SYMPTOM", "clue": "A sign of an illness, such as a fever or a sore throat." },
+            { "answer": "HABIT", "clue": "Something you do regularly, often without thinking." },
+            { "answer": "CALORIES", "clue": "Units that measure the energy in food." },
+            { "answer": "VITAMIN", "clue": "Oranges are full of ___ C." }
+          ]
+        }
+      ]
+    },
+    "B2": {
+      "name": "Upper-Intermediate",
+      "description": "Topic-specific vocabulary, collocations and phrasal verbs for work, society and science. Clues are more abstract and require precise understanding.",
+      "puzzles": [
+        {
+          "id": "B2-business",
+          "theme": "Business & the Workplace",
+          "description": "Careers, meetings and company life.",
+          "words": [
+            { "answer": "DEADLINE", "clue": "The latest time or date by which a task must be completed." },
+            { "answer": "PROMOTION", "clue": "A move to a more senior position at work." },
+            { "answer": "COLLEAGUE", "clue": "A person you work with." },
+            { "answer": "NEGOTIATE", "clue": "To discuss something formally in order to reach an agreement." },
+            { "answer": "RESIGN", "clue": "To officially give up your job." },
+            { "answer": "BUDGET", "clue": "A plan showing how much money is available and how it will be spent." },
+            { "answer": "AGENDA", "clue": "A list of topics to be discussed at a meeting." },
+            { "answer": "ENTREPRENEUR", "clue": "Someone who sets up a business, often taking financial risks." },
+            { "answer": "FREELANCE", "clue": "Working for several clients on a project basis rather than for a single employer." },
+            { "answer": "REVENUE", "clue": "The total income a company receives from its sales." },
+            { "answer": "BURNOUT", "clue": "Physical and emotional exhaustion caused by long-term stress at work." }
+          ]
+        },
+        {
+          "id": "B2-crime",
+          "theme": "Crime & the Law",
+          "description": "Crimes, courts and the justice system.",
+          "words": [
+            { "answer": "WITNESS", "clue": "Someone who sees a crime and may describe it in court." },
+            { "answer": "EVIDENCE", "clue": "Information or objects that help prove whether something is true." },
+            { "answer": "GUILTY", "clue": "Responsible for committing a crime; the opposite of innocent." },
+            { "answer": "VERDICT", "clue": "The official decision made by a jury at the end of a trial." },
+            { "answer": "BURGLARY", "clue": "The crime of breaking into a building to steal things." },
+            { "answer": "SENTENCE", "clue": "The punishment given by a judge, such as ten years in prison." },
+            { "answer": "SUSPECT", "clue": "A person the police believe may have committed a crime." },
+            { "answer": "ARREST", "clue": "What the police do when they take someone to the station because they may have broken the law." },
+            { "answer": "VANDALISM", "clue": "Deliberately damaging public or private property." },
+            { "answer": "SHOPLIFTING", "clue": "Stealing goods from a store while pretending to be a customer." },
+            { "answer": "ALIBI", "clue": "Proof that you were somewhere else when a crime took place." }
+          ]
+        },
+        {
+          "id": "B2-science",
+          "theme": "Science & Innovation",
+          "description": "Research, discovery and new ideas.",
+          "words": [
+            { "answer": "EXPERIMENT", "clue": "A scientific test carried out to discover or prove something." },
+            { "answer": "HYPOTHESIS", "clue": "An idea proposed as a possible explanation, which then needs to be tested." },
+            { "answer": "LABORATORY", "clue": "A room or building equipped for scientific research." },
+            { "answer": "BREAKTHROUGH", "clue": "An important discovery that finally solves a long-standing problem." },
+            { "answer": "INVENTION", "clue": "Something new that someone has designed or created, like the telephone." },
+            { "answer": "GENETIC", "clue": "Related to genes and the characteristics we inherit from our parents." },
+            { "answer": "ARTIFICIAL", "clue": "___ intelligence: computer systems that can learn and make decisions." },
+            { "answer": "EVOLUTION", "clue": "The gradual development of living things over millions of years." },
+            { "answer": "PATENT", "clue": "An official right that stops other people from copying and selling a new product." },
+            { "answer": "VACCINE", "clue": "A substance given to people to protect them against a particular disease." },
+            { "answer": "TELESCOPE", "clue": "An instrument used to observe distant objects such as stars and planets." }
+          ]
+        },
+        {
+          "id": "B2-money",
+          "theme": "Money & Spending",
+          "description": "Personal finance and consumer habits.",
+          "words": [
+            { "answer": "MORTGAGE", "clue": "A long-term loan from a bank used to buy a home." },
+            { "answer": "INTEREST", "clue": "The extra money you pay when you borrow, or earn when you save." },
+            { "answer": "BARGAIN", "clue": "Something bought for much less than its usual price." },
+            { "answer": "REFUND", "clue": "Money returned to you when you give back a product you're not happy with." },
+            { "answer": "INFLATION", "clue": "A general increase in prices over time." },
+            { "answer": "SAVINGS", "clue": "Money that you have put aside, often in a bank, for the future." },
+            { "answer": "AFFORD", "clue": "To have enough money to pay for something." },
+            { "answer": "IMPULSE", "clue": "An ___ purchase is something you buy suddenly, without planning." },
+            { "answer": "BRAND", "clue": "A name that identifies a company's products, like Nike or Apple." },
+            { "answer": "WARRANTY", "clue": "A written promise to repair or replace a product if it breaks within a certain period." },
+            { "answer": "CONSUMERISM", "clue": "The belief that buying more and more goods is good for people and the economy." }
+          ]
+        },
+        {
+          "id": "B2-relationships",
+          "theme": "Relationships & Communication",
+          "description": "Conflict, connection and phrasal verbs.",
+          "words": [
+            { "answer": "ARGUMENT", "clue": "An angry disagreement between two or more people." },
+            { "answer": "APOLOGIZE", "clue": "To say you are sorry for something you did." },
+            { "answer": "COMPROMISE", "clue": "An agreement in which both sides accept less than they originally wanted." },
+            { "answer": "SUPPORTIVE", "clue": "Giving help and encouragement, especially in difficult times." },
+            { "answer": "TRUST", "clue": "To believe that someone is honest and will not hurt you." },
+            { "answer": "GOSSIP", "clue": "Talk about other people's private lives, often unkind or untrue." },
+            { "answer": "ACQUAINTANCE", "clue": "Someone you know, but not very well." },
+            { "answer": "BREAK UP", "clue": "To end a romantic relationship." },
+            { "answer": "GET ALONG", "clue": "To have a friendly relationship with someone." },
+            { "answer": "INTERRUPT", "clue": "To stop someone while they are speaking." },
+            { "answer": "BODY LANGUAGE", "clue": "Communicating through gestures, posture and facial expressions." }
+          ]
+        },
+        {
+          "id": "B2-news",
+          "theme": "News & Advertising",
+          "description": "Journalism, media bias and marketing.",
+          "words": [
+            { "answer": "JOURNALIST", "clue": "A person who writes news stories for newspapers, websites or TV." },
+            { "answer": "BIASED", "clue": "Unfairly favoring one side or opinion over another." },
+            { "answer": "CENSORSHIP", "clue": "The control or banning of information that authorities consider unacceptable." },
+            { "answer": "SLOGAN", "clue": "A short, catchy phrase used to promote a product, like \"Just do it\"." },
+            { "answer": "SPONSOR", "clue": "A company that pays for an event or program in return for advertising." },
+            { "answer": "TABLOID", "clue": "A popular newspaper with short, sensational stories about celebrities and scandals." },
+            { "answer": "COMMERCIAL", "clue": "An advertisement on TV or radio." },
+            { "answer": "INFLUENCER", "clue": "A person who promotes products to their followers on social media." },
+            { "answer": "CLICKBAIT", "clue": "Online content with a shocking headline designed to make you open the link." },
+            { "answer": "BROADCAST", "clue": "To transmit a program on television or radio." },
+            { "answer": "FAKE NEWS", "clue": "False stories deliberately spread to mislead the public, often online." }
+          ]
+        }
+      ]
+    },
+    "C1": {
+      "name": "Advanced",
+      "description": "Specialized and academic vocabulary for politics, economics and research. Clues are concise, dictionary-style definitions.",
+      "puzzles": [
+        {
+          "id": "C1-politics",
+          "theme": "Politics & Governance",
+          "description": "Elections, government and power.",
+          "words": [
+            { "answer": "LEGISLATION", "clue": "Laws, considered collectively, passed by a parliament." },
+            { "answer": "REFERENDUM", "clue": "A direct vote in which the whole electorate decides on a single political question." },
+            { "answer": "CORRUPTION", "clue": "Dishonest or illegal conduct by those in power, typically involving bribery." },
+            { "answer": "COALITION", "clue": "A temporary alliance of political parties formed to govern together." },
+            { "answer": "SOVEREIGNTY", "clue": "The supreme authority of a state to govern itself without outside interference." },
+            { "answer": "BUREAUCRACY", "clue": "An administrative system notorious for excessive rules and slow procedures." },
+            { "answer": "CAMPAIGN", "clue": "An organized series of activities designed to win an election." },
+            { "answer": "IMPEACHMENT", "clue": "The formal process of charging a high-ranking official with misconduct in office." },
+            { "answer": "LOBBYING", "clue": "Seeking to influence lawmakers on behalf of a particular interest group." },
+            { "answer": "MANIFESTO", "clue": "A published declaration of a party's policies and aims." },
+            { "answer": "POLARIZATION", "clue": "The division of public opinion into sharply opposing camps." },
+            { "answer": "CONSTITUTION", "clue": "The body of fundamental principles according to which a state is governed." }
+          ]
+        },
+        {
+          "id": "C1-economy",
+          "theme": "Economy & Finance",
+          "description": "Markets, finance and economic policy.",
+          "words": [
+            { "answer": "RECESSION", "clue": "A period of significant economic decline, typically lasting at least two quarters." },
+            { "answer": "SUBSIDY", "clue": "A sum of money granted by the state to keep the price of a product or service low." },
+            { "answer": "SHAREHOLDER", "clue": "An owner of shares in a company." },
+            { "answer": "VOLATILE", "clue": "Liable to change rapidly and unpredictably, as markets often are." },
+            { "answer": "AUSTERITY", "clue": "Strict government spending cuts aimed at reducing public debt." },
+            { "answer": "MONOPOLY", "clue": "Exclusive control of the supply of a product or service by a single company." },
+            { "answer": "DIVIDEND", "clue": "A portion of a company's profits paid out to its investors." },
+            { "answer": "TARIFF", "clue": "A tax imposed on imported goods." },
+            { "answer": "LIQUIDITY", "clue": "The ease with which an asset can be converted into cash." },
+            { "answer": "BANKRUPTCY", "clue": "The legal status of a person or company unable to repay outstanding debts." },
+            { "answer": "COMMODITY", "clue": "A raw material, such as oil or wheat, that can be bought and sold." },
+            { "answer": "SPECULATION", "clue": "Investing in risky assets in the hope of making a quick profit." }
+          ]
+        },
+        {
+          "id": "C1-psychology",
+          "theme": "Psychology & Behavior",
+          "description": "The mind, emotions and human behavior.",
+          "words": [
+            { "answer": "PROCRASTINATE", "clue": "To keep putting off tasks that ought to be done." },
+            { "answer": "RESILIENCE", "clue": "The capacity to recover quickly from setbacks." },
+            { "answer": "EMPATHY", "clue": "The ability to understand and share the feelings of another person." },
+            { "answer": "COGNITIVE", "clue": "Relating to mental processes such as perception, memory and reasoning." },
+            { "answer": "INTROVERT", "clue": "A person who tends to recharge through solitude rather than social interaction." },
+            { "answer": "ANXIETY", "clue": "A persistent feeling of worry or unease about an uncertain outcome." },
+            { "answer": "MOTIVATION", "clue": "The reason or drive behind a person's actions." },
+            { "answer": "SUBCONSCIOUS", "clue": "The part of the mind that influences behavior without one's full awareness." },
+            { "answer": "COMPULSIVE", "clue": "Driven by an irresistible urge, often against one's own wishes." },
+            { "answer": "STEREOTYPE", "clue": "A widely held but oversimplified image of a particular type of person." },
+            { "answer": "CONFORMITY", "clue": "Behavior that matches the accepted norms of a group." },
+            { "answer": "PERSEVERANCE", "clue": "Continued effort in spite of difficulty or delay in achieving success." }
+          ]
+        },
+        {
+          "id": "C1-academic",
+          "theme": "Academic & Research Language",
+          "description": "Vocabulary for research and academic writing.",
+          "words": [
+            { "answer": "METHODOLOGY", "clue": "The system of methods used in a particular study." },
+            { "answer": "SIGNIFICANT", "clue": "In statistics, describing a result unlikely to have occurred by chance." },
+            { "answer": "PLAGIARISM", "clue": "Presenting someone else's work or ideas as your own." },
+            { "answer": "CITATION", "clue": "A reference to a published source within an academic text." },
+            { "answer": "EMPIRICAL", "clue": "Based on observation or experiment rather than on theory." },
+            { "answer": "ABSTRACT", "clue": "A brief summary placed at the beginning of a research paper." },
+            { "answer": "PEER REVIEW", "clue": "Evaluation of scholarly work by experts in the same field before publication." },
+            { "answer": "CORRELATION", "clue": "A statistical relationship between two factors that does not necessarily prove causation." },
+            { "answer": "BIBLIOGRAPHY", "clue": "A list of all the sources consulted when writing an academic work." },
+            { "answer": "INCONCLUSIVE", "clue": "Not leading to a firm result; leaving questions unresolved." },
+            { "answer": "VARIABLE", "clue": "A factor that can change and be measured in an experiment." },
+            { "answer": "DISSERTATION", "clue": "A long piece of original writing submitted for a university degree." }
+          ]
+        },
+        {
+          "id": "C1-arts",
+          "theme": "Arts & Criticism",
+          "description": "Art, literature and critical analysis.",
+          "words": [
+            { "answer": "MASTERPIECE", "clue": "A work of outstanding skill; an artist's finest achievement." },
+            { "answer": "AESTHETIC", "clue": "Concerned with beauty or the appreciation of beauty." },
+            { "answer": "PORTRAYAL", "clue": "The way someone or something is depicted in a film, book or painting." },
+            { "answer": "SATIRE", "clue": "The use of humor, irony or exaggeration to expose people's foolishness or vices." },
+            { "answer": "PROTAGONIST", "clue": "The main character in a play, film or novel." },
+            { "answer": "CONTEMPORARY", "clue": "Belonging to or occurring in the present day." },
+            { "answer": "EXHIBITION", "clue": "A public display of works of art or items of interest." },
+            { "answer": "CURATOR", "clue": "A person who selects and looks after the collection of a museum or gallery." },
+            { "answer": "NARRATIVE", "clue": "A spoken or written account of connected events; a story." },
+            { "answer": "PRETENTIOUS", "clue": "Attempting to seem more important or cultured than one really is." },
+            { "answer": "ACCLAIMED", "clue": "Enthusiastically praised, especially by critics." },
+            { "answer": "SYMBOLISM", "clue": "The use of images or objects to represent ideas or qualities." }
+          ]
+        },
+        {
+          "id": "C1-medicine",
+          "theme": "Medicine & Wellbeing",
+          "description": "Health, illness and treatment.",
+          "words": [
+            { "answer": "DIAGNOSIS", "clue": "The identification of an illness from its symptoms." },
+            { "answer": "CHRONIC", "clue": "Persisting for a long time or constantly recurring, especially of an illness." },
+            { "answer": "CONTAGIOUS", "clue": "Capable of being passed from one person to another through contact." },
+            { "answer": "SEDENTARY", "clue": "Involving a great deal of sitting and little physical activity." },
+            { "answer": "ANTIBIOTIC", "clue": "A drug that kills bacteria but is ineffective against viruses." },
+            { "answer": "PLACEBO", "clue": "A substance with no active ingredients, used as a control when testing new treatments." },
+            { "answer": "EPIDEMIC", "clue": "A widespread outbreak of an infectious disease within a community." },
+            { "answer": "SURGEON", "clue": "A doctor qualified to perform operations." },
+            { "answer": "MINDFULNESS", "clue": "The practice of calmly focusing one's attention on the present moment." },
+            { "answer": "SIDE EFFECT", "clue": "An unintended, usually undesirable, consequence of taking a drug." },
+            { "answer": "INSOMNIA", "clue": "Habitual inability to fall or stay asleep." },
+            { "answer": "PRESCRIPTION", "clue": "A doctor's written authorization for a patient to obtain a medicine." }
+          ]
+        }
+      ]
+    },
+    "C2": {
+      "name": "Proficiency",
+      "description": "Low-frequency, sophisticated vocabulary with fine shades of meaning. Clues are terse definitions that demand command of register and nuance.",
+      "puzzles": [
+        {
+          "id": "C2-rhetoric",
+          "theme": "Rhetoric & Argument",
+          "description": "The language of persuasion and debate.",
+          "words": [
+            { "answer": "FALLACY", "clue": "An argument that seems valid but rests on unsound reasoning." },
+            { "answer": "EQUIVOCATE", "clue": "To use deliberately ambiguous language so as to avoid committing oneself." },
+            { "answer": "CONCEDE", "clue": "To acknowledge, often reluctantly, that an opponent's point is valid." },
+            { "answer": "REBUTTAL", "clue": "A counter-argument intended to refute a claim." },
+            { "answer": "STRAW MAN", "clue": "A distorted version of an opposing position, set up only to be knocked down." },
+            { "answer": "HYPERBOLE", "clue": "Deliberate exaggeration for emphasis or effect." },
+            { "answer": "TAUTOLOGY", "clue": "Needless repetition of the same idea in different words, as in \"free gift\"." },
+            { "answer": "EUPHEMISM", "clue": "A mild or indirect expression used in place of one considered too blunt." },
+            { "answer": "CORROBORATE", "clue": "To confirm or lend support to a claim with additional evidence." },
+            { "answer": "SOPHISTRY", "clue": "Superficially clever but deceptive reasoning." },
+            { "answer": "AD HOMINEM", "clue": "Directed against the person rather than the position they maintain." },
+            { "answer": "DICHOTOMY", "clue": "A division into two sharply contrasted or mutually exclusive categories." }
+          ]
+        },
+        {
+          "id": "C2-philosophy",
+          "theme": "Philosophy & Ethics",
+          "description": "Schools of thought and moral theory.",
+          "words": [
+            { "answer": "UTILITARIAN", "clue": "Holding that the right action is whichever produces the greatest good for the greatest number." },
+            { "answer": "NIHILISM", "clue": "The rejection of all moral principles, often in the conviction that life is meaningless." },
+            { "answer": "EPISTEMOLOGY", "clue": "The branch of philosophy concerned with the nature, scope and limits of knowledge." },
+            { "answer": "DETERMINISM", "clue": "The doctrine that every event, including human choice, is the inevitable result of prior causes." },
+            { "answer": "ALTRUISM", "clue": "Disinterested and selfless concern for the wellbeing of others." },
+            { "answer": "EXISTENTIAL", "clue": "Concerned with individual freedom, choice and the search for meaning in an indifferent universe." },
+            { "answer": "SOLIPSISM", "clue": "The view that the self is the only thing that can be known to be real." },
+            { "answer": "DOGMATIC", "clue": "Inclined to lay down principles as undeniably true, without regard for evidence." },
+            { "answer": "RELATIVISM", "clue": "The position that truth and morality are not absolute but contingent on culture or context." },
+            { "answer": "METAPHYSICS", "clue": "Inquiry into the fundamental nature of reality, being and causation." },
+            { "answer": "CATEGORICAL", "clue": "Kant's ___ imperative: a moral obligation that holds unconditionally." },
+            { "answer": "STOICISM", "clue": "An ancient school advocating the calm, rational endurance of what cannot be changed." }
+          ]
+        },
+        {
+          "id": "C2-character",
+          "theme": "Character & Temperament",
+          "description": "Nuanced adjectives of personality.",
+          "words": [
+            { "answer": "OBSEQUIOUS", "clue": "Excessively eager to please or obey; fawning." },
+            { "answer": "MAGNANIMOUS", "clue": "Generous and forgiving, especially toward a rival or someone less powerful." },
+            { "answer": "SANCTIMONIOUS", "clue": "Making a show of being morally superior to others." },
+            { "answer": "CANTANKEROUS", "clue": "Bad-tempered, argumentative and uncooperative." },
+            { "answer": "GREGARIOUS", "clue": "Fond of company; sociable." },
+            { "answer": "PUSILLANIMOUS", "clue": "Showing a lack of courage or resolve; timid." },
+            { "answer": "IMPERTINENT", "clue": "Not showing proper respect; cheeky." },
+            { "answer": "FASTIDIOUS", "clue": "Very attentive to accuracy and detail; exacting and hard to please." },
+            { "answer": "DIFFIDENT", "clue": "Modest or shy owing to a lack of self-confidence." },
+            { "answer": "PHLEGMATIC", "clue": "Having an unemotional, stolidly calm disposition." },
+            { "answer": "CAPRICIOUS", "clue": "Given to sudden and unaccountable changes of mood or behavior." },
+            { "answer": "INDEFATIGABLE", "clue": "Persisting tirelessly; incapable of being worn out." }
+          ]
+        },
+        {
+          "id": "C2-deception",
+          "theme": "Truth & Deception",
+          "description": "Honesty, lies and manipulation.",
+          "words": [
+            { "answer": "DISINGENUOUS", "clue": "Not candid or sincere, typically by pretending to know less than one does." },
+            { "answer": "MENDACIOUS", "clue": "Given to telling lies." },
+            { "answer": "DUPLICITY", "clue": "Deceitful double-dealing." },
+            { "answer": "OBFUSCATE", "clue": "To render deliberately obscure or unintelligible." },
+            { "answer": "VERACITY", "clue": "Conformity to facts; truthfulness." },
+            { "answer": "SUBTERFUGE", "clue": "A trick or stratagem used to evade a rule or conceal a purpose." },
+            { "answer": "CHARLATAN", "clue": "A person falsely claiming special knowledge or skill; a fraud." },
+            { "answer": "GASLIGHTING", "clue": "Manipulating someone psychologically into doubting their own memory or perception." },
+            { "answer": "FABRICATE", "clue": "To invent false information in order to deceive." },
+            { "answer": "DISSEMBLE", "clue": "To conceal one's true motives, feelings or beliefs." },
+            { "answer": "CREDULOUS", "clue": "Having an excessive readiness to believe things." },
+            { "answer": "SPURIOUS", "clue": "Plausible on the surface but false; not genuine." }
+          ]
+        },
+        {
+          "id": "C2-power",
+          "theme": "Power & Society",
+          "description": "Hierarchy, authority and social control.",
+          "words": [
+            { "answer": "HEGEMONY", "clue": "Dominance of one state or social group over others, often maintained through consent." },
+            { "answer": "OLIGARCHY", "clue": "Government by a small, privileged group." },
+            { "answer": "DISENFRANCHISE", "clue": "To deprive someone of the right to vote." },
+            { "answer": "NEPOTISM", "clue": "The practice among those in power of favoring relatives, especially in appointments." },
+            { "answer": "MERITOCRACY", "clue": "A system in which advancement is based on individual ability and achievement." },
+            { "answer": "DEMAGOGUE", "clue": "A leader who gains support by exploiting popular prejudices rather than rational argument." },
+            { "answer": "SUBJUGATE", "clue": "To bring under domination or control, especially by conquest." },
+            { "answer": "ACQUIESCE", "clue": "To accept something reluctantly but without protest." },
+            { "answer": "GENTRIFICATION", "clue": "The transformation of a working-class neighborhood by affluent newcomers, often displacing existing residents." },
+            { "answer": "DISSIDENT", "clue": "A person who openly opposes official policy, especially in an authoritarian state." },
+            { "answer": "SCAPEGOAT", "clue": "A person or group made to bear the blame for the failings of others." },
+            { "answer": "INSURRECTION", "clue": "A violent uprising against an established authority." }
+          ]
+        },
+        {
+          "id": "C2-literary",
+          "theme": "Literary Language",
+          "description": "Elevated words for refined expression.",
+          "words": [
+            { "answer": "EPHEMERAL", "clue": "Lasting for a very short time." },
+            { "answer": "UBIQUITOUS", "clue": "Seemingly present everywhere at once." },
+            { "answer": "PERFUNCTORY", "clue": "Carried out with minimal effort or reflection, merely as a routine duty." },
+            { "answer": "QUINTESSENTIAL", "clue": "Representing the most perfect or typical example of a quality or class." },
+            { "answer": "SERENDIPITY", "clue": "The occurrence of fortunate discoveries by chance." },
+            { "answer": "MELLIFLUOUS", "clue": "Sweet and smooth; pleasing to the ear." },
+            { "answer": "INEFFABLE", "clue": "Too great or extreme to be expressed in words." },
+            { "answer": "JUXTAPOSE", "clue": "To place side by side, especially for contrasting effect." },
+            { "answer": "LUGUBRIOUS", "clue": "Looking or sounding mournful and dismal." },
+            { "answer": "EXACERBATE", "clue": "To make a problem, bad situation or negative feeling worse." },
+            { "answer": "ENERVATE", "clue": "To drain of energy or vitality; to weaken." },
+            { "answer": "PALPABLE", "clue": "So intense as to seem almost tangible." }
+          ]
+        }
+      ]
+    }
+  }
+}
