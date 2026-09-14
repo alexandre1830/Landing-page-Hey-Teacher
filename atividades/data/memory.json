@@ -1,0 +1,891 @@
+{
+  "metadata": {
+    "title": "English Memory Game Rounds by CEFR Level",
+    "description": "36 themed memory rounds where each word must be paired with its definition. Themes, vocabulary and definitions are calibrated to each CEFR level, and so are the number of pairs per round (from 12 at A1 to 20 at C2) and the number of peeks available.",
+    "framework": "CEFR (Common European Framework of Reference for Languages)",
+    "puzzles_per_level": 6,
+    "levels": ["A1", "A2", "B1", "B2", "C1", "C2"],
+    "level_settings": {
+      "pairs": "Word–definition pairs per round (the board has twice as many cards). Every puzzle in the level has exactly this many words.",
+      "peeks": "How many times per round the player can briefly turn every hidden card face up."
+    },
+    "version": "2.0"
+  },
+  "levels": {
+    "A1": {
+      "name": "Beginner",
+      "description": "Twelve pairs per round with short, everyday words and very simple definitions. You can peek at the cards three times.",
+      "pairs": 12,
+      "peeks": 3,
+      "puzzles": [
+        {
+          "id": "A1-farm",
+          "theme": "On the Farm",
+          "description": "Animals and things on a farm.",
+          "words": [
+            { "word": "cow", "definition": "It says “moo” and gives us milk." },
+            { "word": "horse", "definition": "A big animal that people ride." },
+            { "word": "sheep", "definition": "Its wool keeps us warm." },
+            { "word": "chicken", "definition": "A bird that gives us eggs." },
+            { "word": "pig", "definition": "A pink animal with a short tail." },
+            { "word": "duck", "definition": "A bird that swims and says “quack”." },
+            { "word": "goat", "definition": "An animal with a beard and horns." },
+            { "word": "rabbit", "definition": "A small animal with long ears." },
+            { "word": "mouse", "definition": "A very small animal. Cats chase it." },
+            { "word": "farmer", "definition": "A person who works on a farm." },
+            { "word": "tractor", "definition": "A big farm machine with large wheels." },
+            { "word": "egg", "definition": "Food with a hard shell." }
+          ]
+        },
+        {
+          "id": "A1-family",
+          "theme": "My Family",
+          "description": "The people in your family.",
+          "words": [
+            { "word": "mother", "definition": "Your female parent." },
+            { "word": "father", "definition": "Your male parent." },
+            { "word": "parents", "definition": "Your mother and father together." },
+            { "word": "sister", "definition": "A girl with the same parents as you." },
+            { "word": "brother", "definition": "A boy with the same parents as you." },
+            { "word": "grandmother", "definition": "The mother of your mother or father." },
+            { "word": "grandfather", "definition": "The father of your mother or father." },
+            { "word": "aunt", "definition": "The sister of your mother or father." },
+            { "word": "uncle", "definition": "The brother of your mother or father." },
+            { "word": "cousin", "definition": "The child of your aunt or uncle." },
+            { "word": "twins", "definition": "Two children born on the same day to one mother." },
+            { "word": "baby", "definition": "A very young child." }
+          ]
+        },
+        {
+          "id": "A1-classroom",
+          "theme": "In the Classroom",
+          "description": "Things and people at school.",
+          "words": [
+            { "word": "teacher", "definition": "The person who helps students learn." },
+            { "word": "student", "definition": "A person who learns at school." },
+            { "word": "book", "definition": "You open it and read the pages." },
+            { "word": "notebook", "definition": "You write your class notes in it." },
+            { "word": "pen", "definition": "You write with it in ink." },
+            { "word": "pencil", "definition": "It writes in grey, and you can erase it." },
+            { "word": "eraser", "definition": "It removes pencil marks." },
+            { "word": "ruler", "definition": "You draw straight lines with it." },
+            { "word": "scissors", "definition": "You cut paper with them." },
+            { "word": "desk", "definition": "A table where you sit and study." },
+            { "word": "board", "definition": "The teacher writes on it at the front." },
+            { "word": "backpack", "definition": "A bag you carry on your back." }
+          ]
+        },
+        {
+          "id": "A1-colors",
+          "theme": "Colors & Shapes",
+          "description": "Colors and shapes you see every day.",
+          "words": [
+            { "word": "blue", "definition": "The color of the sky on a sunny day." },
+            { "word": "green", "definition": "The color of grass and leaves." },
+            { "word": "yellow", "definition": "The color of the sun and bananas." },
+            { "word": "red", "definition": "The color of strawberries." },
+            { "word": "white", "definition": "The color of snow and milk." },
+            { "word": "black", "definition": "The color of the night sky." },
+            { "word": "orange", "definition": "The color of carrots." },
+            { "word": "circle", "definition": "A round shape, like the letter O." },
+            { "word": "square", "definition": "A shape with four equal sides." },
+            { "word": "triangle", "definition": "A shape with three sides." },
+            { "word": "star", "definition": "A shape with five points." },
+            { "word": "heart", "definition": "A shape that means love." }
+          ]
+        },
+        {
+          "id": "A1-body",
+          "theme": "Face & Body",
+          "description": "Parts of the body.",
+          "words": [
+            { "word": "eye", "definition": "You see with it." },
+            { "word": "ear", "definition": "You hear with it." },
+            { "word": "nose", "definition": "You smell with it." },
+            { "word": "mouth", "definition": "You eat and talk with it." },
+            { "word": "teeth", "definition": "You brush them in the morning and at night." },
+            { "word": "hair", "definition": "It grows on your head." },
+            { "word": "neck", "definition": "It is between your head and your body." },
+            { "word": "arm", "definition": "Your hand is at the end of it." },
+            { "word": "hand", "definition": "It has five fingers." },
+            { "word": "finger", "definition": "You have ten of them on your hands." },
+            { "word": "leg", "definition": "Your foot is at the end of it." },
+            { "word": "foot", "definition": "You wear a shoe on it." }
+          ]
+        },
+        {
+          "id": "A1-lunchbox",
+          "theme": "Lunchbox",
+          "description": "Food and drinks for a school lunch.",
+          "words": [
+            { "word": "sandwich", "definition": "Two pieces of bread with food inside." },
+            { "word": "banana", "definition": "A long yellow fruit." },
+            { "word": "apple", "definition": "A round red or green fruit." },
+            { "word": "grapes", "definition": "Small purple or green fruits that grow together." },
+            { "word": "carrot", "definition": "A long orange vegetable." },
+            { "word": "salad", "definition": "Cold food made with leaves and vegetables." },
+            { "word": "water", "definition": "A clear drink with no taste." },
+            { "word": "juice", "definition": "A drink made from fruit." },
+            { "word": "cookie", "definition": "A small, sweet and round snack." },
+            { "word": "popcorn", "definition": "A snack you eat at the cinema." },
+            { "word": "cheese", "definition": "Yellow or white food made from milk." },
+            { "word": "yogurt", "definition": "Soft, creamy food you eat with a spoon." }
+          ]
+        }
+      ]
+    },
+
+    "A2": {
+      "name": "Elementary",
+      "description": "Fourteen pairs per round with vocabulary for daily life, places and people. You can peek at the cards three times.",
+      "pairs": 14,
+      "peeks": 3,
+      "puzzles": [
+        {
+          "id": "A2-jobs",
+          "theme": "People at Work",
+          "description": "Common jobs and what people do.",
+          "words": [
+            { "word": "doctor", "definition": "A person who helps sick people get better." },
+            { "word": "vet", "definition": "A doctor for animals." },
+            { "word": "chef", "definition": "A person who cooks in a restaurant." },
+            { "word": "waiter", "definition": "A person who brings food to your table." },
+            { "word": "cashier", "definition": "A person who takes your money in a shop." },
+            { "word": "pilot", "definition": "A person who flies a plane." },
+            { "word": "farmer", "definition": "A person who grows food and keeps animals." },
+            { "word": "dentist", "definition": "A person who looks after your teeth." },
+            { "word": "firefighter", "definition": "A person who puts out fires." },
+            { "word": "police officer", "definition": "A person who protects people and catches criminals." },
+            { "word": "mechanic", "definition": "A person who repairs cars." },
+            { "word": "plumber", "definition": "A person who fixes water pipes." },
+            { "word": "hairdresser", "definition": "A person who cuts and styles hair." },
+            { "word": "photographer", "definition": "A person who takes pictures as a job." }
+          ]
+        },
+        {
+          "id": "A2-town",
+          "theme": "Places in Town",
+          "description": "Where you go and what you do there.",
+          "words": [
+            { "word": "library", "definition": "A place where you can borrow books." },
+            { "word": "pharmacy", "definition": "A shop where you buy medicine." },
+            { "word": "bakery", "definition": "A shop that sells bread and cakes." },
+            { "word": "supermarket", "definition": "A big shop that sells food and many other things." },
+            { "word": "museum", "definition": "A building with old or famous things to see." },
+            { "word": "bank", "definition": "A place where people keep their money." },
+            { "word": "post office", "definition": "A place where you send letters and packages." },
+            { "word": "hospital", "definition": "A place where sick or injured people get treatment." },
+            { "word": "stadium", "definition": "A big place where people watch sports." },
+            { "word": "cinema", "definition": "A place where you watch films on a big screen." },
+            { "word": "restaurant", "definition": "A place where you pay to eat a meal." },
+            { "word": "park", "definition": "A green area where people walk and play." },
+            { "word": "bus stop", "definition": "The place where you wait for a bus." },
+            { "word": "train station", "definition": "The place where you get on and off trains." }
+          ]
+        },
+        {
+          "id": "A2-weather",
+          "theme": "Seasons & Weather",
+          "description": "Talking about the weather.",
+          "words": [
+            { "word": "sunny", "definition": "Bright weather with no clouds." },
+            { "word": "cloudy", "definition": "The sky is grey and you can't see the sun." },
+            { "word": "windy", "definition": "The air moves fast and trees move." },
+            { "word": "foggy", "definition": "The air is thick and white, so it's hard to see." },
+            { "word": "snow", "definition": "Soft white flakes that fall when it's very cold." },
+            { "word": "storm", "definition": "Very bad weather with strong wind and rain." },
+            { "word": "thunder", "definition": "The loud noise you hear in a storm." },
+            { "word": "rainbow", "definition": "An arc of colors in the sky after rain." },
+            { "word": "umbrella", "definition": "You open it to stay dry in the rain." },
+            { "word": "temperature", "definition": "How hot or cold something is." },
+            { "word": "summer", "definition": "The hottest season of the year." },
+            { "word": "winter", "definition": "The coldest season of the year." },
+            { "word": "spring", "definition": "The season when flowers start to grow." },
+            { "word": "autumn", "definition": "The season when leaves fall from the trees." }
+          ]
+        },
+        {
+          "id": "A2-feelings",
+          "theme": "How Do You Feel?",
+          "description": "Words for feelings and moods.",
+          "words": [
+            { "word": "tired", "definition": "You need to rest or sleep." },
+            { "word": "angry", "definition": "You feel very upset with someone." },
+            { "word": "bored", "definition": "Nothing is interesting and you have nothing to do." },
+            { "word": "scared", "definition": "You are afraid of something, like the dark." },
+            { "word": "hungry", "definition": "You want to eat something." },
+            { "word": "thirsty", "definition": "You want to drink something." },
+            { "word": "surprised", "definition": "Something happened that you didn't expect." },
+            { "word": "nervous", "definition": "You feel uneasy before a test or an interview." },
+            { "word": "proud", "definition": "You feel good about something you did well." },
+            { "word": "excited", "definition": "You are very happy about something that will happen soon." },
+            { "word": "lonely", "definition": "You are sad because you have no one to talk to." },
+            { "word": "embarrassed", "definition": "You feel silly because people saw your mistake." },
+            { "word": "relaxed", "definition": "You feel calm, with no stress." },
+            { "word": "confused", "definition": "You don't understand what is happening." }
+          ]
+        },
+        {
+          "id": "A2-house",
+          "theme": "Around the House",
+          "description": "Furniture and things at home.",
+          "words": [
+            { "word": "fridge", "definition": "It keeps food and drinks cold." },
+            { "word": "oven", "definition": "You bake or cook food inside it." },
+            { "word": "sink", "definition": "You wash the dishes in it." },
+            { "word": "washing machine", "definition": "It cleans your clothes." },
+            { "word": "sofa", "definition": "A long, soft seat for two or more people." },
+            { "word": "carpet", "definition": "A soft covering on the floor." },
+            { "word": "mirror", "definition": "You look at yourself in it." },
+            { "word": "wardrobe", "definition": "A tall cupboard where you hang your clothes." },
+            { "word": "pillow", "definition": "A soft thing for your head in bed." },
+            { "word": "lamp", "definition": "It gives you light at night." },
+            { "word": "shower", "definition": "You stand under it to wash your body." },
+            { "word": "stairs", "definition": "You walk up them to go to another floor." },
+            { "word": "roof", "definition": "The top part of a house." },
+            { "word": "garden", "definition": "The area outside a house with plants and flowers." }
+          ]
+        },
+        {
+          "id": "A2-holiday",
+          "theme": "Holiday Time",
+          "description": "Words for travel and holidays.",
+          "words": [
+            { "word": "passport", "definition": "An official document you need to travel abroad." },
+            { "word": "ticket", "definition": "A paper that lets you get on a train or plane." },
+            { "word": "airport", "definition": "A place where planes take off and land." },
+            { "word": "suitcase", "definition": "A big bag for your clothes when you travel." },
+            { "word": "hotel", "definition": "A building where you pay to sleep on a trip." },
+            { "word": "tent", "definition": "You sleep in it when you go camping." },
+            { "word": "beach", "definition": "An area of sand next to the sea." },
+            { "word": "sunscreen", "definition": "A cream that protects your skin from the sun." },
+            { "word": "map", "definition": "A picture that shows roads and places." },
+            { "word": "camera", "definition": "You take photos with it." },
+            { "word": "tourist", "definition": "A person who visits a place on holiday." },
+            { "word": "guide", "definition": "A person who shows visitors around a place." },
+            { "word": "sightseeing", "definition": "Visiting the famous places in a city." },
+            { "word": "souvenir", "definition": "Something you buy to remember a trip." }
+          ]
+        }
+      ]
+    },
+
+    "B1": {
+      "name": "Intermediate",
+      "description": "Fifteen pairs per round with topic vocabulary and everyday phrasal verbs. Definitions are longer, and you can peek twice.",
+      "pairs": 15,
+      "peeks": 2,
+      "puzzles": [
+        {
+          "id": "B1-office",
+          "theme": "At the Office",
+          "description": "Vocabulary for jobs and working life.",
+          "words": [
+            { "word": "salary", "definition": "The money you earn from your job every month." },
+            { "word": "colleague", "definition": "A person you work with." },
+            { "word": "manager", "definition": "The person in charge of a team or department." },
+            { "word": "deadline", "definition": "The time by which a task must be finished." },
+            { "word": "overtime", "definition": "Extra hours you work after your normal day." },
+            { "word": "promotion", "definition": "A move to a more important job in the same company." },
+            { "word": "job interview", "definition": "A meeting where a company asks you questions before hiring you." },
+            { "word": "CV", "definition": "A document that lists your education and work experience." },
+            { "word": "contract", "definition": "A written agreement between you and your employer." },
+            { "word": "part-time", "definition": "Working only some hours of the day or week." },
+            { "word": "commute", "definition": "To travel regularly between home and work." },
+            { "word": "day off", "definition": "A day when you don't have to go to work." },
+            { "word": "resign", "definition": "To officially leave your job." },
+            { "word": "get fired", "definition": "To lose your job because your employer decides it." },
+            { "word": "retire", "definition": "To stop working because you have reached an older age." }
+          ]
+        },
+        {
+          "id": "B1-doctor",
+          "theme": "Seeing the Doctor",
+          "description": "Health problems and treatment.",
+          "words": [
+            { "word": "symptom", "definition": "A sign that you are ill, like a cough or a headache." },
+            { "word": "fever", "definition": "A body temperature that is higher than normal." },
+            { "word": "sore throat", "definition": "Pain when you swallow, often when you have a cold." },
+            { "word": "allergy", "definition": "A bad reaction to certain food, plants or animals." },
+            { "word": "injury", "definition": "Damage to your body, for example from an accident." },
+            { "word": "sprain", "definition": "To hurt a joint, like your ankle, by twisting it." },
+            { "word": "bandage", "definition": "A strip of cloth you wrap around a wound." },
+            { "word": "appointment", "definition": "A fixed time to see someone, like a doctor." },
+            { "word": "check-up", "definition": "A general exam to make sure you are healthy." },
+            { "word": "X-ray", "definition": "A picture of the inside of your body." },
+            { "word": "prescription", "definition": "A doctor's note that lets you get medicine." },
+            { "word": "painkiller", "definition": "A medicine that makes pain go away." },
+            { "word": "vaccine", "definition": "A substance that protects you from a disease." },
+            { "word": "surgeon", "definition": "A doctor who operates on patients." },
+            { "word": "recover", "definition": "To become healthy again after being ill." }
+          ]
+        },
+        {
+          "id": "B1-online",
+          "theme": "Online Life",
+          "description": "Using computers, phones and the internet.",
+          "words": [
+            { "word": "username", "definition": "The name you use to sign in to a website." },
+            { "word": "password", "definition": "A secret word you type to get into an account." },
+            { "word": "log out", "definition": "To leave your account so others can't use it." },
+            { "word": "download", "definition": "To copy a file from the internet to your device." },
+            { "word": "upload", "definition": "To send a file from your device to the internet." },
+            { "word": "attachment", "definition": "A file you send together with an email." },
+            { "word": "the cloud", "definition": "Online storage for your files, not on your device." },
+            { "word": "update", "definition": "A newer version of an app with fixes and improvements." },
+            { "word": "delete", "definition": "To remove something, like a file or a message." },
+            { "word": "post", "definition": "To share something online, like a photo or comment." },
+            { "word": "screenshot", "definition": "A picture of what is on your screen." },
+            { "word": "browser", "definition": "The program you use to visit websites." },
+            { "word": "Wi-Fi", "definition": "A wireless connection to the internet." },
+            { "word": "spam", "definition": "Unwanted emails, usually advertising." },
+            { "word": "charger", "definition": "The cable you use to give your phone power." }
+          ]
+        },
+        {
+          "id": "B1-green",
+          "theme": "Going Green",
+          "description": "Protecting the environment.",
+          "words": [
+            { "word": "recycle", "definition": "To treat used things so they can be made into new ones." },
+            { "word": "reuse", "definition": "To use something again instead of throwing it away." },
+            { "word": "waste", "definition": "Things that are thrown away because they are not needed." },
+            { "word": "litter", "definition": "Rubbish that people leave on the ground in public places." },
+            { "word": "pollution", "definition": "Dirty and harmful substances in the air, water or land." },
+            { "word": "renewable", "definition": "Describes energy that never runs out, like wind power." },
+            { "word": "solar panel", "definition": "A device that turns sunlight into electricity." },
+            { "word": "carbon footprint", "definition": "The amount of CO₂ that your activities produce." },
+            { "word": "global warming", "definition": "The slow rise in the temperature of the Earth." },
+            { "word": "deforestation", "definition": "Cutting down large areas of forest." },
+            { "word": "endangered", "definition": "Describes an animal that may soon disappear forever." },
+            { "word": "wildlife", "definition": "Animals and plants that live in nature." },
+            { "word": "organic", "definition": "Grown without artificial chemicals." },
+            { "word": "flood", "definition": "A lot of water covering land that is usually dry." },
+            { "word": "drought", "definition": "A long period with little or no rain." }
+          ]
+        },
+        {
+          "id": "B1-personality",
+          "theme": "What Are They Like?",
+          "description": "Adjectives to describe personality.",
+          "words": [
+            { "word": "honest", "definition": "Always tells the truth." },
+            { "word": "generous", "definition": "Happy to give money, time or help to others." },
+            { "word": "selfish", "definition": "Thinks only about themselves." },
+            { "word": "shy", "definition": "Nervous and quiet with people they don't know." },
+            { "word": "confident", "definition": "Sure about their own abilities." },
+            { "word": "lazy", "definition": "Doesn't like working or making an effort." },
+            { "word": "hard-working", "definition": "Puts a lot of effort into their work." },
+            { "word": "patient", "definition": "Can wait calmly without getting annoyed." },
+            { "word": "reliable", "definition": "You can trust them to do what they promise." },
+            { "word": "polite", "definition": "Has good manners and treats people with respect." },
+            { "word": "rude", "definition": "Says or does things that offend people." },
+            { "word": "funny", "definition": "Makes people laugh." },
+            { "word": "cheerful", "definition": "Happy and positive most of the time." },
+            { "word": "bossy", "definition": "Always tells other people what to do." },
+            { "word": "stubborn", "definition": "Refuses to change their mind." }
+          ]
+        },
+        {
+          "id": "B1-phrasal",
+          "theme": "Phrasal Verbs",
+          "description": "Common two- and three-word verbs.",
+          "words": [
+            { "word": "give up", "definition": "To stop trying to do something." },
+            { "word": "carry on", "definition": "To continue doing something." },
+            { "word": "look after", "definition": "To take care of someone or something." },
+            { "word": "find out", "definition": "To learn a fact that you didn't know before." },
+            { "word": "look up", "definition": "To search for a word in a dictionary or online." },
+            { "word": "come across", "definition": "To find something by chance." },
+            { "word": "turn down", "definition": "To say no to an offer or invitation." },
+            { "word": "get along", "definition": "To have a friendly relationship with someone." },
+            { "word": "run out of", "definition": "To have none of something left." },
+            { "word": "put off", "definition": "To move something to a later time." },
+            { "word": "look forward to", "definition": "To feel excited about something in the future." },
+            { "word": "pick up", "definition": "To collect someone or something from a place." },
+            { "word": "set up", "definition": "To start a business or an organization." },
+            { "word": "take off", "definition": "When a plane leaves the ground." },
+            { "word": "break down", "definition": "When a car or machine stops working." }
+          ]
+        }
+      ]
+    },
+
+    "B2": {
+      "name": "Upper-Intermediate",
+      "description": "Sixteen pairs per round with more precise vocabulary and common idioms. You can peek twice.",
+      "pairs": 16,
+      "peeks": 2,
+      "puzzles": [
+        {
+          "id": "B2-money",
+          "theme": "Money Matters",
+          "description": "Saving, spending and borrowing.",
+          "words": [
+            { "word": "budget", "definition": "A plan for how much money you will spend." },
+            { "word": "income", "definition": "All the money you receive, for example from work." },
+            { "word": "savings", "definition": "Money you keep for the future instead of spending." },
+            { "word": "invest", "definition": "To put money into something hoping it will grow." },
+            { "word": "profit", "definition": "The money made after all costs are paid." },
+            { "word": "interest", "definition": "Extra money paid on savings or charged on loans." },
+            { "word": "loan", "definition": "Money that a bank lends you and you pay back." },
+            { "word": "debt", "definition": "Money that you owe to someone." },
+            { "word": "mortgage", "definition": "A long-term loan used to buy a house." },
+            { "word": "credit card", "definition": "A card that lets you buy now and pay later." },
+            { "word": "withdraw", "definition": "To take money out of your bank account." },
+            { "word": "tax", "definition": "Money you must pay to the government." },
+            { "word": "afford", "definition": "To have enough money to pay for something." },
+            { "word": "bargain", "definition": "Something bought for much less than its usual price." },
+            { "word": "receipt", "definition": "A piece of paper that proves you paid for something." },
+            { "word": "refund", "definition": "Money given back when you return a product." }
+          ]
+        },
+        {
+          "id": "B2-news",
+          "theme": "News & Media",
+          "description": "How news is made and shared.",
+          "words": [
+            { "word": "headline", "definition": "The title of a news story, printed in large letters." },
+            { "word": "breaking news", "definition": "Important news reported as it is happening." },
+            { "word": "journalist", "definition": "A person who investigates and writes news stories." },
+            { "word": "editor", "definition": "The person who decides what gets published." },
+            { "word": "the press", "definition": "Newspapers, magazines and journalists as a group." },
+            { "word": "source", "definition": "A person or document that gives information." },
+            { "word": "coverage", "definition": "The amount of reporting that an event receives." },
+            { "word": "biased", "definition": "Unfairly supporting one side of an argument." },
+            { "word": "broadcast", "definition": "To send out a programme on TV or radio." },
+            { "word": "podcast", "definition": "A series of audio episodes you can stream or download." },
+            { "word": "audience", "definition": "The people who watch, read or listen to something." },
+            { "word": "subscribe", "definition": "To pay regularly to receive a newspaper or service." },
+            { "word": "go viral", "definition": "To spread very quickly across the internet." },
+            { "word": "clickbait", "definition": "Online content designed only to attract clicks." },
+            { "word": "censorship", "definition": "Blocking information that authorities don't want shared." },
+            { "word": "fake news", "definition": "False stories presented as if they were real news." }
+          ]
+        },
+        {
+          "id": "B2-law",
+          "theme": "Crime & Justice",
+          "description": "The language of courts and crime.",
+          "words": [
+            { "word": "burglary", "definition": "Breaking into a building to steal things." },
+            { "word": "fraud", "definition": "The crime of deceiving people to get money." },
+            { "word": "witness", "definition": "A person who saw a crime or an accident happen." },
+            { "word": "suspect", "definition": "A person the police think may have committed a crime." },
+            { "word": "arrest", "definition": "When the police take someone away for a crime." },
+            { "word": "alibi", "definition": "Proof that you were somewhere else when a crime happened." },
+            { "word": "lawyer", "definition": "A professional who gives legal advice and represents people." },
+            { "word": "trial", "definition": "The process in court of deciding if someone is guilty." },
+            { "word": "judge", "definition": "The official who is in charge of a court." },
+            { "word": "jury", "definition": "A group of citizens who decide a case in court." },
+            { "word": "verdict", "definition": "The official decision at the end of a trial." },
+            { "word": "guilty", "definition": "Responsible for breaking the law." },
+            { "word": "innocent", "definition": "Not responsible for a crime." },
+            { "word": "sentence", "definition": "The punishment a judge gives to a criminal." },
+            { "word": "fine", "definition": "Money you must pay as a punishment." },
+            { "word": "prison", "definition": "A building where criminals are kept as punishment." }
+          ]
+        },
+        {
+          "id": "B2-idioms",
+          "theme": "Everyday Idioms",
+          "description": "Expressions that don't mean what they say.",
+          "words": [
+            { "word": "a piece of cake", "definition": "Something very easy to do." },
+            { "word": "break the ice", "definition": "To start a conversation in an awkward situation." },
+            { "word": "under the weather", "definition": "Feeling a little ill." },
+            { "word": "cost an arm and a leg", "definition": "To be extremely expensive." },
+            { "word": "once in a blue moon", "definition": "Very rarely." },
+            { "word": "on the fence", "definition": "Unable to decide between two options." },
+            { "word": "spill the beans", "definition": "To reveal a secret." },
+            { "word": "call it a day", "definition": "To stop working for the rest of the day." },
+            { "word": "hit the books", "definition": "To study hard." },
+            { "word": "the last straw", "definition": "The final problem that makes you lose patience." },
+            { "word": "a couch potato", "definition": "A lazy person who watches a lot of TV." },
+            { "word": "get cold feet", "definition": "To become too nervous to do something you planned." },
+            { "word": "in hot water", "definition": "In trouble." },
+            { "word": "keep an eye on", "definition": "To watch someone or something carefully." },
+            { "word": "see eye to eye", "definition": "To agree with someone." },
+            { "word": "a pain in the neck", "definition": "An annoying person or thing." }
+          ]
+        },
+        {
+          "id": "B2-society",
+          "theme": "Society & Change",
+          "description": "Social issues and how people help.",
+          "words": [
+            { "word": "poverty", "definition": "The state of being extremely poor." },
+            { "word": "homeless", "definition": "Having no place to live." },
+            { "word": "unemployment", "definition": "The situation of not having a paid job." },
+            { "word": "minimum wage", "definition": "The lowest pay an employer is allowed to give." },
+            { "word": "welfare", "definition": "Government help for people who need money or housing." },
+            { "word": "equality", "definition": "Everyone having the same rights and opportunities." },
+            { "word": "human rights", "definition": "Basic freedoms that every person should have." },
+            { "word": "discrimination", "definition": "Treating people unfairly because of who they are." },
+            { "word": "community", "definition": "The people who live in one area or share interests." },
+            { "word": "volunteer", "definition": "A person who works for free to help others." },
+            { "word": "charity", "definition": "An organization that raises money to help people in need." },
+            { "word": "protest", "definition": "A public event where people show they disagree." },
+            { "word": "immigrant", "definition": "A person who comes to live permanently in a new country." },
+            { "word": "refugee", "definition": "A person forced to leave their country because of war or danger." },
+            { "word": "the elderly", "definition": "Old people, considered as a group." },
+            { "word": "overpopulation", "definition": "Too many people living in one area." }
+          ]
+        },
+        {
+          "id": "B2-lab",
+          "theme": "In the Lab",
+          "description": "How scientists find answers.",
+          "words": [
+            { "word": "scientist", "definition": "A person who studies the natural world through research." },
+            { "word": "hypothesis", "definition": "An idea that is tested to see if it is true." },
+            { "word": "experiment", "definition": "A scientific test done to discover something." },
+            { "word": "variable", "definition": "A factor that can change during an experiment." },
+            { "word": "sample", "definition": "A small amount taken from something to be tested." },
+            { "word": "observe", "definition": "To watch something carefully to learn about it." },
+            { "word": "measure", "definition": "To find the exact size or amount of something." },
+            { "word": "data", "definition": "Facts and numbers collected for analysis." },
+            { "word": "evidence", "definition": "Facts that show whether something is true." },
+            { "word": "theory", "definition": "A set of ideas that explains why something happens." },
+            { "word": "conclusion", "definition": "The final decision you reach after studying results." },
+            { "word": "trial and error", "definition": "Trying different methods until one works." },
+            { "word": "discovery", "definition": "Finding something that nobody knew before." },
+            { "word": "breakthrough", "definition": "An important new development after a lot of work." },
+            { "word": "microscope", "definition": "An instrument that makes tiny things look bigger." },
+            { "word": "chemical", "definition": "A substance made or used in chemistry." }
+          ]
+        }
+      ]
+    },
+
+    "C1": {
+      "name": "Advanced",
+      "description": "Eighteen pairs per round with sophisticated vocabulary, academic words and idioms. You can peek only once.",
+      "pairs": 18,
+      "peeks": 1,
+      "puzzles": [
+        {
+          "id": "C1-business",
+          "theme": "Business Talk",
+          "description": "The language of companies and markets.",
+          "words": [
+            { "word": "startup", "definition": "A newly created company, often in technology." },
+            { "word": "revenue", "definition": "The total income a company receives from sales." },
+            { "word": "cash flow", "definition": "The movement of money into and out of a business." },
+            { "word": "overheads", "definition": "Regular business costs, such as rent and electricity." },
+            { "word": "stakeholder", "definition": "Anyone affected by a company's decisions, such as staff or clients." },
+            { "word": "shareholder", "definition": "A person who owns part of a company." },
+            { "word": "merger", "definition": "Two companies joining together to form one." },
+            { "word": "franchise", "definition": "A licence to run a business using another company's brand." },
+            { "word": "outsource", "definition": "To pay an outside company to do part of your work." },
+            { "word": "supply chain", "definition": "The network that produces and delivers a product." },
+            { "word": "downsizing", "definition": "Reducing the number of employees to cut costs." },
+            { "word": "recession", "definition": "A period when the economy shrinks and trade slows." },
+            { "word": "bankrupt", "definition": "Legally unable to pay what you owe." },
+            { "word": "benchmark", "definition": "A standard used to measure or compare performance." },
+            { "word": "market share", "definition": "The percentage of total sales a company controls." },
+            { "word": "target audience", "definition": "The specific group a product is aimed at." },
+            { "word": "incentive", "definition": "Something that encourages people to act or work harder." },
+            { "word": "negotiate", "definition": "To discuss something in order to reach an agreement." }
+          ]
+        },
+        {
+          "id": "C1-politics",
+          "theme": "Politics & Power",
+          "description": "How governments make decisions.",
+          "words": [
+            { "word": "legislation", "definition": "Laws, or the process of making them." },
+            { "word": "amendment", "definition": "A formal change made to a law or document." },
+            { "word": "veto", "definition": "The official power to reject a decision or law." },
+            { "word": "referendum", "definition": "A public vote on a single political question." },
+            { "word": "ballot", "definition": "The paper or system used to vote secretly." },
+            { "word": "turnout", "definition": "The percentage of people who actually vote." },
+            { "word": "campaign", "definition": "Organised activities to win support, for example before an election." },
+            { "word": "manifesto", "definition": "A document in which a party sets out its plans." },
+            { "word": "opinion poll", "definition": "A survey of what the public thinks." },
+            { "word": "constituency", "definition": "The voters in the area a politician represents." },
+            { "word": "incumbent", "definition": "The person who currently holds an office." },
+            { "word": "coalition", "definition": "An alliance of parties that govern together." },
+            { "word": "opposition", "definition": "The parties that are not in government." },
+            { "word": "bipartisan", "definition": "Supported by two opposing political parties." },
+            { "word": "lobby", "definition": "To try to influence politicians on an issue." },
+            { "word": "grassroots", "definition": "Coming from ordinary people rather than leaders." },
+            { "word": "corruption", "definition": "Dishonest use of power for personal gain." },
+            { "word": "sanction", "definition": "A penalty imposed on a country to force a change." }
+          ]
+        },
+        {
+          "id": "C1-mind",
+          "theme": "The Mind",
+          "description": "Psychology in everyday language.",
+          "words": [
+            { "word": "introvert", "definition": "Someone who recharges by spending time alone." },
+            { "word": "extrovert", "definition": "Someone who gains energy from being with others." },
+            { "word": "self-esteem", "definition": "How much you value and respect yourself." },
+            { "word": "empathy", "definition": "The ability to understand and share others' feelings." },
+            { "word": "resilience", "definition": "The ability to recover quickly from difficulties." },
+            { "word": "willpower", "definition": "The strength of mind to control your impulses." },
+            { "word": "habit", "definition": "Something you do regularly, often without thinking." },
+            { "word": "procrastination", "definition": "Delaying tasks you know you should do now." },
+            { "word": "burnout", "definition": "Exhaustion caused by long-term stress, usually at work." },
+            { "word": "mindfulness", "definition": "Paying calm attention to the present moment." },
+            { "word": "intuition", "definition": "Knowing something instinctively, without conscious reasoning." },
+            { "word": "bias", "definition": "A tendency to favour one view, often unconsciously." },
+            { "word": "stereotype", "definition": "A fixed, oversimplified idea about a group of people." },
+            { "word": "peer pressure", "definition": "Influence from people your age to behave like them." },
+            { "word": "denial", "definition": "Refusing to accept an unpleasant truth." },
+            { "word": "phobia", "definition": "An intense, irrational fear of something." },
+            { "word": "trauma", "definition": "Deep emotional shock after a very distressing event." },
+            { "word": "nostalgia", "definition": "A bittersweet longing for the past." }
+          ]
+        },
+        {
+          "id": "C1-idioms",
+          "theme": "Tricky Idioms",
+          "description": "Idioms for work, decisions and conflict.",
+          "words": [
+            { "word": "a blessing in disguise", "definition": "Something that seems bad but turns out well." },
+            { "word": "beat around the bush", "definition": "To avoid talking directly about the main point." },
+            { "word": "cut to the chase", "definition": "To get to the point without wasting time." },
+            { "word": "the elephant in the room", "definition": "An obvious problem that everyone avoids mentioning." },
+            { "word": "the tip of the iceberg", "definition": "A small visible part of a much bigger problem." },
+            { "word": "a drop in the ocean", "definition": "An amount too small to make a difference." },
+            { "word": "cut corners", "definition": "To do something cheaply or carelessly to save time." },
+            { "word": "jump on the bandwagon", "definition": "To join something only because it is popular." },
+            { "word": "bite the bullet", "definition": "To force yourself to face something unpleasant." },
+            { "word": "go the extra mile", "definition": "To make more effort than is expected." },
+            { "word": "burn the midnight oil", "definition": "To work late into the night." },
+            { "word": "a double-edged sword", "definition": "Something with both good and bad consequences." },
+            { "word": "on thin ice", "definition": "In a risky situation that could go wrong." },
+            { "word": "back to square one", "definition": "Forced to start again from the beginning." },
+            { "word": "get the ball rolling", "definition": "To start an activity or process." },
+            { "word": "hit the nail on the head", "definition": "To describe something exactly right." },
+            { "word": "play it by ear", "definition": "To decide what to do as things happen, without a plan." },
+            { "word": "throw in the towel", "definition": "To admit defeat and give up." }
+          ]
+        },
+        {
+          "id": "C1-academic",
+          "theme": "Academic English",
+          "description": "Words for essays and reports.",
+          "words": [
+            { "word": "notion", "definition": "An idea or belief about something." },
+            { "word": "implication", "definition": "A possible effect or consequence of an action or decision." },
+            { "word": "discrepancy", "definition": "A difference between things that should match." },
+            { "word": "comprehensive", "definition": "Including all or nearly all the relevant details." },
+            { "word": "concise", "definition": "Giving a lot of information in few words." },
+            { "word": "coherent", "definition": "Logical and consistent, so it is easy to follow." },
+            { "word": "ambiguous", "definition": "Open to more than one interpretation." },
+            { "word": "feasible", "definition": "Possible and practical to achieve." },
+            { "word": "inherent", "definition": "Existing as a natural, permanent part of something." },
+            { "word": "prevalent", "definition": "Widespread in a particular area or time." },
+            { "word": "subsequent", "definition": "Coming after something in time." },
+            { "word": "undermine", "definition": "To gradually weaken something or someone." },
+            { "word": "advocate", "definition": "To publicly support a cause or policy." },
+            { "word": "substantiate", "definition": "To support a claim with evidence." },
+            { "word": "derive", "definition": "To obtain something from a particular source." },
+            { "word": "allocate", "definition": "To officially give resources for a specific purpose." },
+            { "word": "facilitate", "definition": "To make a process easier." },
+            { "word": "hence", "definition": "For this reason; therefore." }
+          ]
+        },
+        {
+          "id": "C1-stories",
+          "theme": "Books & Film",
+          "description": "Talking about stories and reviews.",
+          "words": [
+            { "word": "protagonist", "definition": "The main character of a story." },
+            { "word": "antagonist", "definition": "The character who opposes the main character." },
+            { "word": "narrator", "definition": "The voice that tells the story." },
+            { "word": "setting", "definition": "Where and when a story takes place." },
+            { "word": "genre", "definition": "A category of art, such as horror or comedy." },
+            { "word": "plot twist", "definition": "An unexpected change in the direction of a story." },
+            { "word": "flashback", "definition": "A scene showing events from earlier in the story." },
+            { "word": "cliffhanger", "definition": "An ending that leaves the audience in suspense." },
+            { "word": "spoiler", "definition": "Information that reveals the ending too early." },
+            { "word": "sequel", "definition": "A book or film that continues an earlier story." },
+            { "word": "trilogy", "definition": "A series of three related books or films." },
+            { "word": "adaptation", "definition": "A film or series based on a book or play." },
+            { "word": "screenplay", "definition": "The written script of a film." },
+            { "word": "memoir", "definition": "A book about the writer's own life and memories." },
+            { "word": "satire", "definition": "Humour used to criticise people or society." },
+            { "word": "masterpiece", "definition": "A work of outstanding skill; an artist's best." },
+            { "word": "blockbuster", "definition": "A hugely successful and popular film." },
+            { "word": "acclaim", "definition": "Enthusiastic public praise." }
+          ]
+        }
+      ]
+    },
+
+    "C2": {
+      "name": "Proficiency",
+      "description": "Twenty pairs per round with rare, nuanced and literary vocabulary. You can peek only once.",
+      "pairs": 20,
+      "peeks": 1,
+      "puzzles": [
+        {
+          "id": "C2-adjectives",
+          "theme": "Refined Adjectives",
+          "description": "Precise words for formal writing.",
+          "words": [
+            { "word": "ubiquitous", "definition": "Found everywhere at the same time." },
+            { "word": "ephemeral", "definition": "Lasting for a very short time." },
+            { "word": "meticulous", "definition": "Showing great attention to every detail." },
+            { "word": "pragmatic", "definition": "Dealing with things sensibly and realistically." },
+            { "word": "eloquent", "definition": "Expressing ideas fluently and persuasively." },
+            { "word": "lucid", "definition": "Expressed clearly and easy to understand." },
+            { "word": "candid", "definition": "Truthful and straightforward, even when uncomfortable." },
+            { "word": "clandestine", "definition": "Kept secret, often because it is illegal." },
+            { "word": "obsolete", "definition": "No longer produced or used; out of date." },
+            { "word": "prolific", "definition": "Producing a great deal of work." },
+            { "word": "voracious", "definition": "Having a huge appetite for something, such as books." },
+            { "word": "benevolent", "definition": "Well-meaning and kind towards others." },
+            { "word": "tenacious", "definition": "Refusing to give up; determined." },
+            { "word": "arbitrary", "definition": "Based on random choice rather than reason." },
+            { "word": "esoteric", "definition": "Understood only by a small, specialised group." },
+            { "word": "superfluous", "definition": "More than is needed; unnecessary." },
+            { "word": "innocuous", "definition": "Harmless and unlikely to offend." },
+            { "word": "salient", "definition": "Most noticeable or important." },
+            { "word": "tangible", "definition": "Real enough to be touched or clearly perceived." },
+            { "word": "ostentatious", "definition": "Designed to impress people with wealth." }
+          ]
+        },
+        {
+          "id": "C2-verbs",
+          "theme": "Precise Verbs",
+          "description": "Verbs for argument and analysis.",
+          "words": [
+            { "word": "exacerbate", "definition": "To make a bad situation even worse." },
+            { "word": "mitigate", "definition": "To reduce the severity of something harmful." },
+            { "word": "scrutinize", "definition": "To examine something closely and critically." },
+            { "word": "circumvent", "definition": "To find a clever way around a rule or obstacle." },
+            { "word": "reconcile", "definition": "To make two conflicting ideas compatible." },
+            { "word": "jeopardize", "definition": "To put something valuable at risk." },
+            { "word": "corroborate", "definition": "To confirm a claim with further evidence." },
+            { "word": "relinquish", "definition": "To give up power or control, often unwillingly." },
+            { "word": "deter", "definition": "To discourage someone from acting through fear of consequences." },
+            { "word": "emulate", "definition": "To imitate someone you admire, hoping to equal them." },
+            { "word": "galvanize", "definition": "To shock or inspire people into taking action." },
+            { "word": "vindicate", "definition": "To prove that someone who was blamed was right." },
+            { "word": "obfuscate", "definition": "To make something deliberately unclear." },
+            { "word": "extrapolate", "definition": "To estimate unknown facts from known trends." },
+            { "word": "reiterate", "definition": "To say something again for emphasis." },
+            { "word": "procure", "definition": "To obtain something, especially with effort." },
+            { "word": "stipulate", "definition": "To demand a specific condition in an agreement." },
+            { "word": "placate", "definition": "To calm someone who is angry." },
+            { "word": "proliferate", "definition": "To increase rapidly in number." },
+            { "word": "rescind", "definition": "To officially cancel a law or decision." }
+          ]
+        },
+        {
+          "id": "C2-argument",
+          "theme": "The Art of Argument",
+          "description": "The vocabulary of debate and reasoning.",
+          "words": [
+            { "word": "premise", "definition": "A statement an argument is based on." },
+            { "word": "syllogism", "definition": "A conclusion drawn from two premises." },
+            { "word": "fallacy", "definition": "A mistaken belief or a flaw in reasoning." },
+            { "word": "straw man", "definition": "A distorted version of an opponent's view, easy to attack." },
+            { "word": "ad hominem", "definition": "Attacking the person instead of their argument." },
+            { "word": "slippery slope", "definition": "The claim that one small step will inevitably lead to disaster." },
+            { "word": "cherry-picking", "definition": "Selecting only the evidence that supports your view." },
+            { "word": "tautology", "definition": "Saying the same thing twice in different words." },
+            { "word": "rebuttal", "definition": "A reply that tries to prove an argument wrong." },
+            { "word": "concede", "definition": "To admit, reluctantly, that a point is true." },
+            { "word": "equivocate", "definition": "To speak vaguely to avoid committing to a position." },
+            { "word": "irrefutable", "definition": "Impossible to prove wrong." },
+            { "word": "rhetoric", "definition": "Persuasive language, sometimes lacking sincerity." },
+            { "word": "nuance", "definition": "A subtle difference in meaning or tone." },
+            { "word": "paradox", "definition": "A statement that seems to contradict itself yet may be true." },
+            { "word": "anecdotal", "definition": "Based on personal stories rather than research." },
+            { "word": "dichotomy", "definition": "A sharp division between two opposing things." },
+            { "word": "consensus", "definition": "General agreement among a group." },
+            { "word": "caveat", "definition": "A warning or condition attached to a statement." },
+            { "word": "devil's advocate", "definition": "Someone who argues the opposite side just to test ideas." }
+          ]
+        },
+        {
+          "id": "C2-idioms",
+          "theme": "Idioms with a Story",
+          "description": "Expressions from history, myth and literature.",
+          "words": [
+            { "word": "a Pyrrhic victory", "definition": "A win that costs so much it is almost a defeat." },
+            { "word": "meet your Waterloo", "definition": "To suffer a final, decisive defeat." },
+            { "word": "an Achilles' heel", "definition": "A small but fatal weakness." },
+            { "word": "a Trojan horse", "definition": "Something harmless-looking that hides a threat." },
+            { "word": "open Pandora's box", "definition": "To start something that causes endless problems." },
+            { "word": "a Catch-22", "definition": "A trap where every possible option blocks the others." },
+            { "word": "cross the Rubicon", "definition": "To take a step from which there is no return." },
+            { "word": "a red herring", "definition": "A clue that distracts from the real issue." },
+            { "word": "the writing on the wall", "definition": "Clear signs that failure is coming." },
+            { "word": "the sword of Damocles", "definition": "A constant threat hanging over you." },
+            { "word": "a moot point", "definition": "An issue no longer worth discussing." },
+            { "word": "rest on your laurels", "definition": "To stop trying because of past success." },
+            { "word": "a storm in a teacup", "definition": "A lot of anger about something unimportant." },
+            { "word": "cut the Gordian knot", "definition": "To solve a complex problem with one bold action." },
+            { "word": "a Herculean task", "definition": "A job that requires enormous strength or effort." },
+            { "word": "an albatross around your neck", "definition": "A burden you can't escape, often caused by past actions." },
+            { "word": "a baptism of fire", "definition": "A difficult first experience of something new." },
+            { "word": "sour grapes", "definition": "Pretending not to want what you can't have." },
+            { "word": "a wild goose chase", "definition": "A hopeless search for something you will never find." },
+            { "word": "bury the hatchet", "definition": "To end a quarrel and make peace." }
+          ]
+        },
+        {
+          "id": "C2-ideas",
+          "theme": "Ideas & Philosophy",
+          "description": "Concepts from science and philosophy.",
+          "words": [
+            { "word": "metaphysics", "definition": "Philosophy that studies the nature of reality." },
+            { "word": "epistemology", "definition": "The study of knowledge and how we know things." },
+            { "word": "empirical", "definition": "Based on observation or experiment, not theory." },
+            { "word": "inductive", "definition": "Reasoning from specific examples to general rules." },
+            { "word": "falsifiable", "definition": "Capable of being proven false by evidence." },
+            { "word": "Occam's razor", "definition": "The idea that the simplest explanation is usually best." },
+            { "word": "paradigm", "definition": "A widely accepted model of how something works." },
+            { "word": "axiom", "definition": "A principle accepted as true without proof." },
+            { "word": "dogma", "definition": "Beliefs accepted as true without question." },
+            { "word": "anomaly", "definition": "Something that deviates from what is expected." },
+            { "word": "correlation", "definition": "A connection between two things that change together." },
+            { "word": "causality", "definition": "The relationship between a cause and its effect." },
+            { "word": "determinism", "definition": "The view that all events are decided by earlier causes." },
+            { "word": "free will", "definition": "The power to choose your actions independently." },
+            { "word": "utilitarian", "definition": "Judging actions by how much good they produce." },
+            { "word": "hedonism", "definition": "The pursuit of pleasure as life's main goal." },
+            { "word": "nihilism", "definition": "The belief that life has no inherent meaning." },
+            { "word": "existentialism", "definition": "The view that individuals create meaning through free choices." },
+            { "word": "relativism", "definition": "The view that truth depends on culture or perspective." },
+            { "word": "skepticism", "definition": "A habit of doubting claims until there is proof." }
+          ]
+        },
+        {
+          "id": "C2-character",
+          "theme": "Character Portraits",
+          "description": "Rare adjectives for describing people.",
+          "words": [
+            { "word": "gregarious", "definition": "Enjoys company and seeks out groups." },
+            { "word": "garrulous", "definition": "Talks too much about unimportant things." },
+            { "word": "laconic", "definition": "Using very few words." },
+            { "word": "diffident", "definition": "Modest and lacking self-confidence." },
+            { "word": "obsequious", "definition": "Too eager to please or obey." },
+            { "word": "magnanimous", "definition": "Generous and forgiving, especially towards a rival." },
+            { "word": "altruistic", "definition": "Selflessly concerned for the wellbeing of others." },
+            { "word": "duplicitous", "definition": "Deceitful; says one thing and does another." },
+            { "word": "pedantic", "definition": "Overly concerned with minor rules and details." },
+            { "word": "erudite", "definition": "Having great knowledge gained from study." },
+            { "word": "capricious", "definition": "Changing mood or behaviour suddenly." },
+            { "word": "sanctimonious", "definition": "Acting morally superior to others." },
+            { "word": "irreverent", "definition": "Showing a lack of respect for serious things." },
+            { "word": "cantankerous", "definition": "Bad-tempered and quick to argue." },
+            { "word": "insouciant", "definition": "Casually unconcerned, in a relaxed way." },
+            { "word": "complacent", "definition": "Too satisfied with yourself to see danger." },
+            { "word": "fastidious", "definition": "Very hard to please; demanding perfection." },
+            { "word": "indefatigable", "definition": "Never seeming to get tired." },
+            { "word": "credulous", "definition": "Too ready to believe what people say." },
+            { "word": "stoic", "definition": "Enduring hardship without complaining." }
+          ]
+        }
+      ]
+    }
+  }
+}

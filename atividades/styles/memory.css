@@ -1,0 +1,444 @@
+/* ══════════════════════════════════════════════════════════════
+   MEMORY GAME — builds on atividades.css and puzzles.css
+══════════════════════════════════════════════════════════════ */
+
+/* ─── Theme card preview (navy panel) ─── */
+.mm-preview rect {
+  fill: rgba(238, 242, 249, 0.2);
+  transition: fill .3s ease;
+}
+
+.mm-preview rect.found { fill: var(--pz-green); }
+.pz-theme-card:hover .mm-preview rect:not(.found) { fill: rgba(238, 242, 249, 0.32); }
+
+/* ─── Top bar (navy) ─── */
+/* Shorter than in the other games and without a toolbar below the board,
+   to leave more room for up to 40 cards; the side panel is narrower too */
+@media (min-width: 901px) {
+  #mm-bar { height: 72px; padding-right: 14px; }
+}
+
+@media (min-width: 1101px) {
+  .pz-main.mm-main { grid-template-columns: minmax(0, 1fr) clamp(260px, 22vw, 340px); }
+}
+
+.mm-peek {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 8px 8px 14px;
+  font-family: var(--font-sans);
+  font-size: .88rem;
+  font-weight: 700;
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(128, 149, 182, 0.35);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background .2s ease, border-color .2s ease, transform .15s ease, opacity .2s ease;
+}
+
+.mm-peek:hover:not(:disabled) { background: var(--red); border-color: var(--red); }
+.mm-peek:active:not(:disabled) { transform: scale(0.96); }
+
+.mm-peek:disabled {
+  cursor: default;
+  opacity: .45;
+}
+
+.mm-peek-count {
+  min-width: 24px;
+  height: 24px;
+  padding: 0 7px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .8rem;
+  color: var(--navy);
+  background: var(--white);
+  border-radius: 999px;
+}
+
+.mm-bar-word {
+  font-weight: 800;
+  letter-spacing: .2px;
+}
+
+.mm-bar-hint { color: rgba(255, 255, 255, 0.72); }
+
+.pz-bar.mm-bar-miss .pz-bar-label {
+  background: rgba(128, 149, 182, 0.35);
+  box-shadow: none;
+}
+
+/* ─── Board ─── */
+.mm-board {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mm-grid {
+  --mm-gap: 12px;
+  --mm-card-w: 150px;
+  --mm-card-h: 120px;
+  --mm-def-fs: 13px;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  gap: var(--mm-gap);
+}
+
+.mm-card {
+  position: relative;
+  flex: 0 0 auto;
+  width: var(--mm-card-w);
+  height: var(--mm-card-h);
+  padding: 0;
+  font-family: var(--font-sans);
+  text-align: center;
+  background: none;
+  border: 0;
+  border-radius: 14px;
+  cursor: pointer;
+  perspective: 900px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mm-card:focus-visible { outline: none; }
+.mm-card:focus-visible .mm-card-inner { box-shadow: 0 0 0 3px var(--red-35); }
+
+.mm-card-inner {
+  position: absolute;
+  inset: 0;
+  display: block;
+  border-radius: inherit;
+  transform-style: preserve-3d;
+  transition: transform .45s cubic-bezier(0.4, 0, 0.2, 1), box-shadow .2s ease;
+}
+
+.mm-card.is-up .mm-card-inner { transform: rotateY(180deg); }
+
+.mm-back,
+.mm-face {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Back: navy, like the hub illustrations */
+.mm-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(ellipse 80% 70% at 25% 15%, rgba(22, 76, 168, 0.55) 0%, transparent 70%),
+    var(--navy-panel);
+  box-shadow: 0 10px 22px -14px rgba(var(--navy-rgb), .7);
+  transition: filter .2s ease, box-shadow .2s ease;
+}
+
+.mm-back::before {
+  content: '';
+  position: absolute;
+  inset: 7px;
+  border: 1px solid rgba(238, 242, 249, 0.16);
+  border-radius: 9px;
+}
+
+.mm-back-mark {
+  width: min(44px, 42%);
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif);
+  font-size: min(1.5rem, calc(var(--mm-card-h) * 0.2));
+  font-weight: 700;
+  color: var(--white);
+  border-radius: 50%;
+  background: rgba(238, 242, 249, 0.1);
+  box-shadow: inset 0 -3px 0 var(--red);
+}
+
+.mm-card:not(.is-up):hover .mm-back {
+  filter: brightness(1.18);
+  box-shadow: 0 16px 28px -14px rgba(var(--navy-rgb), .8);
+}
+
+.mm-card:not(.is-up):active .mm-card-inner { transform: scale(0.96); }
+
+/* Face */
+.mm-face {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 9px 10px 10px;
+  color: var(--navy);
+  background: var(--white);
+  border: 1px solid var(--line-strong);
+  box-shadow: 0 10px 22px -16px rgba(var(--navy-rgb), .5);
+  transition: border-color .25s ease, background .25s ease, box-shadow .25s ease;
+}
+
+.mm-face.is-def {
+  color: var(--ink);
+  background: var(--pz-paper);
+  border-color: transparent;
+}
+
+.mm-face-label {
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+  font-size: .56rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  line-height: 1.2;
+  color: var(--red);
+}
+
+.mm-face.is-def .mm-face-label { color: var(--mute); }
+
+.mm-face-text {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.mm-face-fit {
+  display: block;
+  width: 100%;
+  overflow-wrap: normal;
+  hyphens: manual;
+}
+
+.mm-face.is-word .mm-face-fit {
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -.01em;
+}
+
+.mm-face.is-def .mm-face-fit {
+  font-size: var(--mm-def-fs);
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+/* Last resort when text doesn't fit at the minimum size (the grid is lang="en") */
+.mm-face-text.is-tight .mm-face-fit {
+  hyphens: auto;
+  overflow-wrap: anywhere;
+}
+
+/* Small cards: no label, the colors already tell words from definitions */
+.mm-grid.is-compact .mm-face-label { display: none; }
+.mm-grid.is-compact .mm-face { padding: 6px; }
+
+/* States */
+.mm-card.is-open .mm-face {
+  border-color: var(--red);
+  box-shadow: 0 0 0 1px var(--red), 0 14px 26px -16px rgba(var(--red-rgb), .6);
+}
+
+.mm-card.is-wrong { animation: mmShake .45s ease; }
+
+.mm-card.is-wrong .mm-face {
+  border-color: var(--red-light);
+  box-shadow: 0 0 0 1px var(--red-light);
+}
+
+.mm-card.is-found { cursor: default; }
+
+.mm-card.is-found .mm-face {
+  border-color: var(--pz-green);
+  box-shadow: 0 0 0 1px var(--pz-green);
+}
+
+.mm-card.is-found .mm-face.is-def { background: #e3f4ea; }
+.mm-card.is-found .mm-face-label  { color: var(--pz-green-dark); }
+.mm-card.is-new { animation: mmPop .6s var(--spring) .25s both; }
+
+.mm-grid.is-peeking .mm-card:not(.is-found) .mm-face { border-color: var(--navy-light); }
+
+.mm-grid.is-complete .mm-card { animation: mmWave .7s var(--spring) both; }
+.mm-grid.is-complete .mm-card:nth-child(odd) { animation-delay: .1s; }
+.mm-grid.is-complete .mm-card:nth-child(3n) { animation-delay: .2s; }
+
+.mm-grid.is-dealing .mm-card {
+  animation: mmDeal .5s var(--spring) both;
+  animation-delay: calc(var(--i, 0) * 1ms);
+}
+
+@keyframes mmDeal {
+  from { opacity: 0; transform: translateY(16px) scale(0.85); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes mmPop {
+  40% { transform: scale(1.08); }
+  to  { transform: none; }
+}
+
+@keyframes mmShake {
+  20% { transform: translateX(-6px); }
+  40% { transform: translateX(6px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+}
+
+@keyframes mmWave {
+  40% { transform: translateY(-8px); }
+  to  { transform: none; }
+}
+
+/* ─── Side panel ─── */
+.mm-score {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 18px 12px 4px;
+  color: var(--navy);
+}
+
+.mm-score-num {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -.03em;
+}
+
+.mm-score-of {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--mute);
+}
+
+.mm-score-label {
+  margin-left: auto;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--mute);
+}
+
+.mm-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin: 12px 8px 4px;
+}
+
+.mm-stats div {
+  padding: 9px 10px;
+  border-radius: 10px;
+  background: var(--off-white);
+  border: 1px solid var(--line);
+}
+
+.mm-stats dt {
+  font-size: .6rem;
+  font-weight: 700;
+  letter-spacing: .8px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  color: var(--mute);
+}
+
+.mm-stats dd {
+  margin: 2px 0 0;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--navy);
+}
+
+.mm-found {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 0 4px;
+}
+
+.mm-found-empty {
+  padding: 4px 8px;
+  font-size: .88rem;
+  line-height: 1.55;
+  color: var(--mute);
+}
+
+.mm-found-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 9px 12px;
+  border-radius: 10px;
+  background: var(--pz-green-soft);
+  box-shadow: inset 3px 0 0 var(--pz-green);
+}
+
+.mm-found-item.is-new { animation: qFadeIn .5s cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+.mm-found-word {
+  font-size: .95rem;
+  font-weight: 800;
+  color: var(--navy);
+}
+
+.mm-found-def {
+  font-size: .82rem;
+  line-height: 1.45;
+  color: var(--ink-soft);
+}
+
+/* ─── Responsive ─── */
+/* Up to 1100px the board takes the full width and the panel goes below it
+   (puzzles.css already does this up to 900px) */
+@media (min-width: 901px) and (max-width: 1100px) {
+  body.pz-playing .ac-app.mm-app { height: auto; }
+
+  .pz-main.mm-main {
+    display: flex;
+    flex-direction: column;
+    padding: 14px 16px 28px;
+    gap: 14px;
+  }
+
+  .mm-app .pz-bar {
+    position: sticky;
+    top: 8px;
+    z-index: 20;
+  }
+
+  .mm-app .pz-panel { overflow: visible; }
+}
+
+@media (max-width: 1100px) {
+  .mm-board { flex: none; padding: 2px 0; }
+}
+
+@media (max-width: 900px) {
+  .mm-peek { align-self: center; padding: 6px 6px 6px 11px; font-size: .8rem; }
+  .mm-card  { border-radius: 11px; }
+  .mm-back::before { inset: 5px; border-radius: 7px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mm-card-inner { transition: none; }
+  .mm-card,
+  .mm-grid .mm-card,
+  .mm-found-item { animation: none !important; }
+}

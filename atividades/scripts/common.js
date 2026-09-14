@@ -79,6 +79,30 @@ const ACTIVITIES = {
       </svg>`
   },
 
+  memory: {
+    id: 'memory',
+    slug: 'jogo-da-memoria',
+    title: 'Jogo da Memória',
+    kicker: 'Vocabulário',
+    dataUrl: `${ACTIVITIES_ROOT}/data/memory.json`,
+    levelMeta: ld => `${ld.puzzles.length} rodadas · ${ld.pairs} pares`,
+    totalMeta: data => {
+      const total = LEVEL_ORDER.reduce((sum, l) => sum + data.levels[l].puzzles.length, 0);
+      return `${LEVEL_ORDER.length} níveis · ${total} rodadas`;
+    },
+    visual: `
+      <div class="ac-mm" aria-hidden="true">
+        ${[
+          ['', ''], ['open word', 'brave'], ['', ''], ['found word', 'cat'],
+          ['found def', '~'], ['', ''], ['open def', '~'], ['', '']
+        ].map(([st, text]) => {
+          if (!st) return '<span class="ac-mm-card"><b>?</b></span>';
+          const inner = text === '~' ? '<i></i><i></i><i class="short"></i>' : text;
+          return `<span class="ac-mm-card up ${st}">${inner}</span>`;
+        }).join('')}
+      </div>`
+  },
+
   hangman: {
     id: 'hangman',
     slug: 'jogo-da-forca',
