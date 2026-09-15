@@ -2,6 +2,10 @@ const LEVEL_ORDER = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
 
 const ACTIVITIES_ROOT = '/atividades';
 
+// Asset version: bump it (together with the ?v= in the /atividades/ pages) whenever a
+// deploy changes game scripts, styles or data, so browsers never mix cached old files.
+const ASSETS_VERSION = '20260915-1';
+
 /* ─── Activity registry ─────────────────────────────────────────
    To add a new activity: register it here, create its folder
    (/atividades/<slug>/index.html + /atividades/<slug>/jogar/index.html)
@@ -15,7 +19,7 @@ const ACTIVITIES = {
     slug: 'cartoes-de-conversacao',
     title: 'Cartões de Conversação',
     kicker: 'Speaking',
-    dataUrl: `${ACTIVITIES_ROOT}/data/questions.json`,
+    dataUrl: `${ACTIVITIES_ROOT}/data/questions.json?v=${ASSETS_VERSION}`,
     levelMeta: ld => `${ld.questions.length} perguntas`,
     totalMeta: data => {
       const total = LEVEL_ORDER.reduce((sum, l) => sum + data.levels[l].questions.length, 0);
@@ -38,7 +42,7 @@ const ACTIVITIES = {
     slug: 'palavras-cruzadas',
     title: 'Palavras Cruzadas',
     kicker: 'Vocabulário',
-    dataUrl: `${ACTIVITIES_ROOT}/data/crosswords.json`,
+    dataUrl: `${ACTIVITIES_ROOT}/data/crosswords.json?v=${ASSETS_VERSION}`,
     levelMeta: ld => `${ld.puzzles.length} cruzadas`,
     totalMeta: data => {
       const total = LEVEL_ORDER.reduce((sum, l) => sum + data.levels[l].puzzles.length, 0);
@@ -62,7 +66,7 @@ const ACTIVITIES = {
     slug: 'caca-palavras',
     title: 'Caça-Palavras',
     kicker: 'Vocabulário',
-    dataUrl: `${ACTIVITIES_ROOT}/data/wordsearch.json`,
+    dataUrl: `${ACTIVITIES_ROOT}/data/wordsearch.json?v=${ASSETS_VERSION}`,
     levelMeta: ld => `${ld.puzzles.length} grades`,
     totalMeta: data => {
       const total = LEVEL_ORDER.reduce((sum, l) => sum + data.levels[l].puzzles.length, 0);
@@ -84,7 +88,7 @@ const ACTIVITIES = {
     slug: 'jogo-da-memoria',
     title: 'Jogo da Memória',
     kicker: 'Vocabulário',
-    dataUrl: `${ACTIVITIES_ROOT}/data/memory.json`,
+    dataUrl: `${ACTIVITIES_ROOT}/data/memory.json?v=${ASSETS_VERSION}`,
     levelMeta: ld => `${ld.puzzles.length} rodadas · ${ld.pairs} pares`,
     totalMeta: data => {
       const total = LEVEL_ORDER.reduce((sum, l) => sum + data.levels[l].puzzles.length, 0);
@@ -108,7 +112,7 @@ const ACTIVITIES = {
     slug: 'monte-a-frase',
     title: 'Monte a Frase',
     kicker: 'Gramática',
-    dataUrl: `${ACTIVITIES_ROOT}/data/sentences.json`,
+    dataUrl: `${ACTIVITIES_ROOT}/data/sentences.json?v=${ASSETS_VERSION}`,
     levelMeta: ld => `${ld.puzzles.length} rodadas · ${ld.puzzles.reduce((sum, p) => sum + p.sentences.length, 0)} frases`,
     totalMeta: data => {
       const total = LEVEL_ORDER.reduce((sum, l) => sum + data.levels[l].puzzles.reduce((s, p) => s + p.sentences.length, 0), 0);
@@ -132,7 +136,7 @@ const ACTIVITIES = {
     slug: 'jogo-da-forca',
     title: 'Jogo da Forca',
     kicker: 'Ortografia',
-    dataUrl: `${ACTIVITIES_ROOT}/data/hangman.json`,
+    dataUrl: `${ACTIVITIES_ROOT}/data/hangman.json?v=${ASSETS_VERSION}`,
     levelMeta: ld => `${ld.puzzles.length} rodadas`,
     totalMeta: data => {
       const total = LEVEL_ORDER.reduce((sum, l) => sum + data.levels[l].puzzles.length, 0);
@@ -156,7 +160,7 @@ const ACTIVITIES = {
     slug: 'quiz-de-gramatica',
     title: 'Quiz de Gramática',
     kicker: 'Gramática',
-    dataUrl: `${ACTIVITIES_ROOT}/data/quiz.json`,
+    dataUrl: `${ACTIVITIES_ROOT}/data/quiz.json?v=${ASSETS_VERSION}`,
     levelMeta: ld => `${ld.puzzles.length} tópicos`,
     totalMeta: data => {
       const total = LEVEL_ORDER.reduce((sum, l) => sum + data.levels[l].puzzles.length, 0);

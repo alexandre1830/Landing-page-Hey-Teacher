@@ -509,6 +509,10 @@ function renderCards(data) {
   });
 
   updateCounter();
+
+  // ?card=A1-04 (a link from the activity search) opens that question right away
+  const linkedIndex = questions.findIndex(q => q.id === params.get('card'));
+  if (linkedIndex >= 0) openSpotlight(linkedIndex);
 }
 
 /* ─── Init ──────────────────────────────────────────────────── */

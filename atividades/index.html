@@ -30,7 +30,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles/tokens.css">
 <link rel="stylesheet" href="/styles/styles.css">
-<link rel="stylesheet" href="/atividades/styles/atividades.css">
+<link rel="stylesheet" href="/atividades/styles/atividades.css?v=20260915-1">
 
 <script type="application/ld+json">
 {
@@ -83,7 +83,6 @@
         <li>100% grátis</li>
         <li>Sem cadastro</li>
         <li>Níveis A1 a C2</li>
-        <li>Progresso salvo no navegador</li>
       </ul>
     </div>
   </div>
@@ -91,6 +90,52 @@
 
 <section class="ac-section">
   <div class="wrap">
+    <form class="ac-search" id="ac-search" role="search" autocomplete="off">
+      <label class="ac-search-field" for="ac-search-input">
+        <svg class="ac-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <span class="sr-only">Buscar nas atividades</span>
+        <input type="search" id="ac-search-input" name="q" enterkeyhint="search" spellcheck="false"
+               placeholder="Busque um tema ou palavra">
+        <button type="button" class="ac-search-clear" id="ac-search-clear" aria-label="Limpar busca" hidden>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </label>
+
+      <div class="ac-filters">
+        <div class="ac-level-filter" id="ac-level-filter" role="group" aria-label="Filtrar por nível">
+          <button type="button" class="ac-chip is-active" data-level="" aria-pressed="true">Todos <span class="ac-chip-count"></span></button>
+          <button type="button" class="ac-chip" data-level="A1" aria-pressed="false" title="Iniciante">A1 <span class="ac-chip-count"></span></button>
+          <button type="button" class="ac-chip" data-level="A2" aria-pressed="false" title="Básico">A2 <span class="ac-chip-count"></span></button>
+          <button type="button" class="ac-chip" data-level="B1" aria-pressed="false" title="Intermediário">B1 <span class="ac-chip-count"></span></button>
+          <button type="button" class="ac-chip" data-level="B2" aria-pressed="false" title="Intermediário superior">B2 <span class="ac-chip-count"></span></button>
+          <button type="button" class="ac-chip" data-level="C1" aria-pressed="false" title="Avançado">C1 <span class="ac-chip-count"></span></button>
+          <button type="button" class="ac-chip" data-level="C2" aria-pressed="false" title="Proficiente">C2 <span class="ac-chip-count"></span></button>
+        </div>
+        <label class="ac-game-filter">
+          <span class="sr-only">Filtrar por jogo</span>
+          <select id="ac-game-filter">
+            <option value="">Todos os jogos</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="ac-search-suggestions" id="ac-search-suggestions">
+        <span>Sugestões:</span>
+        <button type="button" data-suggest="rotina">rotina</button>
+        <button type="button" data-suggest="viagem">viagem</button>
+        <button type="button" data-suggest="trabalho">trabalho</button>
+        <button type="button" data-suggest="comida">comida</button>
+        <button type="button" data-suggest="phrasal verbs">phrasal verbs</button>
+        <button type="button" data-suggest="present perfect">present perfect</button>
+      </div>
+    </form>
+
+    <div class="ac-results" id="ac-results" hidden>
+      <p class="ac-results-summary" id="ac-results-summary" aria-live="polite"></p>
+      <div class="ac-results-list" id="ac-results-list"></div>
+      <button type="button" class="btn btn-ghost ac-results-more" id="ac-results-more" hidden>Mostrar mais</button>
+    </div>
+
     <div class="activities-grid" id="activities-grid">
 
       <a href="/atividades/palavras-cruzadas/" class="activity-card" data-activity="crosswords">
@@ -288,8 +333,9 @@
 
 <div data-include="footer"></div>
 
-<script src="/atividades/scripts/common.js"></script>
-<script src="/atividades/scripts/menu.js"></script>
+<script src="/atividades/scripts/common.js?v=20260915-1"></script>
+<script src="/atividades/scripts/menu.js?v=20260915-1"></script>
+<script src="/atividades/scripts/search.js?v=20260915-1"></script>
 <script src="/scripts/includes.js" defer></script>
 <script src="/scripts/main.js" defer></script>
 </body>
