@@ -4,7 +4,7 @@ const ACTIVITIES_ROOT = '/atividades';
 
 // Asset version: bump it (together with the ?v= in the /atividades/ pages) whenever a
 // deploy changes game scripts, styles or data, so browsers never mix cached old files.
-const ASSETS_VERSION = '20260915-1';
+const ASSETS_VERSION = '20260915-2';
 
 /* ─── Activity registry ─────────────────────────────────────────
    To add a new activity: register it here, create its folder
@@ -127,6 +127,31 @@ const ACTIVITIES = {
           ${[['finished', ''], ['', 'used'], ['yet', 'extra'], ['', 'used'], ['work', ''], ['her', ''], ['', 'used']].map(([w, st]) =>
             `<span class="${st}">${w}</span>`
           ).join('')}
+        </div>
+      </div>`
+  },
+
+  reading: {
+    id: 'reading',
+    slug: 'interpretacao-de-texto',
+    title: 'Interpretação de Texto',
+    kicker: 'Leitura',
+    dataUrl: `${ACTIVITIES_ROOT}/data/reading.json?v=${ASSETS_VERSION}`,
+    levelMeta: ld => `${ld.puzzles.length} textos · ${ld.questions} perguntas cada`,
+    totalMeta: data => {
+      const total = LEVEL_ORDER.reduce((sum, l) => sum + data.levels[l].puzzles.length, 0);
+      return `${LEVEL_ORDER.length} níveis · ${total} textos`;
+    },
+    visual: `
+      <div class="ac-rd" aria-hidden="true">
+        <div class="ac-rd-page">
+          <span class="ac-rd-title"></span>
+          <i></i><i></i><i class="mark"></i><i class="short"></i>
+          <i></i><i></i><i class="short"></i>
+        </div>
+        <div class="ac-rd-card">
+          <span class="ac-rd-q"></span>
+          ${[['A', ''], ['B', 'ok'], ['C', '']].map(([key, st]) => `<span class="ac-rd-opt ${st}"><b>${key}</b><i></i></span>`).join('')}
         </div>
       </div>`
   },

@@ -29,6 +29,7 @@ Online, gratuitos, sem cadastro e sem download. Conteúdo separado por nível CE
 - [Jogo da forca em inglês](https://heyteacher.com.br/atividades/jogo-da-forca/): treina ortografia. Palavras e expressões com dica.
 - [Quiz de gramática em inglês](https://heyteacher.com.br/atividades/quiz-de-gramatica/): treina gramática. 60 tópicos com cronômetro, modo equipes e explicação de cada resposta.
 - [Monte a frase em inglês](https://heyteacher.com.br/atividades/monte-a-frase/): treina gramática e ordem das palavras. Frases embaralhadas para montar na ordem certa, com tradução como dica e palavras intrusas nos níveis mais altos.
+- [Interpretação de texto em inglês](https://heyteacher.com.br/atividades/interpretacao-de-texto/): treina leitura. 36 textos (e-mails, notícias, resenhas e ensaios) com 5 a 10 perguntas cada, explicação de cada resposta e o trecho da resposta destacado no texto. Textos mais longos e perguntas mais difíceis a cada nível.
 - [Cartões de conversação em inglês](https://heyteacher.com.br/atividades/cartoes-de-conversacao/): treina speaking. 180 perguntas de conversação, com anotações e exportação em PDF.
 
 ## Blog

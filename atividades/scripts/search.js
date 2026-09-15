@@ -64,6 +64,17 @@ const SEARCH_GAMES = [
     items: p => p.sentences.map(s => ({ label: clip(s.text), text: `${s.text} ${s.pt || ''}` }))
   },
   {
+    id: 'reading',
+    name: 'Interpretação de texto',
+    aliases: 'interpretacao de texto interpretacao compreensao de texto leitura ler textos texto reading comprehension',
+    count: p => `${p.questions.length} perguntas`,
+    // Each sentence of the text is an item, then each question with its options
+    items: p => [
+      ...(p.text.join(' ').match(/[^.!?]+[.!?]+[”"’]?/g) || []).map(s => ({ label: clip(s.trim()), text: s })),
+      ...p.questions.map(q => ({ label: clip(q.q), text: `${q.q} ${(q.options || []).join(' ')}` }))
+    ]
+  },
+  {
     id: 'conversation',
     name: 'Cartões de conversação',
     aliases: 'cartoes de conversacao cartoes conversacao conversation speaking perguntas fala',
@@ -150,7 +161,7 @@ const SEARCH_SYNONYMS = [
   ['comunicacao|conversa|falar', 'communication|speak|talk'],
   ['psicologia|mente|mental', 'psycholog|mind|mental'],
   ['arte|artes|cultura|cultural|estetica', 'art|culture|aesthetic'],
-  ['literatura|livro|livros|leitura|literario', 'literar|book|reading|story|stories'],
+  ['literatura|livro|livros|literario', 'literar|book|reading|story|stories'],
   ['filosofia|etica|valores', 'philosoph|ethic|values'],
   ['argumento|argumentacao|debate|retorica|discurso', 'argument|rhetoric|debate|discourse'],
   ['verdade|mentira|mentiras|enganacao', 'truth|decept|lie'],
@@ -171,6 +182,24 @@ const SEARCH_SYNONYMS = [
   ['desejo|desejos|arrependimento|arrependimentos', 'wish|regret'],
   ['regra|regras|conselho|conselhos|obrigacao', 'rule|advice|must|should'],
   ['pedido|pedidos|oferta|ofertas|educado|educada', 'request|offer|polite'],
+  ['aniversario|aniversarios|convite|convites', 'birthday|invit'],
+  ['cachorro|cachorros|cao|caes', 'dog'],
+  ['voluntariado|voluntario|voluntarios', 'volunteer'],
+  ['bicicleta|bicicletas|bike|ciclismo', 'bike|cycl'],
+  ['sono|dormir|insonia', 'sleep'],
+  ['solidao|isolamento|sozinho', 'loneliness|lonely|isolat'],
+  ['felicidade|feliz', 'happiness|happy|wellbeing'],
+  ['tedio|entediado', 'boredom|bored'],
+  ['procrastinacao|procrastinar', 'procrastinat'],
+  ['foco|concentracao|atencao|multitarefa', 'focus|concentrat|attention|multitask'],
+  ['privacidade|dados pessoais', 'privacy|personal data'],
+  ['algoritmo|algoritmos|inteligencia artificial', 'algorithm|machine learning'],
+  ['traducao|traduzir|tradutor', 'translat'],
+  ['museu|museus', 'museum'],
+  ['historia|historias', 'history|histor|story|stories'],
+  ['escolha|escolhas|decisao|decisoes', 'choice|decision'],
+  ['avaliacao|resenha|critica', 'review'],
+  ['email|e mail|carta|cartas', 'email|letter'],
 
   // Skills and grammar
   ['gramatica', 'grammar'],
