@@ -259,6 +259,7 @@ function renderReading({ activity, level, levelData, puzzle, puzzleIndex, model 
     }
 
     // Animations only play for a new question or a new answer
+    const isNewQuestion = shownQuestion !== current;
     questionEl.classList.toggle('is-same', shownQuestion === current);
     shownQuestion = current;
     questionEl.innerHTML = `
@@ -269,6 +270,7 @@ function renderReading({ activity, level, levelData, puzzle, puzzleIndex, model 
       ${prompt}
       <div class="rd-options${q.type === 'mc' ? '' : ' is-short'}" role="group" aria-label="Options">${options}</div>
       <div class="rd-feedback-slot" aria-live="polite">${feedback}</div>`;
+    if (isNewQuestion) questionEl.scrollTop = 0;
   }
 
   function renderPanel() {
@@ -395,6 +397,13 @@ function renderReading({ activity, level, levelData, puzzle, puzzleIndex, model 
     justAnswered = false;
     const focusTarget = nextBtn.hidden ? null : nextBtn;
     if (focusTarget && !rdStacked()) focusTarget.focus({ preventScroll: true });
+
+    // Long questions: bring the explanation into view inside the panel
+    const feedback = questionEl.querySelector('.rd-feedback');
+    if (feedback && !rdStacked()) {
+      const hidden = feedback.getBoundingClientRect().bottom - questionEl.getBoundingClientRect().bottom;
+      if (hidden > 0) questionEl.scrollBy({ top: hidden + 16, behavior: 'smooth' });
+    }
   }
 
   function useHint() {
