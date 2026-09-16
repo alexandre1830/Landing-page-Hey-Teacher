@@ -12,7 +12,7 @@
 
 - [Home](https://heyteacher.com.br/): visão geral da proposta, os 7 pilares da metodologia, planos, depoimentos e FAQ.
 - [Metodologia](https://heyteacher.com.br/metodologia/): os 7 pilares (gramática simplificada, vocabulário por tópicos, exercícios focados, leitura, vídeos e músicas, escrita prática, conversação ao vivo), complementados por jogos e atividades interativas entre as aulas.
-- [Planos e preços](https://heyteacher.com.br/planos/): Essencial (R$ 249/mês, 1 aula por semana), Acelerador (R$ 399/mês, 2 aulas por semana) e Intensivo (R$ 499/mês, 3 aulas por semana). Taxa de matrícula de R$ 99 para reservar a vaga e o horário.
+- [Planos e preços](https://heyteacher.com.br/planos/): Essencial (R$ 249/mês, 1 aula por semana), Acelerador (R$ 399/mês, 2 aulas por semana) e Intensivo (R$ 499/mês, 3 aulas por semana). Taxa de matrícula única para reservar a vaga e o horário, informada na aula diagnóstica. Pagamento mensal via Pix, transferência, boleto bancário ou cartão de crédito.
 - [Certificação CEFR](https://heyteacher.com.br/certificacao/): níveis A1 a C2, avaliação das quatro habilidades e amostra do certificado.
 - [Sobre o professor](https://heyteacher.com.br/sobre/): Alexandre Oliveira ensina inglês desde 2021, passou por quatro escolas de idiomas e estuda Software Development na BYU.
 - [Agendar aula diagnóstica gratuita](https://heyteacher.com.br/contato/): formulário sem compromisso, com resposta em até 24h pelo WhatsApp.
