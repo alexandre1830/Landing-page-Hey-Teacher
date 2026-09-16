@@ -4,7 +4,7 @@ const ACTIVITIES_ROOT = '/atividades';
 
 // Asset version: bump it (together with the ?v= in the /atividades/ pages) whenever a
 // deploy changes game scripts, styles or data, so browsers never mix cached old files.
-const ASSETS_VERSION = '20260915-3';
+const ASSETS_VERSION = '20260916-1';
 
 /* ─── Activity registry ─────────────────────────────────────────
    To add a new activity: register it here, create its folder
@@ -154,6 +154,42 @@ const ACTIVITIES = {
           ${[['A', ''], ['B', 'ok'], ['C', '']].map(([key, st]) => `<span class="ac-rd-opt ${st}"><b>${key}</b><i></i></span>`).join('')}
         </div>
       </div>`
+  },
+
+  maze: {
+    id: 'maze',
+    slug: 'come-palavras',
+    title: 'Come-Palavras',
+    kicker: 'Arcade',
+    dataUrl: `${ACTIVITIES_ROOT}/data/maze.json?v=${ASSETS_VERSION}`,
+    levelMeta: ld => `${ld.puzzles.length} rodadas · ${ld.options} respostas`,
+    totalMeta: data => {
+      const total = LEVEL_ORDER.reduce((sum, l) => sum + data.levels[l].puzzles.length, 0);
+      return `${LEVEL_ORDER.length} níveis · ${total} rodadas`;
+    },
+    visual: `
+      <svg class="ac-mz" viewBox="0 0 124 86" aria-hidden="true">
+        <g class="ac-mz-wall">
+          ${[[6, 8, 34, 8], [50, 8, 24, 8], [84, 8, 34, 8], [6, 26, 8, 30], [24, 26, 26, 8],
+             [60, 26, 8, 30], [78, 26, 26, 8], [110, 26, 8, 30], [24, 44, 8, 30], [42, 62, 40, 8],
+             [96, 44, 8, 12], [6, 66, 8, 12]].map(([x, y, w, h]) =>
+            `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="3"/>`).join('')}
+        </g>
+        <g class="ac-mz-dot">
+          ${[18, 30, 42, 54, 66, 78, 90, 102].map(x => `<circle cx="${x}" cy="21" r="1.8"/>`).join('')}
+          ${[18, 30, 90, 102].map(x => `<circle cx="${x}" cy="60" r="1.8"/>`).join('')}
+        </g>
+        <path class="ac-mz-pac" d="M24 60 L33.5 54.5 A11 11 0 1 1 33.5 65.5 Z"/>
+        <g class="ac-mz-ghost" transform="translate(96 52)">
+          <path d="M-9 10 V0 A9 9 0 0 1 9 0 V10 L6 7 L3 10 L0 7 L-3 10 L-6 7 Z"/>
+          <circle class="eye" cx="-3.4" cy="-1" r="2.6"/>
+          <circle class="eye" cx="3.4" cy="-1" r="2.6"/>
+        </g>
+        <g class="ac-mz-token">
+          <rect x="40" y="36" width="44" height="18" rx="9"/>
+          <text x="62" y="49">goes</text>
+        </g>
+      </svg>`
   },
 
   hangman: {

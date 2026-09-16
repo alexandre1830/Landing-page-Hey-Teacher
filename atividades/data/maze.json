@@ -1,0 +1,603 @@
+{
+  "metadata": {
+    "title": "English Maze Chase Questions by CEFR Level",
+    "description": "36 rounds of 8 questions each. The player moves through a maze and eats the token with the correct answer while the ghosts chase. Topics, question difficulty and the number of options are calibrated to each CEFR level; the arcade difficulty (ghosts, speed and lives) is chosen by the player.",
+    "framework": "CEFR (Common European Framework of Reference for Languages)",
+    "puzzles_per_level": 6,
+    "questions_per_puzzle": 8,
+    "levels": ["A1", "A2", "B1", "B2", "C1", "C2"],
+    "level_settings": {
+      "options": "How many answer tokens are placed in the maze (the extra ones are wrong answers)."
+    },
+    "question_fields": {
+      "q": "The prompt, with ___ for the gap.",
+      "options": "The FIRST option is the correct one. The game shuffles them and places one in each maze slot. Keep them short (up to about 12 characters) so they fit inside a token.",
+      "explain": "Short explanation shown after the answer is eaten."
+    },
+    "version": "1.0"
+  },
+  "levels": {
+    "A1": {
+      "name": "Beginner",
+      "description": "Everyday words and the first grammar rules: to be, to have, the simple present and time. Three answers in the maze.",
+      "options": 3,
+      "puzzles": [
+        {
+          "id": "A1-everyday-verbs",
+          "theme": "Everyday Verbs",
+          "description": "The verbs you use to talk about your day.",
+          "questions": [
+            { "q": "I ___ breakfast at seven.", "options": ["have", "make", "do"], "explain": "We have breakfast, lunch and dinner." },
+            { "q": "She ___ to school by bus.", "options": ["goes", "go", "going"], "explain": "He, she and it add -s: she goes." },
+            { "q": "They ___ football on Sundays.", "options": ["play", "do", "make"], "explain": "We play football, tennis and games." },
+            { "q": "He ___ a shower every morning.", "options": ["takes", "makes", "puts"], "explain": "We take a shower or have a shower." },
+            { "q": "We ___ TV after dinner.", "options": ["watch", "see", "look"], "explain": "We watch TV and watch films." },
+            { "q": "I ___ to music in the car.", "options": ["listen", "hear", "speak"], "explain": "We listen to music. Hear is not on purpose." },
+            { "q": "My mother ___ dinner for us.", "options": ["cooks", "does", "gives"], "explain": "We cook dinner or make dinner." },
+            { "q": "I ___ up at six o'clock.", "options": ["get", "take", "make"], "explain": "Get up means to leave your bed." }
+          ]
+        },
+        {
+          "id": "A1-be-have",
+          "theme": "To Be & To Have",
+          "description": "Am, is, are, have and has in short sentences.",
+          "questions": [
+            { "q": "She ___ a doctor.", "options": ["is", "are", "am"], "explain": "He, she and it take is." },
+            { "q": "They ___ from Brazil.", "options": ["are", "is", "am"], "explain": "We, you and they take are." },
+            { "q": "I ___ twelve years old.", "options": ["am", "is", "are"], "explain": "I always takes am." },
+            { "q": "___ you tired?", "options": ["Are", "Is", "Am"], "explain": "You takes are, in questions too." },
+            { "q": "He ___ two brothers.", "options": ["has", "have", "is"], "explain": "He, she and it take has." },
+            { "q": "We ___ a big garden.", "options": ["have", "has", "are"], "explain": "We, you and they take have." },
+            { "q": "My sister ___ not at home.", "options": ["is", "are", "have"], "explain": "One sister: is not (isn't)." },
+            { "q": "___ they your friends?", "options": ["Are", "Is", "Have"], "explain": "They takes are." }
+          ]
+        },
+        {
+          "id": "A1-house",
+          "theme": "Around the House",
+          "description": "Rooms, furniture and things at home.",
+          "questions": [
+            { "q": "We cook in the ___.", "options": ["kitchen", "bedroom", "garden"], "explain": "The kitchen is the room for cooking." },
+            { "q": "I sleep in my ___.", "options": ["bedroom", "kitchen", "garage"], "explain": "A bed is in the bedroom." },
+            { "q": "The car is in the ___.", "options": ["garage", "fridge", "sofa"], "explain": "We keep the car in the garage." },
+            { "q": "We keep milk in the ___.", "options": ["fridge", "oven", "sink"], "explain": "The fridge keeps food cold." },
+            { "q": "Sit on the ___ and relax.", "options": ["sofa", "stairs", "roof"], "explain": "A sofa is for sitting in the living room." },
+            { "q": "Open the ___, please. It's hot.", "options": ["window", "floor", "wall"], "explain": "We open a window for fresh air." },
+            { "q": "I take a shower in the ___.", "options": ["bathroom", "bedroom", "kitchen"], "explain": "The shower is in the bathroom." },
+            { "q": "Go up the ___ to the first floor.", "options": ["stairs", "door", "garden"], "explain": "Stairs take you up and down." }
+          ]
+        },
+        {
+          "id": "A1-food",
+          "theme": "Food & Drink",
+          "description": "Food, drinks and words for eating.",
+          "questions": [
+            { "q": "Coffee, tea and juice are ___.", "options": ["drinks", "fruit", "meat"], "explain": "We drink them, so they are drinks." },
+            { "q": "An apple is a ___.", "options": ["fruit", "vegetable", "drink"], "explain": "Apples, bananas and oranges are fruit." },
+            { "q": "I eat ___ with butter for breakfast.", "options": ["bread", "soup", "rice"], "explain": "Bread and butter is a common breakfast." },
+            { "q": "Carrots and tomatoes are ___.", "options": ["vegetables", "fruits", "desserts"], "explain": "They grow in a garden and are vegetables." },
+            { "q": "We eat soup with a ___.", "options": ["spoon", "fork", "knife"], "explain": "A spoon holds liquid food." },
+            { "q": "A ___ of water, please.", "options": ["glass", "plate", "bowl"], "explain": "We drink water from a glass." },
+            { "q": "Chicken and beef are ___.", "options": ["meat", "fish", "fruit"], "explain": "Meat comes from animals." },
+            { "q": "Cake and ice cream are ___.", "options": ["desserts", "drinks", "vegetables"], "explain": "A dessert is the sweet food after a meal." }
+          ]
+        },
+        {
+          "id": "A1-simple-present",
+          "theme": "Simple Present",
+          "description": "Do, does and the -s ending for he, she and it.",
+          "questions": [
+            { "q": "He ___ in a bank.", "options": ["works", "work", "working"], "explain": "He, she and it add -s: he works." },
+            { "q": "___ she like pizza?", "options": ["Does", "Do", "Is"], "explain": "Questions with she use does + verb." },
+            { "q": "They ___ not live here.", "options": ["do", "does", "are"], "explain": "They use do not (don't) + verb." },
+            { "q": "My dog ___ every night.", "options": ["barks", "bark", "barking"], "explain": "One dog: barks." },
+            { "q": "We ___ English on Mondays.", "options": ["study", "studies", "studying"], "explain": "We takes the verb with no -s." },
+            { "q": "She ___ her homework after school.", "options": ["does", "do", "make"], "explain": "We do homework, and she does it." },
+            { "q": "___ you speak Spanish?", "options": ["Do", "Does", "Are"], "explain": "You uses do + verb." },
+            { "q": "The shop ___ at nine.", "options": ["opens", "open", "opening"], "explain": "The shop is it, so it adds -s." }
+          ]
+        },
+        {
+          "id": "A1-time",
+          "theme": "Time, Days & Numbers",
+          "description": "Hours, days, months and numbers.",
+          "questions": [
+            { "q": "The class starts ___ 8 o'clock.", "options": ["at", "in", "on"], "explain": "We use at with clock times." },
+            { "q": "My birthday is ___ June.", "options": ["in", "at", "on"], "explain": "We use in with months and years." },
+            { "q": "We have English ___ Monday.", "options": ["on", "in", "at"], "explain": "We use on with days and dates." },
+            { "q": "Ten plus five is ___.", "options": ["fifteen", "fifty", "five"], "explain": "10 + 5 = 15, fifteen." },
+            { "q": "The day after Monday is ___.", "options": ["Tuesday", "Sunday", "Friday"], "explain": "The week goes Monday, Tuesday, Wednesday." },
+            { "q": "It's 7:30. It's half ___ seven.", "options": ["past", "to", "at"], "explain": "Half past seven means 7:30." },
+            { "q": "December is the ___ month.", "options": ["twelfth", "tenth", "second"], "explain": "December is number 12 of the year." },
+            { "q": "There are ___ days in a week.", "options": ["seven", "five", "twelve"], "explain": "A week has seven days." }
+          ]
+        }
+      ]
+    },
+    "A2": {
+      "name": "Elementary",
+      "description": "The past, plans, comparisons and travel vocabulary. Three answers in the maze.",
+      "options": 3,
+      "puzzles": [
+        {
+          "id": "A2-irregular-past",
+          "theme": "Irregular Past Verbs",
+          "description": "The past forms that don't end in -ed.",
+          "questions": [
+            { "q": "I ___ to Rio last year.", "options": ["went", "goed", "go"], "explain": "The past of go is went." },
+            { "q": "She ___ a new phone yesterday.", "options": ["bought", "buyed", "buys"], "explain": "The past of buy is bought." },
+            { "q": "We ___ pizza for dinner.", "options": ["ate", "eated", "eat"], "explain": "The past of eat is ate." },
+            { "q": "He ___ me the truth.", "options": ["told", "telled", "tells"], "explain": "The past of tell is told." },
+            { "q": "They ___ home at midnight.", "options": ["came", "comed", "come"], "explain": "The past of come is came." },
+            { "q": "I ___ my keys this morning.", "options": ["lost", "losed", "lose"], "explain": "The past of lose is lost." },
+            { "q": "The film ___ at nine.", "options": ["began", "beginned", "begins"], "explain": "The past of begin is began." },
+            { "q": "She ___ very well last night.", "options": ["slept", "sleeped", "sleeps"], "explain": "The past of sleep is slept." }
+          ]
+        },
+        {
+          "id": "A2-travel",
+          "theme": "Travel & Holidays",
+          "description": "Airports, hotels and words for a trip.",
+          "questions": [
+            { "q": "We stayed in a cheap ___.", "options": ["hotel", "ticket", "flight"], "explain": "You sleep in a hotel when you travel." },
+            { "q": "Show your ___ at the airport.", "options": ["passport", "wallet", "suitcase"], "explain": "A passport is your travel document." },
+            { "q": "Our ___ leaves at 6 a.m.", "options": ["flight", "station", "hotel"], "explain": "A flight is a journey by plane." },
+            { "q": "I packed my ___ last night.", "options": ["suitcase", "ticket", "seat"], "explain": "You pack clothes in a suitcase." },
+            { "q": "We ___ a car for the weekend.", "options": ["rented", "bought", "sold"], "explain": "You rent a car and give it back later." },
+            { "q": "The hotel is ___ the beach.", "options": ["near", "between", "under"], "explain": "Near means close to." },
+            { "q": "We took lots of ___ on the trip.", "options": ["photos", "luggage", "tickets"], "explain": "You take photos with a camera or phone." },
+            { "q": "I need to ___ a room for two nights.", "options": ["book", "take", "make"], "explain": "Book means to reserve in advance." }
+          ]
+        },
+        {
+          "id": "A2-shopping",
+          "theme": "Clothes & Shopping",
+          "description": "Buying clothes, sizes and prices.",
+          "questions": [
+            { "q": "Can I ___ these jeans on?", "options": ["try", "put", "take"], "explain": "Try on means to test clothes in the shop." },
+            { "q": "How much ___ these shoes cost?", "options": ["do", "does", "are"], "explain": "Shoes is plural, so we use do." },
+            { "q": "The T-shirt is on ___: 50% off!", "options": ["sale", "price", "shop"], "explain": "On sale means with a lower price." },
+            { "q": "What ___ do you wear?", "options": ["size", "number", "money"], "explain": "Clothes come in sizes: S, M, L." },
+            { "q": "It's cold. Put on your ___.", "options": ["coat", "shorts", "sandals"], "explain": "A coat keeps you warm." },
+            { "q": "These shoes don't ___ me: they're too big.", "options": ["fit", "wear", "dress"], "explain": "Fit is about the size being right." },
+            { "q": "Keep the ___ if you want to return it.", "options": ["receipt", "recipe", "ticket"], "explain": "A receipt is the paper proving you paid." },
+            { "q": "Can I ___ this shirt for a bigger one?", "options": ["exchange", "buy", "pay"], "explain": "Exchange means to swap for another item." }
+          ]
+        },
+        {
+          "id": "A2-comparatives",
+          "theme": "Comparatives & Superlatives",
+          "description": "Bigger, the biggest, as ... as.",
+          "questions": [
+            { "q": "This book is ___ than that one.", "options": ["better", "gooder", "best"], "explain": "The comparative of good is better." },
+            { "q": "She is the ___ student in the class.", "options": ["best", "better", "goodest"], "explain": "The superlative of good is the best." },
+            { "q": "Today is ___ than yesterday.", "options": ["hotter", "hoter", "hottest"], "explain": "Short adjectives double the last letter: hotter." },
+            { "q": "My car is ___ expensive than yours.", "options": ["less", "least", "little"], "explain": "Less + adjective + than is the opposite of more." },
+            { "q": "He runs ___ than me.", "options": ["faster", "more fast", "fastest"], "explain": "Short words add -er: faster." },
+            { "q": "It's the ___ film I've ever seen.", "options": ["worst", "worse", "baddest"], "explain": "The superlative of bad is the worst." },
+            { "q": "Anna is as tall ___ her brother.", "options": ["as", "than", "that"], "explain": "The structure is as + adjective + as." },
+            { "q": "This is the ___ interesting book here.", "options": ["most", "more", "much"], "explain": "Long adjectives take the most." }
+          ]
+        },
+        {
+          "id": "A2-future",
+          "theme": "Will & Going To",
+          "description": "Plans, predictions and decisions.",
+          "questions": [
+            { "q": "Look at those clouds! It ___ rain.", "options": ["is going to", "will", "goes"], "explain": "We use going to when we can see the evidence." },
+            { "q": "I think she ___ pass the exam.", "options": ["will", "is going", "goes"], "explain": "After I think we normally use will." },
+            { "q": "We ___ visit my aunt: the tickets are booked.", "options": ["are going to", "will", "go"], "explain": "A decision already made takes going to." },
+            { "q": "Don't worry, I ___ help you.", "options": ["will", "am going to", "go"], "explain": "An offer made now takes will." },
+            { "q": "___ you be at home tonight?", "options": ["Will", "Do", "Are going"], "explain": "Questions about the future use will." },
+            { "q": "They ___ get married in June.", "options": ["are going to", "will going", "going to"], "explain": "Be + going to + verb: they are going to get married." },
+            { "q": "It's cold in here. I ___ close the window.", "options": ["will", "am going to", "close"], "explain": "A decision made at that moment takes will." },
+            { "q": "I've decided: I ___ study medicine.", "options": ["am going to", "will be", "go to"], "explain": "A plan you have decided takes going to." }
+          ]
+        },
+        {
+          "id": "A2-prepositions",
+          "theme": "Prepositions of Place & Movement",
+          "description": "In, on, at, across, through and more.",
+          "questions": [
+            { "q": "Walk ___ the bridge to cross the river.", "options": ["across", "through", "under"], "explain": "Across means from one side to the other." },
+            { "q": "The bank is ___ the café and the shop.", "options": ["between", "among", "next"], "explain": "Between is used with two things." },
+            { "q": "She walked ___ the forest.", "options": ["through", "across", "over"], "explain": "Through is used inside something, like a forest." },
+            { "q": "The plane flew ___ the city.", "options": ["over", "in", "into"], "explain": "Over means above and across." },
+            { "q": "Put the milk ___ the fridge.", "options": ["in", "on", "at"], "explain": "In is used for the inside of something." },
+            { "q": "We arrived ___ the airport at six.", "options": ["at", "in", "to"], "explain": "We arrive at a place and arrive in a city." },
+            { "q": "He ran ___ the stairs to the roof.", "options": ["up", "on", "in"], "explain": "Up shows movement to a higher place." },
+            { "q": "The museum is ___ the corner.", "options": ["around", "in", "between"], "explain": "Around the corner means very close." }
+          ]
+        }
+      ]
+    },
+    "B1": {
+      "name": "Intermediate",
+      "description": "Present perfect, conditionals, phrasal verbs and vocabulary for work and health. Three answers in the maze.",
+      "options": 3,
+      "puzzles": [
+        {
+          "id": "B1-present-perfect",
+          "theme": "Present Perfect",
+          "description": "Experiences, results and for, since and yet.",
+          "questions": [
+            { "q": "I ___ never been to Japan.", "options": ["have", "has", "had"], "explain": "I, you, we and they take have." },
+            { "q": "She ___ worked here since 2019.", "options": ["has", "have", "is"], "explain": "He, she and it take has." },
+            { "q": "___ you finished your report yet?", "options": ["Have", "Did", "Are"], "explain": "Yet goes with the present perfect." },
+            { "q": "We've lived here ___ ten years.", "options": ["for", "since", "during"], "explain": "For + a period of time: for ten years." },
+            { "q": "He's just ___ the news.", "options": ["heard", "hear", "hearing"], "explain": "After have we use the past participle." },
+            { "q": "I haven't seen her ___ Monday.", "options": ["since", "for", "ago"], "explain": "Since + a point in time: since Monday." },
+            { "q": "They ___ already left.", "options": ["have", "are", "did"], "explain": "Already goes between have and the participle." },
+            { "q": "How long ___ you known him?", "options": ["have", "do", "are"], "explain": "How long + present perfect for something still true." }
+          ]
+        },
+        {
+          "id": "B1-work-money",
+          "theme": "Work & Money",
+          "description": "Jobs, salaries and spending.",
+          "questions": [
+            { "q": "I'm going to ___ for the job online.", "options": ["apply", "ask", "sign"], "explain": "You apply for a job." },
+            { "q": "He has a job ___ tomorrow.", "options": ["interview", "meeting", "exam"], "explain": "A job interview is the talk before being hired." },
+            { "q": "We're short of money. We need to ___.", "options": ["save", "spend", "waste"], "explain": "Save means to keep money for later." },
+            { "q": "I get ___ at the end of the month.", "options": ["paid", "pay", "payment"], "explain": "Get paid means to receive your salary." },
+            { "q": "The company ___ 200 people.", "options": ["employs", "uses", "occupies"], "explain": "A company employs its workers." },
+            { "q": "I work ___ time: 40 hours a week.", "options": ["full", "all", "complete"], "explain": "Full time is the opposite of part time." },
+            { "q": "She got a ___ and now earns more.", "options": ["raise", "prize", "price"], "explain": "A raise (or rise) is more money in your salary." },
+            { "q": "Can I pay by ___?", "options": ["card", "cash", "coins"], "explain": "We say pay by card but pay in cash." }
+          ]
+        },
+        {
+          "id": "B1-phrasal-verbs",
+          "theme": "Phrasal Verbs: Daily Life",
+          "description": "Two-word verbs you hear every day.",
+          "questions": [
+            { "q": "I ___ up at six every day.", "options": ["get", "take", "make"], "explain": "Get up means to leave your bed." },
+            { "q": "Please ___ off your shoes.", "options": ["take", "put", "get"], "explain": "Take off is the opposite of put on." },
+            { "q": "Can you ___ up the music? I can't hear it.", "options": ["turn", "put", "get"], "explain": "Turn up means to make louder." },
+            { "q": "She ___ after her little brother.", "options": ["looks", "takes", "sees"], "explain": "Look after means to take care of." },
+            { "q": "We've ___ out of coffee.", "options": ["run", "gone", "got"], "explain": "Run out of means to have none left." },
+            { "q": "He ___ up smoking last year.", "options": ["gave", "took", "put"], "explain": "Give up means to stop a habit." },
+            { "q": "Don't ___ up! You can do it.", "options": ["give", "get", "put"], "explain": "Give up also means to stop trying." },
+            { "q": "The plane ___ off on time.", "options": ["took", "got", "went"], "explain": "Take off is what a plane does when it leaves." }
+          ]
+        },
+        {
+          "id": "B1-health",
+          "theme": "Health & Body",
+          "description": "Symptoms, doctors and staying healthy.",
+          "questions": [
+            { "q": "I have a ___ throat.", "options": ["sore", "hurt", "pain"], "explain": "A sore throat hurts when you swallow." },
+            { "q": "The doctor gave me a ___ for antibiotics.", "options": ["prescription", "receipt", "recipe"], "explain": "A prescription lets you buy medicine." },
+            { "q": "My head hurts. I have a ___.", "options": ["headache", "stomachache", "toothache"], "explain": "Ache + the part of the body: headache." },
+            { "q": "You should see a ___ about that tooth.", "options": ["dentist", "surgeon", "nurse"], "explain": "A dentist treats teeth." },
+            { "q": "He ___ his leg skiing.", "options": ["broke", "breaked", "broken"], "explain": "The past of break is broke." },
+            { "q": "Eat well and ___ regularly to stay healthy.", "options": ["exercise", "exercises", "exercising"], "explain": "After and we repeat the same verb form: eat ... exercise." },
+            { "q": "I feel ___. I think I'll go to bed.", "options": ["ill", "illness", "sickness"], "explain": "Feel + adjective: feel ill." },
+            { "q": "She's ___ to peanuts.", "options": ["allergic", "allergy", "allergen"], "explain": "Be allergic to something." }
+          ]
+        },
+        {
+          "id": "B1-conditionals",
+          "theme": "Conditionals",
+          "description": "Zero, first and second conditionals.",
+          "questions": [
+            { "q": "If it ___ tomorrow, we'll stay home.", "options": ["rains", "will rain", "rained"], "explain": "After if we use the present, not will." },
+            { "q": "If I ___ rich, I'd travel the world.", "options": ["were", "am", "will be"], "explain": "Second conditional: if + past (were)." },
+            { "q": "Water boils if you ___ it to 100°C.", "options": ["heat", "will heat", "heated"], "explain": "Zero conditional: present in both parts." },
+            { "q": "If you heat ice, it ___.", "options": ["melts", "will melt", "melted"], "explain": "General facts take the present in both parts." },
+            { "q": "I would call her if I ___ her number.", "options": ["had", "have", "will have"], "explain": "Second conditional: would + if + past." },
+            { "q": "If you ___ harder, you'll pass.", "options": ["study", "will study", "studied"], "explain": "First conditional: if + present, will + verb." },
+            { "q": "What would you do if you ___ the lottery?", "options": ["won", "win", "will win"], "explain": "An imaginary situation takes the past form." },
+            { "q": "If I were you, I ___ accept the job.", "options": ["would", "will", "am going to"], "explain": "If I were you + would is how we give advice." }
+          ]
+        },
+        {
+          "id": "B1-word-building",
+          "theme": "Word Building",
+          "description": "Turning verbs and nouns into adjectives and adverbs.",
+          "questions": [
+            { "q": "Be ___ with that glass!", "options": ["careful", "care", "caring"], "explain": "Care + ful makes the adjective careful." },
+            { "q": "This job is very ___.", "options": ["stressful", "stress", "stressed"], "explain": "A thing is stressful; a person feels stressed." },
+            { "q": "I was ___ by the film.", "options": ["bored", "boring", "bore"], "explain": "-ed describes how you feel; -ing describes the thing." },
+            { "q": "The instructions were so ___ that nobody understood.", "options": ["unclear", "clearly", "clearness"], "explain": "Un- makes the opposite: unclear." },
+            { "q": "He works as a ___.", "options": ["musician", "music", "musical"], "explain": "-ian and -er often make the person: musician." },
+            { "q": "There's a lot of ___ in this city.", "options": ["pollution", "pollute", "polluted"], "explain": "-tion makes the noun: pollution." },
+            { "q": "She spoke ___ about her country.", "options": ["proudly", "proud", "pride"], "explain": "-ly makes the adverb: proudly." },
+            { "q": "We need a ___ to this problem.", "options": ["solution", "solve", "solved"], "explain": "The noun of solve is solution." }
+          ]
+        }
+      ]
+    },
+    "B2": {
+      "name": "Upper Intermediate",
+      "description": "Collocations, deduction, reported speech and linking words, with four answers in the maze.",
+      "options": 4,
+      "puzzles": [
+        {
+          "id": "B2-collocations",
+          "theme": "Make, Do & Take",
+          "description": "The verbs that go with each noun.",
+          "questions": [
+            { "q": "Could you ___ me a favour?", "options": ["do", "make", "take", "give"], "explain": "We do someone a favour." },
+            { "q": "I need to ___ a decision today.", "options": ["make", "do", "take", "put"], "explain": "We make a decision in English, not take one." },
+            { "q": "She ___ a lot of progress this year.", "options": ["made", "did", "took", "got"], "explain": "Make progress is a fixed collocation." },
+            { "q": "Let's ___ a break.", "options": ["take", "make", "do", "put"], "explain": "We take a break (or have a break)." },
+            { "q": "He ___ his best to help.", "options": ["did", "made", "took", "gave"], "explain": "Do your best is fixed." },
+            { "q": "Don't ___ a risk like that.", "options": ["take", "make", "do", "get"], "explain": "We take risks." },
+            { "q": "They have ___ business with us for years.", "options": ["done", "made", "taken", "got"], "explain": "Do business with someone." },
+            { "q": "I'd like to ___ a complaint.", "options": ["make", "do", "take", "give"], "explain": "We make a complaint." }
+          ]
+        },
+        {
+          "id": "B2-deduction",
+          "theme": "Modals of Deduction",
+          "description": "Must, can't, might and could for guessing.",
+          "questions": [
+            { "q": "She isn't answering. She ___ be asleep.", "options": ["must", "can", "should", "will"], "explain": "Must be shows you are almost certain." },
+            { "q": "That ___ be John: he's in Canada.", "options": ["can't", "mustn't", "shouldn't", "wouldn't"], "explain": "Can't be is the opposite of must be." },
+            { "q": "They ___ have left: the lights are off.", "options": ["must", "can", "should", "would"], "explain": "Must have + participle for a past deduction." },
+            { "q": "He ___ be at home, but I'm not sure.", "options": ["might", "must", "can't", "will"], "explain": "Might shows a possibility." },
+            { "q": "You ___ have seen her: she wasn't there.", "options": ["can't", "mustn't", "needn't", "shouldn't"], "explain": "Can't have + participle means it was impossible." },
+            { "q": "It ___ have been raining: the ground is wet.", "options": ["must", "can", "should", "would"], "explain": "The evidence makes you almost certain." },
+            { "q": "I'm not sure, but they ___ know the answer.", "options": ["may", "must", "can't", "shall"], "explain": "May is like might: a possibility." },
+            { "q": "He ___ have forgotten the meeting.", "options": ["could", "can", "shall", "will"], "explain": "Could have + participle shows a past possibility." }
+          ]
+        },
+        {
+          "id": "B2-environment-tech",
+          "theme": "Environment & Technology",
+          "description": "Energy, waste, data and devices.",
+          "questions": [
+            { "q": "Glass bottles can be ___ and used again.", "options": ["recycled", "wasted", "polluted", "burnt"], "explain": "Recycle means to turn waste into new products." },
+            { "q": "Solar and wind are ___ sources of energy.", "options": ["renewable", "reusable", "recyclable", "refillable"], "explain": "Renewable energy never runs out." },
+            { "q": "The company wants to cut its carbon ___.", "options": ["footprint", "print", "mark", "trace"], "explain": "Carbon footprint is the CO2 you produce." },
+            { "q": "My phone ___ out of battery.", "options": ["ran", "went", "got", "took"], "explain": "Run out of means to finish the supply." },
+            { "q": "Please ___ the app before using it.", "options": ["download", "upload", "unload", "reload"], "explain": "Download brings a file to your device." },
+            { "q": "The files are stored in the ___.", "options": ["cloud", "sky", "air", "space"], "explain": "The cloud means storage on remote servers." },
+            { "q": "Cutting down forests causes ___.", "options": ["deforestation", "reforestation", "desertion", "defrosting"], "explain": "Deforestation is the loss of forests." },
+            { "q": "Turn off the lights to ___ energy.", "options": ["save", "spend", "spare", "waste"], "explain": "Save energy means to use less of it." }
+          ]
+        },
+        {
+          "id": "B2-reported-speech",
+          "theme": "Reported Speech",
+          "description": "Telling people what someone else said.",
+          "questions": [
+            { "q": "He said he ___ tired.", "options": ["was", "is", "has been", "will be"], "explain": "Present becomes past in reported speech." },
+            { "q": "She told me she ___ the film before.", "options": ["had seen", "saw", "has seen", "sees"], "explain": "Present perfect becomes past perfect." },
+            { "q": "They asked me where I ___.", "options": ["lived", "live", "do live", "am living"], "explain": "Reported questions use normal word order." },
+            { "q": "He said he ___ call me the next day.", "options": ["would", "will", "is going", "shall"], "explain": "Will becomes would." },
+            { "q": "She asked me if I ___ help her.", "options": ["could", "can", "may", "shall"], "explain": "Can becomes could." },
+            { "q": "Mark said he ___ finished his homework.", "options": ["had", "has", "have", "was"], "explain": "Have finished becomes had finished." },
+            { "q": "The teacher told us ___ quiet.", "options": ["to be", "be", "being", "been"], "explain": "Tell someone to + verb reports an order." },
+            { "q": "He asked what time the film ___.", "options": ["started", "starts", "has started", "does start"], "explain": "The tense moves back and the order stays normal." }
+          ]
+        },
+        {
+          "id": "B2-confusing-pairs",
+          "theme": "Confusing Pairs",
+          "description": "Words that look alike but behave differently.",
+          "questions": [
+            { "q": "The news didn't ___ me at all.", "options": ["affect", "effect", "afflict", "effort"], "explain": "Affect is the verb; effect is usually the noun." },
+            { "q": "Could you ___ me your pen?", "options": ["lend", "borrow", "rent", "hire"], "explain": "You lend something to someone; you borrow from them." },
+            { "q": "The number of students has ___.", "options": ["risen", "raised", "arisen", "aroused"], "explain": "Rise has no object; raise needs one." },
+            { "q": "We ___ him to be honest with us.", "options": ["expect", "wait", "hope", "wish"], "explain": "Expect someone to do something." },
+            { "q": "He works as an ___ in a bank.", "options": ["economist", "economic", "economical", "economy"], "explain": "The person is an economist." },
+            { "q": "I'm ___ forward to the weekend.", "options": ["looking", "seeing", "watching", "waiting"], "explain": "Look forward to something good." },
+            { "q": "Do you mind if I ___ your phone for a second?", "options": ["use", "lend", "spend", "rent"], "explain": "Use is the neutral verb here." },
+            { "q": "She has a great ___ of humour.", "options": ["sense", "feeling", "sensation", "sensibility"], "explain": "Sense of humour is a fixed phrase." }
+          ]
+        },
+        {
+          "id": "B2-linking-words",
+          "theme": "Linking Words",
+          "description": "Contrast, reason, result and condition.",
+          "questions": [
+            { "q": "___ the rain, we went for a walk.", "options": ["Despite", "Although", "However", "Because"], "explain": "Despite + noun; although + clause." },
+            { "q": "He was tired; ___, he finished the race.", "options": ["however", "despite", "although", "therefore"], "explain": "However introduces a contrasting sentence." },
+            { "q": "___ she was ill, she went to work.", "options": ["Although", "Despite", "However", "In spite"], "explain": "Although + subject + verb." },
+            { "q": "We were late ___ the traffic.", "options": ["because of", "because", "so that", "due"], "explain": "Because of + noun; because + clause." },
+            { "q": "Take an umbrella ___ it rains.", "options": ["in case", "unless", "whether", "so that"], "explain": "In case means as a precaution." },
+            { "q": "I'll help you ___ you ask nicely.", "options": ["as long as", "unless", "despite", "however"], "explain": "As long as sets a condition." },
+            { "q": "She studied hard; ___, she passed.", "options": ["therefore", "although", "whereas", "despite"], "explain": "Therefore introduces a result." },
+            { "q": "___ you hurry, you'll miss the train.", "options": ["Unless", "If", "Although", "Whether"], "explain": "Unless means if ... not." }
+          ]
+        }
+      ]
+    },
+    "C1": {
+      "name": "Advanced",
+      "description": "Idioms, precise adjectives, inversion and the prepositions that follow each word. Four answers in the maze.",
+      "options": 4,
+      "puzzles": [
+        {
+          "id": "C1-idioms",
+          "theme": "Everyday Idioms",
+          "description": "Expressions native speakers use all the time.",
+          "questions": [
+            { "q": "The project is on the back ___ for now.", "options": ["burner", "seat", "foot", "shelf"], "explain": "On the back burner means postponed." },
+            { "q": "Let's call it a ___ and go home.", "options": ["day", "night", "end", "break"], "explain": "Call it a day means to stop working." },
+            { "q": "She let the cat out of the ___.", "options": ["bag", "box", "house", "hat"], "explain": "Let the cat out of the bag means to reveal a secret." },
+            { "q": "Don't worry, it's not rocket ___.", "options": ["science", "surgery", "maths", "physics"], "explain": "Not rocket science means not complicated." },
+            { "q": "He's on the ___ about the offer.", "options": ["fence", "wall", "edge", "line"], "explain": "On the fence means undecided." },
+            { "q": "That was the last ___.", "options": ["straw", "drop", "piece", "stone"], "explain": "The last straw is the final problem you can accept." },
+            { "q": "Stop beating around the ___.", "options": ["bush", "tree", "corner", "point"], "explain": "Beat around the bush means to avoid the subject." },
+            { "q": "The repairs cost an arm and a ___.", "options": ["leg", "hand", "foot", "eye"], "explain": "Cost an arm and a leg means to be very expensive." }
+          ]
+        },
+        {
+          "id": "C1-collocations",
+          "theme": "Advanced Collocations",
+          "description": "The verb each noun expects.",
+          "questions": [
+            { "q": "The company is ___ a loss this year.", "options": ["making", "doing", "taking", "having"], "explain": "Make a loss, make a profit." },
+            { "q": "She ___ a strong case for the change.", "options": ["made", "did", "took", "gave"], "explain": "Make a case means to argue for something." },
+            { "q": "They ___ serious concerns about the plan.", "options": ["raised", "rose", "lifted", "grew"], "explain": "Raise concerns, raise a question." },
+            { "q": "He ___ the blame for the mistake.", "options": ["took", "made", "did", "held"], "explain": "Take the blame means to accept responsibility." },
+            { "q": "Let me ___ your attention to page four.", "options": ["draw", "push", "catch", "pull"], "explain": "Draw someone's attention to something." },
+            { "q": "The results ___ our expectations.", "options": ["exceeded", "overcame", "overtook", "passed"], "explain": "Exceed expectations means to be better than expected." },
+            { "q": "We need to ___ a compromise.", "options": ["reach", "arrive", "get", "take"], "explain": "Reach a compromise or an agreement." },
+            { "q": "They ___ to a conclusion after hours of debate.", "options": ["came", "arrived", "reached", "got"], "explain": "Come to a conclusion (or reach a conclusion, with no to)." }
+          ]
+        },
+        {
+          "id": "C1-inversion",
+          "theme": "Inversion & Emphasis",
+          "description": "Putting the auxiliary first for effect.",
+          "questions": [
+            { "q": "Never ___ I seen such a beautiful sunset.", "options": ["have", "did", "do", "am"], "explain": "After never, the auxiliary comes before the subject." },
+            { "q": "Not only ___ he late, he also forgot the tickets.", "options": ["was", "did", "is", "has"], "explain": "Not only + inverted auxiliary: not only was he late." },
+            { "q": "Hardly ___ I arrived when the phone rang.", "options": ["had", "have", "did", "was"], "explain": "Hardly had I ... when is a fixed pattern." },
+            { "q": "Only after the meeting ___ we learn the truth.", "options": ["did", "do", "have", "were"], "explain": "Only after + inversion in the main clause." },
+            { "q": "It ___ John who broke the window.", "options": ["was", "has", "did", "is being"], "explain": "A cleft sentence: it was John who ..." },
+            { "q": "___ I known, I would have helped.", "options": ["Had", "If", "Should", "Were"], "explain": "Had I known replaces if I had known." },
+            { "q": "Under no circumstances should ___ the door.", "options": ["you open", "open you", "you opening", "to open"], "explain": "After the inverted auxiliary, the subject and the base verb follow." },
+            { "q": "So loud ___ the music that we left.", "options": ["was", "were", "is", "did"], "explain": "So + adjective + was/were + subject." }
+          ]
+        },
+        {
+          "id": "C1-prepositions",
+          "theme": "Dependent Prepositions",
+          "description": "The preposition that belongs to each word.",
+          "questions": [
+            { "q": "She's very good ___ solving problems.", "options": ["at", "in", "on", "with"], "explain": "Good at + noun or -ing." },
+            { "q": "He's responsible ___ the whole team.", "options": ["for", "of", "to", "with"], "explain": "Responsible for something or someone." },
+            { "q": "I'm not familiar ___ that software.", "options": ["with", "to", "about", "of"], "explain": "Familiar with something." },
+            { "q": "They accused him ___ lying.", "options": ["of", "for", "with", "about"], "explain": "Accuse someone of something." },
+            { "q": "Everything depends ___ the weather.", "options": ["on", "of", "from", "in"], "explain": "Depend on something." },
+            { "q": "She apologised ___ being late.", "options": ["for", "of", "about", "to"], "explain": "Apologise to a person for an action." },
+            { "q": "We're fully aware ___ the risks.", "options": ["of", "about", "to", "on"], "explain": "Aware of something." },
+            { "q": "He insisted ___ paying for dinner.", "options": ["on", "in", "for", "to"], "explain": "Insist on + noun or -ing." }
+          ]
+        },
+        {
+          "id": "C1-adjectives",
+          "theme": "Precise Adjectives",
+          "description": "Choosing the adjective that says exactly what you mean.",
+          "questions": [
+            { "q": "After the marathon, she was absolutely ___.", "options": ["exhausted", "annoyed", "bored", "calm"], "explain": "Exhausted is an extreme adjective: very tired." },
+            { "q": "The view from the top was ___.", "options": ["breathtaking", "acceptable", "fine", "decent"], "explain": "Breathtaking means extremely beautiful." },
+            { "q": "His answer was ___: nobody knew what he meant.", "options": ["ambiguous", "obvious", "precise", "blunt"], "explain": "Ambiguous means open to more than one meaning." },
+            { "q": "She gave a ___ account, with every detail.", "options": ["thorough", "brief", "vague", "rough"], "explain": "Thorough means complete and careful." },
+            { "q": "The evidence was ___: there was no doubt.", "options": ["conclusive", "likely", "arguable", "partial"], "explain": "Conclusive evidence settles the question." },
+            { "q": "He made a ___ remark that offended everyone.", "options": ["tactless", "tactful", "polite", "modest"], "explain": "Tactless means without care for other people's feelings." },
+            { "q": "The instructions were ___ and easy to follow.", "options": ["concise", "lengthy", "confusing", "wordy"], "explain": "Concise means short and clear." },
+            { "q": "It was a ___ decision, made without thinking.", "options": ["rash", "careful", "wise", "deliberate"], "explain": "A rash decision is taken too quickly." }
+          ]
+        },
+        {
+          "id": "C1-academic",
+          "theme": "Academic Verbs",
+          "description": "The verbs of reports, studies and essays.",
+          "questions": [
+            { "q": "The study ___ a link between sleep and memory.", "options": ["suggests", "tells", "talks", "speaks"], "explain": "Research suggests, shows or indicates something." },
+            { "q": "The author ___ that the policy failed.", "options": ["argues", "debates", "disputes", "quarrels"], "explain": "Argue that + clause is standard in academic writing." },
+            { "q": "Researchers ___ data from 30 countries.", "options": ["analysed", "analysis", "analytic", "analyse"], "explain": "The past of the verb analyse is analysed." },
+            { "q": "These findings ___ previous research.", "options": ["contradict", "disagree", "refuse", "deny"], "explain": "One result contradicts another." },
+            { "q": "The graph ___ a steady increase.", "options": ["illustrates", "tells", "speaks", "informs"], "explain": "Charts illustrate, show or demonstrate." },
+            { "q": "We need to ___ the results carefully.", "options": ["interpret", "translate", "transfer", "transmit"], "explain": "Interpret means to explain what data means." },
+            { "q": "The theory ___ on three assumptions.", "options": ["rests", "sits", "lies", "stands"], "explain": "A theory rests on (is based on) its assumptions." },
+            { "q": "The final section ___ the main arguments.", "options": ["summarises", "resumes", "abbreviates", "shortens"], "explain": "Summarise means to give the main points." }
+          ]
+        }
+      ]
+    },
+    "C2": {
+      "name": "Proficiency",
+      "description": "Fine differences in meaning, idiomatic language, register and the structures of formal English. Four answers in the maze.",
+      "options": 4,
+      "puzzles": [
+        {
+          "id": "C2-synonyms",
+          "theme": "Subtle Synonyms",
+          "description": "Words that are close in meaning but not interchangeable.",
+          "questions": [
+            { "q": "The talk was ___: an hour with no clear point.", "options": ["rambling", "concise", "succinct", "pithy"], "explain": "Rambling means long and disorganised." },
+            { "q": "Her review of the novel was ___ but fair.", "options": ["scathing", "gentle", "mild", "tepid"], "explain": "Scathing means severely critical." },
+            { "q": "He gave a ___ apology that convinced nobody.", "options": ["perfunctory", "heartfelt", "sincere", "profuse"], "explain": "Perfunctory means done without real interest." },
+            { "q": "The evidence for the theory is ___ at best.", "options": ["tenuous", "robust", "watertight", "sound"], "explain": "Tenuous means weak or very slight." },
+            { "q": "She has a ___ memory for names.", "options": ["prodigious", "hazy", "fleeting", "faint"], "explain": "Prodigious means impressively large." },
+            { "q": "The changes were ___, barely noticeable.", "options": ["imperceptible", "glaring", "stark", "blatant"], "explain": "Imperceptible means too small to notice." },
+            { "q": "His argument was ___ and hard to refute.", "options": ["cogent", "flimsy", "specious", "hollow"], "explain": "Cogent means clear and convincing." },
+            { "q": "After ten hours, the talks reached an ___.", "options": ["impasse", "accord", "outcome", "arrangement"], "explain": "An impasse is a deadlock, with no way forward." }
+          ]
+        },
+        {
+          "id": "C2-idiomatic",
+          "theme": "Idiomatic Expressions",
+          "description": "Fixed expressions that don't translate word for word.",
+          "questions": [
+            { "q": "The new rule is a ___ in the ointment.", "options": ["fly", "bug", "spot", "stain"], "explain": "A fly in the ointment is a small thing that spoils something." },
+            { "q": "He was given a ___ hand to redesign the site.", "options": ["free", "clear", "full", "loose"], "explain": "A free hand means complete freedom to decide." },
+            { "q": "They decided to bite the ___ and tell the truth.", "options": ["bullet", "dust", "apple", "tongue"], "explain": "Bite the bullet means to face something unpleasant." },
+            { "q": "The deal fell ___ at the last minute.", "options": ["through", "off", "out", "down"], "explain": "Fall through means to fail before it is completed." },
+            { "q": "That story sounds odd: take it with a pinch of ___.", "options": ["salt", "sugar", "pepper", "spice"], "explain": "Take it with a pinch of salt means don't fully believe it." },
+            { "q": "All that paperwork is a ___ in the neck.", "options": ["pain", "hurt", "ache", "sting"], "explain": "A pain in the neck is something annoying." },
+            { "q": "We have no plan; let's play it by ___.", "options": ["ear", "hand", "eye", "book"], "explain": "Play it by ear means to improvise." },
+            { "q": "After a terrible year, the company is in the ___.", "options": ["red", "blue", "green", "grey"], "explain": "In the red means losing money." }
+          ]
+        },
+        {
+          "id": "C2-register",
+          "theme": "Register & Style",
+          "description": "The formal word for an everyday one.",
+          "questions": [
+            { "q": "Formal for 'ask for': to ___.", "options": ["request", "beg", "want", "chase"], "explain": "Request is the formal verb." },
+            { "q": "Formal for 'find out': to ___.", "options": ["ascertain", "guess", "notice", "spot"], "explain": "Ascertain means to establish with certainty." },
+            { "q": "Formal for 'help': to ___.", "options": ["assist", "back", "boost", "serve"], "explain": "Assist is the formal equivalent." },
+            { "q": "Formal for 'about' (a subject): ___.", "options": ["regarding", "around", "near", "towards"], "explain": "Regarding or concerning introduces the topic." },
+            { "q": "Formal for 'enough': ___.", "options": ["sufficient", "plenty", "loads", "ample"], "explain": "Sufficient is the neutral formal word." },
+            { "q": "Formal for 'buy': to ___.", "options": ["purchase", "grab", "pick up", "get"], "explain": "Purchase appears in contracts and receipts." },
+            { "q": "In a formal letter: we ___ receipt of your application.", "options": ["acknowledge", "saw", "took", "noticed"], "explain": "Acknowledge receipt is a fixed formal phrase." },
+            { "q": "Formal for 'start' (a process): to ___.", "options": ["commence", "kick off", "get going", "set off"], "explain": "Commence is the formal verb; the others are informal." }
+          ]
+        },
+        {
+          "id": "C2-structures",
+          "theme": "Advanced Structures",
+          "description": "Subjunctive, inversion and emphatic patterns.",
+          "questions": [
+            { "q": "___ it not been for her, we would have failed.", "options": ["Had", "If", "Should", "Were"], "explain": "Had it not been for replaces if it had not been for." },
+            { "q": "I insist that he ___ present at the meeting.", "options": ["be", "is", "was", "will be"], "explain": "After insist that, the subjunctive uses the base form." },
+            { "q": "___ he to resign, the team would collapse.", "options": ["Were", "If", "Had", "Should"], "explain": "Were + subject + to is a formal conditional." },
+            { "q": "So ___ was the evidence that the case collapsed.", "options": ["weak", "weaker", "weakest", "weakly"], "explain": "So + adjective + was + subject is emphatic inversion." },
+            { "q": "It is essential that every student ___ on time.", "options": ["arrive", "arrives", "arrived", "will arrive"], "explain": "It is essential that + base form (subjunctive)." },
+            { "q": "Little ___ that the deal had already failed.", "options": ["did they know", "they knew", "knew they", "they did know"], "explain": "Little + auxiliary + subject is an inverted structure." },
+            { "q": "No sooner ___ than the rain started.", "options": ["had we left", "we had left", "did we leave", "we left"], "explain": "No sooner had ... than is a fixed pattern." },
+            { "q": "Such ___ his anger that he left the room.", "options": ["was", "were", "is", "has been"], "explain": "Such + was + subject, agreeing with anger (singular)." }
+          ]
+        },
+        {
+          "id": "C2-phrasal-verbs",
+          "theme": "Advanced Phrasal Verbs",
+          "description": "Phrasal verbs in the news and at work.",
+          "questions": [
+            { "q": "The government has ___ back on spending.", "options": ["cut", "put", "held", "set"], "explain": "Cut back on means to reduce." },
+            { "q": "We need to ___ up with a better plan.", "options": ["come", "put", "take", "get"], "explain": "Come up with means to produce an idea." },
+            { "q": "Police are ___ down on speeding.", "options": ["cracking", "putting", "breaking", "turning"], "explain": "Crack down on means to act firmly against." },
+            { "q": "She ___ through a difficult period last year.", "options": ["went", "fell", "ran", "took"], "explain": "Go through means to experience something hard." },
+            { "q": "He finally ___ up to his mistake.", "options": ["owned", "stood", "came", "opened"], "explain": "Own up to means to admit." },
+            { "q": "The talks ___ down over pay.", "options": ["broke", "fell", "went", "came"], "explain": "Break down means to fail or collapse." },
+            { "q": "I can't ___ up with this noise any longer.", "options": ["put", "get", "take", "hold"], "explain": "Put up with means to tolerate." },
+            { "q": "They ___ off the meeting until Friday.", "options": ["put", "called", "set", "took"], "explain": "Put off means to postpone; call off means to cancel." }
+          ]
+        },
+        {
+          "id": "C2-discourse",
+          "theme": "Discourse Markers",
+          "description": "The words that organise an argument.",
+          "questions": [
+            { "q": "___, the results were disappointing.", "options": ["All in all", "Even so", "By all means", "As such"], "explain": "All in all introduces a summary." },
+            { "q": "The plan is expensive; ___, it may be worth it.", "options": ["that said", "that is", "even though", "whereas"], "explain": "That said introduces a contrasting point." },
+            { "q": "___, the report ignores the main issue.", "options": ["Crucially", "Namely", "Likewise", "Hence"], "explain": "Crucially marks the most important point." },
+            { "q": "We have two options, ___ selling or renting.", "options": ["namely", "likewise", "whereas", "however"], "explain": "Namely introduces the specific items." },
+            { "q": "___ speaking, the data supports the theory.", "options": ["Broadly", "Deeply", "Highly", "Fully"], "explain": "Broadly speaking means in general terms." },
+            { "q": "He arrived late; ___, he missed the opening.", "options": ["consequently", "nevertheless", "meanwhile", "otherwise"], "explain": "Consequently introduces a result." },
+            { "q": "___, let us consider the costs.", "options": ["Firstly", "Lastly", "Meanwhile", "Otherwise"], "explain": "Firstly opens a list of points." },
+            { "q": "The price is high; ___, demand keeps growing.", "options": ["nonetheless", "therefore", "thus", "hence"], "explain": "Nonetheless signals a contrast; the others signal a result." }
+          ]
+        }
+      ]
+    }
+  }
+}

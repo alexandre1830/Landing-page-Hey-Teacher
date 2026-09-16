@@ -304,30 +304,6 @@
   box-shadow: 0 0 0 3px var(--red-35);
 }
 
-.ac-search-suggestions {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 6px 8px;
-  font-size: .85rem;
-  color: var(--mute);
-}
-
-.ac-search-suggestions button {
-  padding: 4px 11px;
-  font-family: var(--font-sans);
-  font-size: .85rem;
-  font-weight: 600;
-  color: var(--red);
-  background: var(--red-08);
-  border: 0;
-  border-radius: 999px;
-  cursor: pointer;
-  transition: background .2s ease;
-}
-
-.ac-search-suggestions button:hover { background: var(--red-15); }
-
 /* Results */
 .ac-results {
   max-width: 1180px;
@@ -1132,6 +1108,33 @@
 .ac-rd-opt.ok i { background: rgba(255, 255, 255, .6); }
 
 .activity-card:hover .ac-rd { transform: scale(1.06) rotate(-2deg); }
+
+/* Maze chase illustration: walls, dots, a pac and a ghost */
+.ac-mz {
+  width: min(255px, 86%);
+  transition: transform .45s var(--spring);
+}
+
+.ac-mz-wall rect { fill: #164ca8; }
+.ac-mz-dot circle { fill: rgba(238, 242, 249, 0.5); }
+.ac-mz-pac { fill: #f2a7a6; }
+.ac-mz-ghost path { fill: var(--navy-light); }
+.ac-mz-ghost .eye { fill: var(--white); }
+
+.ac-mz-token rect {
+  fill: var(--white);
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.35));
+}
+
+.ac-mz-token text {
+  fill: var(--navy);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 800;
+  text-anchor: middle;
+}
+
+.activity-card:hover .ac-mz { transform: scale(1.06) rotate(2deg); }
 
 /* ─── Level cards ────────────────────────────────────────────── */
 

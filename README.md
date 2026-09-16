@@ -17,10 +17,10 @@ Stack: **HTML + CSS + JavaScript vanilla**. Zero dependências, zero build step,
 ├── politica-de-privacidade/      LGPD (modelo, pendente de revisão jurídica)
 ├── termos-de-uso/                Termos básicos (modelo, idem)
 ├── atividades/                   Jogos de inglês grátis (importados do projeto Activity Center)
-│   ├── index.html                Hub com as 8 atividades + busca por tema/conteúdo e filtros de nível e jogo (scripts/search.js)
+│   ├── index.html                Hub com as 9 atividades + busca por tema/conteúdo e filtros de nível e jogo (scripts/search.js)
 │   ├── <slug>/index.html         Página de SEO da atividade + seleção de nível (A1–C2)
 │   ├── <slug>/jogar/index.html   Tela do jogo (?level=A1&puzzle=<id>), noindex
-│   ├── data/*.json               Conteúdo dos jogos por nível CEFR (memory.json, sentences.json e reading.json são exclusivos do site)
+│   ├── data/*.json               Conteúdo dos jogos por nível CEFR (memory.json, sentences.json, reading.json e maze.json são exclusivos do site)
 │   ├── scripts/                  common.js (registro das atividades e URLs), menu.js, puzzles.js + um script por jogo
 │   └── styles/                   atividades.css (base, tema claro) + puzzles.css + uma folha por jogo
 │                                 Ao alterar scripts, estilos ou dados dos jogos, troque ASSETS_VERSION (common.js)

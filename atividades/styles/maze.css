@@ -1,0 +1,393 @@
+/* ══════════════════════════════════════════════════════════════
+   MAZE CHASE — builds on atividades.css and puzzles.css
+══════════════════════════════════════════════════════════════ */
+
+/* ─── Theme card preview (navy panel) ─── */
+.mz-preview rect {
+  fill: rgba(238, 242, 249, 0.22);
+  transition: fill .3s ease;
+}
+
+.mz-preview .pac   { fill: var(--rose); }
+.mz-preview .ghost { fill: rgba(238, 242, 249, 0.6); }
+.mz-preview .ghost.scared { fill: var(--pz-green); }
+.pz-theme-card:hover .mz-preview rect { fill: rgba(238, 242, 249, 0.32); }
+
+/* ─── Difficulty chips (theme screen and game) ─── */
+.mz-diff {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.mz-diff-label {
+  margin-right: 2px;
+  font-size: .66rem;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: var(--mute);
+}
+
+.mz-chip {
+  padding: 7px 14px;
+  font-family: var(--font-sans);
+  font-size: .82rem;
+  font-weight: 700;
+  color: var(--ink-soft);
+  background: var(--white);
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: color .2s ease, background .2s ease, border-color .2s ease, transform .15s ease;
+}
+
+.mz-chip:hover { color: var(--navy); border-color: var(--line-heavy); transform: translateY(-1px); }
+.mz-chip:focus-visible { outline: none; box-shadow: 0 0 0 3px var(--red-35); }
+
+.mz-chip.is-active {
+  color: var(--white);
+  background: var(--navy);
+  border-color: var(--navy);
+}
+
+/* ─── Start / pause screen ─── */
+.mz-start {
+  position: absolute;
+  inset: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(238, 242, 249, 0.72);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 18px;
+}
+
+.mz-start-card {
+  width: min(460px, 100%);
+  max-height: 100%;
+  overflow-y: auto;
+  padding: 26px 26px 22px;
+  text-align: center;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  box-shadow: 0 30px 70px -30px rgba(var(--navy-rgb), .55);
+  animation: mzStartIn .4s var(--spring) both;
+}
+
+@keyframes mzStartIn {
+  from { opacity: 0; transform: translateY(16px) scale(0.97); }
+  to   { opacity: 1; transform: none; }
+}
+
+.mz-start-kicker {
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--red);
+}
+
+.ac-app .mz-start-title {
+  margin: 8px 0 6px;
+  font-size: clamp(1.4rem, 2.4vw, 1.8rem);
+  font-weight: 800;
+  letter-spacing: -.02em;
+  color: var(--navy);
+}
+
+.mz-start-desc {
+  margin-bottom: 18px;
+  font-size: .92rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
+.mz-start .mz-diff {
+  justify-content: center;
+  padding: 12px;
+  background: var(--off-white);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+
+.mz-start-note {
+  margin: 10px 0 18px;
+  font-size: .82rem;
+  color: var(--mute);
+}
+
+.mz-start-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.mz-start-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  font-family: var(--font-sans);
+  font-size: .95rem;
+  font-weight: 700;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform .15s ease, background .2s ease, border-color .2s ease, color .2s ease;
+}
+
+.mz-start-btn:active { transform: scale(0.97); }
+
+.mz-start-btn.primary {
+  color: var(--white);
+  background: var(--red);
+  border: 1px solid var(--red);
+  box-shadow: 0 12px 26px -10px rgba(var(--red-rgb), .6);
+}
+
+.mz-start-btn.primary:hover { background: var(--red-dark); border-color: var(--red-dark); }
+
+.mz-start-btn.ghost {
+  color: var(--ink-soft);
+  background: var(--white);
+  border: 1px solid var(--line-strong);
+}
+
+.mz-start-btn.ghost:hover { color: var(--navy); border-color: var(--line-heavy); }
+
+.mz-start-hint {
+  margin-top: 16px;
+  font-size: .78rem;
+  line-height: 1.55;
+  color: var(--mute);
+}
+
+.mz-start-hint b { color: var(--ink-soft); }
+
+/* Current difficulty, shown in the HUD while playing */
+.mz-diff-now {
+  padding: 5px 12px;
+  font-size: .76rem;
+  font-weight: 700;
+  color: var(--navy);
+  background: var(--white);
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+}
+
+/* ─── Board ─── */
+.pz-main.mz-main { grid-template-columns: minmax(0, 1fr) clamp(280px, 24vw, 380px); }
+
+.mz-board {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 0;
+}
+
+.mz-stage {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+  animation: pzBoardIn .5s cubic-bezier(0.22, 1, 0.36, 1) .05s both;
+}
+
+#mz-canvas {
+  display: block;
+  max-width: 100%;
+  touch-action: none;
+}
+
+/* ─── HUD ─── */
+.mz-hud {
+  flex-shrink: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 18px;
+  padding: 10px 14px;
+  background: var(--off-white);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+
+.mz-stat {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: var(--mute);
+}
+
+.mz-stat b {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -.02em;
+  color: var(--navy);
+  font-variant-numeric: tabular-nums;
+}
+
+.mz-lives {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 16px;
+}
+
+/* A little pac with its mouth open */
+.mz-life {
+  width: 15px;
+  height: 15px;
+  background: var(--red);
+  border-radius: 50%;
+  clip-path: polygon(100% 28%, 50% 50%, 100% 72%, 100% 100%, 0 100%, 0 0, 100% 0);
+}
+
+.mz-hud .mz-diff-now { margin-left: auto; }
+
+.mz-btn {
+  padding: 8px 16px;
+  font-family: var(--font-sans);
+  font-size: .84rem;
+  font-weight: 700;
+  color: var(--navy);
+  background: var(--white);
+  border: 1px solid var(--line-strong);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: color .2s ease, background .2s ease, border-color .2s ease;
+}
+
+.mz-btn:hover { color: var(--red); background: var(--red-08); border-color: var(--red-35); }
+
+/* ─── Touch pad ─── */
+.mz-pad { display: none; }
+
+.mz-pad button {
+  width: 100%;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--navy);
+  background: var(--white);
+  border: 1px solid var(--line-strong);
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.mz-pad button:active { background: var(--red-08); border-color: var(--red-35); }
+
+/* ─── Panel ─── */
+.mz-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.mz-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 10px;
+}
+
+.mz-item.is-current { background: var(--red-08); box-shadow: inset 3px 0 0 var(--red); }
+
+.mz-item-num {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .74rem;
+  font-weight: 800;
+  color: var(--mute);
+  border: 1.5px solid var(--line-strong);
+  border-radius: 50%;
+}
+
+.mz-item.is-ok .mz-item-num   { color: var(--white); background: var(--pz-green); border-color: var(--pz-green); }
+.mz-item.is-half .mz-item-num { color: var(--white); background: var(--navy-light); border-color: var(--navy-light); }
+
+.mz-item-body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.mz-item-q {
+  font-size: .88rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--ink);
+}
+
+.mz-item-meta { font-size: .74rem; color: var(--mute); }
+
+.mz-help {
+  padding: 12px;
+  margin-top: 8px;
+  font-size: .8rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  background: var(--off-white);
+  border-radius: 12px;
+}
+
+.mz-help b { color: var(--navy); }
+
+/* ─── Responsive ─── */
+@media (max-width: 1100px) {
+  .pz-main.mz-main { grid-template-columns: minmax(0, 1fr) minmax(260px, 32%); }
+}
+
+@media (max-width: 900px) {
+  .mz-stage { padding: 4px; }
+  .mz-hud { gap: 10px 14px; }
+  .mz-hud .mz-diff-now { margin-left: 0; }
+
+  .mz-pad {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    max-width: 320px;
+    margin: 4px auto 0;
+  }
+
+  .mz-pad .up    { grid-column: 2; }
+  .mz-pad .left  { grid-column: 1; grid-row: 2; }
+  .mz-pad .down  { grid-column: 2; grid-row: 2; }
+  .mz-pad .right { grid-column: 3; grid-row: 2; }
+}
+
+@media (max-width: 600px) {
+  .mz-stat b { font-size: 1.25rem; }
+  .mz-hud { padding: 10px; }
+  .mz-btn { padding: 8px 12px; }
+}

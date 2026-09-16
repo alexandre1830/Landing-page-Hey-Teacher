@@ -75,6 +75,13 @@ const SEARCH_GAMES = [
     ]
   },
   {
+    id: 'maze',
+    name: 'Come-Palavras',
+    aliases: 'come palavras comepalavras pac man pacman labirinto arcade fantasmas gramatica grammar vocabulario vocabulary',
+    count: p => `${p.questions.length} perguntas`,
+    items: p => p.questions.map(q => ({ label: clip(q.q.replace('___', '…')), text: `${q.q} ${q.options.join(' ')}` }))
+  },
+  {
     id: 'conversation',
     name: 'Cartões de conversação',
     aliases: 'cartoes de conversacao cartoes conversacao conversation speaking perguntas fala',
@@ -397,7 +404,6 @@ function initActivitySearch(root) {
   const clearBtn   = root.querySelector('#ac-search-clear');
   const levelGroup = root.querySelector('#ac-level-filter');
   const gameSelect = root.querySelector('#ac-game-filter');
-  const suggestions = root.querySelector('#ac-search-suggestions');
   const resultsEl  = document.getElementById('ac-results');
   const summaryEl  = document.getElementById('ac-results-summary');
   const listEl     = document.getElementById('ac-results-list');
@@ -526,14 +532,12 @@ function initActivitySearch(root) {
     if (!isActive()) {
       resultsEl.hidden = true;
       catalogEl.hidden = false;
-      suggestions.hidden = false;
       levelGroup.querySelectorAll('.ac-chip-count').forEach(el => { el.textContent = ''; });
       return;
     }
 
     resultsEl.hidden = false;
     catalogEl.hidden = true;
-    suggestions.hidden = true;
     if (!rounds) {
       summaryEl.textContent = 'Carregando as atividades…';
       listEl.innerHTML = '';
@@ -633,13 +637,6 @@ function initActivitySearch(root) {
   });
 
   gameSelect.addEventListener('change', () => update());
-
-  suggestions.addEventListener('click', (e) => {
-    const btn = e.target.closest('[data-suggest]');
-    if (!btn) return;
-    input.value = btn.dataset.suggest;
-    update();
-  });
 
   moreBtn.addEventListener('click', () => {
     shown += SEARCH_PAGE_SIZE;
