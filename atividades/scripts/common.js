@@ -4,7 +4,7 @@ const ACTIVITIES_ROOT = '/atividades';
 
 // Asset version: bump it (together with the ?v= in the /atividades/ pages) whenever a
 // deploy changes game scripts, styles or data, so browsers never mix cached old files.
-const ASSETS_VERSION = '20260916-1';
+const ASSETS_VERSION = '20260916-2';
 
 /* ─── Activity registry ─────────────────────────────────────────
    To add a new activity: register it here, create its folder
@@ -23,7 +23,7 @@ const ACTIVITIES = {
     levelMeta: ld => `${ld.questions.length} perguntas`,
     totalMeta: data => {
       const total = LEVEL_ORDER.reduce((sum, l) => sum + data.levels[l].questions.length, 0);
-      return `${LEVEL_ORDER.length} níveis · ${total} perguntas`;
+      return `${total} perguntas`;
     },
     visual: `
       <div class="ac-stack" aria-hidden="true">
@@ -46,7 +46,7 @@ const ACTIVITIES = {
     levelMeta: ld => `${ld.puzzles.length} cruzadas`,
     totalMeta: data => {
       const total = LEVEL_ORDER.reduce((sum, l) => sum + data.levels[l].puzzles.length, 0);
-      return `${LEVEL_ORDER.length} níveis · ${total} cruzadas`;
+      return `${total} cruzadas`;
     },
     visual: `
       <div class="ac-mini-grid" aria-hidden="true">
@@ -70,7 +70,7 @@ const ACTIVITIES = {
     levelMeta: ld => `${ld.puzzles.length} grades`,
     totalMeta: data => {
       const total = LEVEL_ORDER.reduce((sum, l) => sum + data.levels[l].puzzles.length, 0);
-      return `${LEVEL_ORDER.length} níveis · ${total} grades`;
+      return `${total} grades`;
     },
     visual: `
       <svg class="ac-ws" viewBox="0 0 6 5" aria-hidden="true">
@@ -92,7 +92,7 @@ const ACTIVITIES = {
     levelMeta: ld => `${ld.puzzles.length} rodadas · ${ld.pairs} pares`,
     totalMeta: data => {
       const total = LEVEL_ORDER.reduce((sum, l) => sum + data.levels[l].puzzles.length, 0);
-      return `${LEVEL_ORDER.length} níveis · ${total} rodadas`;
+      return `${total} rodadas`;
     },
     visual: `
       <div class="ac-mm" aria-hidden="true">
@@ -116,7 +116,7 @@ const ACTIVITIES = {
     levelMeta: ld => `${ld.puzzles.length} rodadas · ${ld.puzzles.reduce((sum, p) => sum + p.sentences.length, 0)} frases`,
     totalMeta: data => {
       const total = LEVEL_ORDER.reduce((sum, l) => sum + data.levels[l].puzzles.reduce((s, p) => s + p.sentences.length, 0), 0);
-      return `${LEVEL_ORDER.length} níveis · ${total} frases`;
+      return `${total} frases`;
     },
     visual: `
       <div class="ac-sb" aria-hidden="true">
@@ -140,7 +140,7 @@ const ACTIVITIES = {
     levelMeta: ld => `${ld.puzzles.length} textos · ${ld.questions} perguntas cada`,
     totalMeta: data => {
       const total = LEVEL_ORDER.reduce((sum, l) => sum + data.levels[l].puzzles.length, 0);
-      return `${LEVEL_ORDER.length} níveis · ${total} textos`;
+      return `${total} textos`;
     },
     visual: `
       <div class="ac-rd" aria-hidden="true">
@@ -165,7 +165,7 @@ const ACTIVITIES = {
     levelMeta: ld => `${ld.puzzles.length} rodadas · ${ld.options} respostas`,
     totalMeta: data => {
       const total = LEVEL_ORDER.reduce((sum, l) => sum + data.levels[l].puzzles.length, 0);
-      return `${LEVEL_ORDER.length} níveis · ${total} rodadas`;
+      return `${total} rodadas`;
     },
     visual: `
       <svg class="ac-mz" viewBox="0 0 124 86" aria-hidden="true">
@@ -201,7 +201,7 @@ const ACTIVITIES = {
     levelMeta: ld => `${ld.puzzles.length} rodadas`,
     totalMeta: data => {
       const total = LEVEL_ORDER.reduce((sum, l) => sum + data.levels[l].puzzles.length, 0);
-      return `${LEVEL_ORDER.length} níveis · ${total} rodadas`;
+      return `${total} rodadas`;
     },
     visual: `
       <div class="ac-hm" aria-hidden="true">
@@ -225,7 +225,7 @@ const ACTIVITIES = {
     levelMeta: ld => `${ld.puzzles.length} tópicos`,
     totalMeta: data => {
       const total = LEVEL_ORDER.reduce((sum, l) => sum + data.levels[l].puzzles.length, 0);
-      return `${LEVEL_ORDER.length} níveis · ${total} tópicos`;
+      return `${total} tópicos`;
     },
     visual: `
       <div class="ac-qz" aria-hidden="true">
