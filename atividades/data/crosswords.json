@@ -1,9 +1,9 @@
 {
   "metadata": {
     "title": "English Crossword Puzzles by CEFR Level",
-    "description": "36 themed crossword puzzles. Themes, word length, word frequency and clue complexity are calibrated to each CEFR level. Answers may contain spaces or hyphens; the grid uses letters only and the clue shows the word lengths.",
+    "description": "60 themed crossword puzzles. Themes, word length, word frequency and clue complexity are calibrated to each CEFR level. Answers may contain spaces or hyphens; the grid uses letters only and the clue shows the word lengths.",
     "framework": "CEFR (Common European Framework of Reference for Languages)",
-    "puzzles_per_level": 6,
+    "puzzles_per_level": 10,
     "levels": ["A1", "A2", "B1", "B2", "C1", "C2"],
     "version": "1.0"
   },
@@ -116,6 +116,51 @@
             { "answer": "READ", "clue": "You do this to learn or to have fun." },
             { "answer": "WALK", "clue": "You do this to get somewhere or to exercise." }
           ]
+        },
+        {
+          "id": "A1-school",
+          "theme": "At School",
+          "description": "Things and people in the classroom.",
+          "words": [
+            { "answer": "TEACHER", "clue": "The person who helps you learn in class." },
+            { "answer": "PENCIL", "clue": "You write or draw with it. You can erase it." },
+            { "answer": "BOOK", "clue": "It has pages. You read it." },
+            { "answer": "DESK", "clue": "A table for students. You sit at it in class." },
+            { "answer": "RULER", "clue": "You use it to draw straight lines." },
+            { "answer": "CLASSROOM", "clue": "The room where students have lessons." },
+            { "answer": "BAG", "clue": "You carry your books in it." },
+            { "answer": "PEN", "clue": "You write with it. It uses ink." }
+          ]
+        },
+        {
+          "id": "A1-body",
+          "theme": "My Body",
+          "description": "Parts of the body and the face.",
+          "words": [
+            { "answer": "HEAD", "clue": "The top part of your body. Your eyes are on it." },
+            { "answer": "HAND", "clue": "It has five fingers." },
+            { "answer": "EYES", "clue": "You see with them." },
+            { "answer": "NOSE", "clue": "It is in the middle of your face. You smell with it." },
+            { "answer": "MOUTH", "clue": "You eat and talk with it." },
+            { "answer": "EAR", "clue": "You hear with it." },
+            { "answer": "FOOT", "clue": "It is at the end of your leg. You put a shoe on it." },
+            { "answer": "HAIR", "clue": "It grows on your head. It can be long or short." }
+          ]
+        },
+        {
+          "id": "A1-sports",
+          "theme": "Sports & Games",
+          "description": "Playing sports and having fun.",
+          "words": [
+            { "answer": "BALL", "clue": "It is round. You kick it or throw it." },
+            { "answer": "SOCCER", "clue": "A sport with a ball and two goals. It is very popular in Brazil." },
+            { "answer": "SWIM", "clue": "You do this in a pool or in the sea." },
+            { "answer": "RUN", "clue": "To move very fast with your legs." },
+            { "answer": "TEAM", "clue": "A group of players. They play together." },
+            { "answer": "GAME", "clue": "An activity with rules. You play it and you win or lose." },
+            { "answer": "BIKE", "clue": "A short word for bicycle." },
+            { "answer": "WIN", "clue": "The opposite of lose." }
+          ]
         }
       ]
     },
@@ -217,6 +262,70 @@
             { "answer": "GARDENING", "clue": "Taking care of the plants and flowers outside your house." },
             { "answer": "CONCERT", "clue": "A show where musicians play music live." },
             { "answer": "HIKING", "clue": "Walking long distances in the mountains or in the countryside." }
+          ]
+        },
+        {
+          "id": "A2-cooking",
+          "theme": "Cooking & Eating Out",
+          "description": "In the kitchen and at a restaurant.",
+          "words": [
+            { "answer": "RECIPE", "clue": "Instructions that tell you how to cook a dish." },
+            { "answer": "BOIL", "clue": "To cook something in very hot water, like eggs or pasta." },
+            { "answer": "MENU", "clue": "A list of the food you can order in a restaurant." },
+            { "answer": "DESSERT", "clue": "Something sweet you eat at the end of a meal." },
+            { "answer": "KNIFE", "clue": "You use it to cut food." },
+            { "answer": "OVEN", "clue": "You bake a cake or a pizza inside it." },
+            { "answer": "FRY", "clue": "To cook something in hot oil." },
+            { "answer": "SPOON", "clue": "You eat soup with it." },
+            { "answer": "BILL", "clue": "At the end of the meal, you ask the waiter for the ___." }
+          ]
+        },
+        {
+          "id": "A2-chores",
+          "theme": "Housework",
+          "description": "Cleaning and jobs around the house.",
+          "words": [
+            { "answer": "LAUNDRY", "clue": "Clothes that you need to wash, or that you have just washed." },
+            { "answer": "IRON", "clue": "A hot machine that makes your clothes smooth." },
+            { "answer": "VACUUM", "clue": "To clean the floor with a machine that sucks up dirt." },
+            { "answer": "DUST", "clue": "Very small pieces of dirt on furniture." },
+            { "answer": "DISHES", "clue": "After dinner, someone has to wash the ___." },
+            { "answer": "BROOM", "clue": "A brush with a long handle. You clean the floor with it." },
+            { "answer": "TIDY", "clue": "Clean and organized. \"Please ___ your room!\"" },
+            { "answer": "TRASH", "clue": "Things you throw away, like old paper and empty bottles." },
+            { "answer": "MAKE THE BED", "clue": "What you do in the morning to put your sheets and pillow in order." }
+          ]
+        },
+        {
+          "id": "A2-nature",
+          "theme": "Nature & Landscapes",
+          "description": "Mountains, rivers and other natural places.",
+          "words": [
+            { "answer": "MOUNTAIN", "clue": "A very high hill. Some have snow on top." },
+            { "answer": "RIVER", "clue": "A lot of water that flows to the sea. The Amazon is one." },
+            { "answer": "FOREST", "clue": "A large area with a lot of trees." },
+            { "answer": "ISLAND", "clue": "Land with water all around it." },
+            { "answer": "DESERT", "clue": "A very dry place with a lot of sand and almost no rain." },
+            { "answer": "LAKE", "clue": "A big area of water with land all around it." },
+            { "answer": "BEACH", "clue": "The sand next to the sea. People swim and sunbathe there." },
+            { "answer": "VALLEY", "clue": "Low land between two mountains or hills." },
+            { "answer": "WATERFALL", "clue": "A place where a river falls from a high place, like Iguaçu." }
+          ]
+        },
+        {
+          "id": "A2-gadgets",
+          "theme": "Phones & Computers",
+          "description": "Everyday technology and staying in touch.",
+          "words": [
+            { "answer": "MESSAGE", "clue": "A short text you send to someone on your phone." },
+            { "answer": "CHARGER", "clue": "You connect your phone to it when the battery is low." },
+            { "answer": "LAPTOP", "clue": "A small computer you can carry with you." },
+            { "answer": "EMAIL", "clue": "A message you send over the internet, with an address like name@site.com." },
+            { "answer": "PRINTER", "clue": "A machine that puts documents and photos on paper." },
+            { "answer": "MOUSE", "clue": "You move it with your hand to click on things on a computer." },
+            { "answer": "APP", "clue": "A program you download on your phone." },
+            { "answer": "SELFIE", "clue": "A photo you take of yourself." },
+            { "answer": "ONLINE", "clue": "Connected to the internet." }
           ]
         }
       ]
@@ -325,6 +434,74 @@
             { "answer": "HABIT", "clue": "Something you do regularly, often without thinking." },
             { "answer": "CALORIES", "clue": "Units that measure the energy in food." },
             { "answer": "VITAMIN", "clue": "Oranges are full of ___ C." }
+          ]
+        },
+        {
+          "id": "B1-travel",
+          "theme": "Travel Experiences",
+          "description": "Planning trips and exploring new places.",
+          "words": [
+            { "answer": "ITINERARY", "clue": "A detailed plan of a journey, with the places you will visit." },
+            { "answer": "SOUVENIR", "clue": "Something you buy to remember a place you visited." },
+            { "answer": "SIGHTSEEING", "clue": "Visiting the famous places in a city as a tourist." },
+            { "answer": "BACKPACK", "clue": "A bag you carry on your back." },
+            { "answer": "ACCOMMODATION", "clue": "A place to stay, such as a hotel or a hostel." },
+            { "answer": "JET LAG", "clue": "Tiredness you feel after a long flight across time zones." },
+            { "answer": "CUSTOMS", "clue": "The place at an airport where officers check what you bring into a country." },
+            { "answer": "LUGGAGE", "clue": "All the bags and suitcases you take on a trip." },
+            { "answer": "GUIDEBOOK", "clue": "A book with information for tourists about a place." },
+            { "answer": "RESERVATION", "clue": "An arrangement to keep a room or a table for you." }
+          ]
+        },
+        {
+          "id": "B1-sports",
+          "theme": "Sports & Competitions",
+          "description": "Matches, players and tournaments.",
+          "words": [
+            { "answer": "REFEREE", "clue": "The person who makes sure players follow the rules in a match." },
+            { "answer": "TOURNAMENT", "clue": "A competition with many teams or players and several rounds." },
+            { "answer": "OPPONENT", "clue": "The person or team you play against." },
+            { "answer": "CHAMPION", "clue": "The winner of a competition." },
+            { "answer": "COACH", "clue": "The person who trains a team or an athlete." },
+            { "answer": "SCORE", "clue": "The number of points or goals each team has." },
+            { "answer": "MEDAL", "clue": "A metal disc you receive for winning or finishing a race." },
+            { "answer": "FAN", "clue": "A person who loves and supports a team." },
+            { "answer": "WARM UP", "clue": "To do gentle exercises before a sport so you don't get hurt." },
+            { "answer": "DRAW", "clue": "A match that ends with the same score for both teams." }
+          ]
+        },
+        {
+          "id": "B1-housing",
+          "theme": "Renting a Place",
+          "description": "Apartments, landlords and sharing a home.",
+          "words": [
+            { "answer": "RENT", "clue": "The money you pay every month to live in a place you don't own." },
+            { "answer": "LANDLORD", "clue": "The person who owns the apartment you rent." },
+            { "answer": "NEIGHBOR", "clue": "A person who lives next to you." },
+            { "answer": "FURNISHED", "clue": "An apartment that already has beds, tables and sofas is ___." },
+            { "answer": "DEPOSIT", "clue": "Money you pay at the start of a rental. You get it back when you leave." },
+            { "answer": "ROOMMATE", "clue": "A person you share an apartment with." },
+            { "answer": "SUBURBS", "clue": "Areas where people live on the edge of a city." },
+            { "answer": "MOVE OUT", "clue": "To leave the place where you live and take your things." },
+            { "answer": "CRAMPED", "clue": "Too small, with not enough space for everyone." },
+            { "answer": "SPACIOUS", "clue": "Large, with a lot of room." }
+          ]
+        },
+        {
+          "id": "B1-food",
+          "theme": "Food & Cooking",
+          "description": "Flavors, meals and cooking habits.",
+          "words": [
+            { "answer": "INGREDIENT", "clue": "One of the foods you need to make a dish." },
+            { "answer": "SPICY", "clue": "Food with a lot of pepper or chili tastes ___." },
+            { "answer": "LEFTOVERS", "clue": "Food that is not eaten at a meal and is kept for later." },
+            { "answer": "TAKEOUT", "clue": "Food you buy at a restaurant to eat at home." },
+            { "answer": "RAW", "clue": "Not cooked, like the fish in sushi." },
+            { "answer": "BAKE", "clue": "To cook bread or cakes in an oven." },
+            { "answer": "FLAVOR", "clue": "The taste of a food, like chocolate or strawberry." },
+            { "answer": "STARVING", "clue": "An informal way to say very, very hungry." },
+            { "answer": "PORTION", "clue": "The amount of food served to one person." },
+            { "answer": "FROZEN", "clue": "Kept very cold in the freezer, like ___ pizza." }
           ]
         }
       ]
@@ -439,6 +616,78 @@
             { "answer": "CLICKBAIT", "clue": "Online content with a shocking headline designed to make you open the link." },
             { "answer": "BROADCAST", "clue": "To transmit a program on television or radio." },
             { "answer": "FAKE NEWS", "clue": "False stories deliberately spread to mislead the public, often online." }
+          ]
+        },
+        {
+          "id": "B2-environment",
+          "theme": "Climate & Sustainability",
+          "description": "Environmental problems and greener choices.",
+          "words": [
+            { "answer": "EMISSIONS", "clue": "Gases such as carbon dioxide that are released into the air." },
+            { "answer": "RENEWABLE", "clue": "Describes energy, like solar or wind power, that doesn't run out." },
+            { "answer": "CARBON FOOTPRINT", "clue": "The amount of greenhouse gases produced by a person's activities." },
+            { "answer": "DEFORESTATION", "clue": "The cutting down of large areas of trees." },
+            { "answer": "BIODIVERSITY", "clue": "The variety of plant and animal life in a particular area." },
+            { "answer": "GREENHOUSE", "clue": "The ___ effect traps heat in the Earth's atmosphere." },
+            { "answer": "SUSTAINABLE", "clue": "Able to continue for a long time without damaging the environment." },
+            { "answer": "HABITAT", "clue": "The natural home of an animal or a plant." },
+            { "answer": "CONSERVATION", "clue": "The protection of nature, wildlife and natural resources." },
+            { "answer": "FOSSIL FUEL", "clue": "Coal, oil or gas, formed from the remains of ancient living things." },
+            { "answer": "ENDANGERED", "clue": "Describes a species that may soon disappear completely." }
+          ]
+        },
+        {
+          "id": "B2-tourism",
+          "theme": "Travel & Tourism",
+          "description": "Trips, tourists and the travel industry.",
+          "words": [
+            { "answer": "LAYOVER", "clue": "A short stop at an airport between two flights." },
+            { "answer": "GETAWAY", "clue": "A short holiday, often to escape from everyday routine." },
+            { "answer": "ECOTOURISM", "clue": "Travel to natural areas that tries to protect the environment and local people." },
+            { "answer": "BACKPACKER", "clue": "A traveler who carries everything in one bag and spends little money." },
+            { "answer": "EXCURSION", "clue": "A short organized trip, usually as part of a longer holiday." },
+            { "answer": "HOSPITALITY", "clue": "Friendly treatment of guests; also the name of the hotel and restaurant industry." },
+            { "answer": "OVERCROWDED", "clue": "Containing far too many people." },
+            { "answer": "ALL-INCLUSIVE", "clue": "Describes a holiday where meals and drinks are included in the price." },
+            { "answer": "SET OFF", "clue": "Phrasal verb: to start a journey." },
+            { "answer": "BREATHTAKING", "clue": "Extremely beautiful or impressive, like a view from a mountain." },
+            { "answer": "TOURIST TRAP", "clue": "A place that attracts many visitors and charges them too much." }
+          ]
+        },
+        {
+          "id": "B2-education",
+          "theme": "Education & Skills",
+          "description": "Schools, courses and lifelong learning.",
+          "words": [
+            { "answer": "CURRICULUM", "clue": "All the subjects and content taught in a school or course." },
+            { "answer": "TUITION", "clue": "The money you pay to study at a college or university." },
+            { "answer": "ASSESSMENT", "clue": "The process of judging a student's work or ability." },
+            { "answer": "DROP OUT", "clue": "Phrasal verb: to leave school or a course before finishing it." },
+            { "answer": "APPRENTICESHIP", "clue": "A period of learning a trade by working for a skilled employer." },
+            { "answer": "SELF-TAUGHT", "clue": "Describes someone who learned a skill without a teacher." },
+            { "answer": "LITERACY", "clue": "The ability to read and write." },
+            { "answer": "ENROLL", "clue": "To officially register for a course or a school." },
+            { "answer": "MENTOR", "clue": "An experienced person who advises and guides someone less experienced." },
+            { "answer": "WORKSHOP", "clue": "A short practical course where a group learns by doing." },
+            { "answer": "FEEDBACK", "clue": "Comments on someone's work that help them improve." }
+          ]
+        },
+        {
+          "id": "B2-medicine",
+          "theme": "Illness & Recovery",
+          "description": "Getting sick, treatment and getting better.",
+          "words": [
+            { "answer": "RECOVER", "clue": "To become healthy again after an illness." },
+            { "answer": "SURGERY", "clue": "Medical treatment in which a doctor cuts open the body." },
+            { "answer": "OUTBREAK", "clue": "The sudden start of a disease that affects many people." },
+            { "answer": "IMMUNE", "clue": "Protected against a disease, often thanks to a vaccine." },
+            { "answer": "FIRST AID", "clue": "Basic medical help given to an injured person before a doctor arrives." },
+            { "answer": "CHECKUP", "clue": "A routine medical examination to make sure you are healthy." },
+            { "answer": "SPRAIN", "clue": "To injure your ankle or wrist by twisting it suddenly." },
+            { "answer": "WELLBEING", "clue": "The state of being healthy, comfortable and happy." },
+            { "answer": "GET OVER", "clue": "Phrasal verb: to recover from an illness or a bad experience." },
+            { "answer": "PAINKILLER", "clue": "A medicine that reduces pain." },
+            { "answer": "NUTRITION", "clue": "The process of getting the right food for good health." }
           ]
         }
       ]
@@ -560,6 +809,82 @@
             { "answer": "INSOMNIA", "clue": "Habitual inability to fall or stay asleep." },
             { "answer": "PRESCRIPTION", "clue": "A doctor's written authorization for a patient to obtain a medicine." }
           ]
+        },
+        {
+          "id": "C1-climate-policy",
+          "theme": "Ecology & Climate Policy",
+          "description": "The science and politics of protecting the planet.",
+          "words": [
+            { "answer": "MITIGATION", "clue": "Action taken to reduce the severity of climate change." },
+            { "answer": "OFFSET", "clue": "To counterbalance emissions, for instance by funding tree planting." },
+            { "answer": "BIODEGRADABLE", "clue": "Able to be broken down naturally by bacteria." },
+            { "answer": "DEPLETION", "clue": "The reduction of a resource until little or none remains." },
+            { "answer": "ECOSYSTEM", "clue": "A community of living things interacting with their environment." },
+            { "answer": "PERMAFROST", "clue": "Ground that stays frozen all year round." },
+            { "answer": "DESERTIFICATION", "clue": "The process by which fertile land becomes desert." },
+            { "answer": "GREENWASHING", "clue": "Misleading marketing that makes a company seem more eco-friendly than it is." },
+            { "answer": "CARBON TAX", "clue": "A charge on fuels designed to discourage emissions." },
+            { "answer": "ACIDIFICATION", "clue": "The process by which oceans absorb CO2 and become less alkaline." },
+            { "answer": "IRREVERSIBLE", "clue": "Impossible to undo or change back." },
+            { "answer": "UPCYCLING", "clue": "Reusing discarded objects to create something of higher value." }
+          ]
+        },
+        {
+          "id": "C1-law",
+          "theme": "Law & Justice",
+          "description": "Courts, lawsuits and legal proceedings.",
+          "words": [
+            { "answer": "JURISDICTION", "clue": "The official power of a court to make legal decisions." },
+            { "answer": "PLAINTIFF", "clue": "The person who brings a case against another in a civil court." },
+            { "answer": "DEFENDANT", "clue": "The person accused or sued in a court of law." },
+            { "answer": "TESTIMONY", "clue": "A formal statement given by a witness in court." },
+            { "answer": "ACQUITTAL", "clue": "A verdict that a person is not guilty of a crime." },
+            { "answer": "LITIGATION", "clue": "The process of taking legal action through the courts." },
+            { "answer": "PRECEDENT", "clue": "An earlier ruling used as a guide for later cases." },
+            { "answer": "APPEAL", "clue": "A request to a higher court to change a decision." },
+            { "answer": "LIABLE", "clue": "Legally responsible for something, such as damages." },
+            { "answer": "INJUNCTION", "clue": "A court order forbidding or requiring a particular action." },
+            { "answer": "SETTLEMENT", "clue": "An agreement that ends a legal dispute without a trial." },
+            { "answer": "PAROLE", "clue": "Early release from prison on condition of good behavior." }
+          ]
+        },
+        {
+          "id": "C1-tech-society",
+          "theme": "Technology & Society",
+          "description": "The social impact of digital technology.",
+          "words": [
+            { "answer": "ALGORITHM", "clue": "A set of rules a computer follows, for example to recommend content." },
+            { "answer": "SURVEILLANCE", "clue": "Close monitoring of people, often by governments or companies." },
+            { "answer": "ENCRYPTION", "clue": "Converting data into a code so that only authorized people can read it." },
+            { "answer": "AUTOMATION", "clue": "The use of machines to do work previously done by people." },
+            { "answer": "OBSOLETE", "clue": "No longer used because something newer has replaced it." },
+            { "answer": "DISRUPTIVE", "clue": "Describes an innovation that radically changes an industry." },
+            { "answer": "BIOMETRIC", "clue": "Relating to identification by fingerprints, faces or irises." },
+            { "answer": "DATA BREACH", "clue": "An incident in which private information is stolen or exposed." },
+            { "answer": "ECHO CHAMBER", "clue": "An environment where people only encounter opinions that match their own." },
+            { "answer": "SCALABLE", "clue": "Able to grow and handle more users without losing performance." },
+            { "answer": "OPEN SOURCE", "clue": "Describes software whose code anyone can view, modify and share." },
+            { "answer": "MISINFORMATION", "clue": "False information spread, whether or not there is an intent to deceive." }
+          ]
+        },
+        {
+          "id": "C1-management",
+          "theme": "Careers & Management",
+          "description": "Leadership, strategy and corporate life.",
+          "words": [
+            { "answer": "DELEGATE", "clue": "To give part of your work or responsibility to someone else." },
+            { "answer": "STAKEHOLDER", "clue": "Anyone with an interest in a company's decisions and results." },
+            { "answer": "BENCHMARK", "clue": "A standard against which performance can be measured." },
+            { "answer": "OUTSOURCE", "clue": "To pay an external company to do work instead of doing it in-house." },
+            { "answer": "RESTRUCTURING", "clue": "A major reorganization of a company, often involving job cuts." },
+            { "answer": "INCENTIVE", "clue": "Something, such as a bonus, that motivates people to work harder." },
+            { "answer": "APPRAISAL", "clue": "A formal review of an employee's performance." },
+            { "answer": "NETWORKING", "clue": "Building professional contacts that may help your career." },
+            { "answer": "REDUNDANCY", "clue": "Losing your job because your position is no longer needed." },
+            { "answer": "TURNOVER", "clue": "The rate at which employees leave a company and are replaced." },
+            { "answer": "HEADHUNT", "clue": "To approach a person working elsewhere and offer them a job." },
+            { "answer": "WORK-LIFE BALANCE", "clue": "A healthy division of time between your job and your personal life." }
+          ]
         }
       ]
     },
@@ -679,6 +1004,82 @@
             { "answer": "EXACERBATE", "clue": "To make a problem, bad situation or negative feeling worse." },
             { "answer": "ENERVATE", "clue": "To drain of energy or vitality; to weaken." },
             { "answer": "PALPABLE", "clue": "So intense as to seem almost tangible." }
+          ]
+        },
+        {
+          "id": "C2-style",
+          "theme": "Language & Style",
+          "description": "Words to describe how people speak and write.",
+          "words": [
+            { "answer": "VERBOSE", "clue": "Using more words than necessary." },
+            { "answer": "LACONIC", "clue": "Using very few words, sometimes to the point of seeming rude." },
+            { "answer": "PITHY", "clue": "Brief but full of meaning." },
+            { "answer": "GRANDILOQUENT", "clue": "Pompous or extravagant in language, especially to impress." },
+            { "answer": "VERNACULAR", "clue": "The everyday language spoken by ordinary people in a region." },
+            { "answer": "SOLECISM", "clue": "A grammatical mistake or a breach of good manners." },
+            { "answer": "MALAPROPISM", "clue": "The comic misuse of a word in place of a similar-sounding one." },
+            { "answer": "EUPHONY", "clue": "A pleasing quality in the sound of words." },
+            { "answer": "PROLIX", "clue": "Tediously lengthy in speech or writing." },
+            { "answer": "PLATITUDE", "clue": "A remark used too often to be interesting or thoughtful." },
+            { "answer": "NEOLOGISM", "clue": "A newly coined word or expression." },
+            { "answer": "CIRCUMLOCUTION", "clue": "The use of many words where fewer would do, often to be evasive." }
+          ]
+        },
+        {
+          "id": "C2-emotions",
+          "theme": "Moods & Emotions",
+          "description": "Fine shades of feeling, from gloom to elation.",
+          "words": [
+            { "answer": "MELANCHOLY", "clue": "A deep, lasting and often thoughtful sadness." },
+            { "answer": "EUPHORIA", "clue": "An intense feeling of excitement and happiness." },
+            { "answer": "ENNUI", "clue": "Listless weariness arising from a lack of interest or occupation." },
+            { "answer": "CHAGRIN", "clue": "Annoyance or distress at having failed or been humiliated." },
+            { "answer": "RANCOR", "clue": "Bitter, long-lasting resentment." },
+            { "answer": "WISTFUL", "clue": "Full of vague or regretful longing." },
+            { "answer": "DESPONDENT", "clue": "In low spirits from loss of hope or courage." },
+            { "answer": "ELATED", "clue": "Ecstatically happy, often after a success." },
+            { "answer": "CONTRITE", "clue": "Feeling or expressing sincere remorse." },
+            { "answer": "APPREHENSIVE", "clue": "Anxious that something bad will happen." },
+            { "answer": "INDIGNANT", "clue": "Angry at what is perceived as unfair treatment." },
+            { "answer": "FORLORN", "clue": "Pitifully sad and lonely." }
+          ]
+        },
+        {
+          "id": "C2-wealth",
+          "theme": "Wealth & Poverty",
+          "description": "Abundance, scarcity and attitudes to money.",
+          "words": [
+            { "answer": "IMPECUNIOUS", "clue": "Having little or no money." },
+            { "answer": "AFFLUENT", "clue": "Having a great deal of money; wealthy." },
+            { "answer": "PARSIMONIOUS", "clue": "Extremely unwilling to spend money." },
+            { "answer": "PROFLIGATE", "clue": "Recklessly extravagant or wasteful with resources." },
+            { "answer": "DESTITUTE", "clue": "Without the basic necessities of life." },
+            { "answer": "LARGESSE", "clue": "Generosity in giving money or gifts." },
+            { "answer": "OPULENT", "clue": "Ostentatiously rich and luxurious." },
+            { "answer": "FRUGAL", "clue": "Sparing or economical with money or food." },
+            { "answer": "PHILANTHROPY", "clue": "The practice of donating money to good causes." },
+            { "answer": "INDIGENT", "clue": "Poor and needy (formal)." },
+            { "answer": "AVARICE", "clue": "Extreme greed for wealth." },
+            { "answer": "SQUANDER", "clue": "To waste money or an opportunity recklessly." }
+          ]
+        },
+        {
+          "id": "C2-conflict",
+          "theme": "Conflict & Reconciliation",
+          "description": "Hostility, deadlock and making peace.",
+          "words": [
+            { "answer": "ANIMOSITY", "clue": "Strong hostility between people or groups." },
+            { "answer": "BELLIGERENT", "clue": "Hostile and aggressive, eager to fight." },
+            { "answer": "CONCILIATORY", "clue": "Intended to placate or pacify." },
+            { "answer": "RAPPROCHEMENT", "clue": "The re-establishment of friendly relations, especially between states." },
+            { "answer": "ACRIMONY", "clue": "Bitterness or ill feeling in speech or manner." },
+            { "answer": "IMPASSE", "clue": "A situation in which no progress is possible; a deadlock." },
+            { "answer": "APPEASE", "clue": "To pacify by giving in to demands." },
+            { "answer": "TRUCE", "clue": "An agreement to stop fighting for a certain time." },
+            { "answer": "INTRANSIGENT", "clue": "Refusing to change one's views or to agree." },
+            { "answer": "MOLLIFY", "clue": "To calm someone's anger or anxiety." },
+            { "answer": "FRACAS", "clue": "A noisy disturbance or quarrel." },
+            { "answer": "DETENTE", "clue": "The easing of hostility between countries." }
           ]
         }
       ]
