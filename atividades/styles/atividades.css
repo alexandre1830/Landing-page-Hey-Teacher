@@ -1323,25 +1323,9 @@
 .lc-arrow svg { transition: transform .3s ease; flex-shrink: 0; }
 .level-card:hover .lc-arrow svg { transform: translateX(5px); }
 
-.lc-meta {
-  position: absolute;
-  top: 18px;
-  right: 18px;
-  font-size: .72rem;
-  font-weight: 600;
-  color: var(--mute);
-  padding: 4px 10px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--off-white);
-}
-
-.lc-meta:empty { display: none; }
-
 @media (max-width: 520px) {
   .level-card { padding: 22px 16px 18px; }
   .lc-desc    { display: none; }
-  .lc-meta    { position: static; align-self: flex-start; margin-bottom: 14px; }
   .lc-arrow   { padding-top: 16px; }
 }
 

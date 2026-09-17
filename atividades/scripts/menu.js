@@ -1,16 +1,8 @@
 /* ══════════════════════════════════════════════════════════════
    ACTIVITY MENU (/atividades/) and LEVEL SELECTION (/atividades/<slug>/)
    The cards are static HTML (good for SEO); this script adds the
-   illustrations, the content counts and the exit animation.
+   illustrations and the exit animation.
 ══════════════════════════════════════════════════════════════ */
-
-// Content counts are a nice-to-have: fill them in if the data loads
-function fillCount(activity, apply) {
-  fetch(activity.dataUrl)
-    .then(res => (res.ok ? res.json() : Promise.reject()))
-    .then(apply)
-    .catch(() => {});
-}
 
 function enhanceActivityMenu(grid) {
   grid.querySelectorAll('.activity-card[data-activity]').forEach((card) => {
@@ -30,13 +22,6 @@ function enhanceLevelSelect(grid) {
   cards.forEach((card, i) => {
     attachExitNavigation(card);
     revealStaggered(card, i);
-  });
-
-  fillCount(activity, (data) => {
-    cards.forEach((card) => {
-      const ld = data.levels[card.dataset.level];
-      if (ld) card.querySelector('.lc-meta').textContent = activity.levelMeta(ld);
-    });
   });
 }
 

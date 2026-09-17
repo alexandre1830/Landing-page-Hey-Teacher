@@ -4,7 +4,7 @@ const ACTIVITIES_ROOT = '/atividades';
 
 // Asset version: bump it (together with the ?v= in the /atividades/ pages) whenever a
 // deploy changes game scripts, styles or data, so browsers never mix cached old files.
-const ASSETS_VERSION = '20260917-7';
+const ASSETS_VERSION = '20260917-8';
 
 /* ─── Activity registry ─────────────────────────────────────────
    To add a new activity: register it here, create its folder
@@ -20,7 +20,6 @@ const ACTIVITIES = {
     title: 'Cartões de Conversação',
     kicker: 'Speaking',
     dataUrl: `${ACTIVITIES_ROOT}/data/questions.json?v=${ASSETS_VERSION}`,
-    levelMeta: ld => `${ld.questions.length} perguntas`,
     visual: `
       <div class="ac-stack" aria-hidden="true">
         <span class="ac-stack-card back">12</span>
@@ -39,7 +38,6 @@ const ACTIVITIES = {
     title: 'Palavras Cruzadas',
     kicker: 'Vocabulário',
     dataUrl: `${ACTIVITIES_ROOT}/data/crosswords.json?v=${ASSETS_VERSION}`,
-    levelMeta: ld => `${ld.puzzles.length} cruzadas`,
     visual: `
       <div class="ac-mini-grid" aria-hidden="true">
         ${[
@@ -59,7 +57,6 @@ const ACTIVITIES = {
     title: 'Caça-Palavras',
     kicker: 'Vocabulário',
     dataUrl: `${ACTIVITIES_ROOT}/data/wordsearch.json?v=${ASSETS_VERSION}`,
-    levelMeta: ld => `${ld.puzzles.length} grades`,
     visual: `
       <svg class="ac-ws" viewBox="0 0 6 5" aria-hidden="true">
         <line x1="1.5" y1="1.5" x2="5.5" y2="1.5" stroke="#f2a7a6"/>
@@ -77,7 +74,6 @@ const ACTIVITIES = {
     title: 'Jogo da Memória',
     kicker: 'Vocabulário',
     dataUrl: `${ACTIVITIES_ROOT}/data/memory.json?v=${ASSETS_VERSION}`,
-    levelMeta: ld => `${ld.puzzles.length} rodadas · ${ld.pairs} pares`,
     visual: `
       <div class="ac-mm" aria-hidden="true">
         ${[
@@ -97,7 +93,6 @@ const ACTIVITIES = {
     title: 'Monte a Frase',
     kicker: 'Gramática',
     dataUrl: `${ACTIVITIES_ROOT}/data/sentences.json?v=${ASSETS_VERSION}`,
-    levelMeta: ld => `${ld.puzzles.length} rodadas · ${ld.puzzles.reduce((sum, p) => sum + p.sentences.length, 0)} frases`,
     visual: `
       <div class="ac-sb" aria-hidden="true">
         <div class="ac-sb-line">
@@ -117,7 +112,6 @@ const ACTIVITIES = {
     title: 'Interpretação de Texto',
     kicker: 'Leitura',
     dataUrl: `${ACTIVITIES_ROOT}/data/reading.json?v=${ASSETS_VERSION}`,
-    levelMeta: ld => `${ld.puzzles.length} textos · ${ld.questions} perguntas cada`,
     visual: `
       <div class="ac-rd" aria-hidden="true">
         <div class="ac-rd-page">
@@ -138,7 +132,6 @@ const ACTIVITIES = {
     title: 'Complete o Texto',
     kicker: 'Gramática e vocabulário',
     dataUrl: `${ACTIVITIES_ROOT}/data/cloze.json?v=${ASSETS_VERSION}`,
-    levelMeta: ld => `${ld.puzzles.length} textos · ${ld.gaps} lacunas cada`,
     visual: `
       <div class="ac-ct" aria-hidden="true">
         <div class="ac-ct-page">
@@ -162,7 +155,6 @@ const ACTIVITIES = {
     title: 'Come-Palavras',
     kicker: 'Arcade',
     dataUrl: `${ACTIVITIES_ROOT}/data/maze.json?v=${ASSETS_VERSION}`,
-    levelMeta: ld => `${ld.puzzles.length} rodadas · ${ld.options} respostas`,
     visual: `
       <svg class="ac-mz" viewBox="0 0 124 86" aria-hidden="true">
         <g class="ac-mz-wall">
@@ -194,7 +186,6 @@ const ACTIVITIES = {
     title: 'Jogo da Forca',
     kicker: 'Ortografia',
     dataUrl: `${ACTIVITIES_ROOT}/data/hangman.json?v=${ASSETS_VERSION}`,
-    levelMeta: ld => `${ld.puzzles.length} rodadas`,
     visual: `
       <div class="ac-hm" aria-hidden="true">
         <svg class="ac-hm-drawing" viewBox="0 0 120 130">
@@ -214,7 +205,6 @@ const ACTIVITIES = {
     title: 'Quiz de Gramática',
     kicker: 'Gramática',
     dataUrl: `${ACTIVITIES_ROOT}/data/quiz.json?v=${ASSETS_VERSION}`,
-    levelMeta: ld => `${ld.puzzles.length} tópicos`,
     visual: `
       <div class="ac-qz" aria-hidden="true">
         <div class="ac-qz-question">
