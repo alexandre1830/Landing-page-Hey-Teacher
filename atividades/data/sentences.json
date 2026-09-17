@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "English Sentence Builder Rounds by CEFR Level",
-    "description": "36 themed rounds of 8 sentences each. The player puts shuffled words in the right order. Grammar topics, sentence length, extra words that don't belong, tries and translation hints are calibrated to each CEFR level.",
+    "description": "37 themed rounds of 8 sentences each (6 per level, 7 at A1). The player puts shuffled words in the right order. Grammar topics, sentence length, extra words that don't belong, tries and translation hints are calibrated to each CEFR level.",
     "framework": "CEFR (Common European Framework of Reference for Languages)",
     "puzzles_per_level": 6,
     "sentences_per_puzzle": 8,
@@ -116,6 +116,21 @@
             { "text": "We really like this song.", "pt": "Nós gostamos muito desta música." },
             { "text": "What kind of music do you like?", "pt": "Que tipo de música você curte?" },
             { "text": "I don't like tea very much.", "pt": "Eu não gosto muito de chá." }
+          ]
+        },
+        {
+          "id": "A1-countries",
+          "theme": "Countries",
+          "description": "Countries, capitals and languages.",
+          "sentences": [
+            { "text": "Japan is a country in Asia.", "pt": "O Japão é um país na Ásia.", "keepCase": true },
+            { "text": "My mother is from Portugal.", "pt": "Minha mãe é de Portugal." },
+            { "text": "They speak Spanish in Mexico.", "pt": "Eles falam espanhol no México." },
+            { "text": "What is the capital of France?", "pt": "Qual é a capital da França?" },
+            { "text": "Canada is very cold in winter.", "alt": ["In winter Canada is very cold."], "pt": "O Canadá é muito frio no inverno.", "keepCase": true },
+            { "text": "I want to visit Italy one day.", "alt": ["One day I want to visit Italy."], "pt": "Eu quero visitar a Itália um dia." },
+            { "text": "Are you from the United States?", "pt": "Você é dos Estados Unidos?" },
+            { "text": "Egypt has very old pyramids.", "pt": "O Egito tem pirâmides muito antigas.", "keepCase": true }
           ]
         }
       ]

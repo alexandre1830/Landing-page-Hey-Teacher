@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "English Reading Comprehension Texts by CEFR Level",
-    "description": "61 texts (10 per level, 11 at A2) with 5 to 10 comprehension questions each. Text length, vocabulary, genre, number of questions, number of options, question skills and hints are calibrated to each CEFR level.",
+    "description": "62 texts (10 per level, 11 at A1 and A2) with 5 to 10 comprehension questions each. Text length, vocabulary, genre, number of questions, number of options, question skills and hints are calibrated to each CEFR level.",
     "framework": "CEFR (Common European Framework of Reference for Languages)",
     "puzzles_per_level": 10,
     "levels": ["A1", "A2", "B1", "B2", "C1", "C2"],
@@ -236,6 +236,26 @@
             { "type": "tf", "skill": "detail", "q": "Aiko plays the guitar.", "answer": "true", "quote": "I love music and I play the guitar.", "explain": "She loves music and plays the guitar." },
             { "type": "tf", "skill": "detail", "q": "Aiko likes football.", "answer": "false", "quote": "I don't like football, but I love volleyball!", "explain": "She doesn't like football. She loves volleyball." },
             { "type": "mc", "skill": "detail", "q": "When is Aiko free?", "options": ["On Tuesday and Thursday evenings", "On Saturday mornings", "Every day"], "quote": "I am free on Tuesday and Thursday evenings.", "explain": "She is free on Tuesday and Thursday evenings." }
+          ]
+        },
+        {
+          "id": "A1-countries",
+          "theme": "Three Countries",
+          "genre": "School project",
+          "description": "A school project about Japan, Egypt and Canada, and the country where the writer lives.",
+          "text": [
+            "Hello! My name is Ana. This is my school project about three countries.",
+            "Japan is in Asia. The capital city is Tokyo, and people speak Japanese. Japan has more than 6,000 islands!",
+            "Egypt is in Africa. It is very hot and dry. In Egypt, you can see the pyramids.",
+            "Canada is in North America. It is a very big country, and it is very cold in winter. People speak English and French there.",
+            "My country is Brazil. It is in South America, and we speak Portuguese. I want to visit Japan one day."
+          ],
+          "questions": [
+            { "type": "mc", "skill": "main idea", "q": "What is the text about?", "options": ["Three countries and Ana's country", "Ana's family in Japan", "A trip to the pyramids"], "explain": "Ana writes about Japan, Egypt and Canada, and then about Brazil, her country." },
+            { "type": "mc", "skill": "detail", "q": "Where is Japan?", "options": ["In Asia", "In Africa", "In South America"], "quote": "Japan is in Asia.", "explain": "The text says that Japan is in Asia." },
+            { "type": "mc", "skill": "detail", "q": "What can you see in Egypt?", "options": ["The pyramids", "6,000 islands", "A lot of snow"], "quote": "In Egypt, you can see the pyramids.", "explain": "In Egypt, you can see the pyramids." },
+            { "type": "tf", "skill": "detail", "q": "People in Canada speak English and French.", "answer": "true", "quote": "People speak English and French there.", "explain": "In Canada, people speak English and French." },
+            { "type": "tf", "skill": "detail", "q": "Ana is from Japan.", "answer": "false", "quote": "My country is Brazil.", "explain": "Ana is from Brazil. She only wants to visit Japan one day." }
           ]
         }
       ]

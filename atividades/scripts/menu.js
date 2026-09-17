@@ -17,11 +17,8 @@ function enhanceActivityMenu(grid) {
     const activity = ACTIVITIES[card.dataset.activity];
     if (!activity) return;
 
-    card.querySelector('.ac-visual').innerHTML = activity.visual;
+    card.querySelector(".ac-visual").innerHTML = activity.visual;
     attachExitNavigation(card);
-    fillCount(activity, (data) => {
-      card.querySelector('.ac-meta').textContent = activity.totalMeta(data);
-    });
   });
 }
 

@@ -4,7 +4,7 @@ const ACTIVITIES_ROOT = '/atividades';
 
 // Asset version: bump it (together with the ?v= in the /atividades/ pages) whenever a
 // deploy changes game scripts, styles or data, so browsers never mix cached old files.
-const ASSETS_VERSION = '20260917-5';
+const ASSETS_VERSION = '20260917-7';
 
 /* ─── Activity registry ─────────────────────────────────────────
    To add a new activity: register it here, create its folder
@@ -21,10 +21,6 @@ const ACTIVITIES = {
     kicker: 'Speaking',
     dataUrl: `${ACTIVITIES_ROOT}/data/questions.json?v=${ASSETS_VERSION}`,
     levelMeta: ld => `${ld.questions.length} perguntas`,
-    totalMeta: data => {
-      const total = LEVEL_ORDER.reduce((sum, l) => sum + data.levels[l].questions.length, 0);
-      return `${total} perguntas`;
-    },
     visual: `
       <div class="ac-stack" aria-hidden="true">
         <span class="ac-stack-card back">12</span>
@@ -44,10 +40,6 @@ const ACTIVITIES = {
     kicker: 'Vocabulário',
     dataUrl: `${ACTIVITIES_ROOT}/data/crosswords.json?v=${ASSETS_VERSION}`,
     levelMeta: ld => `${ld.puzzles.length} cruzadas`,
-    totalMeta: data => {
-      const total = LEVEL_ORDER.reduce((sum, l) => sum + data.levels[l].puzzles.length, 0);
-      return `${total} cruzadas`;
-    },
     visual: `
       <div class="ac-mini-grid" aria-hidden="true">
         ${[
@@ -68,10 +60,6 @@ const ACTIVITIES = {
     kicker: 'Vocabulário',
     dataUrl: `${ACTIVITIES_ROOT}/data/wordsearch.json?v=${ASSETS_VERSION}`,
     levelMeta: ld => `${ld.puzzles.length} grades`,
-    totalMeta: data => {
-      const total = LEVEL_ORDER.reduce((sum, l) => sum + data.levels[l].puzzles.length, 0);
-      return `${total} grades`;
-    },
     visual: `
       <svg class="ac-ws" viewBox="0 0 6 5" aria-hidden="true">
         <line x1="1.5" y1="1.5" x2="5.5" y2="1.5" stroke="#f2a7a6"/>
@@ -90,10 +78,6 @@ const ACTIVITIES = {
     kicker: 'Vocabulário',
     dataUrl: `${ACTIVITIES_ROOT}/data/memory.json?v=${ASSETS_VERSION}`,
     levelMeta: ld => `${ld.puzzles.length} rodadas · ${ld.pairs} pares`,
-    totalMeta: data => {
-      const total = LEVEL_ORDER.reduce((sum, l) => sum + data.levels[l].puzzles.length, 0);
-      return `${total} rodadas`;
-    },
     visual: `
       <div class="ac-mm" aria-hidden="true">
         ${[
@@ -114,10 +98,6 @@ const ACTIVITIES = {
     kicker: 'Gramática',
     dataUrl: `${ACTIVITIES_ROOT}/data/sentences.json?v=${ASSETS_VERSION}`,
     levelMeta: ld => `${ld.puzzles.length} rodadas · ${ld.puzzles.reduce((sum, p) => sum + p.sentences.length, 0)} frases`,
-    totalMeta: data => {
-      const total = LEVEL_ORDER.reduce((sum, l) => sum + data.levels[l].puzzles.reduce((s, p) => s + p.sentences.length, 0), 0);
-      return `${total} frases`;
-    },
     visual: `
       <div class="ac-sb" aria-hidden="true">
         <div class="ac-sb-line">
@@ -138,10 +118,6 @@ const ACTIVITIES = {
     kicker: 'Leitura',
     dataUrl: `${ACTIVITIES_ROOT}/data/reading.json?v=${ASSETS_VERSION}`,
     levelMeta: ld => `${ld.puzzles.length} textos · ${ld.questions} perguntas cada`,
-    totalMeta: data => {
-      const total = LEVEL_ORDER.reduce((sum, l) => sum + data.levels[l].puzzles.length, 0);
-      return `${total} textos`;
-    },
     visual: `
       <div class="ac-rd" aria-hidden="true">
         <div class="ac-rd-page">
@@ -163,10 +139,6 @@ const ACTIVITIES = {
     kicker: 'Gramática e vocabulário',
     dataUrl: `${ACTIVITIES_ROOT}/data/cloze.json?v=${ASSETS_VERSION}`,
     levelMeta: ld => `${ld.puzzles.length} textos · ${ld.gaps} lacunas cada`,
-    totalMeta: data => {
-      const total = LEVEL_ORDER.reduce((sum, l) => sum + data.levels[l].puzzles.reduce((s, p) => s + p.text.join(' ').split('[').length - 1, 0), 0);
-      return `${total} lacunas`;
-    },
     visual: `
       <div class="ac-ct" aria-hidden="true">
         <div class="ac-ct-page">
@@ -191,10 +163,6 @@ const ACTIVITIES = {
     kicker: 'Arcade',
     dataUrl: `${ACTIVITIES_ROOT}/data/maze.json?v=${ASSETS_VERSION}`,
     levelMeta: ld => `${ld.puzzles.length} rodadas · ${ld.options} respostas`,
-    totalMeta: data => {
-      const total = LEVEL_ORDER.reduce((sum, l) => sum + data.levels[l].puzzles.length, 0);
-      return `${total} rodadas`;
-    },
     visual: `
       <svg class="ac-mz" viewBox="0 0 124 86" aria-hidden="true">
         <g class="ac-mz-wall">
@@ -227,10 +195,6 @@ const ACTIVITIES = {
     kicker: 'Ortografia',
     dataUrl: `${ACTIVITIES_ROOT}/data/hangman.json?v=${ASSETS_VERSION}`,
     levelMeta: ld => `${ld.puzzles.length} rodadas`,
-    totalMeta: data => {
-      const total = LEVEL_ORDER.reduce((sum, l) => sum + data.levels[l].puzzles.length, 0);
-      return `${total} rodadas`;
-    },
     visual: `
       <div class="ac-hm" aria-hidden="true">
         <svg class="ac-hm-drawing" viewBox="0 0 120 130">
@@ -251,10 +215,6 @@ const ACTIVITIES = {
     kicker: 'Gramática',
     dataUrl: `${ACTIVITIES_ROOT}/data/quiz.json?v=${ASSETS_VERSION}`,
     levelMeta: ld => `${ld.puzzles.length} tópicos`,
-    totalMeta: data => {
-      const total = LEVEL_ORDER.reduce((sum, l) => sum + data.levels[l].puzzles.length, 0);
-      return `${total} tópicos`;
-    },
     visual: `
       <div class="ac-qz" aria-hidden="true">
         <div class="ac-qz-question">
