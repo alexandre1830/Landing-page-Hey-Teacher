@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "English Reading Comprehension Texts by CEFR Level",
-    "description": "60 texts (10 per level) with 5 to 10 comprehension questions each. Text length, vocabulary, genre, number of questions, number of options, question skills and hints are calibrated to each CEFR level.",
+    "description": "61 texts (10 per level, 11 at A2) with 5 to 10 comprehension questions each. Text length, vocabulary, genre, number of questions, number of options, question skills and hints are calibrated to each CEFR level.",
     "framework": "CEFR (Common European Framework of Reference for Languages)",
     "puzzles_per_level": 10,
     "levels": ["A1", "A2", "B1", "B2", "C1", "C2"],
@@ -464,6 +464,27 @@
             { "type": "mc", "skill": "detail", "q": "How did Grandma go to school?", "options": ["She walked", "By bus", "By bike"], "quote": "We walked five kilometres to school every day, even in the rain.", "explain": "She walked five kilometres every day." },
             { "type": "tf", "skill": "detail", "q": "According to Grandma, teachers were stricter in the past.", "answer": "true", "quote": "the teachers were stricter than today", "explain": "She says the teachers were stricter than today." },
             { "type": "mc", "skill": "detail", "q": "Why does Grandma like her smartphone?", "options": ["She can see Sofia's photos", "She can write letters on it", "She can play games on it"], "quote": "Today, I love my smartphone because I can see your photos every day.", "explain": "She can see Sofia's photos every day, but she still prefers letters." }
+          ]
+        },
+        {
+          "id": "A2-louvre",
+          "theme": "The Louvre: A Palace Full of Art",
+          "genre": "Travel article",
+          "description": "The biggest art museum in the world: its history as a royal palace, the Mona Lisa and the glass pyramid in Paris.",
+          "text": [
+            "The Louvre is in Paris, France. It is the biggest art museum in the world, and about nine million people visit it every year.",
+            "The building is very old. It was a castle in 1190, and later it became a royal palace. Kings and queens lived there for hundreds of years. In 1793, after the French Revolution, it opened as a public museum with 537 paintings.",
+            "Today, the museum has more than 35,000 works of art, from ancient Egypt to the 19th century. The most famous one is the Mona Lisa, a painting by Leonardo da Vinci. It is only 77 centimetres tall, and it is behind special glass.",
+            "In front of the museum stands a big glass pyramid, the main entrance, which opened in 1989. Some people hated it at first, but today it is a symbol of the city.",
+            "The Louvre is so big that it is impossible to see everything in one day. Many visitors take a map and choose only two or three rooms."
+          ],
+          "questions": [
+            { "type": "mc", "skill": "main idea", "q": "What is the text about?", "options": ["The history and the art of the Louvre", "How to paint like Leonardo da Vinci", "The best hotels in Paris"], "explain": "The text tells the story of the building and describes its most famous works of art." },
+            { "type": "mc", "skill": "detail", "q": "What was the Louvre before it was a museum?", "options": ["A castle and then a royal palace", "A school for young artists", "An old church"], "quote": "It was a castle in 1190, and later it became a royal palace.", "explain": "First it was a castle, and after that it became a royal palace." },
+            { "type": "tf", "skill": "detail", "q": "The Louvre opened as a public museum in 1793.", "answer": "true", "quote": "In 1793, after the French Revolution, it opened as a public museum with 537 paintings.", "explain": "It opened as a public museum in 1793, after the French Revolution." },
+            { "type": "mc", "skill": "detail", "q": "What does the text say about the Mona Lisa?", "options": ["It is small and it is behind special glass", "It is the biggest painting in the museum", "Visitors cannot see it today"], "quote": "It is only 77 centimetres tall, and it is behind special glass.", "explain": "The Mona Lisa is only 77 centimetres tall and stands behind special glass." },
+            { "type": "tf", "skill": "detail", "q": "Everybody liked the glass pyramid when it opened.", "answer": "false", "quote": "Some people hated it at first, but today it is a symbol of the city.", "explain": "Some people hated the pyramid at first. Only later did it become a symbol of Paris." },
+            { "type": "mc", "skill": "inference", "q": "Why do many visitors take a map and choose only a few rooms?", "options": ["Because the museum is too big to see in one day", "Because most rooms are closed", "Because the map is free"], "quote": "The Louvre is so big that it is impossible to see everything in one day.", "explain": "The museum is enormous, so visitors plan a short route instead of trying to see it all." }
           ]
         }
       ]

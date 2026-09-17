@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "English Crossword Puzzles by CEFR Level",
-    "description": "60 themed crossword puzzles. Themes, word length, word frequency and clue complexity are calibrated to each CEFR level. Answers may contain spaces or hyphens; the grid uses letters only and the clue shows the word lengths.",
+    "description": "61 themed crossword puzzles (10 per level, 11 at A2). Themes, word length, word frequency and clue complexity are calibrated to each CEFR level. Answers may contain spaces or hyphens; the grid uses letters only and the clue shows the word lengths.",
     "framework": "CEFR (Common European Framework of Reference for Languages)",
     "puzzles_per_level": 10,
     "levels": ["A1", "A2", "B1", "B2", "C1", "C2"],
@@ -326,6 +326,22 @@
             { "answer": "APP", "clue": "A program you download on your phone." },
             { "answer": "SELFIE", "clue": "A photo you take of yourself." },
             { "answer": "ONLINE", "clue": "Connected to the internet." }
+          ]
+        },
+        {
+          "id": "A2-museums",
+          "theme": "At the Museum",
+          "description": "Art, guides and old objects on show.",
+          "words": [
+            { "answer": "ARTIST", "clue": "A person who paints pictures or makes other works of art." },
+            { "answer": "GALLERY", "clue": "A room or building where you can look at art." },
+            { "answer": "STATUE", "clue": "A figure of a person or an animal made of stone or metal." },
+            { "answer": "ANCIENT", "clue": "Very, very old, like objects from Egypt or Rome." },
+            { "answer": "GUIDE", "clue": "The person who shows visitors around and explains the objects." },
+            { "answer": "ENTRANCE", "clue": "The door where you go into a building." },
+            { "answer": "MUMMY", "clue": "A body from ancient Egypt, covered in cloth." },
+            { "answer": "PHOTO", "clue": "You take one with your camera or your phone." },
+            { "answer": "FAMOUS", "clue": "Known by a lot of people, like the Mona Lisa." }
           ]
         }
       ]
