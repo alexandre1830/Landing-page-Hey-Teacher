@@ -4,7 +4,7 @@ const ACTIVITIES_ROOT = '/atividades';
 
 // Asset version: bump it (together with the ?v= in the /atividades/ pages) whenever a
 // deploy changes game scripts, styles or data, so browsers never mix cached old files.
-const ASSETS_VERSION = '20260916-2';
+const ASSETS_VERSION = '20260917-1';
 
 /* ─── Activity registry ─────────────────────────────────────────
    To add a new activity: register it here, create its folder
@@ -152,6 +152,34 @@ const ACTIVITIES = {
         <div class="ac-rd-card">
           <span class="ac-rd-q"></span>
           ${[['A', ''], ['B', 'ok'], ['C', '']].map(([key, st]) => `<span class="ac-rd-opt ${st}"><b>${key}</b><i></i></span>`).join('')}
+        </div>
+      </div>`
+  },
+
+  cloze: {
+    id: 'cloze',
+    slug: 'complete-o-texto',
+    title: 'Complete o Texto',
+    kicker: 'Gramática e vocabulário',
+    dataUrl: `${ACTIVITIES_ROOT}/data/cloze.json?v=${ASSETS_VERSION}`,
+    levelMeta: ld => `${ld.puzzles.length} textos · ${ld.gaps} lacunas cada`,
+    totalMeta: data => {
+      const total = LEVEL_ORDER.reduce((sum, l) => sum + data.levels[l].puzzles.reduce((s, p) => s + p.text.join(' ').split('[').length - 1, 0), 0);
+      return `${total} lacunas`;
+    },
+    visual: `
+      <div class="ac-ct" aria-hidden="true">
+        <div class="ac-ct-page">
+          <span class="ac-ct-title"></span>
+          <p><i style="width:24%"></i><b class="ok">went</b><i style="width:30%"></i></p>
+          <p><i style="width:46%"></i><b class="active"></b><i style="width:12%"></i></p>
+          <p><i style="width:16%"></i><b></b><i style="width:40%"></i></p>
+          <p><i style="width:58%"></i></p>
+        </div>
+        <div class="ac-ct-bank">
+          ${[['went', 'used'], ['since', ''], ['bought', ''], ['goed', 'extra'], ['ago', '']].map(([w, st]) =>
+            `<span class="${st}">${w}</span>`
+          ).join('')}
         </div>
       </div>`
   },

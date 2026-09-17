@@ -11,8 +11,8 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Interpretação de Texto | Hey, Teacher!™</title>
-<meta name="description" content="Textos em inglês com perguntas de interpretação, online e grátis, do nível A1 ao C2.">
+<title>Complete o Texto | Hey, Teacher!™</title>
+<meta name="description" content="Textos em inglês com lacunas para completar com as palavras do banco, online e grátis, do nível A1 ao C2.">
 <meta name="robots" content="noindex, follow">
 
 <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
@@ -25,7 +25,7 @@
 <link rel="stylesheet" href="/styles/styles.css">
 <link rel="stylesheet" href="/atividades/styles/atividades.css?v=20260917-1">
 <link rel="stylesheet" href="/atividades/styles/puzzles.css?v=20260917-1">
-<link rel="stylesheet" href="/atividades/styles/reading.css?v=20260917-1">
+<link rel="stylesheet" href="/atividades/styles/cloze.css?v=20260917-1">
 </head>
 <body>
 
@@ -34,7 +34,7 @@
 <div class="ac-app" data-activity-root>
 
   <header class="cards-header">
-    <a href="/atividades/interpretacao-de-texto/" class="back-btn" id="pz-back" aria-label="Back to levels">
+    <a href="/atividades/complete-o-texto/" class="back-btn" id="pz-back" aria-label="Back to levels">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <path d="M19 12H5M5 12l7-7M5 12l7 7"/>
       </svg>
@@ -63,43 +63,46 @@
     </div>
   </main>
 
-  <!-- ─── Reading ─── -->
-  <main class="pz-main rd-main" id="pz-puzzle" hidden>
-    <div class="rd-tabs" role="tablist" aria-label="Reading">
-      <button type="button" class="rd-tab is-active" data-tab="text" role="tab" aria-selected="true">Text</button>
-      <button type="button" class="rd-tab" data-tab="questions" role="tab" aria-selected="false">Questions <span class="rd-tab-count" id="rd-tab-count"></span></button>
-    </div>
-
-    <article class="rd-text" id="rd-text" lang="en" aria-labelledby="rd-title">
-      <div class="rd-text-inner">
-        <div class="rd-text-head">
-          <span class="rd-genre" id="rd-genre"></span>
-          <span class="rd-meta" id="rd-meta"></span>
+  <!-- ─── Gap fill ─── -->
+  <main class="pz-main ct-main" id="pz-puzzle" hidden>
+    <article class="ct-text" id="ct-text" lang="en" aria-labelledby="ct-title">
+      <div class="ct-text-inner">
+        <div class="ct-text-head">
+          <span class="ct-kind" id="ct-kind"></span>
+          <span class="ct-meta" id="ct-meta"></span>
         </div>
-        <h2 class="rd-title" id="rd-title">&nbsp;</h2>
-        <div class="rd-body" id="rd-body"></div>
-        <button type="button" class="rd-btn primary rd-to-questions" data-tab-go="questions">Answer the questions →</button>
+        <h2 class="ct-title" id="ct-title">&nbsp;</h2>
+        <details class="ct-focus" id="ct-focus" hidden>
+          <summary>
+            <span class="ct-focus-label">Grammar focus</span>
+            <span class="ct-focus-name" id="ct-focus-name"></span>
+            <span class="ct-focus-toggle" aria-hidden="true"></span>
+          </summary>
+          <p class="ct-focus-rule" id="ct-focus-rule"></p>
+        </details>
+        <div class="ct-body" id="ct-body"></div>
       </div>
     </article>
 
-    <section class="rd-quiz" id="rd-quiz" aria-label="Questions">
-      <div class="rd-quiz-top">
-        <div class="rd-score" id="rd-score"></div>
-        <ol class="rd-dots" id="rd-dots" aria-label="Questions"></ol>
+    <aside class="ct-side" aria-label="Word bank">
+      <div class="ct-score" id="ct-score"></div>
+
+      <div class="ct-bank-wrap" id="ct-bank-wrap">
+        <div class="ct-bank-head">
+          <span class="ct-bank-title">Word bank</span>
+          <span class="ct-bank-info" id="ct-bank-info"></span>
+        </div>
+        <ul class="ct-bank" id="ct-bank" lang="en"></ul>
+        <p class="ct-help">Type a word from the bank in each gap. <b>Enter</b> jumps to the next empty gap, and <b>Check answers</b> shows what is right so far.</p>
       </div>
 
-      <div class="rd-question" id="rd-question" lang="en"></div>
+      <div class="pz-toast" id="pz-toast" role="status" aria-live="polite"></div>
 
-      <div class="rd-actions">
-        <button class="rd-nav" id="rd-prev" type="button" aria-label="Previous question">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M15 18l-6-6 6-6"/>
-          </svg>
-        </button>
-        <button class="pz-tool" id="rd-hint" type="button">Show the sentence</button>
-        <button class="rd-btn ghost" id="rd-next" type="button">Skip →</button>
+      <div class="ct-actions">
+        <button class="pz-tool" id="ct-hint" type="button">Reveal a word</button>
+        <button class="ct-btn" id="ct-check" type="button">Check answers</button>
       </div>
-    </section>
+    </aside>
   </main>
 
   <!-- ─── Completion dialog ─── -->
@@ -114,7 +117,7 @@
       <p class="pz-modal-text" id="pz-modal-text">&nbsp;</p>
       <div class="pz-modal-actions">
         <a class="pz-modal-btn" id="pz-modal-themes" href="#">All texts</a>
-        <button class="pz-modal-btn" id="pz-modal-close" type="button">Review answers</button>
+        <button class="pz-modal-btn" id="pz-modal-close" type="button">Review the text</button>
         <a class="pz-modal-btn primary" id="pz-modal-next" href="#">
           Next text
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -138,7 +141,7 @@
 
 <script src="/atividades/scripts/common.js?v=20260917-1"></script>
 <script src="/atividades/scripts/puzzles.js?v=20260917-1"></script>
-<script src="/atividades/scripts/reading.js?v=20260917-1"></script>
+<script src="/atividades/scripts/cloze.js?v=20260917-1"></script>
 <script src="/scripts/includes.js" defer></script>
 <script src="/scripts/main.js" defer></script>
 </body>

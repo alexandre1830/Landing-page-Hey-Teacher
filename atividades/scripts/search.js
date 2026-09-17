@@ -75,6 +75,17 @@ const SEARCH_GAMES = [
     ]
   },
   {
+    id: 'cloze',
+    name: 'Complete o texto',
+    aliases: 'complete o texto completar texto lacunas preencher lacunas banco de palavras cloze gap fill fill in the blanks gramatica grammar vocabulario vocabulary',
+    count: p => `${p.text.join(' ').split('[').length - 1} lacunas`,
+    // Each sentence of the text (with the answers in place) is an item, plus the grammar focus
+    items: p => [
+      ...(p.focus ? [{ label: p.focus, text: `${p.focus} grammar` }] : []),
+      ...(p.text.join(' ').replace(/\[([^\]|]+)[^\]]*\]/g, '$1').match(/[^.!?]+[.!?]+[”"’]?/g) || []).map(s => ({ label: clip(s.trim()), text: s }))
+    ]
+  },
+  {
     id: 'maze',
     name: 'Come-Palavras',
     aliases: 'come palavras comepalavras pac man pacman labirinto arcade fantasmas gramatica grammar vocabulario vocabulary',
@@ -245,11 +256,11 @@ const SEARCH_SYNONYMS = [
   ['futuro', 'future|will|going to'],
   ['futuro perfeito', 'future perfect'],
   ['condicional|condicionais|oracoes condicionais', 'conditional|if clause'],
-  ['voz passiva|passiva', 'passive'],
+  ['voz passiva|passiva', 'passive|reporting structures'],
   ['discurso indireto|fala indireta|discurso direto', 'reported speech'],
   ['perguntas indiretas|pergunta indireta', 'indirect question|polite question'],
   ['pergunta|perguntas|interrogativas', 'question'],
-  ['oracoes relativas|oracao relativa|pronomes relativos', 'relative clause'],
+  ['oracoes relativas|oracao relativa|pronomes relativos', 'relative clause|relative pronoun'],
   ['gerundio|infinitivo', 'gerund|infinitive|verb patterns'],
   ['modal|modais|verbos modais', 'modal|must|should|can'],
   ['deducao', 'deduction|must have'],
@@ -273,7 +284,9 @@ const SEARCH_SYNONYMS = [
   ['palavras emprestadas|estrangeirismos', 'borrowed words'],
   ['figuras de linguagem', 'literary devices'],
   ['frequencia|adverbios de frequencia', 'frequency'],
-  ['tempos verbais', 'tense']
+  ['tempos verbais', 'tense'],
+  ['desejos|arrependimentos|arrependimento', 'wish|if only|regret'],
+  ['lacunas|preencher|completar', 'gap|fill']
 ];
 
 // Common Portuguese words that shouldn't narrow the search

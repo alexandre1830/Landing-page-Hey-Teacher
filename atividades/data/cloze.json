@@ -1,0 +1,1008 @@
+{
+  "metadata": {
+    "title": "English Gap-Fill Texts by CEFR Level",
+    "description": "60 texts (10 per level) with gaps to complete with words from a word bank. Some texts share facts and curiosities, some cover everyday situations and some focus on a specific grammar structure. Text length, vocabulary, number of gaps (10 at A1-A2, 15 at B1-B2, 20 at C1-C2), extra words in the bank and reveals are calibrated to each CEFR level.",
+    "framework": "CEFR (Common European Framework of Reference for Languages)",
+    "puzzles_per_level": 10,
+    "levels": ["A1", "A2", "B1", "B2", "C1", "C2"],
+    "level_settings": {
+      "gaps": "Number of gaps in each text.",
+      "extra": "Number of extra words in the bank that don't go in any gap.",
+      "hints": "How many words the student can reveal in each text."
+    },
+    "text_fields": {
+      "theme": "Title of the text.",
+      "kind": "\"facts\" (facts and curiosities), \"everyday\" (everyday situations) or \"grammar\" (focus on one structure).",
+      "focus": "grammar only: the structure practised in the gaps.",
+      "rule": "grammar only: short explanation of the rule, shown on demand.",
+      "description": "Short summary with the topic keywords (used on the cards and in the hub search).",
+      "text": "The paragraphs. Each gap is written as [answer], or [answer|alternative] when another word is also correct. A word may appear in more than one gap (the bank then lists it more than once).",
+      "extra": "Extra words for the bank. They must not fit any gap."
+    },
+    "version": "1.0"
+  },
+  "levels": {
+    "A1": {
+      "name": "Beginner",
+      "description": "Short texts of about 90 words with 10 gaps. The word bank has 2 extra words, and you can reveal up to 3 words.",
+      "gaps": 10,
+      "extra": 2,
+      "hints": 3,
+      "puzzles": [
+        {
+          "id": "A1-octopus",
+          "theme": "Amazing Octopuses",
+          "kind": "facts",
+          "description": "Eight arms, three hearts and blue blood: fun facts about a very clever sea animal.",
+          "text": [
+            "An octopus is a very clever sea animal. It has eight long [arms] and three [hearts]. Its blood isn't red. It's [blue]!",
+            "An octopus has no [bones], so it can go through very small holes. It likes to [hide] between rocks when it is afraid. It can also change its [colour] in one second, so fish can't see it.",
+            "Octopuses are good at solving problems. In aquariums, some octopuses open [jars] to get the food inside. Some even [escape] from their tanks at night! Most octopuses [live] for only one or two years. They eat crabs and small [fish]."
+          ],
+          "extra": ["slowly", "because"]
+        },
+        {
+          "id": "A1-ana-morning",
+          "theme": "Ana's Morning",
+          "kind": "everyday",
+          "description": "A morning routine: waking up, breakfast with the family and the bus to work.",
+          "text": [
+            "My name is Ana. On weekdays, I [wake] up at seven o'clock. First, I take a [shower] and brush my [teeth]. Then I get [dressed] and go to the kitchen.",
+            "For breakfast, I usually [drink] coffee with milk and eat some [bread] with cheese. My brother is always [late], so he eats very fast!",
+            "At half past seven, I [catch] the bus to work. The bus [stop] is near my house, and I [arrive] at the office at eight."
+          ],
+          "extra": ["sleeps", "yellow"]
+        },
+        {
+          "id": "A1-new-classmate",
+          "theme": "A New Classmate",
+          "kind": "grammar",
+          "focus": "Verb to be (am, is, are)",
+          "rule": "Use am with I, is with he, she and it, and are with you, we and they. For the negative, add not: am not, isn't (is not), aren't (are not). In questions, the verb comes first: Are you OK?",
+          "description": "Grammar focus: the verb to be. Sofia helps Kenji, a new student from Japan, on his first day.",
+          "text": [
+            "Hi! My name [is] Sofia and I [am] twelve years old. There is a new student in my class today. His name is Kenji and he [is] from Japan.",
+            "Kenji and I [are] in the same group for our science project. He is very friendly, but he [isn't] very happy today. The school is big and everything [is] new for him.",
+            "“Are you OK?” I ask. “Yes, I [am],” he says. “But I [am not] sure where the science lab is.” “Don't worry. We [aren't] late, and the lab is next to our classroom. My friends [are] there too. Come with me!”"
+          ],
+          "extra": ["be", "does"]
+        },
+        {
+          "id": "A1-moon",
+          "theme": "Our Moon",
+          "kind": "facts",
+          "description": "Facts about the Moon: no air, very hot days, very cold nights and old footprints.",
+          "text": [
+            "At night, we can see the Moon in the [sky]. It is very far away: about 384,000 kilometres from Earth. A trip there [takes] about three days by spaceship.",
+            "The Moon has no [air], so astronauts need special suits to breathe. There is no water, so there are no plants or [animals]. It is very [hot] in the day and very cold at night.",
+            "In 1969, two astronauts [walked] on the Moon for the first time. Their footprints are still there today, because there is no [wind] to move the dust.",
+            "The Moon doesn't make its own [light]. It is like a big mirror for the light of the [Sun]. That is why it [shines] at night."
+          ],
+          "extra": ["slowly", "eat"]
+        },
+        {
+          "id": "A1-cafe",
+          "theme": "At the Café",
+          "kind": "everyday",
+          "description": "Ordering tea and a sandwich in a café, asking the price and paying by card.",
+          "text": [
+            "Waiter: Good morning! Can I [help] you?",
+            "Maya: Yes, please. Can I have a [cup] of tea and a cheese sandwich?",
+            "Waiter: Of course. Do you want [sugar] in your tea?",
+            "Maya: No, thanks. And a bottle of [water], please.",
+            "Waiter: Small or [large]?",
+            "Maya: Small, please. How [much] is that?",
+            "Waiter: That's nine dollars. Do you want to eat here or take it [away]?",
+            "Maya: Here, please. Can I [pay] by card?",
+            "Waiter: Yes, of course. Please [sit] down and I'll bring it to your [table]."
+          ],
+          "extra": ["many", "drive"]
+        },
+        {
+          "id": "A1-grandpa-joe",
+          "theme": "Grandpa Joe's Day",
+          "kind": "grammar",
+          "focus": "Simple present (he, she, it + -s)",
+          "rule": "After he, she and it, add -s to the verb: he reads, she plays. Verbs ending in -sh, -ch, -s and -o take -es (watches, goes), and a consonant + y changes to -ies (studies). Have becomes has. In the negative, use doesn't + the base verb: he doesn't like.",
+          "description": "Grammar focus: the simple present with he and she. The busy daily routine of a very active grandfather.",
+          "text": [
+            "My grandpa Joe is seventy years old, but he is very active. He [wakes] up at six o'clock every morning and [goes] for a walk in the park.",
+            "After breakfast, he [reads] the newspaper and [drinks] a big cup of black coffee. He [doesn't] like tea.",
+            "In the afternoon, Grandpa [watches] football on TV or [plays] cards with his friends. On Saturdays, he [studies] Spanish online. He [has] a lesson with a teacher from Mexico.",
+            "At night, he [calls] me and we talk about our day."
+          ],
+          "extra": ["go", "watchs"]
+        },
+        {
+          "id": "A1-penguins",
+          "theme": "Penguins",
+          "kind": "facts",
+          "description": "Birds that can't fly: where penguins live, what they eat and how emperor penguin fathers look after the egg.",
+          "text": [
+            "Penguins are birds, but they can't [fly]. They use their wings to [swim], and they are very fast in the water.",
+            "Most penguins live in the south of the world, in very cold [places] like Antarctica. Their black and white feathers keep them [warm], and they live in big [groups] called colonies.",
+            "Penguins eat fish and small sea animals. Some penguins can stay under the [water] for twenty minutes!",
+            "The emperor penguin is the [biggest] penguin. It is more than one [metre] tall. The father keeps the [egg] on his feet for about two months. In that time, he doesn't [eat] anything!"
+          ],
+          "extra": ["yesterday", "those"]
+        },
+        {
+          "id": "A1-new-jacket",
+          "theme": "A New Jacket",
+          "kind": "everyday",
+          "description": "Shopping for clothes: asking for a size, trying a jacket on and paying for it.",
+          "text": [
+            "Assistant: Hello! Can I help you?",
+            "Leo: Yes. I'm looking for a [jacket] for the winter.",
+            "Assistant: What [size] are you?",
+            "Leo: Medium, I think.",
+            "Assistant: OK. We have this one in black, [grey] and blue.",
+            "Leo: Can I [try] the blue one on?",
+            "Assistant: Sure. The changing [rooms] are over there.",
+            "Assistant: How is it?",
+            "Leo: It's a bit [small]. Do you have it in large?",
+            "Assistant: Yes, here you are.",
+            "Leo: This is perfect. How [much] is it?",
+            "Assistant: It's sixty dollars, but it's on [sale] today.",
+            "Leo: Great! I'll [take] it. Can I pay by [card]?"
+          ],
+          "extra": ["cheap", "shoes"]
+        },
+        {
+          "id": "A1-my-street",
+          "theme": "My Street",
+          "kind": "grammar",
+          "focus": "There is / there are",
+          "rule": "Use there is with singular nouns (there is a park) and there are with plural nouns (there are two cafés). The negatives are there isn't and there aren't. Use a or an with singular nouns, some with plurals in positive sentences, and any in negatives and questions.",
+          "description": "Grammar focus: there is and there are, with a, an, some and any. What you can find in a street in the city centre.",
+          "text": [
+            "I live in a small street in the city centre. There [is] a bakery on the corner, and there [are] two cafés next to it.",
+            "There [isn't] a supermarket in my street, but there is [a] big one near the station. There are [some] nice clothes shops too.",
+            "My street is quiet because there [aren't] many cars. There is [an] old church with a beautiful garden.",
+            "Is there a cinema? No, there isn't. And are there [any] parks? Yes, there [are]. My favourite park is behind my building, and there is [a] lake in it."
+          ],
+          "extra": ["much", "am"]
+        },
+        {
+          "id": "A1-giraffes",
+          "theme": "Giraffes",
+          "kind": "facts",
+          "description": "The tallest animals in the world: their long necks, purple tongues and babies that walk in one hour.",
+          "text": [
+            "Giraffes are the [tallest] animals in the world. An adult giraffe can be almost six metres tall, and its [neck] is about two metres long!",
+            "Giraffes live in Africa. They eat [leaves] from the top of tall [trees]. A giraffe's tongue is about fifty centimetres long, and it is dark [purple].",
+            "Giraffes don't need much [sleep]: only about thirty minutes a day. They often sleep [standing] up.",
+            "A baby giraffe is almost two metres tall when it is [born]. It can [walk] one hour later, and it [runs] with its mother on the same day."
+          ],
+          "extra": ["because", "cheap"]
+        }
+      ]
+    },
+    "A2": {
+      "name": "Elementary",
+      "description": "Texts of about 120 words with 10 gaps. The word bank has 2 extra words, and you can reveal up to 3 words.",
+      "gaps": 10,
+      "extra": 2,
+      "hints": 3,
+      "puzzles": [
+        {
+          "id": "A2-honey",
+          "theme": "Honey Never Goes Bad",
+          "kind": "facts",
+          "description": "Why 3,000-year-old honey is still safe to eat, and how hard bees work to make one spoonful.",
+          "text": [
+            "Honey is one of the few foods that never goes [bad]. Archaeologists [found] pots of honey in ancient Egyptian tombs, and the honey was more than 3,000 years [old]. It was still safe to eat!",
+            "Why does honey [last] so long? It has very little water, and bacteria can't [grow] without water. Bees also add a special substance that [kills] germs.",
+            "Making honey is hard work. To make just one [spoonful], bees need to visit thousands of flowers. A single bee makes only a tiny amount of honey in its whole [life].",
+            "If your honey [becomes] hard and white, don't throw it away. Just put the jar in [warm] water for a few minutes, and it will be soft again."
+          ],
+          "extra": ["cold", "young"]
+        },
+        {
+          "id": "A2-hotel-email",
+          "theme": "Booking a Hotel Room",
+          "kind": "everyday",
+          "description": "An email to a hotel: booking a room, arriving late and asking about breakfast and the beach.",
+          "text": [
+            "Dear Sir or Madam,",
+            "I would like to [book] a double room at your hotel for three [nights], from 12 to 15 July. I am travelling with my wife and our two-year-old son, so could you please put a baby bed in the room?",
+            "We are coming by train, and our train [gets] to the station at about 10 p.m. Is it possible to [check] in late?",
+            "I also have some questions. Is [breakfast] included in the price? Is there free Wi-Fi in the [rooms]? And how far is the hotel from the [beach]? We would like to [walk] there every day.",
+            "I look [forward] to hearing from you.",
+            "Best [wishes],",
+            "Daniel Moreira"
+          ],
+          "extra": ["cheap", "later"]
+        },
+        {
+          "id": "A2-day-to-forget",
+          "theme": "A Day to Forget",
+          "kind": "grammar",
+          "focus": "Past simple (regular and irregular verbs)",
+          "rule": "Use the past simple for finished actions in the past. Regular verbs add -ed (walk → walked, stop → stopped). Irregular verbs have their own forms (go → went, buy → bought, meet → met). In negatives and questions, use did or didn't + the base verb: it didn't ring.",
+          "description": "Grammar focus: the past simple. A late alarm, a missed bus and a closed museum: a Saturday where everything went wrong.",
+          "text": [
+            "Last Saturday was a terrible day. I [woke] up late because my alarm clock [didn't] ring. I [missed] the bus to the city, so I [took] a taxi. It was very expensive!",
+            "When I [arrived] at the station, my train was gone. I [waited] for the next one for an hour. While I was waiting, I [bought] a coffee, but I [dropped] it on my new white shoes.",
+            "In the afternoon, I finally [met] my friends at the museum, but it was closed! We [went] to a pizza place instead. The pizza was delicious, so the day wasn't a total disaster."
+          ],
+          "extra": ["buyed", "wake"]
+        },
+        {
+          "id": "A2-coffee-story",
+          "theme": "The Story of Coffee",
+          "kind": "facts",
+          "description": "An old legend from Ethiopia about dancing goats, red berries and the first cup of coffee.",
+          "text": [
+            "Coffee is one of the most popular drinks in the world. People [drink] about two billion cups every day! But how did it all [begin]?",
+            "There is an old story from Ethiopia. About 1,200 years ago, a goat farmer called Kaldi [noticed] something strange. After his goats [ate] red berries from a small tree, they were full of [energy] and danced all night!",
+            "Kaldi took some berries to a monk. The monk [threw] them into the fire because he thought they were dangerous. But soon, a wonderful [smell] came from the fire. The monks put the roasted beans in hot water and made the first cup of coffee. It helped them stay [awake] during their long prayers at night.",
+            "Nobody knows if this story is [true], but we know that coffee [arrived] in Europe in the 1600s."
+          ],
+          "extra": ["asleep", "drove"]
+        },
+        {
+          "id": "A2-doctor",
+          "theme": "At the Doctor's",
+          "kind": "everyday",
+          "description": "Explaining how you feel to a doctor: a sore throat, a temperature, tablets and rest.",
+          "text": [
+            "Doctor: Good morning. What's the [problem]?",
+            "Carla: I feel terrible. My [head] hurts and I have a sore throat.",
+            "Doctor: When did it start?",
+            "Carla: Two days [ago]. I also feel very [tired].",
+            "Doctor: Do you have a [temperature]?",
+            "Carla: Yes, it was 38 degrees this morning.",
+            "Doctor: Let me look at your throat. Open your [mouth], please. OK, it's a bit red. I think it's a [cold], not the flu.",
+            "Carla: Do I need any [medicine]?",
+            "Doctor: Take these tablets three [times] a day, after meals. And [drink] lots of water. Stay at home and rest for two or three days."
+          ],
+          "extra": ["weeks", "yesterday"]
+        },
+        {
+          "id": "A2-new-phone",
+          "theme": "Which Phone Should I Buy?",
+          "kind": "grammar",
+          "focus": "Comparatives and superlatives",
+          "rule": "Short adjectives add -er and -est (cheap → cheaper → the cheapest, heavy → heavier → the heaviest). Long adjectives use more and the most (more expensive, the most expensive). Some are irregular: good → better → the best, bad → worse → the worst. Use than after a comparative.",
+          "description": "Grammar focus: comparatives and superlatives. Comparing the price, camera and battery of three phones.",
+          "text": [
+            "I need a new phone, and I can't decide between three models. The Nova X is the [cheapest]: it costs only $150. The Pixo 5 is [more] expensive, at $300, and the Zen Pro is the [most] expensive of the three.",
+            "The Zen Pro has the [best] camera, and its photos are much [better] than the photos from the Nova X. But it is also the [heaviest] phone, and I want something light for running.",
+            "The Pixo 5 is [smaller] than the Zen Pro, so it fits in my pocket. Its battery lasts [longer] too: almost two days! The Nova X has the [worst] battery of the three, and it is slower [than] the other two."
+          ],
+          "extra": ["gooder", "expensiver"]
+        },
+        {
+          "id": "A2-eiffel-tower",
+          "theme": "The Eiffel Tower",
+          "kind": "facts",
+          "description": "Surprising facts about the Eiffel Tower: people hated it, it grows in summer and it needs 60 tonnes of paint.",
+          "text": [
+            "The Eiffel Tower is the most famous [building] in Paris. It was built for a big international fair in 1889, and at that time it was the tallest structure in the [world].",
+            "Many Parisians [hated] the tower at first, and some artists said it was ugly. The city planned to [remove] it after twenty years, but the tower became too [useful]: scientists used it to send radio signals.",
+            "Here are some surprising facts. The tower is made of [iron], and in summer it grows about fifteen centimetres because the metal [expands] in the heat. It is [painted] every seven years, and the job needs sixty tonnes of paint!",
+            "If you don't want to take the lift, you can [climb] the 674 steps to the second floor. Every year, about seven million [visitors] go up the tower."
+          ],
+          "extra": ["loved", "wood"]
+        },
+        {
+          "id": "A2-weekend-plans",
+          "theme": "Plans for Saturday",
+          "kind": "everyday",
+          "description": "Text messages between two friends making plans to go to a street food festival.",
+          "text": [
+            "Tom: Hi Lucy! Are you [free] this Saturday?",
+            "Lucy: Yes, I think so. Why?",
+            "Tom: There's a street food [festival] in the park. Do you want to go?",
+            "Lucy: Sounds great! What [time] does it start?",
+            "Tom: At eleven. We can [meet] at the park gate at half past eleven.",
+            "Lucy: How much are the [tickets]?",
+            "Tom: Nothing! It costs nothing to get in.",
+            "Lucy: Should I [bring] anything?",
+            "Tom: Maybe a hat. The weather [forecast] says it's going to be sunny and hot.",
+            "Lucy: Good idea. Can my cousin [come] too? She's staying with me this week.",
+            "Tom: Of course! The more, the [merrier].",
+            "Lucy: Perfect. See you on Saturday. Don't be [late]!"
+          ],
+          "extra": ["rain", "never"]
+        },
+        {
+          "id": "A2-beach-call",
+          "theme": "A Video Call from the Beach",
+          "kind": "grammar",
+          "focus": "Present continuous",
+          "rule": "Use am, is or are + verb-ing for actions happening now: I'm reading, they are playing. Some verbs change their spelling: sit → sitting, swim → swimming, lie → lying, make → making. The negative is am not, isn't or aren't + verb-ing.",
+          "description": "Grammar focus: the present continuous. A boy describes to his grandmother what his family is doing on the beach.",
+          "text": [
+            "Hi Grandma! Can you see me? I'm [sitting|lying] on the beach in Florianópolis. The sun is [shining] and it's really hot.",
+            "Look, that's Dad over there. He [is] swimming in the sea. Mum isn't swimming. She's [lying|sitting] under the umbrella and [reading] a book.",
+            "My little brothers [are] building a sandcastle. Well, actually, they [aren't] building it now. They're [fighting] about the bucket!",
+            "And what [are] you doing, Grandma? Oh, you're [making] a chocolate cake? Lucky you! Save me a piece!"
+          ],
+          "extra": ["swiming", "lieing"]
+        },
+        {
+          "id": "A2-dolphins",
+          "theme": "How Dolphins Sleep",
+          "kind": "facts",
+          "description": "Intelligent sea animals that sleep with half of the brain, have their own names and find fish with sound.",
+          "text": [
+            "Dolphins are some of the most intelligent animals on Earth. They live in [groups] called pods, and they [help] each other when a member is sick or hurt.",
+            "Dolphins can't breathe under water, so they swim to the [surface] to get air. They breathe through a hole on the top of their [head].",
+            "But how do dolphins [sleep]? They never fall completely asleep. Half of the brain rests while the other half stays [awake], so the dolphin can keep breathing and watch for danger.",
+            "Dolphins [talk] to each other with clicks and whistles. Scientists believe that every dolphin has its own special whistle, like a [name]. They also use sounds to [find] fish in dark water: the sound comes back to them like an [echo]."
+          ],
+          "extra": ["asleep", "tail"]
+        }
+      ]
+    },
+    "B1": {
+      "name": "Intermediate",
+      "description": "Texts of about 200 words with 15 gaps. The word bank has 3 extra words, and you can reveal up to 2 words.",
+      "gaps": 15,
+      "extra": 3,
+      "hints": 2,
+      "puzzles": [
+        {
+          "id": "B1-yawning",
+          "theme": "Why Do We Yawn?",
+          "kind": "facts",
+          "description": "What science knows about yawning: a cooler brain, contagious yawns and dogs that yawn with their owners.",
+          "text": [
+            "Everybody yawns. We yawn when we are tired, when we are [bored], and sometimes for no clear reason at all. Even babies yawn before they are [born]. But why do we do it? Scientists still don't have a [complete] answer.",
+            "For a long time, people [believed] that we yawn because our bodies need more oxygen. However, experiments have [shown] that this is probably not true: breathing extra oxygen doesn't make people yawn [less].",
+            "A more recent theory says that yawning [cools] down the brain. When we yawn, we take in a large amount of air, which may lower the [temperature] of the blood going to our head. This could help us stay [alert].",
+            "One of the strangest things about yawning is that it is [contagious]. If you see someone yawn, you will probably yawn too. It can even [happen] when you read about yawning, so don't be [surprised] if you are yawning right now! Some studies suggest that we [catch] yawns more easily from people we are close to, like friends and [family]. Dogs can even catch yawns from their [owners]."
+          ],
+          "extra": ["more", "warms", "strangers"]
+        },
+        {
+          "id": "B1-landlord-email",
+          "theme": "Problems with the Flat",
+          "kind": "everyday",
+          "description": "An email to a landlord about a leaking tap, a cold radiator and mould in the bathroom.",
+          "text": [
+            "Hi Mr Collins,",
+            "I'm writing to let you know about a few problems in the flat. First of all, the kitchen tap is [leaking]. It has been dripping for about a week, and the noise keeps me [awake] at night.",
+            "Secondly, the heating isn't [working] properly. The radiator in the bedroom stays cold even when I turn it up to the [maximum]. It's getting colder every day, so I'd be grateful if you could [fix] it before winter.",
+            "There's also a problem in the bathroom. There are dark spots of [mould] on the ceiling above the shower. I always open the [window] after a shower, but it doesn't seem to help. I've [attached] some photos of all three problems.",
+            "Could you please send someone to have a [look]? I work from home on Mondays and Wednesdays, so those days would be the most [convenient] for me. If nobody is at home, my [neighbour] in flat 3B has a spare [key].",
+            "By the way, the rent for October has already been [paid]. Please let me know if you haven't [received] it.",
+            "Thanks in [advance],",
+            "Julia"
+          ],
+          "extra": ["asleep", "repairing", "forward"]
+        },
+        {
+          "id": "B1-travel-blogger",
+          "theme": "A Life on the Road",
+          "kind": "grammar",
+          "focus": "Present perfect and past simple",
+          "rule": "Use the present perfect (have / has + past participle) for life experiences and for situations that continue up to now, often with ever, never, already, yet, for and since: I've visited forty countries. Use the past simple for finished actions at a specific time in the past, often with ago, last or in + year: I left my job in 2019.",
+          "description": "Grammar focus: the present perfect and the past simple. A travel blogger tells the story of his six years on the road.",
+          "text": [
+            "Hi, I'm Marco, and I [have] been a travel blogger for six years. Before that, I [worked] in a bank in Milan. I [left] my job in 2019 because I wanted to see the world, and I have never [regretted] that decision.",
+            "Since then, I've [visited] more than forty countries. I've [slept] in a tent in the Sahara, I've [eaten] insects in Thailand, and I've [seen] the northern lights in Norway. Last year, I [spent] three months in Peru, where I [learned] to speak some Spanish.",
+            "People often ask me which country is my favourite. I [haven't] found an answer yet! But the best moment of all my trips [happened] in Japan, two years [ago], when a family I had just met invited me to their home for dinner.",
+            "Have you ever [been] to a place that changed your life? I've already [written] two books about my travels, and I'm working on the third one now."
+          ],
+          "extra": ["went", "wrote", "since"]
+        },
+        {
+          "id": "B1-flamingos",
+          "theme": "Why Flamingos Are Pink",
+          "kind": "facts",
+          "description": "Flamingos are born grey: how their diet makes them pink, and why they stand on one leg.",
+          "text": [
+            "Flamingos are famous for their bright pink feathers, but they are not [born] pink. Baby flamingos are grey or white, and they only [turn] pink after two or three years.",
+            "The secret is in their [diet]. Flamingos eat small shrimp and algae that [contain] natural pigments called carotenoids. These are the same substances that give carrots their orange [colour]. As the flamingo digests its food, the pigments are stored in its skin and feathers.",
+            "The more carotenoids a flamingo eats, the brighter it becomes. In zoos, flamingos sometimes start to lose their colour, so zookeepers add special [supplements] to their food. A bright pink flamingo is usually [healthy] and well fed, which makes it more [attractive] to a partner.",
+            "Flamingos have other [unusual] habits too. They often stand on one [leg] for hours. Scientists think this helps them save [energy] and keep warm, because less of their body is in the cold water. They also eat with their heads [upside] down, using their beaks to [filter] food from the mud. And when they look for a partner, large groups [perform] a kind of dance, marching together in the same [direction]."
+          ],
+          "extra": ["wing", "weak", "backwards"]
+        },
+        {
+          "id": "B1-job-interview",
+          "theme": "Getting Ready for a Job Interview",
+          "kind": "everyday",
+          "description": "Practical tips for a job interview: research, common questions, what to wear and what to do afterwards.",
+          "text": [
+            "Got a job interview next week? Don't panic. With good preparation, you can [impress] the interviewer and feel much more [confident]. Here are some tips.",
+            "Before the interview, [research] the company. Look at its website and social media, and try to understand what it does and who its [customers] are. Then read the job [advertisement] again and think of examples from your past experience that show you have the right [skills].",
+            "Practise [answering] common questions, such as “Why do you want this job?” or “What are your strengths and [weaknesses]?” It's a good idea to practise with a friend.",
+            "On the day, choose clothes that are [appropriate] for the company, and plan your journey so you [arrive] ten minutes early. Don't [forget] to switch off your phone. During the interview, make eye [contact], listen carefully and don't [interrupt]. It's fine to take a moment to think before you answer.",
+            "At the end, the interviewer will probably ask if you have any questions. Always have one or two [ready]: it shows you are really interested. Finally, send a short email the next day to [thank] them for their time."
+          ],
+          "extra": ["nervous", "answer", "weakness"]
+        },
+        {
+          "id": "B1-ouro-preto",
+          "theme": "Welcome to My Hometown",
+          "kind": "grammar",
+          "focus": "Relative pronouns (who, which, whose, where, when)",
+          "rule": "Relative pronouns add information about a noun. Use who for people, which for things, whose for possession (a hero whose statue…), where for places and when for times. In defining clauses, that can replace who or which, but never after a comma.",
+          "description": "Grammar focus: relative pronouns. A tour of Ouro Preto, a historic gold-mining town in Minas Gerais.",
+          "text": [
+            "Ouro Preto, [where] I grew up, is a small historic town in Minas Gerais. It was founded in the 17th century by explorers [who|that] were looking for gold, and it became one of the richest cities in the Americas.",
+            "The town is full of churches [which|that] were decorated with gold. The most famous one is São Francisco de Assis, [which] was designed by Aleijadinho, an artist [whose] real name was Antônio Francisco Lisboa. He was a sculptor [who|that] continued working even when a serious illness made it hard for him to use his hands.",
+            "My favourite place is Tiradentes Square, named after a national hero [whose] statue stands in the middle. It's the place [where] university students meet in the evenings. I also love Carnival, [when] the streets are full of music and people [who|that] come from all over the country.",
+            "If you visit, stay at Pousada Ouro Velho, a small hotel [whose] owner, Dona Rosa, makes the best cheese bread in town. Her husband, [who] is a local guide, can take you to the old gold mines, [where] you can walk through tunnels [which|that] are more than 300 years old. The best time to go is between April and September, [when] it rarely rains."
+          ],
+          "extra": ["what", "whom", "why"]
+        },
+        {
+          "id": "B1-happy-accidents",
+          "theme": "Happy Accidents",
+          "kind": "facts",
+          "description": "Inventions that nobody planned: the microwave oven, the Post-it Note and penicillin.",
+          "text": [
+            "Some of the most useful inventions in history were not planned at all. They were the result of lucky [accidents] and people who were curious enough to notice them.",
+            "In 1945, an engineer called Percy Spencer was [testing] a radar machine when he noticed that the chocolate bar in his pocket had [melted]. He then put some popcorn kernels near the machine, and they started to [pop]. This discovery led to the first microwave [oven].",
+            "Another famous accident happened in 1968. Spencer Silver, a scientist at the company 3M, was trying to create a very strong glue. Instead, he made a weak one that could stick to surfaces and be [removed] easily without leaving a mark. For years, nobody could think of a [use] for it. Then his colleague Art Fry, who sang in a church choir, got [annoyed] because his paper bookmarks kept [falling] out of his songbook. He used Silver's glue to make bookmarks that stayed in [place], and the Post-it Note was born.",
+            "Even penicillin, one of the most important [medicines] ever, was discovered by chance. In 1928, Alexander Fleming [forgot] to clean some dishes of bacteria before he went on [holiday]. When he came back, he noticed that mould was growing on one of them, and the bacteria around it had [died]. His [mistake] has saved millions of lives."
+          ],
+          "extra": ["froze", "remembered", "cheaper"]
+        },
+        {
+          "id": "B1-refund",
+          "theme": "Taking Something Back",
+          "kind": "everyday",
+          "description": "At a shop: returning faulty headphones, asking for a refund and choosing a better pair.",
+          "text": [
+            "Assistant: Good afternoon. How can I help you?",
+            "Pedro: Hi. I [bought] these headphones here last week, but there's a problem with them. The left side doesn't [work].",
+            "Assistant: Oh, I'm sorry to hear that. Do you have the [receipt]?",
+            "Pedro: Yes, here it is.",
+            "Assistant: Thank you. Let me have a look. Hmm, you're right, there's no sound on the left. Would you like to [exchange] them for a new pair, or would you prefer a [refund]?",
+            "Pedro: I'd like my money back, please. I've read some bad [reviews] of this model online.",
+            "Assistant: No problem. Did you pay in [cash] or by card?",
+            "Pedro: By card.",
+            "Assistant: OK, the money will go back to your account. It usually [takes] three to five working days. Could you [sign] here, please?",
+            "Pedro: Sure. And while I'm here, can you [recommend] a better pair? I use them mainly for [running].",
+            "Assistant: These ones are very popular with runners. They're [waterproof], so they're fine in the rain, and the battery [lasts] up to twelve hours. They're a bit more expensive, but they come with a two-year [guarantee].",
+            "Pedro: Great. Can I [try] them on?",
+            "Assistant: Of course."
+          ],
+          "extra": ["broken", "cheap", "borrow"]
+        },
+        {
+          "id": "B1-london-tips",
+          "theme": "Your First Week in London",
+          "kind": "grammar",
+          "focus": "First conditional",
+          "rule": "Use the first conditional for real possibilities in the future: if + present simple, will / won't + base verb. If you buy an Oyster card, you will pay less. Unless means if not. The if-clause can come first or second; use a comma when it comes first.",
+          "description": "Grammar focus: the first conditional. Practical advice about transport, weather, food and making friends in London.",
+          "text": [
+            "Moving to London? Here's some advice for your first week.",
+            "If you [buy] an Oyster card, you [will] pay much less for the Tube and the bus than with paper tickets. And you'll save even more if you [travel] after 9:30 in the morning.",
+            "London weather changes quickly. If you [don't] carry an umbrella, you'll probably [get] wet at least once a day!",
+            "Food can be expensive. You'll [save] a lot of money if you [cook] at home instead of eating out. Many supermarkets reduce their prices in the evening, so if you [go] shopping after 8 p.m., you'll [find] some good bargains.",
+            "Remember that cars drive on the left. You [won't] have any accidents if you [look] right before you cross the road.",
+            "Finally, talk to people! Londoners may seem busy, but most of them [will] help you if you [ask] for directions. If you [join] a club or a language exchange, you'll meet new people quickly. And [unless] you make an effort, it will be difficult to make friends."
+          ],
+          "extra": ["would", "cooked", "buys"]
+        },
+        {
+          "id": "B1-amazon",
+          "theme": "The Amazon Rainforest",
+          "kind": "facts",
+          "description": "The largest rainforest on Earth: its variety of life, a river without bridges, and the dangers it faces.",
+          "text": [
+            "The Amazon is the largest tropical rainforest on the planet. It [covers] about 5.5 million square kilometres and spreads across nine countries, although about 60 per cent of it is in [Brazil].",
+            "The forest is home to an incredible [variety] of life. Scientists have [identified] around 40,000 plant species there, and they [discover] new species almost every year. It is also home to hundreds of Indigenous [communities].",
+            "The Amazon River carries more water than any other river in the world. In some places during the rainy [season], it is more than 40 kilometres [wide]! There isn't a single [bridge] across it.",
+            "The rainforest is sometimes called “the lungs of the planet” because its trees [absorb] huge amounts of carbon dioxide. It also creates [rain]: water from its trees forms clouds that bring rain to farms in other parts of South America.",
+            "Unfortunately, the Amazon is in [danger]. Every year, large areas are cut down to [create] space for cattle farms. Many scientists [warn] that if deforestation continues, parts of the forest could turn into dry grassland. It is essential to [protect] it, not only for Brazil but for the whole planet."
+          ],
+          "extra": ["release", "narrow", "destroy"]
+        }
+      ]
+    },
+    "B2": {
+      "name": "Upper Intermediate",
+      "description": "Texts of about 240 words with 15 gaps. The word bank has 3 extra words, and you can reveal up to 2 words.",
+      "gaps": 15,
+      "extra": 3,
+      "hints": 2,
+      "puzzles": [
+        {
+          "id": "B2-placebo",
+          "theme": "The Placebo Effect",
+          "kind": "facts",
+          "description": "How sugar pills can reduce real pain, why expensive placebos work better and what the nocebo effect is.",
+          "text": [
+            "Imagine taking a pill for a headache and feeling better twenty minutes later, even though the pill [contained] nothing but sugar. This is the placebo effect, and it is one of the most [fascinating] puzzles in medicine.",
+            "A placebo is a treatment with no active [ingredients]. Yet in clinical trials, a significant number of patients who receive one [report] real improvements, especially for pain, nausea and anxiety. For this reason, new drugs must [prove] that they work better than a placebo before they can be approved.",
+            "Researchers believe that our [expectations] play a key role. When we expect to feel better, the brain can release natural painkillers such as endorphins. The [context] matters too: a friendly doctor, an official-looking prescription or even the colour of the pill can [influence] the result. In some studies, expensive placebos worked better than [cheap] ones.",
+            "Perhaps the most [surprising] finding is that placebos can work even when patients [know] they are taking one. In a 2010 study, people with a painful bowel condition were openly told that their pills were fake, yet many still felt [significantly] better.",
+            "There is also a dark side. The nocebo effect is the [opposite]: when patients expect negative side effects, they are more likely to [experience] them. Doctors therefore have to think carefully about how they [describe] a treatment's risks."
+          ],
+          "extra": ["avoid", "ignore", "hardly"]
+        },
+        {
+          "id": "B2-cancelled-flight",
+          "theme": "A Cancelled Flight",
+          "kind": "everyday",
+          "description": "A formal complaint email to an airline about a last-minute cancellation, hotel costs and compensation.",
+          "text": [
+            "Dear Customer Service Team,",
+            "I am writing to [complain] about the way my family and I were treated when our flight from Lisbon to São Paulo was cancelled on 3 March.",
+            "We had already [checked] in and passed through security when the cancellation was [announced], only forty minutes before departure. No reason was given, and there were no staff at the gate to answer [questions]. We had to wait in a queue for almost three hours before we could speak to anyone. The whole experience was completely [unacceptable].",
+            "We were eventually [booked] on a flight the following evening. However, we were not offered any [accommodation], so we had to pay €240 for a hotel near the airport, as well as €85 for meals. I have [attached] copies of the receipts. As a result of the [delay], I also missed an important business meeting, and my children missed two days of school.",
+            "According to EU regulations, passengers are [entitled] to compensation of €600 each when a long-haul flight is cancelled at short [notice]. I would therefore like to [request] this compensation for the four members of my family, together with a [refund] of our hotel and meal expenses.",
+            "I look forward to your [reply] within the next fourteen days. If I do not hear from you, I will have no [choice] but to take this matter further.",
+            "Yours faithfully,",
+            "Renata Alves"
+          ],
+          "extra": ["apologise", "allowed", "delighted"]
+        },
+        {
+          "id": "B2-bean-to-bar",
+          "theme": "From Bean to Bar",
+          "kind": "grammar",
+          "focus": "The passive voice",
+          "rule": "Use the passive (be + past participle) when the action matters more than who does it: the beans are dried. Change be for each tense: is made, was brought, has been eaten, is being made. Use by to say who does the action, only when it matters: by Spanish explorers.",
+          "description": "Grammar focus: the passive voice. How chocolate is made, from the cacao tree to the factory, and how it arrived in Europe.",
+          "text": [
+            "Chocolate is [enjoyed] by millions of people every day, but few of us know how it is made. The journey from bean to bar is long and surprisingly complex.",
+            "It all starts with the cacao tree, which is [grown|produced] in hot, humid countries near the equator. Today, most of the world's cacao is [produced|grown] in West Africa, especially in Côte d'Ivoire and Ghana. The fruits, known as pods, are [cut|removed] from the trees by hand, because the trees are too delicate for machines.",
+            "Inside each pod, there are about forty beans, which are [covered] in a sweet white pulp. The beans and pulp are left to ferment for several days, and then they are [dried] in the sun. After that, the beans are packed into sacks and [shipped] to factories all over the world.",
+            "At the factory, the beans are [roasted] to bring out their flavour, and their shells are [removed|cut]. What remains is [ground] into a thick paste called cocoa liquor. Sugar, milk and cocoa butter are then [added], depending on the type of chocolate that is [being] made.",
+            "Chocolate has [been] eaten in Europe since the sixteenth century, when it was [brought] from Mexico by Spanish explorers. At first, however, it was only [drunk] as a bitter, spicy drink."
+          ],
+          "extra": ["grinded", "drank", "be"]
+        },
+        {
+          "id": "B2-tardigrades",
+          "theme": "Tardigrades: Almost Indestructible",
+          "kind": "facts",
+          "description": "Tiny water bears that survive freezing, radiation and the vacuum of space, and a spacecraft that crashed on the Moon.",
+          "text": [
+            "They are smaller than a grain of sand, they look like tiny bears with eight legs, and they are almost [impossible] to kill. Meet the tardigrades, also known as water bears.",
+            "Tardigrades live almost everywhere on Earth: in moss, in the deep ocean, in the [ice] of Antarctica and probably in your garden. They are barely [visible] to the naked eye, so most people have never seen one.",
+            "What makes them so extraordinary is their ability to [survive] conditions that would kill almost any other animal. When their environment becomes too dry, they can lose nearly all the water in their bodies. In this state, their [metabolism] almost stops, and they can [remain] like this for years, or even decades. When water returns, they simply [wake] up and carry on as if nothing had happened.",
+            "In laboratory experiments, tardigrades in this state have [withstood] temperatures close to absolute zero, levels of radiation hundreds of times higher than a [lethal] dose for humans, and even the vacuum of space. One species produces a special protein that [protects] its DNA from damage.",
+            "Scientists are now [studying] these tiny creatures to find new ways to [preserve] vaccines without refrigeration. Some even believe tardigrades could help us understand how life might survive on other [planets]. In 2019, a spacecraft carrying thousands of dried-out tardigrades [crashed] on the Moon. Whether any of them are still alive there is a [mystery]."
+          ],
+          "extra": ["harmless", "destroys", "invisible"]
+        },
+        {
+          "id": "B2-new-colleague",
+          "theme": "Hello from Your New Colleague",
+          "kind": "everyday",
+          "description": "An email introducing yourself to a new team at work: past experience, new role and a few personal details.",
+          "text": [
+            "Hi everyone,",
+            "My name is Daniela Santos, and I'm [delighted] to be joining the marketing team as a content manager this Monday. Since I'll be working [closely] with many of you, I thought I'd send a quick email to introduce myself.",
+            "For the past five years, I've been working at a travel start-up in Recife, where I was [responsible] for the company's blog and social media. Before that, I spent two years as a freelance writer, which taught me to meet tight [deadlines] and adapt to very different clients.",
+            "In this new [role], I'll be focusing on our newsletter and on [improving] the content on our website. I'm really looking forward to [learning] from you, so please don't hesitate to share your ideas, or to tell me if there's anything I should be [aware] of.",
+            "On a more personal [note], I've [recently] moved to São Paulo with my partner and our very lazy cat. I love hiking, I'm a terrible but enthusiastic guitar player, and I'm always happy to [recommend] a good book.",
+            "I'll be in the office on Mondays, Tuesdays and Thursdays, and working [remotely] for the rest of the week. If you'd like to grab a coffee and [chat], just let me know. I can't [wait] to meet you all in person.",
+            "Best [regards],",
+            "Daniela"
+          ],
+          "extra": ["responsibility", "sincerely", "learn"]
+        },
+        {
+          "id": "B2-missed-train",
+          "theme": "The Train I Missed",
+          "kind": "grammar",
+          "focus": "Second and third conditionals",
+          "rule": "Use the second conditional for imaginary situations in the present or future: if + past simple, would + base verb (If I were single, I would work at weekends). Use the third conditional for imaginary situations in the past: if + past perfect, would have + past participle (If I had caught the train, I wouldn't have met her). Mixed conditionals join a past condition to a present result: if I hadn't met her, I wouldn't be here.",
+          "description": "Grammar focus: second and third conditionals. How missing a train by thirty seconds changed a man's whole life.",
+          "text": [
+            "Ten years ago, I missed a train by thirty seconds. At the time, I was furious. If I [had] left home five minutes earlier, I would [have] caught it, and I would have [arrived] at my job interview on time.",
+            "Instead, I waited for the next train, and a woman sat down next to me. Her name was Clara. If the train [hadn't] been so crowded, she [wouldn't] have sat next to me, and we would never have [started] talking. We chatted for the whole journey, and by the time we reached the city, we had exchanged phone numbers.",
+            "I didn't get that job, of course. But if I [had] got it, I would have moved to another city, and I probably [would] never have seen Clara again. Today, she is my wife, and we have two wonderful children.",
+            "I often think about how different my life would [be] now if I had caught that train. If I [were] still single, I would probably [spend] my weekends working. And if Clara hadn't encouraged me to start my own business, I wouldn't [be] my own boss today.",
+            "So, what [would] you [do] if you could go back in time and change one small decision? Personally, I wouldn't change a thing. If I [could] give my younger self one piece of advice, it would be this: don't worry so much about missing trains."
+          ],
+          "extra": ["will", "has", "did"]
+        },
+        {
+          "id": "B2-voynich",
+          "theme": "The Book Nobody Can Read",
+          "kind": "facts",
+          "description": "The Voynich Manuscript: a 600-year-old book written in an unknown alphabet that no codebreaker has ever deciphered.",
+          "text": [
+            "In 1912, a Polish-American book dealer named Wilfrid Voynich [purchased] a collection of old books from a Jesuit college near Rome. Among them was a small, strange manuscript that has [puzzled] experts ever since.",
+            "The Voynich Manuscript has around 240 pages, and almost every one is [illustrated] with drawings of unknown plants, star charts and small figures bathing in green liquid. But the most [baffling] thing about the book is its text. It is written in an alphabet that does not [match] any known language, and nobody has ever managed to read a single sentence.",
+            "Carbon dating has [revealed] that the parchment was made in the early fifteenth century, so the manuscript is not a modern [forgery]. Its author, however, remains a complete mystery.",
+            "Over the past century, some of the world's best [codebreakers], including experts who cracked secret codes in both world wars, have tried and [failed] to decode it. Countless theories have been [proposed]. Some believe it is written in a lost language, others think it is an elaborate code, and some suggest it is simply an [ingenious] hoax, designed to look meaningful so that it could be sold to a wealthy collector.",
+            "Interestingly, statistical analyses show that the text [follows] patterns similar to those found in real languages, which makes the hoax theory harder to [defend]. Every few years, someone [claims] to have solved the mystery, but so far none of these solutions has convinced the experts. Today, the manuscript is kept at Yale University, and a digital version is [available] online, so anyone can try their luck."
+          ],
+          "extra": ["succeeded", "denies", "forbidden"]
+        },
+        {
+          "id": "B2-missing-order",
+          "theme": "Where Is My Order?",
+          "kind": "everyday",
+          "description": "A customer service chat about a parcel that never arrived: tracking, redelivery, a voucher and a refund.",
+          "text": [
+            "Agent: Hi, you're chatting with Lucas from ShopFast. How can I help you today?",
+            "Beatriz: Hi Lucas. I ordered a coffee machine two weeks ago, and it still hasn't [arrived]. The website said it would be [delivered] within five working days.",
+            "Agent: I'm sorry to hear that. Could you give me your order [number], please?",
+            "Beatriz: Sure, it's 58213.",
+            "Agent: Thank you. Let me [check]… OK, I can see that your parcel left our warehouse on 2 May, but according to the [tracking] information, the courier tried to deliver it on 6 May and nobody was at home.",
+            "Beatriz: That's strange. I work from home, and nobody [rang] the doorbell. I didn't receive a note either.",
+            "Agent: I [apologise] for the inconvenience. It looks like the parcel was taken back to the courier's local [depot]. I can arrange for it to be delivered again, or you can [collect] it yourself.",
+            "Beatriz: I'd rather have it delivered. Can you [guarantee] it will arrive this time?",
+            "Agent: I'll mark it as urgent, and it should arrive by Friday. As a [gesture] of goodwill, I've also added a R$50 voucher to your account.",
+            "Beatriz: That's kind of you, thanks. But if it doesn't arrive by Friday, I'd like to [cancel] the order and get my money back.",
+            "Agent: That's completely [understandable]. In that case, just reply to the confirmation email, and we'll [process] a full refund straight away. Is there anything [else] I can help you with?",
+            "Beatriz: No, that's all. Thanks for your help."
+          ],
+          "extra": ["knocked", "gift", "understanding"]
+        },
+        {
+          "id": "B2-worst-interview",
+          "theme": "My Worst Job Interview",
+          "kind": "grammar",
+          "focus": "Reported speech",
+          "rule": "When you report what someone said, the verb usually moves one tense back: “I am late” → he said (that) he was late; “We will call you” → they said they would call me; “I have always admired…” → I said I had always admired… For yes/no questions, use if or whether; for other questions, use the question word. Reported questions have normal word order: he asked me why I had applied.",
+          "description": "Grammar focus: reported speech. A candidate retells, word for word, a job interview that went terribly wrong.",
+          "text": [
+            "Last month, I had a job interview that I will never forget. When I arrived, the receptionist told me that the manager [was] running late and asked me [whether|if] I wanted a coffee or some water. I said I [would] love a coffee.",
+            "Twenty minutes later, a tall man came in. He apologised and said that he [had] been stuck in traffic. Then he asked me [why] I had applied for the job. I explained that I [had] always admired the company's products and that I [wanted] a new challenge.",
+            "Everything was going well until he asked me what my greatest weakness [was]. I told him that I sometimes [worked] too hard. He smiled and said that everybody [said] that. Then he asked me if I [could] give him a real example.",
+            "I panicked. I told him that I [didn't] like getting up early, and that I had [been] late for work three times that week.",
+            "There was a long silence. Finally, he said that they [would] contact me the following week, and he added that he [appreciated] my honesty. I never heard from them again."
+          ],
+          "extra": ["will", "has", "does"]
+        },
+        {
+          "id": "B2-time-flies",
+          "theme": "Why Time Flies as We Get Older",
+          "kind": "facts",
+          "description": "Why years seem shorter with age: simple maths, new experiences, routines and how the brain processes images.",
+          "text": [
+            "When you were a child, the summer holidays seemed to [last] forever. Now, whole years seem to disappear in the blink of an eye. Almost everyone [notices] this change as they get older, and psychologists have several [explanations] for it.",
+            "One theory is based on simple maths. For a five-year-old, one year is 20 per cent of their whole life. For a fifty-year-old, it is only 2 per cent. As each year becomes a smaller [proportion] of our total experience, it may feel shorter.",
+            "Another explanation has to do with [novelty]. Children are constantly having new experiences: their first day at school, their first trip to the beach, their first bike. The brain records new experiences in rich [detail], so when we look back on those periods, they seem long. Adults, on the other hand, tend to follow [routines]. When one week is very [similar] to the next, the brain stores fewer memories, and in [retrospect] the time seems to have passed quickly.",
+            "There may also be a [physical] cause. According to one researcher, the speed at which our brains [process] visual images slows down with age. As a result, we perceive fewer “frames” per second, which could make time feel as if it is [speeding] up.",
+            "The good news is that we can [slow] time down, at least in our memories. Travelling, learning new skills and meeting new people all [create] fresh memories. So if you want next year to feel longer, try to fill it with things you have never done [before]."
+          ],
+          "extra": ["different", "speed", "erase"]
+        }
+      ]
+    },
+    "C1": {
+      "name": "Advanced",
+      "description": "Texts of about 280 words with 20 gaps and precise, less common vocabulary. The word bank has 4 extra words, and you can reveal only 1 word.",
+      "gaps": 20,
+      "extra": 4,
+      "hints": 1,
+      "puzzles": [
+        {
+          "id": "C1-wood-wide-web",
+          "theme": "The Wood Wide Web",
+          "kind": "facts",
+          "description": "How trees may share carbon and warnings through underground fungal networks, and why some scientists are not convinced.",
+          "text": [
+            "For centuries, forests were seen as collections of individual trees [competing] for sunlight, water and nutrients. Over the past three decades, however, research has [transformed] that picture. Beneath our feet lies a vast underground network that may allow trees to [communicate] and even to share resources.",
+            "The network is made up of fungi. Their thread-like filaments, known as mycelium, [wrap] around tree roots and extend through the soil for kilometres. The relationship is mutually [beneficial]: the fungi help trees absorb water and minerals, and in [exchange] they receive sugars that the trees produce through photosynthesis.",
+            "What has [captured] the public imagination is the idea that trees use these connections to help one another. The Canadian ecologist Suzanne Simard found evidence that large, old “mother trees” [transfer] carbon to seedlings growing in deep shade, where there is too little light for them to [thrive] on their own. Some studies also suggest that when a tree is [attacked] by insects, chemical signals travelling through the network may prompt neighbouring trees to [strengthen] their defences.",
+            "Not all scientists are [convinced]. Critics argue that some of the most [striking] claims are based on a small number of field studies and have been [exaggerated] in popular books and documentaries. Much of the carbon that moves between trees, they point out, may simply be [consumed] by the fungi themselves rather than [delivered] to another plant.",
+            "Nevertheless, even sceptics [acknowledge] that fungal networks play a crucial role in forest health. The debate has practical [implications]: if trees really do depend on one another, then clear-cutting old forests and replanting neat [rows] of young trees may not be enough to restore healthy [ecosystems]."
+          ],
+          "extra": ["harmful", "deny", "understated", "weaken"]
+        },
+        {
+          "id": "C1-pay-rise",
+          "theme": "How to Ask for a Pay Rise",
+          "kind": "everyday",
+          "description": "Practical advice for salary negotiations: research, timing, showing your value and dealing with objections.",
+          "text": [
+            "Asking for a pay rise is one of those conversations that most people [dread]. Yet those who prepare properly are far more likely to walk away [satisfied]. Here is how to make a strong case.",
+            "Start by doing your [homework]. Find out what people in similar roles [earn], both inside your company and across the industry. Salary surveys, recruitment websites and conversations with trusted contacts can give you a realistic [benchmark]. Walking in with concrete figures shows that your request is [grounded] in reality rather than wishful thinking.",
+            "Timing is also [crucial]. The ideal moment is shortly after you have [delivered] a successful project, or a few months before the annual budget is set. Avoid raising the subject when your manager is clearly under [pressure] or the company has just announced disappointing results.",
+            "When the meeting comes, focus on the value you bring rather than your personal [circumstances]. Your rent may have gone up, but that is not your employer's [concern]. Instead, highlight specific achievements: clients you have [retained], processes you have made more efficient, or responsibilities you have [taken] on beyond your job description. Wherever possible, [quantify] your contribution.",
+            "Be ready for [objections]. If your manager says there is no budget, ask what you would need to achieve to be [considered] for a rise in six months, and request that this be put in [writing]. If money really is off the table, you might [negotiate] other benefits, such as extra holiday, flexible hours or funding for a course.",
+            "Finally, stay calm and professional, whatever the [outcome]. Even if the answer is no this time, you will have made your [ambitions] clear, and that is rarely a wasted conversation."
+          ],
+          "extra": ["enjoy", "irrelevant", "lost", "guessing"]
+        },
+        {
+          "id": "C1-wedding-storm",
+          "theme": "The Night the Lights Went Out",
+          "kind": "grammar",
+          "focus": "Inversion after negative and limiting adverbials",
+          "rule": "After a negative or limiting expression at the start of a sentence, the auxiliary comes before the subject, as in a question: Never have I seen…, Not only was it…, Hardly had we arrived when…, No sooner had it started than…, Only then did we realise…, Little did we know…, Under no circumstances should you… If there is no auxiliary, use do, does or did. So + adjective and such + be also invert: So breathtaking was the view that…",
+          "description": "Grammar focus: inversion for emphasis. A storm and a power cut turn a mountain wedding into a night nobody will forget.",
+          "text": [
+            "Never [have] I attended a wedding quite like my cousin Marta's. The ceremony was held in an old farmhouse in the mountains, and not only [was] the setting spectacular, but the weather was perfect as well. So [breathtaking] was the view that several guests forgot to eat. Little [did] we know what the evening had in store.",
+            "No [sooner] had the couple cut the cake [than] the sky turned an ominous shade of purple. Hardly [had] the band started their first song [when] a violent storm broke out. Such [was] the force of the wind that the windows shook, and within minutes the whole farmhouse was plunged into darkness.",
+            "Only [then] did we [realise] that nobody had brought a torch. Not [until] one of the waiters found a box of candles in the kitchen [did] anyone manage to see anything at all. Under no [circumstances], the owner warned us, [should] we go outside while the storm was raging.",
+            "Rarely [has] a party been rescued so creatively. Not only did the band keep playing on acoustic instruments, [but] the guests also started singing along by candlelight. Nor [did] the power cut spoil the food, which had already been served. At no [point] did the bride stop smiling, and seldom [have] I seen so many people so happy in the dark."
+          ],
+          "extra": ["do", "that", "is", "will"]
+        },
+        {
+          "id": "C1-seed-vault",
+          "theme": "The Doomsday Vault",
+          "kind": "facts",
+          "description": "The Svalbard Global Seed Vault: a million seeds kept inside an Arctic mountain, and its first withdrawal during the Syrian war.",
+          "text": [
+            "Deep inside a mountain on a remote Norwegian island, just 1,300 kilometres from the North Pole, lies one of the most [unusual] storage facilities in the world. The Svalbard Global Seed Vault, [nicknamed] the “Doomsday Vault”, holds more than a million seed samples from almost every country on Earth.",
+            "The vault opened in 2008 as a kind of insurance policy for global agriculture. Crop diversity is [essential] for food security: different varieties of the same plant may [resist] different diseases, tolerate drought or adapt to a changing climate. Yet thousands of traditional varieties have already [vanished], and many national seed banks are [vulnerable] to war, natural disasters or simple lack of funding.",
+            "The location was chosen with great care. The island's [permafrost] keeps the rock naturally cold, so even if the power [failed], the seeds would remain frozen for decades. The vault sits 130 metres above sea level, high enough to stay dry even if the polar ice caps were to [melt] completely, and the area is geologically [stable].",
+            "The facility works rather like a safety deposit box at a bank. Countries and institutions [deposit] seeds free of charge, and they [retain] ownership of them: only the depositor can ask for the samples to be returned.",
+            "For years, many assumed the vault would never be used. That changed in 2015, when researchers whose main gene bank in Aleppo had been [damaged] by the Syrian civil war requested seeds to [rebuild] their collection in Morocco and Lebanon. It was the first [withdrawal] in the vault's history. Having successfully [regenerated] the samples, the scientists later sent fresh seeds back to Svalbard.",
+            "Ironically, the vault has not been entirely [immune] to climate change itself. In 2016, unusually warm temperatures caused meltwater to [leak] into the entrance tunnel. None of the seeds were [affected], but the incident prompted a major [upgrade] of the building."
+          ],
+          "extra": ["freeze", "lose", "exposed", "flourished"]
+        },
+        {
+          "id": "C1-moving-abroad",
+          "theme": "Moving Abroad: The Paperwork",
+          "kind": "everyday",
+          "description": "A blog post about the admin nobody warns you about when you move to another country: documents, housing, registration and money.",
+          "text": [
+            "When I moved from Porto Alegre to Dublin three years ago, I had prepared for the weather, the accent and the [homesickness]. What I hadn't prepared for was the paperwork. If you are planning a similar move, here are a few things I wish someone had told me.",
+            "First, [sort] out your documents before you leave. Get certified [translations] of your birth certificate, diplomas and any professional qualifications, and make several copies. Trying to replace them from abroad is a [nightmare] that can take months.",
+            "Second, don't [underestimate] how long it takes to find accommodation. In many European cities, demand far [exceeds] supply, and landlords often ask for [references], proof of income and a deposit of up to two months' rent. Without a local bank account or a credit [history], you may be at a [disadvantage], so it's worth staying in a short-term rental for the first few weeks while you search.",
+            "Third, [register] with the local authorities as soon as you can. In Ireland, for example, I needed a Personal Public Service Number before I could start work or [access] public health services, and the waiting time for an appointment was almost a month. It pays to look into the [requirements] for your destination well in [advance].",
+            "Fourth, think about your finances. Transferring money [internationally] through a traditional bank can be surprisingly expensive once you factor in [fees] and poor exchange rates, so compare alternatives. Also check whether you will still have tax [obligations] in your home country.",
+            "Finally, be patient with yourself. There will be days when a missing form or an unhelpful [official] makes you [question] the whole move. Keep a folder with every document, [stay] organised, and remember that the paperwork phase does eventually end. In my case, it was more than [worth] it."
+          ],
+          "extra": ["overestimate", "advantage", "discounts", "worthless"]
+        },
+        {
+          "id": "C1-missing-laptop",
+          "theme": "The Case of the Missing Laptop",
+          "kind": "grammar",
+          "focus": "Modal verbs of deduction in the past",
+          "rule": "To make deductions about the past, use modal + have + past participle. Must have means you are almost sure something happened; can't have or couldn't have means you are almost sure it didn't; may have, might have and could have mean it is possible. For an action in progress, use modal + have been + -ing: he must have been working.",
+          "description": "Grammar focus: must have, can't have, might have. Two colleagues try to work out who took a laptop from the office.",
+          "text": [
+            "When Paula arrived at the office on Monday morning, her laptop had disappeared. She was sure she had left it on her desk on Friday evening. The office had been locked all weekend, so whoever took it [must] have [had] a key.",
+            "Her first suspect was the cleaner, but the cleaning company confirmed that nobody had worked on Saturday or Sunday, so the cleaner [can't|couldn't] have [taken] it. “Someone from IT [might|may|could] have [collected] it to install updates,” suggested her colleague Joe. But the IT department said nobody had touched it. “Then they [can't|couldn't] have been involved,” Paula said.",
+            "Then Paula noticed that the window next to her desk was slightly open. “Someone [could|might|may] have [climbed] in,” said Joe. “We're on the fourth floor,” Paula replied. “Nobody could [have] got in that way. The wind [must] have [blown] it open.”",
+            "Next, they checked the security records. The only person who had entered the building over the weekend was Mr Davies, the finance director. “He [must] have [been] working on the annual report,” said Joe. “But he [couldn't|can't] have [needed] your laptop. He's got his own.”",
+            "Just then, Paula's phone rang. It was her husband, calling to say that her laptop was in the car. Paula went red. She [must] have been [thinking] about her dentist's appointment on Friday and [forgotten] to take it out. “Well,” said Joe, laughing, “Mr Davies [may|might|could] have been the only person in the building, but he certainly didn't take your laptop.”"
+          ],
+          "extra": ["should", "forgot", "blew", "climb"]
+        },
+        {
+          "id": "C1-tulip-mania",
+          "theme": "Tulip Mania",
+          "kind": "facts",
+          "description": "When a single tulip bulb cost more than a house: the Dutch tulip bubble of 1637 and the myths around it.",
+          "text": [
+            "In the winter of 1636, a single tulip bulb in the Dutch Republic could [fetch] more than ten times the annual income of a skilled craftsman. A few months later, the same bulb was almost [worthless]. The episode, known as tulip mania, is often described as the first speculative [bubble] in history.",
+            "Tulips had arrived in Europe from the Ottoman Empire in the sixteenth century, and they quickly became a [status] symbol among wealthy Dutch merchants. The most [prized] varieties had dramatic streaked petals. Ironically, we now know that these beautiful patterns were [caused] by a virus, which also made the bulbs weaker and slower to [reproduce], keeping them rare.",
+            "As prices rose, sometimes [doubling] in a matter of weeks, people from all walks of life began to [speculate]. Weavers, bakers and farmers bought and sold contracts for bulbs that were still in the ground, hoping to [profit] from further price rises. Much of this trading took place in taverns, and very few buyers [intended] to plant the flowers themselves.",
+            "Then, in February 1637, the market suddenly [collapsed]. At a routine auction in Haarlem, buyers failed to [show] up, and panic spread rapidly. Within days, prices had [plummeted], and many traders found themselves holding contracts they could not [afford] to honour.",
+            "For centuries, tulip mania was presented as a cautionary [tale] about human greed. Recent historians, however, have [questioned] the popular version of the story. They argue that most of the [dramatic] anecdotes came from moralising pamphlets published after the crash, and that relatively few people were actually [ruined]. Still, the image of a nation driven to financial chaos by flowers has proved remarkably [enduring]."
+          ],
+          "extra": ["priceless", "soared", "confirmed", "short-lived"]
+        },
+        {
+          "id": "C1-restaurant-review",
+          "theme": "A Restaurant Review",
+          "kind": "everyday",
+          "description": "A detailed review of a busy new restaurant: great atmosphere and desserts, uneven main courses and chaotic service.",
+          "text": [
+            "Casa Azul opened last spring to considerable [hype], and on a Friday night it was easy to see why. The dining room, with its exposed brick walls and dim lighting, has a warm, [inviting] atmosphere, and every table was taken. We had booked three weeks in [advance].",
+            "The menu [focuses] on modern Brazilian cooking with Portuguese influences. To start, we shared the grilled octopus, which was [tender] and beautifully charred, and a heart of palm salad that was fresh but slightly [bland]; it could have done with more seasoning.",
+            "The main courses were more [uneven]. My partner's slow-cooked pork belly was outstanding, with crackling so crisp it [shattered] under the knife. My seafood moqueca, on the other hand, was [disappointing]. The coconut broth was rich, but the prawns were [overcooked] and rubbery, and at R$145, the portion felt rather [stingy].",
+            "Service was friendly but [chaotic]. Our waiter forgot our drinks order twice and brought us someone else's dessert, although he did [apologise] and took it off the bill. Given how busy it was, the restaurant seemed clearly [understaffed].",
+            "The desserts, fortunately, were a [highlight]. The passion fruit mousse struck a perfect [balance] between sweet and sharp, and the custard tart was among the best I have had outside Lisbon.",
+            "Overall, Casa Azul has a lot of [potential], and some of its dishes are genuinely [memorable]. However, at these prices, diners are [entitled] to expect more consistency. It's worth a visit for the atmosphere and the desserts, but I'd [recommend] going on a quieter weeknight."
+          ],
+          "extra": ["generous", "undercooked", "flawless", "disaster"]
+        },
+        {
+          "id": "C1-renovation",
+          "theme": "I Wish We'd Never Started",
+          "kind": "grammar",
+          "focus": "Wish, if only, would rather and it's time",
+          "rule": "For present situations you would like to change, use wish / if only + past simple (I wish we lived closer). For past regrets, use wish / if only + past perfect (I wish we hadn't started). To complain about someone's behaviour, use wish + would (I wish he would answer his phone). After would rather + another subject and after it's (high / about) time, use the past simple with a present or future meaning: I'd rather we moved, it's time we found someone else.",
+          "description": "Grammar focus: wishes and regrets. A kitchen renovation that was supposed to take six weeks has lasted eight months.",
+          "text": [
+            "Eight months ago, my husband and I decided to renovate our kitchen. “It'll take six weeks,” the builder promised. I wish I [had] asked for that in writing.",
+            "We still don't have a working sink. I wish I [could] tell you that things are improving, but they aren't. If only we [lived] closer to my parents, we could at least cook at their house! Every morning, I wash the dishes in the bathroom and think: if only we [had] listened to my mother, who told us to hire someone she knew.",
+            "The builder, Mr Ramos, is a charming man, but I wish he [would] answer his phone. He turns up at random, works for two hours and then disappears for days. My husband says it's high time we [found] another builder, but he'd rather we [didn't] pay a deposit twice. Personally, I'd rather Mr Ramos [told] us the truth about the delays.",
+            "The children aren't happy either. My son wishes he [didn't] have to share a room with his sister, and my daughter wishes her brother [would] stop snoring. If only the house [were] bigger!",
+            "Looking back, I wish we [hadn't] been so ambitious. We could [have] simply painted the cupboards. Instead, we knocked down a wall, and now I wish we [knew] whether the ceiling is going to stay up. I'd rather we [moved] to a hotel until the work is finished, but we can't [afford] it.",
+            "Would I do it again? Absolutely not. If only someone [had] warned us! I wish I [were|was] the kind of person who could laugh about it. Still, it's about time I [stopped] complaining. I just wish the dust [would] settle, literally and figuratively."
+          ],
+          "extra": ["will", "wouldn't", "know", "can"]
+        },
+        {
+          "id": "C1-mpemba-effect",
+          "theme": "Can Hot Water Freeze Faster?",
+          "kind": "facts",
+          "description": "The Mpemba effect: a Tanzanian schoolboy, a pot of ice cream and a scientific puzzle that is still unsolved.",
+          "text": [
+            "In 1963, a Tanzanian schoolboy named Erasto Mpemba noticed something that seemed to [defy] common sense. While making ice cream in a cookery class, he put his hot milk mixture straight into the freezer instead of waiting for it to cool, and it froze [faster] than his classmates' cold mixtures.",
+            "His teacher [dismissed] the observation, and his classmates laughed at him. But Mpemba refused to let the matter [drop]. A few years later, when a physics professor visited his school, Mpemba asked him to [explain] why hot water sometimes freezes before cold water. The professor was [sceptical], but he tested the claim in his laboratory and, to his surprise, [replicated] the result. They published a paper together in 1969, and the phenomenon has [borne] Mpemba's name ever since.",
+            "Mpemba was not the first to notice it. Aristotle [described] a similar effect more than two thousand years ago. Yet scientists still cannot agree on whether the effect is [genuine], let alone on what [causes] it.",
+            "Several explanations have been [proposed]. Hot water [evaporates] more quickly, which reduces the amount of liquid left to freeze. It also contains less dissolved gas, and it may create currents that [speed] up heat loss. Another theory suggests that cold water is more likely to become “supercooled”, remaining liquid well [below] zero degrees.",
+            "The problem is that the effect is notoriously difficult to [reproduce] reliably. Small [variations] in the shape of the container, the type of freezer or the way temperature is measured can completely change the [outcome]. A 2016 study concluded that there was no convincing [evidence] for the effect at all, while other researchers insist they have [observed] it. More than sixty years after that cookery class, the debate is far from settled."
+          ],
+          "extra": ["slower", "praised", "confident", "above"]
+        }
+      ]
+    },
+    "C2": {
+      "name": "Proficient",
+      "description": "Long texts of about 320 words with 20 gaps, idiomatic language and advanced structures. The word bank has 4 extra words, and you can reveal only 1 word.",
+      "gaps": 20,
+      "extra": 4,
+      "hints": 1,
+      "puzzles": [
+        {
+          "id": "C2-coastline-paradox",
+          "theme": "The Coastline Paradox",
+          "kind": "facts",
+          "description": "Why a coastline gets longer the more carefully you measure it, and what fractals have to do with it.",
+          "text": [
+            "How long is the coastline of Great Britain? The question sounds [straightforward], yet it has no single correct answer. In fact, the more [meticulously] you measure it, the longer it seems to become.",
+            "The problem was famously [articulated] by the mathematician Benoit Mandelbrot in 1967, building on earlier work by the British scientist Lewis Fry Richardson. Richardson had noticed that [estimates] of the length of the same border varied wildly: Portugal, for instance, claimed that its border with Spain was considerably longer than the Spanish figure [suggested].",
+            "The explanation lies in the ruler. Measure the coast with a ruler 200 kilometres long, and you will [skip] over countless bays, inlets and headlands, arriving at a relatively modest figure. Shrink the ruler to 50 kilometres, and it begins to [trace] features that the longer one ignored, so the total grows. Reduce it to a metre, and every rock and [crevice] adds to the length. In principle, the figure [increases] without limit as the unit of measurement shrinks.",
+            "Coastlines, Mandelbrot argued, are [fractal]: they display similar patterns of [irregularity] at every scale, so zooming in never reveals a smooth line. Rather than asking how long a coast is, he suggested, we should describe how [rugged] it is.",
+            "Far from being a mere mathematical [curiosity], the paradox has practical [ramifications]. Official figures for a country's coastline can [diverge] dramatically depending on the map scale used, which matters when governments [allocate] funding for coastal defence or calculate the extent of their territorial waters. Published estimates for the coastline of the United States, for example, [differ] by more than a factor of three.",
+            "The paradox is a humbling [reminder] that even seemingly simple quantities are shaped by the choices we make when measuring them, and that precision, taken to its [extreme], can lead us not to certainty but to [infinity]."
+          ],
+          "extra": ["carelessly", "converge", "decreases", "trivial"]
+        },
+        {
+          "id": "C2-declining-offer",
+          "theme": "Declining a Job Offer",
+          "kind": "everyday",
+          "description": "A formal and gracious email turning down a job offer while keeping the door open for the future.",
+          "text": [
+            "Dear Ms Whitfield,",
+            "Thank you very much for offering me the position of Senior Data Analyst at Northbridge Consulting, and for the time you and your colleagues [devoted] to the interview process. I was genuinely [impressed] by the team's expertise and by the openness with which you discussed the challenges ahead.",
+            "After a great deal of [deliberation], however, I have decided to [decline] the offer. This was by no means an easy decision. Shortly after our final interview, I received a [counteroffer] from my current employer that includes the opportunity to lead a new research unit, and I feel that this role is more closely [aligned] with my long-term goals.",
+            "I appreciate that this may cause some [inconvenience], particularly as you had hoped to fill the post before the end of the quarter, and I [apologise] for not being able to give you my answer sooner. I wanted to be certain that I was making the right choice rather than [rushing] into a commitment I might later regret.",
+            "I would also like to [reiterate] how much I enjoyed meeting the team. Our conversation about predictive modelling in healthcare was particularly [stimulating], and I left with a number of ideas I am still [mulling] over. Should an opportunity arise in the future that [matches] my experience, I would very much welcome the chance to be [considered].",
+            "In the meantime, I would be [delighted] to stay in touch, and if it would be of any [assistance], I would be happy to [recommend] a former colleague whose profile seems well [suited] to the position.",
+            "Thank you once again for your [generous] offer and for your understanding. I wish you and the team every [success] in the coming year.",
+            "Yours sincerely,",
+            "Tomás Ribeiro"
+          ],
+          "extra": ["accept", "hesitating", "unimpressed", "tedious"]
+        },
+        {
+          "id": "C2-admissions-letter",
+          "theme": "A Letter from Admissions",
+          "kind": "grammar",
+          "focus": "Formal structures: the subjunctive and inverted conditionals",
+          "rule": "In formal English, verbs such as require, recommend, suggest and ask, and adjectives such as essential, vital or imperative, can be followed by that + the base form for every subject: it is essential that every student attend; the negative is not + base form (that attendance not fall). Conditionals can drop if and invert instead: should you need help (= if you need), were a student to fail (= if a student were to fail), had they applied (= if they had applied), were it not for (= without).",
+          "description": "Grammar focus: the subjunctive and inverted conditionals. A formal letter from a university confirming a place and setting out its conditions.",
+          "text": [
+            "Dear Ms Oliveira,",
+            "We are delighted to confirm your place on the MSc in Environmental Policy, beginning on 22 September. Please read the following conditions carefully.",
+            "The University requires that all overseas students [be] registered with the International Office before the start of term. It is therefore essential that you [complete] the online enrolment form by 1 September and that your passport [be] presented in person during induction week. Please contact our admissions team [should] you experience any difficulty with the form.",
+            "Your offer remains conditional on the receipt of your final degree transcript. It is vital that the transcript [come] directly from your previous university, and we would be unable to confirm your enrolment [were] this document not to arrive by 15 August.",
+            "We strongly recommend that you [arrange] accommodation well in advance, and we would also suggest that you [open] a UK bank account as soon as you arrive. Many students last year would have been spared considerable stress [had] they [applied] for university housing before July.",
+            "Scholarship holders should note that the terms of the award stipulate that the recipient [maintain] an average grade of at least 60 per cent. It is equally imperative that attendance [not] fall below 80 per cent. Payments may be suspended [were] a student to fall below either threshold, although the committee will always consider [mitigating] circumstances. Were it not [for] the generosity of our alumni, many of these scholarships would not exist.",
+            "Finally, we ask that you [inform] us immediately [should] you decide not to take up your place, so that it can be offered to another [applicant]. Do not hesitate to get in touch [should] you require any further [information].",
+            "Yours sincerely,",
+            "Dr Helen Graham, Director of Admissions"
+          ],
+          "extra": ["completes", "has", "being", "would"]
+        },
+        {
+          "id": "C2-history-overlaps",
+          "theme": "History's Strange Overlaps",
+          "kind": "facts",
+          "description": "Cleopatra, mammoths and the fax machine: surprising overlaps that show how badly we picture historical time.",
+          "text": [
+            "History is usually taught as a neat [sequence] of separate eras, which makes it easy to lose any intuitive [sense] of how events actually relate to one another in time. Consider a few examples that tend to [confound] our assumptions.",
+            "Cleopatra, the last active ruler of Ptolemaic Egypt, lived closer in time to the Moon landing than to the construction of the Great Pyramid of Giza. By the time she was born, the pyramid was already around 2,500 years old and was itself an ancient [monument], marvelled at by Greek and Roman tourists.",
+            "Similarly, the woolly mammoth did not [vanish] as early as many people imagine. While most populations died out around 10,000 years ago, a small group [survived] on Wrangel Island, off the coast of Siberia, until roughly 4,000 years ago, several centuries after the Great Pyramid had been [completed].",
+            "Closer to the present, Oxford University was already teaching students more than two centuries before the Aztec city of Tenochtitlán was [founded]. And the fax machine, which most of us [associate] with offices in the 1980s, was first [patented] in 1843, the same year that large wagon trains set out along the Oregon Trail, and decades before the telephone was [invented].",
+            "Such [juxtapositions] are more than party trivia. They [expose] the way our mental timeline tends to [compress] the distant past into a single, blurry “long ago”, while [stretching] out the recent past in considerable detail. They also remind us that history does not [unfold] at the same pace everywhere: technologies, institutions and ways of life that seem [incompatible] often coexisted for centuries.",
+            "Perhaps the most [sobering] lesson is how short recorded history really is. If the entire history of the Earth were [condensed] into a single day, the whole of human civilisation would [occupy] less than the final second before midnight."
+          ],
+          "extra": ["expand", "compatible", "demolished", "prolonged"]
+        },
+        {
+          "id": "C2-small-talk",
+          "theme": "The Art of Small Talk",
+          "kind": "everyday",
+          "description": "How to handle networking events: breaking the ice, listening well, ending a conversation and managing expectations.",
+          "text": [
+            "For many professionals, walking into a room full of strangers at a networking event is [daunting]. The drinks are lukewarm, the name badges are [illegible], and everyone else seems to know exactly what to say. Yet small talk is a skill like any other, and, with a little [practice], it can be [honed].",
+            "The first step is to [abandon] the idea that you need to impress. Most people are far more [preoccupied] with how they themselves come across than with judging you. Approaching someone who is standing alone is usually the easiest way to [break] the ice; they are likely to be [relieved] that somebody has made the first move.",
+            "Open with a remark about your shared [surroundings] rather than a question about someone's job title. A comment on the venue or the talk you have both just heard is less [intrusive] and gives the other person an easy way in. From there, open-ended questions tend to [yield] more interesting conversations than those that can be answered with a simple yes or no.",
+            "Listening is at least as important as talking. Resist the [temptation] to plan your next contribution while the other person is still speaking, and pick up on [details] they mention in passing: these are often the key to a more memorable exchange. By the same token, don't [monopolise] the conversation with a detailed account of your own career.",
+            "Knowing how to end a conversation is equally [valuable]. There is nothing [rude] about saying that you have enjoyed talking and would like to meet a few more people before the evening is over. If the exchange has been fruitful, suggest a concrete way to [follow] up, such as sending an article you discussed.",
+            "Finally, keep your [expectations] realistic. Not every conversation will lead to a job offer or a new client, and that is perfectly fine. The real [payoff] of networking often comes months later, when a casual acquaintance [remembers] you at exactly the right moment."
+          ],
+          "extra": ["embrace", "offended", "melt", "forgets"]
+        },
+        {
+          "id": "C2-first-marathon",
+          "theme": "What Nobody Tells You About Marathons",
+          "kind": "grammar",
+          "focus": "Cleft sentences and emphasis",
+          "rule": "Cleft sentences split one idea into two parts to put the focus on the most important information: What surprised me was…, It was my sister who convinced me…, It wasn't the long runs that exhausted me…, All I could think about was…, The reason why…, The place where… You can also stress a verb with do, does or did + base form: I did finish.",
+          "description": "Grammar focus: cleft sentences and emphatic do. A first-time runner describes the surprises of training for and running a marathon.",
+          "text": [
+            "Last April, I ran my first marathon. People had warned me about the pain and the early mornings, but there were several things [that] nobody mentioned, and what [surprised] me most [was] how emotional the whole experience would be.",
+            "It was actually my sister [who] convinced me to sign up. She had run the Rio de Janeiro Marathon two years earlier, and the thing [that] impressed me [wasn't] her finishing time but the way she talked about the crowd.",
+            "The training was tough, I [do] admit. What I hadn't expected, though, [was] that the hardest part would be mental rather than physical. It wasn't the long runs [that] exhausted me; [it] was the constant negotiation with myself at five o'clock in the morning.",
+            "On race day, the reason [why] I kept going after the thirtieth kilometre was simple: all I [could] think about [was] the finish line. The place [where] I nearly gave up was a long, empty stretch of road with nobody cheering.",
+            "What [kept] me moving [was] a complete stranger. An elderly man at the side of the road shouted my name, which was printed on my race number, and it was [then] that I realised how much encouragement from others matters.",
+            "I [did] finish, in four hours and thirty-seven minutes. Where I celebrated afterwards [was] a small café near the finish line, and what I [ordered] was the biggest plate of pasta I have ever eaten."
+          ],
+          "extra": ["whose", "what", "does", "whom"]
+        },
+        {
+          "id": "C2-emu-war",
+          "theme": "The Great Emu War",
+          "kind": "facts",
+          "description": "In 1932, the Australian army sent machine guns against 20,000 emus. The emus won.",
+          "text": [
+            "In late 1932, the Australian government went to war against an unlikely [adversary]: the emu. The conflict, which has since become the stuff of internet legend, ended in what many observers [regarded] as a humiliating defeat for the soldiers.",
+            "The trouble began after the First World War, when thousands of former soldiers were given land in Western Australia to farm wheat. Their situation was already [precarious]: the Great Depression had sent wheat prices [plummeting], and promised government subsidies had failed to [materialise]. Then, after the breeding season, some 20,000 emus [descended] on the region, trampling crops and tearing holes in the fences that kept out rabbits.",
+            "The farmers [appealed] to the Minister of Defence, who agreed to send a small military [detachment] armed with two Lewis machine guns and 10,000 rounds of ammunition. The operation, led by Major G. P. W. Meredith, was expected to be [swift].",
+            "It proved anything but. The emus, it turned out, were remarkably adept at [evading] gunfire. At the first sign of danger, the flocks would [scatter] in all directions, making them almost impossible to target. On one occasion, the soldiers laid an [ambush] near a dam, but the gun jammed after only a dozen birds had been killed. Mounting a machine gun on a truck fared no better, as the vehicle could not keep [pace] with the birds over rough ground.",
+            "Meredith later [remarked] that if he had a military division with the bullet-carrying capacity of these birds, it would face any army in the world. After a month of [sporadic] fighting, and amid growing [ridicule] in the press, the soldiers were [withdrawn]. The government [subsequently] turned to a bounty system, which proved considerably more effective.",
+            "Whether the episode truly counts as a defeat is open to debate, but it has [endured] as a wry reminder that nature does not always [yield] to brute force."
+          ],
+          "extra": ["ally", "soaring", "praise", "abundant"]
+        },
+        {
+          "id": "C2-book-club",
+          "theme": "Book Club Night",
+          "kind": "everyday",
+          "description": "Friends at a book club debate a slow start, a twist ending and an unreliable narrator, full of idiomatic English.",
+          "text": [
+            "Laura: So, what did everyone make of it? I have to [confess], I couldn't put it down.",
+            "Miguel: Really? I found it hard [going], to be honest. The first hundred pages were so slow that I nearly [gave] up.",
+            "Laura: I know what you mean, but the slow start [rewards] your patience. By the time you get to the flood, you're completely [invested] in the characters.",
+            "Aisha: I'm with Laura on this one. But what struck me most was the ending. I didn't see that twist [coming] at all.",
+            "Miguel: Didn't you? I thought it was [telegraphed] from the very first chapter. The moment the brother mentioned the letter, I had a [hunch] it would come back.",
+            "Aisha: Well, you've always had a knack for spotting plot twists. Some of us just go with the [flow].",
+            "Laura: Can I play devil's [advocate] for a moment? Some reviewers said the narrator was completely [unreliable], and that nothing she tells us about her mother should be taken at face [value].",
+            "Miguel: I'd go even further. I think the author deliberately [muddies] the waters so that we never quite know whose version to believe.",
+            "Aisha: That's a fair [point], but isn't that a bit of a [cop-out]? At some stage, you have to give readers something solid to hold on to.",
+            "Laura: Maybe. Either way, it certainly got us talking. Shall we [move] on to next month's book?",
+            "Miguel: Please tell me it's shorter. I'm not sure I can [face] another five hundred pages.",
+            "Aisha: It's a collection of short stories, so you're [off] the hook.",
+            "Miguel: Thank goodness. Right, whose turn is it to [host]?",
+            "Laura: Yours, I'm [afraid]. And you promised to bake."
+          ],
+          "extra": ["lawyer", "stream", "worth", "clears"]
+        },
+        {
+          "id": "C2-loch-ness",
+          "theme": "The Loch Ness Monster",
+          "kind": "grammar",
+          "focus": "Reporting structures in the passive",
+          "rule": "To report beliefs and claims without saying who holds them, use it + passive reporting verb + that (it was revealed that…) or subject + passive reporting verb + to-infinitive (Nessie is said to be…). For earlier events, use the perfect infinitive to have + past participle (believed to have died out), and to have been + past participle in the passive (supposed to have been taken). For actions in progress, use to be + -ing (rumoured to be waiting).",
+          "description": "Grammar focus: passive reporting structures (is said to be, is believed to have…). Legends, hoaxes and DNA tests at Loch Ness.",
+          "text": [
+            "Loch Ness, in the Scottish Highlands, is said [to] be home to one of the world's most famous monsters. The creature, affectionately known as Nessie, is thought to [be] a large, long-necked animal resembling a plesiosaur, a marine reptile generally believed to [have] died out 66 million years ago.",
+            "Sightings are claimed to [go] back as far as the sixth century, when Saint Columba is reported to have [driven] a “water beast” back into the River Ness. The modern legend, however, is usually considered to have [begun] in 1933, when a new road along the northern shore gave motorists a clear view of the water.",
+            "The most famous image of Nessie, the so-called Surgeon's Photograph of 1934, was long supposed to have [been] taken by a respected London doctor. In 1994, however, [it] was revealed [that] the picture was a hoax: the “monster” was a toy submarine [fitted] with a head made of wood putty.",
+            "Despite this, the loch continues to attract thousands of hopeful visitors, and dozens of new sightings [are] reported every year. It has been [estimated] that Nessie-related tourism is worth around £40 million a year to the Scottish economy.",
+            "In 2018, a team of scientists analysed the DNA [left] behind in the water by the creatures living in the loch. No reptile DNA was found, but there were large quantities of eel DNA, and it has since been suggested that people may have [been] mistaking unusually large eels for a monster. Eels [are] not known to grow to the size described in many sightings, but the theory is considered far more [plausible] than the survival of a prehistoric reptile.",
+            "Whether Nessie exists or not, she is unlikely [to] disappear from the popular imagination. Somewhere in the loch, she is rumoured to be [waiting] for the next eager tourist with a camera, and she is believed to [have] been [seen] again only last summer."
+          ],
+          "extra": ["being", "drove", "began", "is"]
+        },
+        {
+          "id": "C2-english-spelling",
+          "theme": "Why English Spelling Is So Strange",
+          "kind": "facts",
+          "description": "Flemish printers, the Great Vowel Shift and Renaissance scholars: how English spelling became so irregular.",
+          "text": [
+            "Few aspects of English cause learners, and native speakers, as much [frustration] as its spelling. Why do “though”, “through”, “tough” and “cough” look so similar yet sound so different? The answer lies in a long and rather [haphazard] history.",
+            "Much of the [inconsistency] dates back to the fifteenth century. When William Caxton set up England's first printing press in 1476, spelling had not yet been [standardised], and many of his typesetters came from Flanders. Unfamiliar with English, they sometimes [imposed] Flemish conventions: the “h” in “ghost”, for instance, is widely [attributed] to their influence.",
+            "At roughly the same time, the language was undergoing a [dramatic] change in pronunciation known as the Great Vowel Shift. Over two or three centuries, the long vowels gradually [shifted] upwards in the mouth, so that “bite”, once pronounced rather like “beet”, acquired its modern sound. Unfortunately, printing had begun to [fix] spellings just as pronunciation was changing, leaving written English [stranded] somewhere in the past.",
+            "Later scholars made matters worse. During the Renaissance, some writers, eager to [display] their classical learning, inserted silent letters to [reflect] a word's Latin origin. The “b” in “debt” was added because of the Latin debitum, even though the word had [entered] English from French without it. In some cases, the scholars were simply [mistaken]: the “s” in “island” comes from a false association with the Latin insula, although the word is in fact of Germanic origin. English has also [borrowed] freely from other languages, often keeping the original spelling, as in “ballet”, “yacht” and “psychology”.",
+            "Numerous reformers, from Benjamin Franklin to George Bernard Shaw, have [campaigned] for a more phonetic system, but none has succeeded. Any reform would render centuries of printed text [obsolete], and, given the variety of accents across the English-speaking world, it is far from clear whose pronunciation a new system should [mirror]. Paradoxically, the very quirks that make English spelling so [maddening] also [preserve] a fascinating record of the language's past."
+          ],
+          "extra": ["systematic", "hide", "correct", "lent"]
+        }
+      ]
+    }
+  }
+}

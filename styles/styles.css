@@ -17,7 +17,9 @@ body {
   background: var(--white);
   line-height: 1.55;
   font-size: 16px;
+  /* clip (not hidden) keeps position: sticky working; hidden is the fallback for old browsers */
   overflow-x: hidden;
+  overflow-x: clip;
   -webkit-font-smoothing: antialiased;
 }
 img { max-width: 100%; display: block; }
