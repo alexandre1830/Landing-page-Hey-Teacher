@@ -2044,6 +2044,177 @@ body.pz-playing .ac-app {
   font-weight: 800;
 }
 
+/* ─── Record your answer + live transcription ─── */
+.sp-speak {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 16px;
+  margin-bottom: 14px;
+}
+
+.sp-rec {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 18px;
+  font-family: var(--font-sans);
+  font-size: .92rem;
+  font-weight: 700;
+  color: var(--navy);
+  background: var(--white);
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: color .2s ease, background .2s ease, border-color .2s ease, transform .15s ease;
+}
+
+.sp-rec:hover:not(:disabled) { color: var(--red); border-color: var(--red-35); background: var(--red-08); }
+.sp-rec:active:not(:disabled) { transform: scale(0.97); }
+.sp-rec:focus-visible { outline: none; box-shadow: 0 0 0 3px var(--red-35); }
+.sp-rec:disabled { opacity: .5; cursor: not-allowed; }
+
+.sp-rec-icon {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--red);
+}
+
+.sp-rec.is-recording {
+  color: var(--white);
+  background: var(--red);
+  border-color: var(--red);
+}
+
+.sp-rec.is-recording:hover { color: var(--white); background: var(--red-dark); border-color: var(--red-dark); }
+
+.sp-rec.is-recording .sp-rec-icon {
+  background: var(--white);
+  border-radius: 2px;
+  animation: spPulse 1.4s ease-in-out infinite;
+}
+
+@keyframes spPulse {
+  50% { opacity: .35; }
+}
+
+.sp-rec-time {
+  font-family: var(--font-mono, monospace);
+  font-size: .9rem;
+  font-weight: 700;
+  color: var(--red);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Toggle: transcribe while speaking */
+.sp-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-size: .88rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  cursor: pointer;
+  user-select: none;
+}
+
+.sp-switch input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.sp-switch-track {
+  position: relative;
+  width: 40px;
+  height: 22px;
+  flex-shrink: 0;
+  background: var(--line-strong);
+  border-radius: 999px;
+  transition: background .25s ease;
+}
+
+.sp-switch-dot {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 16px;
+  height: 16px;
+  background: var(--white);
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(var(--navy-rgb), .35);
+  transition: transform .25s var(--spring);
+}
+
+.sp-switch input:checked + .sp-switch-track { background: var(--pz-green); }
+.sp-switch input:checked + .sp-switch-track .sp-switch-dot { transform: translateX(18px); }
+.sp-switch input:focus-visible + .sp-switch-track { box-shadow: 0 0 0 3px var(--red-35); }
+
+.sp-switch input:disabled + .sp-switch-track { opacity: .45; }
+.sp-switch input:disabled ~ .sp-switch-text { opacity: .55; }
+
+.sp-speak-note {
+  flex-basis: 100%;
+  margin: -2px 0 0;
+  font-size: .84rem;
+  line-height: 1.5;
+  color: var(--mute);
+}
+
+.sp-speak-note.warn { color: var(--red); }
+
+.sp-speak-note.live {
+  font-weight: 600;
+  color: var(--pz-green-dark);
+}
+
+.sp-player {
+  flex-basis: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 12px;
+  padding: 12px 14px;
+  background: var(--off-white);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+
+.sp-player audio {
+  flex: 1;
+  min-width: 220px;
+  height: 38px;
+}
+
+.sp-player-btn {
+  padding: 7px 14px;
+  font-family: var(--font-sans);
+  font-size: .82rem;
+  font-weight: 700;
+  color: var(--navy);
+  background: var(--white);
+  border: 1px solid var(--line-strong);
+  border-radius: 9px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color .2s ease, background .2s ease, border-color .2s ease;
+}
+
+.sp-player-btn:hover { color: var(--red); background: var(--red-08); border-color: var(--red-35); }
+
+@media (max-width: 600px) {
+  .sp-speak { gap: 8px 12px; }
+  .sp-rec { padding: 8px 14px; font-size: .86rem; }
+  .sp-switch { font-size: .82rem; }
+
+  /* The player takes a whole row, with the buttons side by side below it */
+  .sp-player { padding: 10px; }
+  .sp-player audio { flex: 1 1 100%; width: 100%; min-width: 0; }
+  .sp-player-btn { flex: 1 1 40%; text-align: center; }
+}
+
 .spotlight-textarea {
   display: block;
   width: 100%;

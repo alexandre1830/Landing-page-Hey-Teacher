@@ -23,7 +23,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles/tokens.css">
 <link rel="stylesheet" href="/styles/styles.css">
-<link rel="stylesheet" href="/atividades/styles/atividades.css?v=20260917-4">
+<link rel="stylesheet" href="/atividades/styles/atividades.css?v=20260917-5">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
 </head>
 <body>
@@ -99,6 +99,30 @@
           <label for="spotlight-textarea" class="spotlight-notes-label">Notes</label>
           <span class="spotlight-saved" id="spotlight-saved" aria-live="polite">Saved</span>
         </div>
+
+        <!-- ─── Record your answer (and transcribe it live) ─── -->
+        <div class="sp-speak" id="sp-speak">
+          <button type="button" class="sp-rec" id="sp-rec" aria-pressed="false">
+            <span class="sp-rec-icon" aria-hidden="true"></span>
+            <span id="sp-rec-label">Record answer</span>
+          </button>
+          <span class="sp-rec-time" id="sp-rec-time" hidden>0:00</span>
+
+          <label class="sp-switch" for="sp-live">
+            <input type="checkbox" id="sp-live" checked>
+            <span class="sp-switch-track" aria-hidden="true"><span class="sp-switch-dot"></span></span>
+            <span class="sp-switch-text">Transcribe while I speak</span>
+          </label>
+
+          <p class="sp-speak-note" id="sp-speak-note" aria-live="polite"></p>
+
+          <div class="sp-player" id="sp-player" hidden>
+            <audio id="sp-audio" controls preload="metadata"></audio>
+            <a class="sp-player-btn" id="sp-download" download>Download</a>
+            <button type="button" class="sp-player-btn" id="sp-discard">Delete</button>
+          </div>
+        </div>
+
         <textarea
           id="spotlight-textarea"
           class="spotlight-textarea"
@@ -126,8 +150,8 @@
 
 <div data-include="footer"></div>
 
-<script src="/atividades/scripts/common.js?v=20260917-4"></script>
-<script src="/atividades/scripts/cards.js?v=20260917-4"></script>
+<script src="/atividades/scripts/common.js?v=20260917-5"></script>
+<script src="/atividades/scripts/cards.js?v=20260917-5"></script>
 <script src="/scripts/includes.js" defer></script>
 <script src="/scripts/main.js" defer></script>
 </body>

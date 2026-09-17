@@ -239,6 +239,255 @@ async function exportPDF(level, levelName, questions) {
    CARDS PAGE
 ══════════════════════════════════════════════════════════════ */
 
+/* ══════════════════════════════════════════════════════════════
+   SPEAKING — record the answer and, if the student wants,
+   transcribe it into the notes while they speak.
+   Recordings live in memory only (they can be downloaded);
+   the transcript is saved with the notes, as usual.
+══════════════════════════════════════════════════════════════ */
+
+const SpeechRecognitionClass = window.SpeechRecognition || window.webkitSpeechRecognition;
+const CAN_RECORD = !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia && window.MediaRecorder);
+const REC_LIMIT_MS = 5 * 60 * 1000;   // recordings stop by themselves after 5 minutes
+const LIVE_PREF_KEY = 'heyTeacher:liveTranscript';
+
+function recTime(ms) {
+  const total = Math.floor(ms / 1000);
+  return `${Math.floor(total / 60)}:${String(total % 60).padStart(2, '0')}`;
+}
+
+function setupSpeaking({ textarea, onTranscript }) {
+  const root = document.getElementById('sp-speak');
+  if (!root) return null;
+
+  const recBtn      = document.getElementById('sp-rec');
+  const recLabel    = document.getElementById('sp-rec-label');
+  const timeEl      = document.getElementById('sp-rec-time');
+  const liveBox     = document.getElementById('sp-live');
+  const noteEl      = document.getElementById('sp-speak-note');
+  const player      = document.getElementById('sp-player');
+  const audioEl     = document.getElementById('sp-audio');
+  const downloadEl  = document.getElementById('sp-download');
+  const discardBtn  = document.getElementById('sp-discard');
+
+  const takes = new Map();   // question id -> { url, name }
+  let currentId = null;
+  let recorder = null;
+  let stream = null;
+  let recognition = null;
+  let listening = false;
+  let startedAt = 0;
+  let tickTimer = null;
+  let limitTimer = null;
+  let base = '';        // notes text before the transcript started
+  let finalText = '';   // everything the recognizer has confirmed
+
+  try { liveBox.checked = localStorage.getItem(LIVE_PREF_KEY) !== '0'; } catch { /* no storage */ }
+  if (!SpeechRecognitionClass) {
+    liveBox.checked = false;
+    liveBox.disabled = true;
+  }
+  if (!CAN_RECORD) recBtn.disabled = true;
+
+  const isRecording = () => !!recorder && recorder.state === 'recording';
+
+  function say(text, tone = '') {
+    noteEl.textContent = text;
+    noteEl.className = `sp-speak-note${tone ? ` ${tone}` : ''}`;
+  }
+
+  function idleNote() {
+    if (!CAN_RECORD && !SpeechRecognitionClass) return say('This browser cannot record or transcribe. Try Chrome, Edge or Safari.', 'warn');
+    if (!CAN_RECORD) return say('This browser cannot record audio, so only the transcript will be saved.', 'warn');
+    if (!SpeechRecognitionClass) return say('Live transcription needs Chrome, Edge or Safari. You can still record.', 'warn');
+    say(liveBox.checked
+      ? 'Answer out loud in English: your words appear in the notes as you speak.'
+      : 'Your recording stays on this device until you close the page.');
+  }
+
+  function paint() {
+    const on = isRecording();
+    recBtn.classList.toggle('is-recording', on);
+    recBtn.setAttribute('aria-pressed', String(on));
+    recLabel.textContent = on ? 'Stop' : 'Record answer';
+    timeEl.hidden = !on;
+    liveBox.disabled = on || !SpeechRecognitionClass;
+  }
+
+  function tick() {
+    timeEl.textContent = recTime(Date.now() - startedAt);
+  }
+
+  /* ─── Transcription ────────────────────────────────────── */
+  function write(value) {
+    textarea.value = value;
+    textarea.scrollTop = textarea.scrollHeight;
+    onTranscript();
+  }
+
+  function startListening() {
+    base = textarea.value;
+    if (base && !/\s$/.test(base)) base += '\n';
+    finalText = '';
+
+    recognition = new SpeechRecognitionClass();
+    recognition.lang = 'en-US';
+    recognition.continuous = true;
+    recognition.interimResults = true;
+
+    recognition.addEventListener('result', (e) => {
+      let interim = '';
+      for (let i = e.resultIndex; i < e.results.length; i++) {
+        const result = e.results[i];
+        if (result.isFinal) finalText += `${result[0].transcript.trim()} `;
+        else interim += result[0].transcript;
+      }
+      write(base + finalText + interim);
+    });
+
+    recognition.addEventListener('error', (e) => {
+      if (e.error === 'no-speech' || e.error === 'aborted') return;
+      say(e.error === 'not-allowed'
+        ? 'The microphone is blocked, so there is no transcript.'
+        : 'Transcription stopped. The recording is still running.', 'warn');
+      recognition = null;
+    });
+
+    // Browsers stop listening after a pause: start again while we are still recording
+    recognition.addEventListener('end', () => {
+      listening = false;
+      if (recognition && isRecording()) {
+        try { recognition.start(); listening = true; } catch { /* already starting */ }
+      }
+    });
+
+    try {
+      recognition.start();
+      listening = true;
+    } catch {
+      recognition = null;
+    }
+  }
+
+  function stopListening() {
+    const active = recognition;
+    recognition = null;
+    if (active && listening) { try { active.stop(); } catch { /* already stopped */ } }
+    listening = false;
+    base = '';
+    finalText = '';
+  }
+
+  /* ─── Recording ────────────────────────────────────────── */
+  function showTake(id) {
+    const take = takes.get(id);
+    player.hidden = !take;
+    audioEl.src = take ? take.url : '';
+    if (take) {
+      downloadEl.href = take.url;
+      downloadEl.download = take.name;
+    }
+  }
+
+  function keepTake(blob, type) {
+    if (!currentId || !blob.size) return;
+    const old = takes.get(currentId);
+    if (old) URL.revokeObjectURL(old.url);
+    const ext = /ogg/.test(type) ? 'ogg' : /mp4|mpeg|aac/.test(type) ? 'm4a' : 'webm';
+    takes.set(currentId, { url: URL.createObjectURL(blob), name: `hey-teacher-${currentId}.${ext}` });
+    showTake(currentId);
+  }
+
+  async function start() {
+    if (isRecording() || !CAN_RECORD) return;
+    say('');
+    try {
+      stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    } catch (err) {
+      const name = err && err.name;
+      say(name === 'NotAllowedError' || name === 'SecurityError'
+        ? 'Microphone blocked. Allow it in your browser and try again.'
+        : 'No microphone was found.', 'warn');
+      return;
+    }
+
+    const chunks = [];
+    try {
+      recorder = new MediaRecorder(stream);
+    } catch {
+      stream.getTracks().forEach(t => t.stop());
+      stream = null;
+      recorder = null;
+      say('This browser cannot record audio.', 'warn');
+      return;
+    }
+
+    recorder.addEventListener('dataavailable', (e) => { if (e.data && e.data.size) chunks.push(e.data); });
+    recorder.addEventListener('stop', () => {
+      const type = recorder ? recorder.mimeType : '';
+      if (stream) { stream.getTracks().forEach(t => t.stop()); stream = null; }
+      recorder = null;
+      clearInterval(tickTimer);
+      clearTimeout(limitTimer);
+      stopListening();
+      if (chunks.length) keepTake(new Blob(chunks, { type: type || 'audio/webm' }), type);
+      paint();
+      idleNote();
+    });
+
+    recorder.start();
+    startedAt = Date.now();
+    tick();
+    tickTimer = setInterval(tick, 500);
+    limitTimer = setTimeout(stop, REC_LIMIT_MS);
+    if (liveBox.checked && SpeechRecognitionClass) startListening();
+    paint();
+    say(liveBox.checked && SpeechRecognitionClass ? 'Listening… speak in English.' : 'Recording…', 'live');
+  }
+
+  function stop() {
+    if (!isRecording()) return;
+    try { recorder.stop(); } catch { /* already stopped */ }
+  }
+
+  /* ─── Events ───────────────────────────────────────────── */
+  recBtn.addEventListener('click', () => (isRecording() ? stop() : start()));
+
+  liveBox.addEventListener('change', () => {
+    try { localStorage.setItem(LIVE_PREF_KEY, liveBox.checked ? '1' : '0'); } catch { /* no storage */ }
+    idleNote();
+  });
+
+  discardBtn.addEventListener('click', () => {
+    const take = takes.get(currentId);
+    if (!take) return;
+    URL.revokeObjectURL(take.url);
+    takes.delete(currentId);
+    showTake(currentId);
+  });
+
+  document.addEventListener('visibilitychange', () => { if (document.hidden) stop(); });
+
+  paint();
+  idleNote();
+
+  return {
+    stop,
+    setQuestion(id) {
+      stop();
+      currentId = id;
+      showTake(id);
+      idleNote();
+    },
+    clearAll() {
+      stop();
+      takes.forEach(take => URL.revokeObjectURL(take.url));
+      takes.clear();
+      showTake(currentId);
+    }
+  };
+}
+
 function renderCards(data) {
   const params = new URLSearchParams(window.location.search);
   const rawLevel = params.get('level') ?? '';
@@ -274,6 +523,18 @@ function renderCards(data) {
   let currentIndex = -1;
   let saveTimer = null;
   let savedIndicatorTimer = null;
+
+  // Debounced save, shared by typing and by the live transcript
+  function scheduleSave() {
+    if (currentIndex < 0) return;
+    clearTimeout(saveTimer);
+    saveTimer = setTimeout(() => {
+      commitCurrentNote();
+      showSavedIndicator();
+    }, 450);
+  }
+
+  const speaking = setupSpeaking({ textarea: spTextarea, onTranscript: scheduleSave });
 
   function updateCounter() {
     const counter = document.getElementById('progress-counter');
@@ -328,6 +589,7 @@ function renderCards(data) {
 
     // Load saved note
     spTextarea.value = getNote(q.id);
+    if (speaking) speaking.setQuestion(q.id);
     spSaved.classList.remove('visible');
 
     // Reflect review state on toggle
@@ -352,6 +614,7 @@ function renderCards(data) {
   }
 
   function closeSpotlight() {
+    if (speaking) speaking.stop();
     commitCurrentNote();
     spotlight.classList.remove('active');
     spotlight.setAttribute('aria-hidden', 'true');
@@ -438,14 +701,7 @@ function renderCards(data) {
   });
 
   /* ─── Notes textarea: debounced auto-save ─────────────────── */
-  spTextarea.addEventListener('input', () => {
-    if (currentIndex < 0) return;
-    clearTimeout(saveTimer);
-    saveTimer = setTimeout(() => {
-      commitCurrentNote();
-      showSavedIndicator();
-    }, 450);
-  });
+  spTextarea.addEventListener("input", scheduleSave);
 
   spTextarea.addEventListener('blur', () => {
     clearTimeout(saveTimer);
@@ -486,6 +742,7 @@ function renderCards(data) {
       });
       clearLevelNotes(questions);
       clearLevelReviews(questions);
+      if (speaking) speaking.clearAll();
 
       if (spotlight.classList.contains('active') && currentIndex >= 0) {
         spTextarea.value = '';
