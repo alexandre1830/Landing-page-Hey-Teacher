@@ -16,8 +16,14 @@ Allow: /
 User-agent: OAI-SearchBot
 Allow: /
 
-# Anthropic (Claude)
+# Anthropic (Claude: treinamento, busca e acesso a pedido do usuário)
 User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
 Allow: /
 
 User-agent: anthropic-ai
@@ -47,6 +53,13 @@ Allow: /
 
 # Meta AI
 User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+# Microsoft Copilot e ChatGPT Search usam o índice do Bing
+User-agent: Bingbot
 Allow: /
 
 # Cohere
