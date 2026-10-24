@@ -4,7 +4,11 @@ const ACTIVITIES_ROOT = '/atividades';
 
 // Asset version: bump it (together with the ?v= in the /atividades/ pages) whenever a
 // deploy changes game scripts, styles or data, so browsers never mix cached old files.
-const ASSETS_VERSION = '20260917-8';
+const ASSETS_VERSION = '20261024-2';
+
+// Modo embed do portal do aluno: o <head> das páginas jogar/ marca <html class="ht-embed"> com ?embed=1
+// (só no topo da janela ou com o portal/localhost como página-mãe; ver README, "Modo embed").
+const EMBED = document.documentElement.classList.contains('ht-embed');
 
 /* ─── Activity registry ─────────────────────────────────────────
    To add a new activity: register it here, create its folder
@@ -220,10 +224,11 @@ const ACTIVITIES = {
   }
 };
 
-// URLs derived from the slug: landing page (levels) and play page
+// URLs derived from the slug: landing page (levels) and play page.
+// Every in-game URL comes from levelUrl (puzzleUrl appends &puzzle=), so embed mode keeps embed=1.
 for (const activity of Object.values(ACTIVITIES)) {
   activity.pageUrl  = `${ACTIVITIES_ROOT}/${activity.slug}/`;
-  activity.levelUrl = level => `${activity.pageUrl}jogar/?level=${encodeURIComponent(level)}`;
+  activity.levelUrl = level => `${activity.pageUrl}jogar/?level=${encodeURIComponent(level)}${EMBED ? '&embed=1' : ''}`;
 }
 
 /* ─── Helpers ───────────────────────────────────────────────── */
@@ -276,6 +281,7 @@ async function loadJSON(url) {
     return await res.json();
   } catch (err) {
     // Replaces only the activity area, so the site nav and footer stay usable
+    // (embed mode: no link that would leave the game)
     const target = document.querySelector('[data-activity-root]') || document.body;
     target.innerHTML = `
       <div class="ac-error" role="alert">
@@ -283,7 +289,7 @@ async function loadJSON(url) {
         <p>Verifique a sua conexão e tente novamente em alguns instantes.</p>
         <div class="ac-error-actions">
           <button type="button" class="btn btn-primary" onclick="location.reload()">Tentar de novo</button>
-          <a class="btn btn-ghost" href="${ACTIVITIES_ROOT}/">Ver todas as atividades</a>
+          ${EMBED ? '' : `<a class="btn btn-ghost" href="${ACTIVITIES_ROOT}/">Ver todas as atividades</a>`}
         </div>
       </div>`;
     throw err;
@@ -332,3 +338,30 @@ window.addEventListener('pageshow', (e) => {
     document.querySelectorAll('.exiting').forEach(el => el.classList.remove('exiting'));
   }
 });
+
+/* ─── Embed mode (portal do aluno) ──────────────────────────── */
+
+// Safety net: inside the portal iframe, a link to this game page always keeps
+// embed=1 and any other link (another page or site) opens in a new tab.
+// attachExitNavigation calls preventDefault first, so theme cards keep their
+// own path; download links and blob: URLs are left alone.
+if (EMBED) {
+  document.addEventListener('click', (e) => {
+    if (e.defaultPrevented || e.button !== 0) return;
+    const link = e.target.closest ? e.target.closest('a[href]') : null;
+    if (!link || link.hasAttribute('download')) return;
+    let url;
+    try { url = new URL(link.getAttribute('href'), location.href); } catch { return; }
+    if (url.protocol !== 'https:' && url.protocol !== 'http:') return;
+    if (url.origin === location.origin && url.pathname === location.pathname) {
+      if (url.searchParams.get('embed') !== '1') {   // internal link without embed: fix it
+        e.preventDefault();
+        url.searchParams.set('embed', '1');
+        location.href = url.href;
+      }
+      return;
+    }
+    e.preventDefault();                              // would leave the game: new tab
+    window.open(url.href, '_blank', 'noopener');
+  });
+}

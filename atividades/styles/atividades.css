@@ -2294,3 +2294,34 @@ body.pz-playing .ac-app {
   .spotlight-textarea { font-size: .95rem; min-height: 180px; padding: 14px 16px; }
   .spotlight-notes { margin-top: 22px; padding-top: 18px; }
 }
+
+/* ══════════════════════════════════════════════════════════════
+   MODO EMBED (portal do aluno): ?embed=1 nas páginas jogar/
+   O <head> marca <html class="ht-embed"> (topo da janela ou portal/localhost como
+   página-mãe): sem nav, rodapé, WhatsApp e CTA.
+══════════════════════════════════════════════════════════════ */
+.ht-embed { --nav-h: 0px; }
+.ht-embed [data-include],
+.ht-embed .nav,
+.ht-embed .nav-overlay,
+.ht-embed footer,
+.ht-embed .wa-float,
+.ht-embed .ac-cta-band { display: none !important; }
+.ht-embed .back-btn:not(.ht-in-game) { visibility: hidden; pointer-events: none; }
+/* No portal o iframe tem no máximo ~990 px de largura, então o mínimo de 480 px
+   precisa valer a partir de 901 px. Abaixo disso puzzles.css (<= 900 px) usa height: auto.
+   O jogo da memória (memory.css, 901-1100 px) e os Cartões (atividades.css <= 700 px;
+   em 901-1100 px as anotações cairiam abaixo da dobra) só recebem o mínimo a partir de 1101 px. */
+@media (min-width: 901px) {
+  .ht-embed body.pz-playing .ac-app:not(.mm-app) {
+    height: max(480px, 100vh);
+    height: max(480px, 100dvh);
+  }
+}
+@media (min-width: 1101px) {
+  .ht-embed body.pz-playing .ac-app.mm-app,
+  .ht-embed .ac-app--cards {
+    height: max(480px, 100vh);
+    height: max(480px, 100dvh);
+  }
+}

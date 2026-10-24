@@ -2,6 +2,13 @@
   const slots = document.querySelectorAll('[data-include]');
   if (!slots.length) return;
 
+  // Modo embed do portal (html.ht-embed, só nas páginas jogar/): sem nav, rodapé e WhatsApp.
+  if (document.documentElement.classList.contains('ht-embed')) {
+    slots.forEach((slot) => slot.remove());
+    document.dispatchEvent(new CustomEvent('partials:loaded'));
+    return;
+  }
+
   const cache = {};
   const fetchPartial = async (name) => {
     if (cache[name]) return cache[name];

@@ -205,6 +205,7 @@ async function startPuzzleActivity(activity, { store, buildModel, preview, meta,
   document.title = pageTitle(activity.title, level, puzzle.theme);
   document.body.classList.add('pz-playing');
   back.href = puzzleUrl(activity, level);
+  back.classList.add('ht-in-game');   // stays visible in embed mode (back to the theme list)
   back.setAttribute('aria-label', 'Back to themes');
   document.getElementById('pz-back-label').textContent = 'Themes';
   document.getElementById('level-name').textContent = puzzle.theme;

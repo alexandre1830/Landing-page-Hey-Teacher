@@ -1,15 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JXD2KCQXS0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-JXD2KCQXS0');
-</script>
 <meta charset="UTF-8">
+<!-- Google tag (gtag.js), exceto com ?embed=1. O layout limpo do modo embed (html.ht-embed)
+     só vale no topo da janela ou com o portal do aluno (ou localhost) como página-mãe. -->
+<script>
+  (function () {
+    if (/(?:^|[?&])embed=1(?:&|$)/.test(location.search)) {
+      var ok = window.self === window.top;
+      if (!ok) {
+        var allowed = /^(https:\/\/portal\.heyteacher\.com\.br|http:\/\/(localhost|127\.0\.0\.1)(:\d+)?)$/;
+        var ao = location.ancestorOrigins;
+        if (ao && ao.length) {
+          ok = allowed.test(ao[ao.length - 1]) || allowed.test(ao[0]);
+        } else {
+          var ref = '';
+          try { ref = document.referrer ? new URL(document.referrer).origin : ''; } catch (e) {}
+          ok = allowed.test(ref) || ref === location.origin;
+        }
+      }
+      if (ok) document.documentElement.classList.add('ht-embed');
+      return;
+    }
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    gtag('js', new Date());
+    gtag('config', 'G-JXD2KCQXS0');
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-JXD2KCQXS0';
+    document.head.appendChild(s);
+  })();
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Quiz de Gramática | Hey, Teacher!™</title>
 <meta name="description" content="Quiz de gramática em inglês online e grátis, do nível A1 ao C2.">
@@ -23,9 +45,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles/tokens.css">
 <link rel="stylesheet" href="/styles/styles.css">
-<link rel="stylesheet" href="/atividades/styles/atividades.css?v=20260917-8">
-<link rel="stylesheet" href="/atividades/styles/puzzles.css?v=20260917-8">
-<link rel="stylesheet" href="/atividades/styles/quiz.css?v=20260917-8">
+<link rel="stylesheet" href="/atividades/styles/atividades.css?v=20261024-2">
+<link rel="stylesheet" href="/atividades/styles/puzzles.css?v=20261024-2">
+<link rel="stylesheet" href="/atividades/styles/quiz.css?v=20261024-2">
 </head>
 <body>
 
@@ -157,9 +179,9 @@
 
 <div data-include="footer"></div>
 
-<script src="/atividades/scripts/common.js?v=20260917-8"></script>
-<script src="/atividades/scripts/puzzles.js?v=20260917-8"></script>
-<script src="/atividades/scripts/quiz.js?v=20260917-8"></script>
+<script src="/atividades/scripts/common.js?v=20261024-2"></script>
+<script src="/atividades/scripts/puzzles.js?v=20261024-2"></script>
+<script src="/atividades/scripts/quiz.js?v=20261024-2"></script>
 <script src="/scripts/includes.js" defer></script>
 <script src="/scripts/main.js" defer></script>
 </body>
