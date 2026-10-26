@@ -4,7 +4,7 @@ const ACTIVITIES_ROOT = '/atividades';
 
 // Asset version: bump it (together with the ?v= in the /atividades/ pages) whenever a
 // deploy changes game scripts, styles or data, so browsers never mix cached old files.
-const ASSETS_VERSION = '20261024-2';
+const ASSETS_VERSION = '20261026-1';
 
 // Modo embed do portal do aluno: o <head> das páginas jogar/ marca <html class="ht-embed"> com ?embed=1
 // (só no topo da janela ou com o portal/localhost como página-mãe; ver README, "Modo embed").
