@@ -57,6 +57,13 @@
     });
     const refInput = form.querySelector('input[name="referrer"]');
     if (refInput) refInput.value = (document.referrer || '').slice(0, 300);
+
+    // Veio do convite de um jogo (utm_medium=jogo): já marca a origem
+    const mediumInput = form.querySelector('input[name="utm_medium"]');
+    const conheceuSelect = form.querySelector('#f-conheceu');
+    if (mediumInput && mediumInput.value === 'jogo' && conheceuSelect && !conheceuSelect.value) {
+      conheceuSelect.value = 'Jogos e atividades do site';
+    }
   } catch (_) { /* noop */ }
 
   // ===== Sanitização leve do telefone (aceita formato internacional) =====
@@ -241,6 +248,15 @@
         headers: { Accept: 'application/json' },
       });
       if (!res.ok) throw new Error('HTTP ' + res.status);
+
+      // Conversão no Google Analytics, com a origem informada
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'generate_lead', {
+          lead_source: data.get('como_conheceu') || '(não informado)',
+          utm_medium: data.get('utm_medium') || '',
+          utm_campaign: data.get('utm_campaign') || '',
+        });
+      }
 
       form.hidden = true;
       if (successEl) {

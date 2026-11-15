@@ -152,6 +152,9 @@ function createCompletionDialog({ activity, level, levelData, puzzleIndex, onClo
     next.hidden = true;
   }
 
+  // Lesson invite at the end of a round (not inside the portal: those players are already students)
+  if (!EMBED) addLessonInvite(modal.querySelector('.pz-modal-card'), activity, level);
+
   const isOpen = () => modal.classList.contains('active');
 
   function open(message) {
@@ -175,6 +178,25 @@ function createCompletionDialog({ activity, level, levelData, puzzleIndex, onClo
   });
 
   return { open, close: hide, isOpen };
+}
+
+// The UTMs reach the contact form (agendar.js), which also preselects "Jogos e atividades do site"
+function addLessonInvite(card, activity, level) {
+  if (!card || card.querySelector('.pz-modal-cta')) return;
+  const url = `/contato/?utm_source=site&utm_medium=jogo&utm_campaign=${activity.slug}` +
+              `&utm_content=fim-de-partida-${level}#agendar`;
+  const box = document.createElement('div');
+  box.className = 'pz-modal-cta';
+  box.innerHTML = `
+    <p>
+      <strong>Quer saber o seu nível real de inglês?</strong>
+      Na aula diagnóstica gratuita, o professor Alexandre avalia a sua conversação e mostra o caminho até a fluência. Sem compromisso.
+    </p>
+    <a class="pz-modal-cta-btn" href="${url}">Agendar aula grátis →</a>`;
+  box.querySelector('a').addEventListener('click', () => {
+    if (typeof window.gtag === 'function') window.gtag('event', 'cta_aula_jogo', { activity: activity.slug, level });
+  });
+  card.appendChild(box);
 }
 
 /* ─── Page bootstrap ────────────────────────────────────────── */

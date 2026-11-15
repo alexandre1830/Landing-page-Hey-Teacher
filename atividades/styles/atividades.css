@@ -1392,6 +1392,65 @@
 
 .ac-more a:hover { color: var(--red); border-color: var(--red-35); transform: translateY(-2px); }
 
+/* Related reading and lesson pages (activity landing pages) */
+.ac-further {
+  max-width: 1080px;
+  margin: 48px auto 0;
+}
+
+.ac-further h3 {
+  margin-bottom: 18px;
+  font-size: 1.15rem;
+  text-align: center;
+  color: var(--navy);
+}
+
+.ac-further ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  list-style: none;
+}
+
+@media (min-width: 800px) { .ac-further ul { grid-template-columns: repeat(3, 1fr); gap: 16px; } }
+
+.ac-further a {
+  display: block;
+  height: 100%;
+  padding: 18px 20px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  transition: border-color .2s, transform .2s var(--ease);
+}
+
+.ac-further a:hover { border-color: var(--red-35); transform: translateY(-2px); }
+
+.ac-further .k {
+  display: block;
+  margin-bottom: 6px;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--red);
+}
+
+.ac-further .t {
+  display: block;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--navy);
+}
+
+.ac-further .d {
+  display: block;
+  margin-top: 6px;
+  font-size: .88rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
 /* ══════════════════════════════════════════════════════════════
    TELA DE JOGO — shell entre o nav e o rodapé do site
 ══════════════════════════════════════════════════════════════ */
