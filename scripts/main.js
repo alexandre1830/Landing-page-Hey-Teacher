@@ -186,3 +186,61 @@ const initHeroVerbRotator = () => {
   }, 2100);
 };
 initHeroVerbRotator();
+
+// ===== Carrossel de avaliações do Google (home) =====
+const initReviewsCarousel = () => {
+  const root = document.querySelector('.gr-carousel');
+  if (!root) return;
+  const track = root.querySelector('.gr-track');
+  const prev = root.querySelector('.gr-nav.prev');
+  const next = root.querySelector('.gr-nav.next');
+  const bar = root.querySelector('.gr-progress span');
+
+  // Avança um cartão por clique (largura do cartão + gap)
+  const step = () => {
+    const card = track.querySelector('.gr-card');
+    const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+    return card ? card.getBoundingClientRect().width + gap : track.clientWidth;
+  };
+  const go = (dir) => track.scrollBy({ left: dir * step(), behavior: prefersReducedMotion() ? 'auto' : 'smooth' });
+  prev.addEventListener('click', () => go(-1));
+  next.addEventListener('click', () => go(1));
+
+  // Setas desativadas nas pontas + barra de progresso proporcional à parte visível
+  const update = () => {
+    const max = track.scrollWidth - track.clientWidth;
+    prev.disabled = track.scrollLeft <= 2;
+    next.disabled = track.scrollLeft >= max - 2;
+    const visible = Math.min(1, track.clientWidth / track.scrollWidth);
+    bar.style.width = `${visible * 100}%`;
+    const offset = max > 0 ? (track.scrollLeft / max) * ((1 - visible) / visible) * 100 : 0;
+    bar.style.transform = `translateX(${offset}%)`;
+  };
+
+  // "Ler mais" só aparece nos depoimentos cortados pelo line-clamp (folga de meia linha:
+  // as aspas decorativas do ::before passam um pouco da caixa mesmo em textos curtos)
+  const fitMore = () => {
+    track.querySelectorAll('.gr-card:not(.is-open)').forEach((card) => {
+      const text = card.querySelector('.gr-text');
+      const slack = parseFloat(getComputedStyle(text).lineHeight) / 2 || 8;
+      card.querySelector('.gr-more').hidden = text.scrollHeight - text.clientHeight < slack;
+    });
+  };
+  track.addEventListener('click', (e) => {
+    const btn = e.target.closest('.gr-more');
+    if (!btn) return;
+    const card = btn.closest('.gr-card');
+    if (!track.classList.contains('has-open')) track.style.setProperty('--gr-h', `${card.offsetHeight}px`);
+    const open = card.classList.toggle('is-open');
+    track.classList.toggle('has-open', !!track.querySelector('.gr-card.is-open'));
+    btn.textContent = open ? 'Ler menos' : 'Ler mais';
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+
+  track.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', () => { fitMore(); update(); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => { fitMore(); update(); });
+  fitMore();
+  update();
+};
+initReviewsCarousel();
