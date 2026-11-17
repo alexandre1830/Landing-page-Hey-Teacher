@@ -579,6 +579,7 @@
 
 .qz-countdown.is-count .qz-countdown-big {
   font-family: var(--font-serif);
+  font-size-adjust: var(--font-serif-adjust);
   font-size: clamp(6rem, 17vw, 12rem);
   font-variant-numeric: tabular-nums;
 }
@@ -1188,6 +1189,7 @@
 
 .qz-solo-score {
   font-family: var(--font-serif);
+  font-size-adjust: var(--font-serif-adjust);
   font-size: 3.3rem;
   font-weight: 700;
   line-height: 1;
@@ -1285,6 +1287,7 @@
 
 .qz-team-score {
   font-family: var(--font-serif);
+  font-size-adjust: var(--font-serif-adjust);
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 1;
@@ -1450,6 +1453,7 @@
 
 .qz-final-score {
   font-family: var(--font-serif);
+  font-size-adjust: var(--font-serif-adjust);
   font-size: clamp(3.4rem, 7vw, 5.6rem);
   font-weight: 700;
   line-height: 1;
@@ -1574,6 +1578,7 @@
 .qz-dialog-score b {
   margin-right: 4px;
   font-family: var(--font-serif);
+  font-size-adjust: var(--font-serif-adjust);
   font-size: 2.2rem;
   font-weight: 700;
   color: var(--navy);
@@ -1598,7 +1603,7 @@
   border-radius: 14px;
 }
 
-.qz-dialog-team b { font-family: var(--font-serif); font-size: 2rem; font-weight: 700; line-height: 1.1; }
+.qz-dialog-team b { font-family: var(--font-serif); font-size-adjust: var(--font-serif-adjust); font-size: 2rem; font-weight: 700; line-height: 1.1; }
 .qz-dialog-team.is-red  { border-color: rgba(166, 4, 4, 0.45); background: rgba(166, 4, 4, 0.07); }
 .qz-dialog-team.is-blue { border-color: rgba(63, 134, 224, 0.5); background: rgba(63, 134, 224, 0.08); }
 .qz-dialog-team.is-winner { box-shadow: 0 0 0 3px var(--qz-gold); }

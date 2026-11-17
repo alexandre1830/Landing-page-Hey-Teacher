@@ -161,6 +161,7 @@
   align-items: center;
   justify-content: center;
   font-family: var(--font-serif);
+  font-size-adjust: var(--font-serif-adjust);
   font-size: min(1.5rem, calc(var(--mm-card-h) * 0.2));
   font-weight: 700;
   color: var(--white);
@@ -314,6 +315,7 @@
 
 .mm-score-num {
   font-family: var(--font-serif);
+  font-size-adjust: var(--font-serif-adjust);
   font-size: 3rem;
   font-weight: 700;
   line-height: 1;

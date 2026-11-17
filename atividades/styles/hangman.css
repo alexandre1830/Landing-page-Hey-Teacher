@@ -401,6 +401,7 @@
 
 .hm-score-num {
   font-family: var(--font-serif);
+  font-size-adjust: var(--font-serif-adjust);
   font-size: 3rem;
   font-weight: 700;
   line-height: 1;

@@ -612,6 +612,7 @@
   align-items: center;
   justify-content: center;
   font-family: var(--font-serif);
+  font-size-adjust: var(--font-serif-adjust);
   font-size: 2.6rem;
   font-weight: 700;
   letter-spacing: -2px;
@@ -813,6 +814,7 @@
   align-items: center;
   justify-content: center;
   font-family: var(--font-serif);
+  font-size-adjust: var(--font-serif-adjust);
   font-size: .8rem;
   color: var(--white);
   border-radius: 50%;
@@ -1285,7 +1287,8 @@
 
 .lc-code {
   font-family: var(--font-serif);
-  font-variation-settings: "opsz" 144;
+  font-size-adjust: var(--font-serif-adjust);
+  font-optical-sizing: auto;
   font-size: clamp(3rem, 6vw, 4.4rem);
   font-weight: 700;
   line-height: 1;
@@ -1733,7 +1736,8 @@ body.pz-playing .ac-app {
 
 .card-num {
   font-family: var(--font-serif);
-  font-variation-settings: "opsz" 144;
+  font-size-adjust: var(--font-serif-adjust);
+  font-optical-sizing: auto;
   font-size: clamp(2rem, 4.2vw, 3.4rem);
   font-weight: 700;
   color: var(--navy);
@@ -1904,6 +1908,7 @@ body.pz-playing .ac-app {
 
 .spotlight-num {
   font-family: var(--font-serif);
+  font-size-adjust: var(--font-serif-adjust);
   font-size: 3rem;
   font-weight: 700;
   letter-spacing: -.03em;

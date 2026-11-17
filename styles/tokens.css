@@ -29,7 +29,13 @@
   --white-rgb:     255, 255, 255;
 
   /* ===== TIPOGRAFIA ===== */
-  --font-serif: 'Fraunces', serif;
+  /* Títulos: Bricolage Grotesque, a mesma do portal do aluno (antes, Fraunces). O nome
+     --font-serif ficou por compatibilidade com as regras existentes. */
+  --font-serif: 'Bricolage Grotesque', 'Plus Jakarta Sans', system-ui, sans-serif;
+  /* A Bricolage tem x-height de 0,53 (a Fraunces, 0,45) e é mais larga: com font-size-adjust
+     0,45 as minúsculas ficam da altura que tinham na Fraunces (~15% menores) e os títulos
+     ocupam as mesmas linhas de antes. Usado junto de cada font-family: var(--font-serif). */
+  --font-serif-adjust: 0.45;
   --font-sans:  'Plus Jakarta Sans', system-ui, sans-serif;
   --font-mono:  'JetBrains Mono', monospace;
 
