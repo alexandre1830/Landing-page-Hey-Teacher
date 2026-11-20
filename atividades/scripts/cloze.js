@@ -77,56 +77,28 @@ function buildCloze(puzzle, levelData) {
    THEME CARDS
 ══════════════════════════════════════════════════════════════ */
 
-// Lines of text with the gaps drawn as boxes, colored by result
+// Photo of each text's topic: images/cloze/<text id>.jpg (sources in images/cloze/SOURCES.txt)
+function clozePhotoUrl(id) {
+  return `${ACTIVITIES_ROOT}/images/cloze/${encodeURIComponent(id)}.jpg?v=${ASSETS_VERSION}`;
+}
+
+// A text without a photo yet (new text, file missing): hide the broken image, the navy panel stays
+document.addEventListener('error', (event) => {
+  const img = event.target;
+  if (img && img.classList && img.classList.contains('ct-photo')) img.hidden = true;
+}, true);
+
+// The text's photo, with one square per gap colored by result once the text is started
 function clozePreview(model, saved) {
   const status = (saved && saved.status) || [];
-  const pad = 9;
-  const width = 230;
-  const full = width - pad * 2;
-  const gapW = 22;
-  const totalChars = model.plain.reduce((sum, p) => sum + p.length, 0) || 1;
-  const counts = model.plain.map(p => Math.max(1, Math.round((p.length / totalChars) * 8)));
-  const totalLines = counts.reduce((sum, n) => sum + n, 0);
-  // Dialogues have many short paragraphs: squeeze them so the page keeps its shape
-  const lineH = Math.min(10, 96 / totalLines);
-  const space = totalLines > 10 ? 1.5 : 4;
-  const boxH = Math.min(7.2, lineH * 0.74);
-
-  let y = pad;
-  let lines = `<rect class="title" x="${pad}" y="${y}" width="92" height="5.2" rx="1.6"/>`;
-  let boxes = '';
-  y += 13;
-
-  model.plain.forEach((p, para) => {
-    const count = counts[para];
-    const lineW = i => (i === count - 1 && count > 1 ? 120 : full);
-
-    for (let i = 0; i < count; i++) {
-      lines += `<rect x="${pad}" y="${(y + i * lineH + boxH / 2 - 1.4).toFixed(1)}" width="${lineW(i)}" height="2.8" rx="1.4"/>`;
-    }
-
-    let prevLine = -1;
-    let prevX = 0;
-    model.gaps.filter(g => g.para === para).forEach((g) => {
-      let line = Math.min(count - 1, Math.floor(g.pos * count));
-      let x = pad + (g.pos * count - line) * (lineW(line) - gapW);
-      if (line === prevLine && x < prevX + gapW + 4) x = prevX + gapW + 4;
-      if (x > pad + lineW(line) - gapW && line < count - 1) { line += 1; x = pad; }
-      x = Math.min(x, pad + full - gapW);
-
-      const st = Number(status[g.index]);
-      const cls = st === CT_OK ? ' won' : st === CT_WRONG ? ' lost' : st === CT_SHOWN ? ' shown' : '';
-      boxes += `<rect class="gap${cls}" x="${x.toFixed(1)}" y="${(y + line * lineH).toFixed(1)}" width="${gapW}" height="${boxH.toFixed(1)}" rx="2"/>`;
-      prevLine = line;
-      prevX = x;
-    });
-
-    y += count * lineH + space;
-  });
-
-  const pageH = y + pad - 5;
-  return `<svg class="ct-preview" viewBox="0 0 ${width} ${pageH.toFixed(1)}" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
-    <rect class="page" x="0" y="0" width="${width}" height="${pageH.toFixed(1)}" rx="4"/>${lines}${boxes}</svg>`;
+  const gaps = status.some(st => Number(st))
+    ? `<span class="ct-photo-gaps">${model.gaps.map((g) => {
+        const st = Number(status[g.index]);
+        const cls = st === CT_OK ? ' class="won"' : st === CT_WRONG ? ' class="lost"' : st === CT_SHOWN ? ' class="shown"' : '';
+        return `<i${cls}></i>`;
+      }).join('')}</span>`
+    : '';
+  return `<img class="ct-photo" src="${clozePhotoUrl(model.id)}" alt="" loading="lazy" decoding="async">${gaps}`;
 }
 
 function clozeMeta(model) {
@@ -167,6 +139,12 @@ function renderCloze({ activity, level, levelData, puzzle, puzzleIndex, model })
   document.getElementById('ct-kind').textContent = CT_KINDS[model.kind].label;
   document.getElementById('ct-meta').textContent = `${model.words} words · ${total} gaps`;
   document.getElementById('ct-title').textContent = puzzle.theme;
+  const cover = document.getElementById('ct-cover');
+  if (cover) {
+    cover.addEventListener('error', () => { cover.hidden = true; }, { once: true });
+    cover.src = clozePhotoUrl(puzzle.id);
+    cover.hidden = false;
+  }
   document.getElementById('ct-bank-info').textContent = model.extra
     ? `${bank.length} words · ${model.extra} won't be used`
     : `${bank.length} words`;

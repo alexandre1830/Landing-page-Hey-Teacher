@@ -2,25 +2,58 @@
    COMPLETE THE TEXT — builds on atividades.css and puzzles.css
 ══════════════════════════════════════════════════════════════ */
 
-/* ─── Theme card preview (navy panel) ─── */
-.ct-preview rect {
-  fill: rgba(238, 242, 249, 0.2);
-  transition: fill .3s ease, stroke .3s ease;
+/* ─── Theme card preview: a photo of the text's topic (images/cloze/<id>.jpg) ─── */
+.ptc-preview:has(.ct-photo) {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
 }
 
-.ct-preview rect.title { fill: rgba(238, 242, 249, 0.55); }
-.ct-preview rect.page  { fill: rgba(238, 242, 249, 0.07); }
-
-.ct-preview rect.gap {
-  fill: #062559;
-  stroke: rgba(238, 242, 249, 0.5);
-  stroke-width: .8;
+.ct-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .5s ease;
 }
 
-.ct-preview rect.gap.won   { fill: var(--pz-green); stroke: var(--pz-green); }
-.ct-preview rect.gap.lost  { fill: var(--rose); stroke: var(--rose); }
-.ct-preview rect.gap.shown { fill: #e3b53d; stroke: #e3b53d; }
-.pz-theme-card:hover .ct-preview rect:not(.title):not(.page):not(.gap) { fill: rgba(238, 242, 249, 0.3); }
+.pz-theme-card:hover .ct-photo { transform: scale(1.05); }
+
+/* Filled gaps, one square each (green right, rose wrong, yellow revealed) */
+.ct-photo-gaps {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  max-width: calc(100% - 20px);
+  padding: 5px 8px;
+  border-radius: 8px;
+  background: rgba(2, 20, 50, .6);
+}
+
+.ct-photo-gaps i {
+  width: 9px;
+  height: 6px;
+  border-radius: 2px;
+  background: rgba(238, 242, 249, .45);
+}
+
+.ct-photo-gaps i.won   { background: var(--pz-green); }
+.ct-photo-gaps i.lost  { background: var(--rose); }
+.ct-photo-gaps i.shown { background: #e3b53d; }
+
+/* Photo at the top of the text */
+.ct-cover {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 7;
+  object-fit: cover;
+  margin-bottom: 18px;
+  border-radius: 14px;
+  background: var(--navy-dark);
+}
 
 /* ─── Layout: text on the left, word bank on the right ─── */
 .pz-main.ct-main {
