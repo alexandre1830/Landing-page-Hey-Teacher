@@ -104,7 +104,7 @@ function readingPreview(model, saved) {
 }
 
 function readingMeta(model) {
-  return `${model.genre} · ${model.words} words · ${model.questions.length} questions`;
+  return model.genre;
 }
 
 function readingStatus(model, saved) {

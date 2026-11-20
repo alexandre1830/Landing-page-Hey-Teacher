@@ -102,7 +102,7 @@ function clozePreview(model, saved) {
 }
 
 function clozeMeta(model) {
-  return `${CT_KINDS[model.kind].short} · ${model.words} words · ${model.gaps.length} gaps`;
+  return CT_KINDS[model.kind].short;
 }
 
 function clozeStatus(model, saved) {
