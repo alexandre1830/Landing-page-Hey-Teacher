@@ -80,40 +80,27 @@ function buildReading(puzzle, levelData) {
    THEME CARDS
 ══════════════════════════════════════════════════════════════ */
 
-// A page of text lines next to the list of questions, colored by result
+// Photo of each text's topic: images/reading/<text id>.jpg (sources in images/reading/SOURCES.txt)
+function readingPhotoUrl(id) {
+  return `${ACTIVITIES_ROOT}/images/reading/${encodeURIComponent(id)}.jpg?v=${ASSETS_VERSION}`;
+}
+
+// A text without a photo yet (new text, file missing): hide the broken image, the navy panel stays
+document.addEventListener('error', (event) => {
+  const img = event.target;
+  if (img && img.classList && img.classList.contains('rd-photo')) img.hidden = true;
+}, true);
+
+// The text's photo, with one dot per question colored by result once answered
 function readingPreview(model, saved) {
   const answers = (saved && saved.answers) || [];
-  const totalChars = model.paragraphs.reduce((sum, p) => sum + p.length, 0);
-  const pad = 7;
-  const pageW = 96;
-  let y = pad;
-  let lines = `<rect class="title" x="${pad}" y="${y}" width="52" height="4.6" rx="1.4"/>`;
-  y += 10;
-
-  model.paragraphs.forEach((p) => {
-    const count = Math.max(1, Math.round((p.length / totalChars) * 11));
-    for (let i = 0; i < count; i++) {
-      const w = i === count - 1 && count > 1 ? 50 : pageW - pad * 2;
-      lines += `<rect x="${pad}" y="${y.toFixed(1)}" width="${w}" height="2.4" rx="1.2"/>`;
-      y += 4.4;
-    }
-    y += 2.4;
-  });
-  const pageH = y - 4.4 + pad;
-
-  const n = model.questions.length;
-  const step = Math.min(8, (pageH - 6) / n);
-  const top = (pageH - step * (n - 1)) / 2;
-  const rows = model.questions.map((q, i) => {
-    const a = answers[i] ? Number(answers[i][0]) : -1;
-    const cls = a >= 0 ? (a === q.correct ? ' class="won"' : ' class="lost"') : '';
-    const cy = (top + i * step).toFixed(1);
-    const w = 22 + ((i * 7) % 3) * 6;
-    return `<circle cx="112" cy="${cy}" r="2.3"${cls}/><rect x="118" y="${(cy - 1.2).toFixed(1)}" width="${w}" height="2.4" rx="1.2"/>`;
-  }).join('');
-
-  return `<svg class="rd-preview" viewBox="0 0 152 ${pageH.toFixed(1)}" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
-    <rect class="page" x="0" y="0" width="${pageW}" height="${pageH.toFixed(1)}" rx="4"/>${lines}${rows}</svg>`;
+  const dots = answers.length
+    ? `<span class="rd-photo-dots">${model.questions.map((q, i) => {
+        const a = answers[i] ? Number(answers[i][0]) : -1;
+        return `<i${a >= 0 ? (a === q.correct ? ' class="won"' : ' class="lost"') : ''}></i>`;
+      }).join('')}</span>`
+    : '';
+  return `<img class="rd-photo" src="${readingPhotoUrl(model.id)}" alt="" loading="lazy" decoding="async">${dots}`;
 }
 
 function readingMeta(model) {
@@ -156,6 +143,12 @@ function renderReading({ activity, level, levelData, puzzle, puzzleIndex, model 
   document.getElementById('rd-genre').textContent = model.genre;
   document.getElementById('rd-meta').textContent = `${model.words} words · about ${model.minutes} min`;
   document.getElementById('rd-title').textContent = puzzle.theme;
+  const cover = document.getElementById('rd-cover');
+  if (cover) {
+    cover.addEventListener('error', () => { cover.hidden = true; }, { once: true });
+    cover.src = readingPhotoUrl(puzzle.id);
+    cover.hidden = false;
+  }
   counter.title = 'Questions answered';
   if (model.hint === 'none') hintBtn.hidden = true;
   textEl.classList.toggle('is-numbered', model.numbered);

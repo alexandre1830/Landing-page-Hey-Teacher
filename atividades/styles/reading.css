@@ -2,25 +2,57 @@
    READING COMPREHENSION — builds on atividades.css and puzzles.css
 ══════════════════════════════════════════════════════════════ */
 
-/* ─── Theme card preview (navy panel) ─── */
-.rd-preview rect {
-  fill: rgba(238, 242, 249, 0.2);
-  transition: fill .3s ease;
+/* ─── Theme card preview: a photo of the text's topic (images/reading/<id>.jpg) ─── */
+.ptc-preview:has(.rd-photo) {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
 }
 
-.rd-preview rect.title { fill: rgba(238, 242, 249, 0.55); }
-.rd-preview rect.page  { fill: rgba(238, 242, 249, 0.07); }
-
-.rd-preview circle {
-  fill: none;
-  stroke: rgba(238, 242, 249, 0.35);
-  stroke-width: .9;
-  transition: fill .3s ease, stroke .3s ease;
+.rd-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .5s ease;
 }
 
-.rd-preview circle.won  { fill: var(--pz-green); stroke: var(--pz-green); }
-.rd-preview circle.lost { fill: var(--rose); stroke: var(--rose); }
-.pz-theme-card:hover .rd-preview rect:not(.title):not(.page) { fill: rgba(238, 242, 249, 0.3); }
+.pz-theme-card:hover .rd-photo { transform: scale(1.05); }
+
+/* Answered questions, one dot each (green right, rose wrong) */
+.rd-photo-dots {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  max-width: calc(100% - 20px);
+  padding: 5px 8px;
+  border-radius: 999px;
+  background: rgba(2, 20, 50, .6);
+}
+
+.rd-photo-dots i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(238, 242, 249, .45);
+}
+
+.rd-photo-dots i.won  { background: var(--pz-green); }
+.rd-photo-dots i.lost { background: var(--rose); }
+
+/* Photo at the top of the text */
+.rd-cover {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 7;
+  object-fit: cover;
+  margin-bottom: 18px;
+  border-radius: 14px;
+  background: var(--navy-dark);
+}
 
 /* ─── Layout: text on the left, questions on the right ─── */
 .pz-main.rd-main {
